@@ -1,0 +1,17 @@
+[project]
+name = "security-standards-template"
+version = "1.0.0"
+description = "Compliance-as-Code Information Security Management System (ISMS) Template"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mkdocs>=1.6.0,<2.0.0",
+    "mkdocs-material>=9.5.0,<10.0.0",
+    "mkdocs-material-extensions>=1.3.1",
+    "pymdown-extensions>=10.0,<12.0.0",
+    "PyYAML>=6.0,<7.0.0",
+    "pyyaml-env-tag>=1.1",
+]
+
+[dependency-groups]
+dev = []

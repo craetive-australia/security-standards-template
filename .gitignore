@@ -1,0 +1,35 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# MkDocs build output
+site/
+.cache/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# IDE and Editor directories
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment variable secrets
+.env
+*.local
+
+# Pytest and testing caches
+.pytest_cache/
+
+# Multi-agent orchestration telemetry
+.agents/

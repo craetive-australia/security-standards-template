@@ -1,0 +1,97 @@
+site_name: '[COMPANY_NAME] Information Security Management System'
+site_description: 'Compliance-as-Code ISMS Documentation Template aligned with ISO/IEC 27001:2022, SOC 2, NIST CSF 2.0, and GDPR'
+
+theme:
+  name: material
+  palette:
+    # Light mode
+    - scheme: default
+      primary: teal
+      accent: purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - scheme: slate
+      primary: teal
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - tables
+  - attr_list
+  - def_list
+  - footnotes
+  - toc:
+      permalink: true
+
+nav:
+  - Overview: index.md
+  - ISMS Framework:
+    - Information Security Policy: 01_ISMS_Framework/01_Information_Security_Policy.md
+    - Context of the Organization: 01_ISMS_Framework/02_Context_of_the_Organization.md
+    - Risk Management Methodology: 01_ISMS_Framework/03_Risk_Management_Methodology.md
+    - Roles and Responsibilities: 01_ISMS_Framework/04_Roles_and_Responsibilities.md
+    - Statement of Applicability: 01_ISMS_Framework/05_Statement_of_Applicability_SoA.md
+    - Governance, Audit & Improvement: 01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md
+    - Framework & Domain Onboarding: 01_ISMS_Framework/07_Framework_and_Domain_Onboarding_Guide.md
+  - Policies:
+    - Access Control Policy: 02_Policies/01_Access_Control_Policy.md
+    - Asset Management Policy: 02_Policies/02_Asset_Management_Policy.md
+    - Cryptography Policy: 02_Policies/03_Cryptography_Policy.md
+    - Physical Security Policy: 02_Policies/04_Physical_Security_Policy.md
+    - Operations Security Policy: 02_Policies/05_Operations_Security_Policy.md
+    - Communications Security Policy: 02_Policies/06_Communications_Security_Policy.md
+    - Supplier Security Policy: 02_Policies/07_Supplier_Security_Policy.md
+    - HR Security Policy: 02_Policies/08_HR_Security_Policy.md
+    - Data Privacy Policy: 02_Policies/09_Data_Privacy_and_Protection_Policy.md
+    - Incident Management Policy: 02_Policies/10_Incident_Management_Policy.md
+    - Business Continuity Policy: 02_Policies/11_Business_Continuity_Policy.md
+    - SDLC & Change Management: 02_Policies/12_SDLC_and_Change_Management_Policy.md
+    - Acceptable Use & AI Security: 02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md
+  - Standards & Procedures:
+    - Password & Authentication: 03_Standards_and_Procedures/01_Password_and_Authentication_Standard.md
+    - Data Classification: 03_Standards_and_Procedures/02_Data_Classification_and_Handling_Standard.md
+    - Data Retention: 03_Standards_and_Procedures/03_Data_Retention_and_Destruction_Standard.md
+    - Vulnerability Management: 03_Standards_and_Procedures/04_Vulnerability_and_Patch_Management_Standard.md
+    - Secure Coding: 03_Standards_and_Procedures/05_Secure_Coding_Standard.md
+    - Incident Response Plan: 03_Standards_and_Procedures/06_Incident_Response_Plan_IRP.md
+    - Business Continuity Plan: 03_Standards_and_Procedures/07_Business_Continuity_Plan_BCP.md
+    - Disaster Recovery Plan: 03_Standards_and_Procedures/08_Disaster_Recovery_Plan_DRP.md
+    - Data Breach Notification: 03_Standards_and_Procedures/09_Data_Breach_Notification_Procedure.md
+  - Templates & Registers:
+    - Information Asset Register: 04_Templates_and_Registers/01_Information_Asset_Register.md
+    - Risk Register: 04_Templates_and_Registers/02_Risk_Register.md
+    - Security Incident Log: 04_Templates_and_Registers/03_Security_Incident_Log.md
+    - Vendor Risk Assessment: 04_Templates_and_Registers/04_Vendor_Risk_Assessment_Template.md
+    - Access Review Log: 04_Templates_and_Registers/05_Access_Review_Log.md
+    - RoPA Template (GDPR): 04_Templates_and_Registers/06_RoPA_Template.md
+    - DPIA Template (GDPR): 04_Templates_and_Registers/07_DPIA_Template.md
+    - Internal Audit & CAPA Register: 04_Templates_and_Registers/08_Internal_Audit_and_CAPA_Register.md
