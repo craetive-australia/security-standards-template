@@ -41,7 +41,7 @@ jobs:
 
       - name: Upload Governance Audit Report Artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: isms-governance-audit-report
           path: adoption_audit_report.md
