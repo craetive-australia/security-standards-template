@@ -8,7 +8,7 @@
 | **Document Owner** | [CISO_NAME] / Head of Infrastructure & SRE |
 | **Review Cycle** | Annual |
 | **Classification** | Internal |
-| **Framework Mappings** | ISO/IEC 27001:2022 (A.5.29, A.5.30, A.8.13, A.8.14), SOC 2 TSC (CC7.5, CC9.1), NIST CSF 2.0 (RC.RP-01, RC.RP-02, PR.DS-09), GDPR (Art. 32) |
+| **Framework Mappings** | ISO/IEC 27001:2022 (A.5.29, A.5.30, A.8.13, A.8.14), SOC 2 TSC (CC7.5, CC9.1), NIST CSF 2.0 (RC.RP-01, RC.RP-02, PR.DS-11, PR.IR-04), GDPR (Art. 32) |
 
 ## 1. Purpose
 To ensure that [COMPANY_NAME] maintains high availability of critical services and can quickly restore operations using robust, automated failover mechanisms in the event of a disaster. *(ISO/IEC 27001:2022 A.5.29, A.5.30, SOC 2 CC7.5, NIST CSF 2.0 RC.RP-01)*
@@ -20,11 +20,11 @@ Covers the technical planning, implementation, and testing of BCPs and DRPs for 
 
 ### 3.1 Resilient Architecture and Targets
 * **RTO and RPO:** The Recovery Time Objective (RTO) for critical systems is set to < 4 hours. The Recovery Point Objective (RPO) is set to < 1 hour.
-* **High Availability (HA):** All critical production workloads must be deployed across multiple Availability Zones (Multi-AZ) or regions, utilizing Active-Passive or Active-Active failover routing. *(ISO/IEC 27001:2022 A.5.29, A.8.14, SOC 2 CC7.5, NIST CSF 2.0 PR.DS-09, RC.RP-01)*
+* **High Availability (HA):** All critical production workloads must be deployed across multiple Availability Zones (Multi-AZ) or regions, utilizing Active-Passive or Active-Active failover routing. *(ISO/IEC 27001:2022 A.5.29, A.8.14, SOC 2 CC7.5, NIST CSF 2.0 PR.IR-04, RC.RP-01)*
 
 ### 3.2 Automated Backups
 * **Database Snapshots:** Databases must execute automated point-in-time recovery (PITR) snapshots.
-* **Immutable Storage:** Backups must be replicated to a secondary geographic region and stored in WORM (Write Once, Read Many) compliant storage to defend against ransomware. *(ISO/IEC 27001:2022 A.8.13, SOC 2 CC7.5, NIST CSF 2.0 PR.DS-09)*
+* **Immutable Storage:** Backups must be replicated to a secondary geographic region and stored in WORM (Write Once, Read Many) compliant storage to defend against ransomware. *(ISO/IEC 27001:2022 A.8.13, SOC 2 CC7.5, NIST CSF 2.0 PR.DS-11)*
 
 ### 3.3 Testing and Exercising
 * **Technical Failover Tests:** A full technical disaster recovery test (failing over to the secondary region/environment) must be executed successfully at least annually.

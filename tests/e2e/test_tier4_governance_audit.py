@@ -1,8 +1,8 @@
 """
 Tier 4: Governance, Auditing & Harmonization E2E Tests
 Validates the 93-control ISO 27001:2022 Statement of Applicability (with link verification),
-scans for deprecated ISO 2013 and invalid citations, verifies resolution of all 6 policy contradictions,
-verifies new governance/AI policies and registers, and validates the canonical control registry.
+scans for deprecated ISO 2013 and invalid/retired NIST CSF 2.0 citations, verifies resolution of all 6 policy contradictions,
+verifies new governance/AI policies and registers, and validates the v2.0 canonical control registry & 6 catalogs.
 """
 
 import os
@@ -22,6 +22,30 @@ EXPECTED_ISO_2022_CONTROLS = (
     + [f"A.8.{i}" for i in range(1, 35)]  # 34 controls
 )
 assert len(EXPECTED_ISO_2022_CONTROLS) == 93
+
+RETIRED_CSF_2_0_IDS = [
+    "GV.CO-01",
+    "GV.CO-02",
+    "PR.DS-03",
+    "PR.DS-05",
+    "PR.DS-07",
+    "PR.DS-09",
+    "PR.PS-07",
+    "PR.PS-08",
+    "PR.PS-09",
+    "DE.CM-04",
+    "RS.AN-04",
+    "RS.AN-05",
+    "RS.RP-01",
+]
+
+
+def _extract_id(item):
+    if isinstance(item, str):
+        return item.strip()
+    if isinstance(item, dict) and "id" in item:
+        return str(item["id"]).strip()
+    return ""
 
 
 class TestTier4GovernanceAudit(unittest.TestCase):
@@ -45,11 +69,9 @@ class TestTier4GovernanceAudit(unittest.TestCase):
             if not line.strip().startswith("|"):
                 continue
             for ctrl in EXPECTED_ISO_2022_CONTROLS:
-                # Check for control ID in table line (e.g. | A.5.1 | or | **A.5.1** |)
                 pattern = rf"\|\s*(?:\*\*)?{re.escape(ctrl)}(?:\*\*)?\s*\|"
                 if re.search(pattern, line):
                     found_controls.add(ctrl)
-                    # Check for implementing document link in this row
                     links = link_pattern.findall(line)
                     if not links:
                         broken_soa_links.append(f"{ctrl}: No markdown link found in row: {line.strip()}")
@@ -82,7 +104,6 @@ class TestTier4GovernanceAudit(unittest.TestCase):
 
     def test_zero_deprecated_iso_2013_citations(self):
         """Scans docs/ for obsolete ISO 27001:2013 Annex A citations outside designated legacy crosswalks."""
-        # Deprecated 2013 patterns: A.9 to A.18, and 4-segment IDs like A.5.1.1, A.6.1.1, A.7.1.1
         iso_2013_re = re.compile(
             r"\bA\.(?:9|1[0-8])\.\d+(?:\.\d+)?|\bA\.(?:5|6|7)\.\d+\.\d+",
             re.IGNORECASE,
@@ -97,14 +118,12 @@ class TestTier4GovernanceAudit(unittest.TestCase):
             content = md_file.read_text(encoding="utf-8")
             lines = content.splitlines()
 
-            # Determine whether file is allowed to contain legacy crosswalk column
             is_soa = "05_Statement_of_Applicability_SoA.md" in rel_path
             is_onboarding = "07_Framework_and_Domain_Onboarding_Guide.md" in rel_path
 
             for idx, line in enumerate(lines, 1):
                 match = iso_2013_re.search(line)
                 if match:
-                    # Allow only within explicit legacy crosswalk columns or sections
                     if is_soa and ("legacy" in line.lower() or "2013" in line):
                         continue
                     if is_onboarding and ("crosswalk" in line.lower() or "2013" in line or "legacy" in line.lower()):
@@ -142,6 +161,28 @@ class TestTier4GovernanceAudit(unittest.TestCase):
             f"Found invalid/deprecated standard citations:\n" + "\n".join(violations),
         )
 
+    def test_zero_retired_nist_csf_2_0_ids(self):
+        """Asserts zero occurrences of the 13 retired/invalid NIST CSF 2.0 IDs across framework_registry.yaml and docs/."""
+        violations = []
+        reg_path = REPO_ROOT / "mappings" / "framework_registry.yaml"
+        reg_text = reg_path.read_text(encoding="utf-8")
+        for bad_id in RETIRED_CSF_2_0_IDS:
+            if bad_id in reg_text:
+                violations.append(f"mappings/framework_registry.yaml: contains retired CSF ID {bad_id}")
+
+        for md_file in (REPO_ROOT / "docs").rglob("*.md"):
+            rel_path = md_file.relative_to(REPO_ROOT).as_posix()
+            content = md_file.read_text(encoding="utf-8")
+            for bad_id in RETIRED_CSF_2_0_IDS:
+                if bad_id in content:
+                    violations.append(f"{rel_path}: contains retired CSF ID {bad_id}")
+
+        self.assertEqual(
+            violations,
+            [],
+            f"Found retired NIST CSF 2.0 subcategory citations:\n" + "\n".join(violations),
+        )
+
     def test_contradiction_1_authentication_standard(self):
         """Verifies 01_Password_and_Authentication_Standard.md implements modern NIST SP 800-63B guidelines."""
         std_path = (
@@ -153,27 +194,22 @@ class TestTier4GovernanceAudit(unittest.TestCase):
         self.assertTrue(std_path.exists(), f"File not found: {std_path}")
         content = std_path.read_text(encoding="utf-8")
 
-        # 14-char min
         self.assertTrue(
             "14" in content or "[MIN_PASSWORD_LENGTH]" in content,
             "Must mandate 14-character minimum password length",
         )
-        # Passphrases encouraged
         self.assertTrue(
             bool(re.search(r"passphrase", content, re.IGNORECASE)),
             "Must encourage passphrases",
         )
-        # Compromised password check
         self.assertTrue(
             bool(re.search(r"compromised|blocklist|breached", content, re.IGNORECASE)),
             "Must mandate checking against compromised/breached password blocklists",
         )
-        # Phishing-resistant MFA (FIDO2/WebAuthn)
         self.assertTrue(
             bool(re.search(r"FIDO2|WebAuthn|phishing-resistant|number-matching", content, re.IGNORECASE)),
             "Must require phishing-resistant MFA or number-matching push",
         )
-        # NIST SP 800-63B reference
         self.assertTrue(
             "800-63B" in content or "800-63" in content,
             "Must reference NIST SP 800-63B authentication guidelines",
@@ -190,7 +226,6 @@ class TestTier4GovernanceAudit(unittest.TestCase):
         self.assertTrue(std_path.exists(), f"File not found: {std_path}")
         content = std_path.read_text(encoding="utf-8")
 
-        # Approvals
         self.assertTrue(
             bool(re.search(r"1\s+peer|one\s+peer|at\s+least\s+1", content, re.IGNORECASE)),
             "Must mandate at least 1 peer approval for standard changes",
@@ -199,7 +234,6 @@ class TestTier4GovernanceAudit(unittest.TestCase):
             bool(re.search(r"2\s+approv|two\s+approv|CODEOWNERS", content, re.IGNORECASE)),
             "Must mandate 2 approvals (including security/CODEOWNERS) for Tier-1/security changes",
         )
-        # SBOM, secret scanning, artifact signing
         self.assertTrue(
             bool(re.search(r"SBOM|Software Bill of Materials", content, re.IGNORECASE)),
             "Must mandate SBOM generation",
@@ -224,12 +258,10 @@ class TestTier4GovernanceAudit(unittest.TestCase):
         self.assertTrue(std_path.exists(), f"File not found: {std_path}")
         content = std_path.read_text(encoding="utf-8")
 
-        # Default Internal
         self.assertTrue(
             bool(re.search(r"default.*Internal|Internal.*default", content, re.IGNORECASE)),
             "Must mandate default 'Internal' metadata classification",
         )
-        # Visual markings on Confidential and Restricted
         self.assertTrue(
             bool(re.search(r"visual|marking|header|labeling", content, re.IGNORECASE)),
             "Must require explicit markings for Confidential and Restricted assets",
@@ -246,12 +278,10 @@ class TestTier4GovernanceAudit(unittest.TestCase):
         self.assertTrue(sop_path.exists(), f"File not found: {sop_path}")
         content = sop_path.read_text(encoding="utf-8")
 
-        # SLAs
         self.assertTrue(
             bool(re.search(r"5\s+(?:business\s+)?days?", content, re.IGNORECASE)),
             "Must specify 5 business days post-mortem SLA for critical/high severity",
         )
-        # Jurisdictions in matrix
         for jurisdiction in ["GDPR", "72", "CIRCIA", "SEC"]:
             self.assertTrue(
                 jurisdiction.lower() in content.lower(),
@@ -269,10 +299,8 @@ class TestTier4GovernanceAudit(unittest.TestCase):
         self.assertTrue(std_path.exists(), f"File not found: {std_path}")
         content = std_path.read_text(encoding="utf-8")
 
-        # 90 days hot and 365 days cold/archive
         self.assertTrue("90" in content, "Must specify 90 days active/hot log retention")
         self.assertTrue("365" in content, "Must specify 365 days archive/cold log retention")
-        # NIST SP 800-88 Rev. 1 and IEEE 2883-2022
         self.assertTrue(
             "800-88" in content,
             "Must reference NIST SP 800-88 Rev. 1 for media sanitization",
@@ -284,7 +312,6 @@ class TestTier4GovernanceAudit(unittest.TestCase):
 
     def test_contradiction_6_access_reviews_vulnerability_and_risk(self):
         """Verifies access review cadences, vulnerability scoring (CVSS v4, KEV, EPSS), and 5x5 risk matrix."""
-        # Access policy
         access_pol = REPO_ROOT / "docs" / "02_Policies" / "01_Access_Control_Policy.md"
         self.assertTrue(access_pol.exists(), f"File not found: {access_pol}")
         acc_content = access_pol.read_text(encoding="utf-8")
@@ -293,7 +320,6 @@ class TestTier4GovernanceAudit(unittest.TestCase):
             "Access Control Policy must specify monthly privileged and quarterly critical review cadences",
         )
 
-        # Vulnerability standard
         vuln_std = (
             REPO_ROOT
             / "docs"
@@ -311,7 +337,6 @@ class TestTier4GovernanceAudit(unittest.TestCase):
             "Vulnerability standard must incorporate CISA KEV or EPSS risk prioritization",
         )
 
-        # Risk methodology
         risk_meth = (
             REPO_ROOT
             / "docs"
@@ -367,7 +392,6 @@ class TestTier4GovernanceAudit(unittest.TestCase):
         self.assertTrue(ai_path.exists(), f"File not found: {ai_path}")
         content = ai_path.read_text(encoding="utf-8")
 
-        # Endpoint security
         self.assertTrue(
             bool(re.search(r"encryption|FDE|BitLocker|FileVault", content, re.IGNORECASE)),
             "AI & Acceptable Use policy must mandate full disk encryption",
@@ -376,7 +400,6 @@ class TestTier4GovernanceAudit(unittest.TestCase):
             bool(re.search(r"MDM|Mobile Device Management", content, re.IGNORECASE)),
             "AI & Acceptable Use policy must mandate MDM enrollment",
         )
-        # AI governance
         self.assertTrue(
             bool(re.search(r"Generative AI|LLM|Artificial Intelligence", content, re.IGNORECASE)),
             "AI & Acceptable Use policy must govern Generative AI / LLMs",
@@ -439,7 +462,7 @@ class TestTier4GovernanceAudit(unittest.TestCase):
         )
 
     def test_framework_registry_schema_and_canonical_controls(self):
-        """Verifies mappings/framework_registry.yaml schema, 55 canonical controls, and mapping to all 93 ISO controls."""
+        """Verifies mappings/framework_registry.yaml v2.0.0 schema, 98 canonical controls, and 6-framework coverage."""
         reg_path = REPO_ROOT / "mappings" / "framework_registry.yaml"
         self.assertTrue(reg_path.exists(), f"File not found: {reg_path}")
 
@@ -447,6 +470,7 @@ class TestTier4GovernanceAudit(unittest.TestCase):
             data = yaml.safe_load(f)
 
         self.assertIsInstance(data, dict, "Registry root must be a dict")
+        self.assertEqual(data.get("schema_version"), "2.0.0", "Registry must declare schema_version '2.0.0'")
         controls = data.get("controls") or data.get("canonical_controls", [])
         self.assertGreaterEqual(
             len(controls),
@@ -455,16 +479,26 @@ class TestTier4GovernanceAudit(unittest.TestCase):
         )
 
         mapped_iso_controls = set()
+        mapped_csf_controls = set()
+        mapped_nist800_controls = set()
+        mapped_nist800_families = set()
+        mapped_e8_controls = set()
+
         for ctrl in controls:
             mappings = ctrl.get("mappings", {})
-            iso_list = (
-                mappings.get("iso_27001_2022")
-                or mappings.get("iso27001_2022")
-                or mappings.get("iso_27001")
-                or []
-            )
-            for c in iso_list:
-                mapped_iso_controls.add(c)
+            for c in mappings.get("iso_27001_2022", []):
+                mapped_iso_controls.add(_extract_id(c))
+            for c in mappings.get("nist_csf_2_0", []):
+                mapped_csf_controls.add(_extract_id(c))
+            for c in mappings.get("nist_sp_800_53_rev5", []):
+                cid = _extract_id(c)
+                if cid:
+                    mapped_nist800_controls.add(cid)
+                    mapped_nist800_families.add(cid.split("-")[0])
+            for c in mappings.get("asd_essential_eight", []):
+                cid = _extract_id(c)
+                if cid:
+                    mapped_e8_controls.add(cid)
 
         unmapped = set(EXPECTED_ISO_2022_CONTROLS) - mapped_iso_controls
         self.assertEqual(
@@ -472,6 +506,10 @@ class TestTier4GovernanceAudit(unittest.TestCase):
             set(),
             f"Framework registry fails to map {len(unmapped)} ISO/IEC 27001:2022 controls: {sorted(unmapped)}",
         )
+        self.assertGreaterEqual(len(mapped_csf_controls), 45, "Must map >= 45 NIST CSF 2.0 subcategories")
+        self.assertGreaterEqual(len(mapped_nist800_controls), 85, "Must map >= 85 NIST SP 800-53 Rev. 5 controls")
+        self.assertEqual(len(mapped_nist800_families), 20, "Must map all 20 NIST SP 800-53 Rev. 5 families (AC-SR)")
+        self.assertEqual(len(mapped_e8_controls), 24, "Must map all 24 ASD Essential Eight ML1-ML3 capabilities")
 
 
 if __name__ == "__main__":

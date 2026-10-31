@@ -8,7 +8,7 @@
 | **Document Owner** | [CISO_NAME] / Facilities & Physical Security Lead |
 | **Review Cycle** | Annual |
 | **Classification** | Internal |
-| **Framework Mappings** | ISO/IEC 27001:2022 (A.7.1, A.7.2, A.7.3, A.7.4, A.7.5, A.7.6, A.7.7, A.7.8, A.7.11, A.7.14), SOC 2 TSC (CC6.1, CC6.4, CC6.5), NIST CSF 2.0 (PR.PS-01, PR.PS-02, PR.PS-03, PR.PS-04, PR.PS-05, PR.PS-07, PR.DS-03), GDPR (Art. 32) |
+| **Framework Mappings** | ISO/IEC 27001:2022 (A.7.1, A.7.2, A.7.3, A.7.4, A.7.5, A.7.6, A.7.7, A.7.8, A.7.11, A.7.14), SOC 2 TSC (CC6.1, CC6.4, CC6.5), NIST CSF 2.0 (PR.PS-01, PR.PS-02, PR.PS-03, PR.PS-04, PR.PS-05, PR.AA-06), GDPR (Art. 32) |
 
 ## 1. Purpose
 To prevent unauthorized physical access, damage, and interference to [COMPANY_NAME]'s information and information processing facilities using robust physical security controls. *(ISO/IEC 27001:2022 A.7.1, A.7.2, SOC 2 CC6.4, NIST CSF 2.0 PR.PS-01)*
@@ -32,7 +32,7 @@ Applies to all [COMPANY_NAME] offices, leased facilities, data centers, and phys
 
 ### 3.4 Clear Desk and Clear Screen
 * **Automated Lock:** All endpoints must be configured via MDM/GPO to automatically lock screens after 5 minutes of inactivity.
-* **Secure Disposal:** Locked, confidential shredding bins must be used for all physical documents. A clean-desk policy will be enforced via unannounced monthly walk-throughs. *(ISO/IEC 27001:2022 A.7.7, A.7.14, SOC 2 CC6.1, CC6.5, NIST CSF 2.0 PR.PS-07, PR.DS-03)*
+* **Secure Disposal:** Locked, confidential shredding bins must be used for all physical documents. A clean-desk policy will be enforced via unannounced monthly walk-throughs. *(ISO/IEC 27001:2022 A.7.7, A.7.14, SOC 2 CC6.1, CC6.5, NIST CSF 2.0 PR.AA-06, PR.PS-03)*
 
 ## 4. Roles and Responsibilities
 - **[CISO_NAME]**: Defines physical security requirements, perimeter control standards, and oversees annual physical risk reviews.

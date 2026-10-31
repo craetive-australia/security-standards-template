@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://security-standards-template.local/schemas/framework_registry.schema.json",
+  "title": "ISMS Framework Registry Schema v2.0",
+  "description": "Validates the canonical control registry and multi-framework crosswalk mappings.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "version",
+    "metadata",
+    "frameworks",
+    "domains",
+    "controls"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^2\\.\\d+\\.\\d+$"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["repository", "title", "last_updated", "author", "description"],
+      "properties": {
+        "repository": { "type": "string" },
+        "title": { "type": "string" },
+        "last_updated": { "type": "string" },
+        "author": { "type": "string" },
+        "description": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "frameworks": {
+      "type": "object",
+      "required": [
+        "iso_27001_2022",
+        "soc2_tsc_2017",
+        "nist_csf_2_0",
+        "gdpr",
+        "nist_sp_800_53_rev5",
+        "asd_essential_eight"
+      ],
+      "additionalProperties": true
+    },
+    "domains": {
+      "type": "array",
+      "minItems": 14,
+      "items": {
+        "type": "object",
+        "required": ["id", "name"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "description": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "controls": {
+      "type": "array",
+      "minItems": 55,
+      "items": { "$ref": "#/$defs/canonicalControl" }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "canonicalControl": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "domain",
+        "description",
+        "implementing_docs",
+        "mappings"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^CC-[A-Z]{2}-\\d{2}$"
+        },
+        "name": { "type": "string" },
+        "domain": { "type": "string" },
+        "description": { "type": "string" },
+        "implementing_docs": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "mappings": { "$ref": "#/$defs/controlMappings" }
+      },
+      "additionalProperties": false
+    },
+    "controlMappings": {
+      "type": "object",
+      "required": [
+        "iso_27001_2022",
+        "iso_27001_2013_legacy",
+        "soc2_tsc_2017",
+        "nist_csf_2_0",
+        "gdpr_articles",
+        "nist_sp_800_53_rev5",
+        "asd_essential_eight"
+      ],
+      "properties": {
+        "iso_27001_2022": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/mappedItem" }
+        },
+        "iso_27001_2013_legacy": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "not": { "const": "None" }
+          }
+        },
+        "soc2_tsc_2017": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/mappedItem" }
+        },
+        "nist_csf_2_0": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/mappedItem" }
+        },
+        "gdpr_articles": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/mappedItem" }
+        },
+        "nist_sp_800_53_rev5": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/mappedItem" }
+        },
+        "asd_essential_eight": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/mappedItem" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "mappedItem": {
+      "oneOf": [
+        { "type": "string" },
+        {
+          "type": "object",
+          "required": ["id", "relationship"],
+          "properties": {
+            "id": { "type": "string" },
+            "relationship": {
+              "type": "string",
+              "enum": ["equivalent-to", "subset-of", "superset-of", "intersects-with"]
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    }
+  }
+}

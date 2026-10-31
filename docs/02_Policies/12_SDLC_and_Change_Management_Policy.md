@@ -8,10 +8,10 @@
 | **Document Owner** | [CISO_NAME] / VP Engineering & AppSec Lead |
 | **Review Cycle** | Annual |
 | **Classification** | Internal |
-| **Framework Mappings** | ISO/IEC 27001:2022 (A.8.25, A.8.26, A.8.27, A.8.28, A.8.29, A.8.31, A.8.32, A.8.33), SOC 2 TSC (CC8.1), NIST CSF 2.0 (PR.DS-07, PR.PS-01), GDPR (Art. 25, 32) |
+| **Framework Mappings** | ISO/IEC 27001:2022 (A.8.25, A.8.26, A.8.27, A.8.28, A.8.29, A.8.31, A.8.32, A.8.33), SOC 2 TSC (CC8.1), NIST CSF 2.0 (PR.PS-06, PR.PS-01), GDPR (Art. 25, 32) |
 
 ## 1. Purpose
-To ensure that strict technical security controls, vulnerability scanning, tiered peer reviews, and supply chain integrity are embedded into the SDLC CI/CD pipeline, and that all production changes are securely managed. *(ISO/IEC 27001:2022 A.8.25, A.8.32, SOC 2 CC8.1, NIST CSF 2.0 PR.DS-07, PR.PS-01)*
+To ensure that strict technical security controls, vulnerability scanning, tiered peer reviews, and supply chain integrity are embedded into the SDLC CI/CD pipeline, and that all production changes are securely managed. *(ISO/IEC 27001:2022 A.8.25, A.8.32, SOC 2 CC8.1, NIST CSF 2.0 PR.PS-06, PR.PS-01)*
 
 ## 2. Scope
 Applies to all software engineering, internal and outsourced development, and all infrastructure or application changes deployed to [COMPANY_NAME] production environments.
@@ -19,10 +19,10 @@ Applies to all software engineering, internal and outsourced development, and al
 ## 3. Policy Statements
 
 ### 3.1 Secure Software Development (SDLC)
-* **Threat Modeling:** Significant architectural changes require documented threat modeling (e.g., using STRIDE) during the design phase. *(ISO/IEC 27001:2022 A.8.26, SOC 2 CC8.1, NIST CSF 2.0 PR.DS-07)*
+* **Threat Modeling:** Significant architectural changes require documented threat modeling (e.g., using STRIDE) during the design phase. *(ISO/IEC 27001:2022 A.8.26, SOC 2 CC8.1, NIST CSF 2.0 PR.PS-06)*
 * **Tiered Peer Reviews & Branch Protections:** Branch protection rules must be strictly enforced on all code repositories. Direct commits or force pushes to protected branches (`main`, `release/*`) are strictly prohibited.
   * **Standard Changes:** All standard pull requests require a minimum of at least one (1) peer approval from an authorized engineer before merging.
-  * **Tier-1 Production & Security Changes:** Changes affecting Tier-1 production systems, core infrastructure, authentication services, or security configurations require a minimum of two (2) approvals, including designated Security / CODEOWNERS. *(SOC 2 CC8.1, NIST CSF 2.0 PR.DS-07)*
+  * **Tier-1 Production & Security Changes:** Changes affecting Tier-1 production systems, core infrastructure, authentication services, or security configurations require a minimum of two (2) approvals, including designated Security / CODEOWNERS. *(SOC 2 CC8.1, NIST CSF 2.0 PR.PS-06)*
 * **Software Supply Chain Security:**
   * **Software Bill of Materials (SBOM):** Automated generation of machine-readable SBOMs (CycloneDX or SPDX format) is mandatory for every production release and build artifact.
   * **Secret Scanning:** Mandatory pre-commit hooks and CI/CD automated secret scanning must run across all repositories, automatically blocking commits or builds containing tokens, API keys, or certificates.
@@ -30,8 +30,8 @@ Applies to all software engineering, internal and outsourced development, and al
 * **Automated Security Testing in CI/CD:**
   * **SAST & DAST:** Static Application Security Testing (SAST) and Dynamic Application Security Testing (DAST) must run on every pull request. Builds must fail automatically if Critical or High vulnerabilities are identified.
   * **SCA:** Software Composition Analysis (SCA) must continuously inventory and scan third-party dependencies for known vulnerabilities and unapproved licenses.
-  * **Container Security:** Container base images must be scanned for CVEs and configuration flaws prior to pushing to container registries. *(ISO/IEC 27001:2022 A.8.25, A.8.28, SOC 2 CC8.1, NIST CSF 2.0 PR.DS-07)*
-* **Environment Segregation:** Development, testing/staging, and production environments must run in completely isolated VPCs and cloud accounts. Production data must never be used in lower environments without automated anonymization or pseudonymization. *(ISO/IEC 27001:2022 A.8.31, SOC 2 CC8.1, NIST CSF 2.0 PR.DS-07)*
+  * **Container Security:** Container base images must be scanned for CVEs and configuration flaws prior to pushing to container registries. *(ISO/IEC 27001:2022 A.8.25, A.8.28, SOC 2 CC8.1, NIST CSF 2.0 PR.PS-06)*
+* **Environment Segregation:** Development, testing/staging, and production environments must run in completely isolated VPCs and cloud accounts. Production data must never be used in lower environments without automated anonymization or pseudonymization. *(ISO/IEC 27001:2022 A.8.31, SOC 2 CC8.1, NIST CSF 2.0 PR.PS-06)*
 
 ### 3.2 Change Management
 * **Infrastructure as Code (IaC):** All infrastructure changes must be version-controlled, peer-reviewed, and deployed automatically via CI/CD platforms. Manual changes to production servers are strictly prohibited. *(ISO/IEC 27001:2022 A.8.32, A.8.9, SOC 2 CC8.1, NIST CSF 2.0 PR.PS-01)*

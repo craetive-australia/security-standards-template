@@ -1,0 +1,80 @@
+name: ISMS Compliance & Verification CI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+  security-events: write
+
+jobs:
+  compliance-gate:
+    name: Compliance-as-Code Verification Suite
+    runs-on: ubuntu-latest
+    env:
+      NO_MKDOCS_2_WARNING: "1"
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Validate ISMS Integrity, Schemas, Catalogs & Coverage
+        run: |
+          python scripts/validate_isms.py --strict --coverage-report --check-drift
+
+      - name: Generate SARIF Compliance Report
+        run: |
+          python scripts/validate_isms.py --strict --check-drift --format sarif > isms-compliance.sarif
+
+      - name: Upload SARIF to GitHub Code Scanning
+        if: always()
+        continue-on-error: true
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: isms-compliance.sarif
+          category: isms-compliance
+
+      - name: Verify Deterministic OSCAL v1.2.0 Export
+        run: |
+          python scripts/export_oscal.py --validate --check
+
+      - name: Verify Multi-Framework Crosswalk Documentation Drift
+        run: |
+          python scripts/generate_docs.py --check
+
+      - name: Audit Compliance Adoption, Review Cadences & Exceptions
+        run: |
+          python scripts/check_adoption.py --manifest mappings/compliance_manifest.yaml --strict
+
+      - name: Build Documentation Portal (Strict Mode)
+        run: |
+          mkdocs build --strict
+
+      - name: Execute 4-Tier E2E Test Suite
+        run: |
+          python tests/e2e/run_all_tests.py --verbose
+
+      - name: Execute Tier 5 Adversarial & Stress Challenger Suites
+        run: |
+          python tests/test_m1_stress_challenger.py -v
+          python tests/test_tier5_adversarial_challenger.py -v

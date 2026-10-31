@@ -1,0 +1,85 @@
+schema_version: "2.0.0"
+
+organization:
+  name: "[COMPANY_NAME]"
+  ciso: "[CISO_NAME]"
+  dpo: "[DPO_NAME]"
+  author: "Information Security Team"
+
+review_policy:
+  max_age_days: 365
+  cadence: "annual"
+  enforce_approval: true
+
+adopted_frameworks:
+  - framework_id: "iso_27001_2022"
+    name: "ISO/IEC 27001:2022 Annex A"
+    version: "2022"
+    target_coverage_pct: 100.0
+    enforcement: "mandatory"
+
+  - framework_id: "soc2_tsc_2017"
+    name: "AICPA SOC 2 (2017/2022 TSC)"
+    version: "2017/2022"
+    target_coverage_pct: 100.0
+    enforcement: "mandatory"
+
+  - framework_id: "nist_csf_2_0"
+    name: "NIST Cybersecurity Framework 2.0"
+    version: "2.0"
+    target_coverage_pct: 100.0
+    enforcement: "mandatory"
+
+  - framework_id: "gdpr"
+    name: "General Data Protection Regulation (EU 2016/679)"
+    version: "2016/679"
+    target_coverage_pct: 100.0
+    enforcement: "mandatory"
+
+  - framework_id: "nist_sp_800_53_rev5"
+    name: "NIST SP 800-53 Rev. 5 (Moderate Baseline)"
+    version: "Rev. 5"
+    target_baseline: "Moderate"
+    target_coverage_pct: 100.0
+    enforcement: "mandatory"
+
+  - framework_id: "asd_essential_eight"
+    name: "ASD Essential Eight Maturity Model"
+    version: "2023"
+    target_maturity_level: "ML2"
+    target_coverage_pct: 100.0
+    enforcement: "mandatory"
+
+thresholds:
+  min_canonical_controls: 55
+  min_distinct_csf_subcategories: 45
+  min_distinct_nist_800_53_controls: 85
+  min_essential_eight_strategies: 8
+
+exceptions:
+  - id: "EX-2026-001"
+    control_id: "CC-AC-02"
+    title: "Temporary MFA Exemption for Isolated Operational SCADA Telemetry Interface"
+    justification: "Legacy RTU/PLC diagnostic telemetry endpoint does not support modern FIDO2/WebAuthn or certificate authentication; network is physically isolated."
+    approved_by: "[CISO_NAME], Chief Information Security Officer"
+    approval_date: "2026-10-26"
+    expiration_date: "2027-01-20"
+    risk_level: "Medium"
+    status: "active"
+    compensating_controls:
+      - "Physical access to gateway terminal restricted to badge-access security room with dual authentication."
+      - "Dedicated out-of-band jump server with eBPF keystroke logging and continuous packet inspection."
+      - "Weekly automated privilege reconciliation audit."
+
+  - id: "EX-2026-002"
+    control_id: "CC-OP-04"
+    title: "Extended 14-Day Patch Testing Window for Core Financial Transaction Database Engine"
+    justification: "Vendor-supplied kernel patch introduces breaking regression risks on high-throughput database storage engines; staging soak testing requires 10 calendar days."
+    approved_by: "[CISO_NAME], Chief Information Security Officer"
+    approval_date: "2026-10-28"
+    expiration_date: "2026-11-25"
+    risk_level: "High"
+    status: "active"
+    compensating_controls:
+      - "WAF virtual patch rule set deployed on ingress load balancers with zero tolerance for exploit payloads."
+      - "Database subnet isolated from general corporate network with strict stateful egress filters."

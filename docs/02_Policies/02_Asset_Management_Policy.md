@@ -8,7 +8,7 @@
 | **Document Owner** | [CISO_NAME] / IT Operations Lead |
 | **Review Cycle** | Annual |
 | **Classification** | Internal |
-| **Framework Mappings** | ISO/IEC 27001:2022 (A.5.9, A.5.10, A.5.11, A.5.12, A.5.13, A.7.14, A.8.1, A.8.10), SOC 2 TSC (CC6.1, CC6.5, CC6.7, C1.1), NIST CSF 2.0 (ID.AM-01, ID.AM-05, PR.AA-01, PR.DS-01, PR.DS-03, PR.DS-11), GDPR (Art. 30, 32) |
+| **Framework Mappings** | ISO/IEC 27001:2022 (A.5.9, A.5.10, A.5.11, A.5.12, A.5.13, A.7.14, A.8.1, A.8.10), SOC 2 TSC (CC6.1, CC6.5, CC6.7, C1.1), NIST CSF 2.0 (ID.AM-01, ID.AM-05, PR.AA-01, PR.DS-01, PR.PS-03, PR.DS-11), GDPR (Art. 30, 32) |
 
 ## 1. Purpose
 To ensure that all information assets are identified, cryptographically protected, and actively managed throughout their lifecycle in accordance with their value to [COMPANY_NAME]. *(ISO/IEC 27001:2022 A.5.9, SOC 2 CC6.1, NIST CSF 2.0 ID.AM-01)*
@@ -28,7 +28,7 @@ This policy applies to all hardware, software, information, and physical assets 
 
 ### 3.3 Return and Destruction of Assets
 * **Offboarding:** All physical assets must be returned within 3 days of employment termination.
-* **Data Sanitization:** Media designated for disposal must be cryptographically wiped or purged in accordance with NIST SP 800-88 Rev. 1 and IEEE 2883-2022 standards, or physically destroyed by a certified e-waste contractor. *(ISO/IEC 27001:2022 A.5.11, A.7.14, A.8.10, SOC 2 CC6.5, NIST CSF 2.0 PR.DS-03, PR.DS-11)*
+* **Data Sanitization:** Media designated for disposal must be cryptographically wiped or purged in accordance with NIST SP 800-88 Rev. 1 and IEEE 2883-2022 standards, or physically destroyed by a certified e-waste contractor. *(ISO/IEC 27001:2022 A.5.11, A.7.14, A.8.10, SOC 2 CC6.5, NIST CSF 2.0 PR.PS-03, PR.DS-11)*
 
 ### 3.4 Information Classification and Labeling
 * **Default Classification:** All newly generated documents, spreadsheets, repositories, and workspace artifacts receive a default metadata classification of **Internal** via automated DLP and workspace tooling.

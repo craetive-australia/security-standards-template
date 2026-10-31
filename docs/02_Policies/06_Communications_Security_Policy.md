@@ -8,7 +8,7 @@
 | **Document Owner** | [CISO_NAME] / Network Security Lead |
 | **Review Cycle** | Annual |
 | **Classification** | Internal |
-| **Framework Mappings** | ISO/IEC 27001:2022 (A.5.14, A.7.12, A.8.20, A.8.21, A.8.22, A.8.26), SOC 2 TSC (CC6.6, CC6.7), NIST CSF 2.0 (PR.IR-01, PR.IR-02, PR.IR-03, PR.DS-02, PR.DS-07), GDPR (Art. 32) |
+| **Framework Mappings** | ISO/IEC 27001:2022 (A.5.14, A.7.12, A.8.20, A.8.21, A.8.22, A.8.26), SOC 2 TSC (CC6.6, CC6.7), NIST CSF 2.0 (PR.IR-01, PR.IR-02, PR.IR-03, PR.DS-02, PR.PS-06), GDPR (Art. 32) |
 
 ## 1. Purpose
 To ensure the protection of information traversing networks and its supporting infrastructure through advanced network security controls and segmentation. *(ISO/IEC 27001:2022 A.8.20, SOC 2 CC6.6, NIST CSF 2.0 PR.IR-01)*
@@ -20,7 +20,7 @@ Applies to all internal, external, and cloud networks operated by or on behalf o
 
 ### 3.1 Network Controls and Boundary Defense
 * **Next-Gen Firewalls:** Network boundaries must be protected by Next-Generation Firewalls (NGFW) with deep packet inspection and Intrusion Prevention Systems (IPS) enabled.
-* **Web Application Firewall (WAF):** All external-facing web applications and APIs must be shielded by a WAF configured to block OWASP Top 10 attacks. *(ISO/IEC 27001:2022 A.8.20, A.8.26, SOC 2 CC6.6, NIST CSF 2.0 PR.IR-01, PR.DS-07)*
+* **Web Application Firewall (WAF):** All external-facing web applications and APIs must be shielded by a WAF configured to block OWASP Top 10 attacks. *(ISO/IEC 27001:2022 A.8.20, A.8.26, SOC 2 CC6.6, NIST CSF 2.0 PR.IR-01, PR.PS-06)*
 
 ### 3.2 Secure Remote Access
 * **Zero Trust / VPN:** Remote access to the internal network must be brokered through a Zero Trust Network Access (ZTNA) solution or a VPN requiring SSO and MFA. Direct SSH or RDP exposure to the internet is strictly forbidden.

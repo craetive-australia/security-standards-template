@@ -1,14 +1,15 @@
 """
 Tier 1: Static Checks, Syntax & Structure E2E Tests
-Validates repository infrastructure, file existence, Python/YAML syntax,
+Validates repository infrastructure, file existence, Python/YAML/JSON syntax,
 relative Markdown link integrity, Document Control Header tables, and Document History tables.
 """
 
+import json
 import os
+import py_compile
 import re
 import sys
 import unittest
-import py_compile
 from pathlib import Path
 import yaml
 
@@ -17,7 +18,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 EXPECTED_DOC_FILES = [
     # Index
     "docs/index.md",
-    # 01_ISMS_Framework (7 files)
+    # 01_ISMS_Framework (8 files)
     "docs/01_ISMS_Framework/01_Information_Security_Policy.md",
     "docs/01_ISMS_Framework/02_Context_of_the_Organization.md",
     "docs/01_ISMS_Framework/03_Risk_Management_Methodology.md",
@@ -25,6 +26,7 @@ EXPECTED_DOC_FILES = [
     "docs/01_ISMS_Framework/05_Statement_of_Applicability_SoA.md",
     "docs/01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md",
     "docs/01_ISMS_Framework/07_Framework_and_Domain_Onboarding_Guide.md",
+    "docs/01_ISMS_Framework/08_Multi_Framework_Crosswalk_and_OSCAL_Matrix.md",
     # 02_Policies (13 files)
     "docs/02_Policies/01_Access_Control_Policy.md",
     "docs/02_Policies/02_Asset_Management_Policy.md",
@@ -61,6 +63,7 @@ EXPECTED_DOC_FILES = [
 ]
 
 EXPECTED_ROOT_FILES = [
+    "LICENSE",
     "mkdocs.yml",
     "README.md",
     ".gitignore",
@@ -69,7 +72,11 @@ EXPECTED_ROOT_FILES = [
     "tests/TEST_INFRA.md",
     "scripts/fill_placeholders.py",
     "scripts/validate_isms.py",
+    "scripts/export_oscal.py",
+    "scripts/check_adoption.py",
+    "scripts/generate_docs.py",
     "mappings/framework_registry.yaml",
+    "mappings/compliance_manifest.yaml",
 ]
 
 
@@ -90,7 +97,7 @@ class TestTier1Static(unittest.TestCase):
         )
 
     def test_all_documentation_files_exist(self):
-        """Verifies that all 39 expected Markdown documentation files exist on disk."""
+        """Verifies that all 40 expected Markdown documentation files exist on disk."""
         missing = []
         for rel_path in EXPECTED_DOC_FILES:
             full_path = REPO_ROOT / rel_path
@@ -103,10 +110,13 @@ class TestTier1Static(unittest.TestCase):
         )
 
     def test_python_scripts_syntax(self):
-        """Verifies that all Python automation scripts compile cleanly without syntax errors."""
+        """Verifies that all 5 Python automation scripts compile cleanly without syntax errors."""
         scripts_to_check = [
             REPO_ROOT / "scripts" / "fill_placeholders.py",
             REPO_ROOT / "scripts" / "validate_isms.py",
+            REPO_ROOT / "scripts" / "export_oscal.py",
+            REPO_ROOT / "scripts" / "check_adoption.py",
+            REPO_ROOT / "scripts" / "generate_docs.py",
         ]
         for script_path in scripts_to_check:
             self.assertTrue(
@@ -119,10 +129,21 @@ class TestTier1Static(unittest.TestCase):
                 self.fail(f"Python syntax compilation failed for {script_path}: {e}")
 
     def test_yaml_files_syntax(self):
-        """Verifies that mkdocs.yml and framework_registry.yaml parse cleanly as valid YAML."""
+        """Verifies that mkdocs.yml, registries, catalogs, and GitHub workflows parse cleanly as valid YAML."""
         yaml_files = [
             REPO_ROOT / "mkdocs.yml",
             REPO_ROOT / "mappings" / "framework_registry.yaml",
+            REPO_ROOT / "mappings" / "compliance_manifest.yaml",
+            REPO_ROOT / "mappings" / "catalogs" / "iso_27001_2022.yaml",
+            REPO_ROOT / "mappings" / "catalogs" / "soc2_tsc_2017.yaml",
+            REPO_ROOT / "mappings" / "catalogs" / "nist_csf_2_0.yaml",
+            REPO_ROOT / "mappings" / "catalogs" / "gdpr.yaml",
+            REPO_ROOT / "mappings" / "catalogs" / "nist_sp_800_53_rev5.yaml",
+            REPO_ROOT / "mappings" / "catalogs" / "asd_essential_eight.yaml",
+            REPO_ROOT / ".github" / "dependabot.yml",
+            REPO_ROOT / ".github" / "workflows" / "isms-compliance-ci.yml",
+            REPO_ROOT / ".github" / "workflows" / "scheduled-governance-audit.yml",
+            REPO_ROOT / ".github" / "workflows" / "docs-publish.yml",
         ]
         for yml_path in yaml_files:
             self.assertTrue(
@@ -139,6 +160,54 @@ class TestTier1Static(unittest.TestCase):
                     )
                 except yaml.YAMLError as e:
                     self.fail(f"YAML parsing error in {yml_path}: {e}")
+
+    def test_json_schemas_and_oscal_artifacts_syntax(self):
+        """Verifies that all Draft 2020-12 JSON Schemas and OSCAL v1.2.0 artifacts parse cleanly."""
+        schema_files = [
+            REPO_ROOT / "schemas" / "framework_registry.schema.json",
+            REPO_ROOT / "schemas" / "catalog.schema.json",
+            REPO_ROOT / "schemas" / "compliance_manifest.schema.json",
+            REPO_ROOT / "schemas" / "oscal_v1_2_0_subset.schema.json",
+        ]
+        for s_path in schema_files:
+            self.assertTrue(s_path.exists(), f"JSON schema missing: {s_path}")
+            data = json.loads(s_path.read_text(encoding="utf-8"))
+            self.assertIn("$schema", data, f"{s_path.name} missing $schema")
+            self.assertIn("2020-12", data["$schema"], f"{s_path.name} must use Draft 2020-12")
+
+        oscal_files = [
+            REPO_ROOT / "dist" / "oscal" / "catalog.json",
+            REPO_ROOT / "dist" / "oscal" / "mapping_collection.json",
+            REPO_ROOT / "dist" / "oscal" / "profile_e8_ml2.json",
+            REPO_ROOT / "dist" / "oscal" / "profile_nist_800_53_moderate.json",
+            REPO_ROOT / "dist" / "oscal" / "component_definition.json",
+        ]
+        for o_path in oscal_files:
+            self.assertTrue(o_path.exists(), f"OSCAL artifact missing: {o_path}")
+            data = json.loads(o_path.read_text(encoding="utf-8"))
+            self.assertIsInstance(data, dict)
+
+    def test_adr_and_github_governance_files_exist(self):
+        """Verifies ADRs in architecture/adr/ (outside docs/) and .github governance files exist."""
+        adrs = [
+            REPO_ROOT / "architecture" / "adr" / "ADR-001-yaml-sot-and-oscal-export.md",
+            REPO_ROOT / "architecture" / "adr" / "ADR-002-mkdocs-zensical-migration.md",
+            REPO_ROOT / "architecture" / "adr" / "ADR-003-essential-eight-and-nist-800-53-mapping.md",
+        ]
+        for adr in adrs:
+            self.assertTrue(adr.exists(), f"Missing ADR: {adr}")
+
+        # Verify no ADR files leaked into docs/
+        docs_adrs = list((REPO_ROOT / "docs").rglob("ADR-*.md"))
+        self.assertEqual(docs_adrs, [], f"ADRs must not reside inside docs/: {docs_adrs}")
+
+        gov_files = [
+            REPO_ROOT / ".github" / "CODEOWNERS",
+            REPO_ROOT / ".github" / "dependabot.yml",
+            REPO_ROOT / ".github" / "pull_request_template.md",
+        ]
+        for gf in gov_files:
+            self.assertTrue(gf.exists(), f"Missing GitHub governance file: {gf}")
 
     def test_markdown_relative_links(self):
         """Verifies that all local relative Markdown links across docs resolve to existing files."""
@@ -181,7 +250,7 @@ class TestTier1Static(unittest.TestCase):
         )
 
     def test_document_control_header_tables(self):
-        """Verifies that all 38 documents in 01-04 have a standardized Document Control Header Table."""
+        """Verifies that all 39 documents in 01-04 have a standardized Document Control Header Table."""
         required_keys = [
             "Document ID",
             "Version",
@@ -197,7 +266,6 @@ class TestTier1Static(unittest.TestCase):
         )
 
         invalid_headers = []
-        docs_dir = REPO_ROOT / "docs"
 
         # Check all markdown files except docs/index.md
         for rel_doc in EXPECTED_DOC_FILES:
@@ -235,7 +303,7 @@ class TestTier1Static(unittest.TestCase):
         )
 
     def test_document_history_tables(self):
-        """Verifies that all 38 documents in 01-04 have a standardized 5-column Document History Table."""
+        """Verifies that all 39 documents in 01-04 have a standardized 5-column Document History Table."""
         required_columns = ["Version", "Date", "Author", "Approved By", "Description"]
         invalid_footers = []
 
@@ -310,7 +378,11 @@ class TestTier1Static(unittest.TestCase):
         )
 
     def test_repository_infrastructure_metadata(self):
-        """Verifies README.md, .gitignore, and requirements.txt contents."""
+        """Verifies README.md, .gitignore, LICENSE, and requirements.txt contents."""
+        license_file = REPO_ROOT / "LICENSE"
+        self.assertTrue(license_file.exists(), "LICENSE must exist")
+        self.assertIn("Apache License", license_file.read_text(encoding="utf-8"))
+
         readme = REPO_ROOT / "README.md"
         self.assertTrue(readme.exists(), "README.md must exist")
         readme_content = readme.read_text(encoding="utf-8")
@@ -321,6 +393,8 @@ class TestTier1Static(unittest.TestCase):
         )
         self.assertIn("mkdocs", readme_content.lower())
         self.assertIn("fill_placeholders.py", readme_content)
+        self.assertIn("export_oscal.py", readme_content)
+        self.assertIn("check_adoption.py", readme_content)
         self.assertIn("uv", readme_content)
 
         gitignore = REPO_ROOT / ".gitignore"
@@ -329,6 +403,8 @@ class TestTier1Static(unittest.TestCase):
         self.assertIn(".venv", gi_content)
         self.assertIn("site/", gi_content)
         self.assertIn("__pycache__", gi_content)
+        self.assertIn("serve_*.txt", gi_content)
+        self.assertIn("*.sarif", gi_content)
 
         reqs = REPO_ROOT / "requirements.txt"
         self.assertTrue(reqs.exists(), "requirements.txt must exist")

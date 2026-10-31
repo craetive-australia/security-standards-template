@@ -33,7 +33,7 @@ Access to [COMPANY_NAME]'s information systems must be granted based on the prin
 ### 4.2 Asset Management *(ISO/IEC 27001:2022 A.5.9, A.5.10, A.5.12, SOC 2 CC6.1, NIST CSF 2.0 ID.AM-01, PR.DS-01)*
 All information assets must be identified, classified, and protected according to their criticality and sensitivity.
 
-### 4.3 Incident Management *(ISO/IEC 27001:2022 A.5.24, A.5.25, A.5.26, A.5.27, A.5.28, SOC 2 CC7.3, NIST CSF 2.0 RS.MA-01, RS.RP-01)*
+### 4.3 Incident Management *(ISO/IEC 27001:2022 A.5.24, A.5.25, A.5.26, A.5.27, A.5.28, SOC 2 CC7.3, NIST CSF 2.0 RS.MA-01)*
 All security events and incidents must be reported promptly to the security team and managed according to the Incident Response Plan.
 
 ## 5. Violations

@@ -8,7 +8,7 @@
 | **Document Owner** | [CISO_NAME] / AI Governance & IT Lead |
 | **Review Cycle** | Annual |
 | **Classification** | Internal |
-| **Framework Mappings** | ISO/IEC 27001:2022 (A.5.10, A.6.7, A.8.1, A.8.23), ISO/IEC 42001:2023, NIST AI RMF 1.0, SOC 2 TSC (CC6.1, CC6.6, CC6.7), NIST CSF 2.0 (PR.AA-01, PR.AA-05, PR.PS-01) |
+| **Framework Mappings** | ISO/IEC 27001:2022 (A.5.10, A.6.7, A.8.1, A.8.23), ISO/IEC 42001:2023, NIST AI RMF 1.0, SOC 2 TSC (CC6.1, CC6.6, CC6.7), NIST CSF 2.0 (PR.AA-01, PR.AA-05, PR.PS-01), NIST SP 800-53 Rev. 5 (AC-18, CM-7, SI-3, PL-4), ASD Essential Eight (E8-OM-ML2, E8-AH-ML2, E8-AC-ML2) |
 
 ## 1. Purpose
 To establish acceptable use standards for [COMPANY_NAME] information assets, communications systems, endpoint devices, and Artificial Intelligence (AI) technologies, ensuring the protection of company data, employee privacy, and intellectual property. *(ISO/IEC 27001:2022 A.5.10, A.8.1, SOC 2 CC6.1, NIST CSF 2.0 PR.AA-01)*
@@ -23,6 +23,17 @@ Applies to all employees, contractors, temporary staff, and third parties utiliz
 * **Full Disk Encryption (FDE):** Full Disk Encryption (e.g., BitLocker with TPM on Windows, FileVault 2 on macOS) must be enabled on all endpoints. MDM automated compliance policies must verify encryption status prior to granting network access.
 * **Endpoint Protection & Patching:** Next-generation EDR agents must remain running with real-time behavioral protection active. Automated OS and browser security updates must install within 7 days of release.
 * **Screen Locking & Clean Desk:** Endpoints must lock automatically after a maximum of 5 minutes of inactivity. Physical screens must be positioned away from public observation.
+
+### 3.1.1 Microsoft Office Macro Security (Essential Eight ML2/ML3)
+* **Internet Macro Blocking:** Macros inside Microsoft Office files originating from the internet (email attachments, web downloads, external messaging) must be strictly blocked from executing.
+* **Default Disable:** Macro execution is disabled by default across all productivity suites for all users without a formally approved, documented security exception.
+* **Trusted Publishers & Signatures:** Only digitally signed macros from vetted, trusted publishers located in read-only administrative paths (e.g., Trusted Locations) are permitted to run.
+* **No User Bypasses:** End-users are strictly prohibited from bypassing macro security warnings or enabling macros in documents originating from untrusted locations. *(ASD Essential Eight E8-OM-ML2, E8-OM-ML3, NIST SP 800-53 Rev. 5 CM-7)*
+
+### 3.1.2 User Application Hardening (Essential Eight ML2/ML3)
+* **Web Browser Hardening:** Corporate web browsers must be configured via enterprise policy to block or disable web advertisements and web advertising, obsolete browser plug-ins (Flash, Silverlight), and browser-based Java runtime environments.
+* **Browser Extension Control:** Endpoints must prevent users from installing unapproved browser extensions or add-ons; only extensions in the centrally managed allowlist are permitted.
+* **Child Process Protection:** Productivity applications and PDF readers must be hardened via exploit protection policies to prevent spawning child processes (e.g., PDF readers and Office suites are strictly blocked from executing `cmd.exe`, `powershell.exe`, or scripting runtimes). *(ASD Essential Eight E8-AH-ML2, E8-AH-ML3, NIST SP 800-53 Rev. 5 SI-3, CM-7)*
 
 ### 3.2 Remote Working and BYOD Security
 * **Secure Networks:** Remote personnel must connect to corporate resources exclusively via approved Zero Trust Network Access (ZTNA) or corporate VPN tunnels. Conducting work over unencrypted public Wi-Fi without VPN is prohibited. *(ISO/IEC 27001:2022 A.6.7, SOC 2 CC6.6, CC6.7, NIST CSF 2.0 PR.AA-05)*

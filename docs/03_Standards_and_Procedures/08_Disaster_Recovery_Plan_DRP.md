@@ -8,11 +8,11 @@
 | **Document Owner** | [CISO_NAME] / Disaster Recovery Coordinator |
 | **Review Cycle** | Annual |
 | **Classification** | Internal |
-| **Framework Mappings** | ISO/IEC 27001:2022 (A.5.30, A.8.14), SOC 2 TSC (CC9.1), NIST CSF 2.0 (RC.RP-02, PR.DS-09) |
+| **Framework Mappings** | ISO/IEC 27001:2022 (A.5.30, A.8.14), SOC 2 TSC (CC9.1), NIST CSF 2.0 (RC.RP-02, PR.DS-11) |
 
 ## 1. Purpose
 The Disaster Recovery Plan (DRP) provides the technical procedures and guidelines to recover [COMPANY_NAME]'s critical IT infrastructure, systems, and data following a catastrophic failure, cyberattack, or natural disaster.
-*(ISO/IEC 27001:2022 A.5.30, A.8.14, SOC 2 CC9.1, NIST CSF 2.0 RC.RP-02, PR.DS-09)*
+*(ISO/IEC 27001:2022 A.5.30, A.8.14, SOC 2 CC9.1, NIST CSF 2.0 RC.RP-02, PR.DS-11)*
 
 ## 2. Scope
 This plan applies to all IT systems, applications, and networks deemed critical in the Business Impact Analysis (BIA), including on-premise hardware, cloud environments, and data backups.

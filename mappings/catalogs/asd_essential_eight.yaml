@@ -1,0 +1,216 @@
+id: asd_essential_eight
+name: "ASD Essential Eight Maturity Model"
+version: "2023"
+authority: "Australian Signals Directorate (ASD) / Australian Cyber Security Centre (ACSC)"
+description: "Essential Eight baseline mitigation strategies to protect against cyber threats across Maturity Levels 1 to 3"
+last_updated: "2026-10-31"
+total_controls: 24
+strategies:
+  - id: "application_control"
+    name: "Application Control"
+    count: 3
+  - id: "patch_applications"
+    name: "Patch Applications"
+    count: 3
+  - id: "configure_office_macros"
+    name: "Configure Microsoft Office Macro Settings"
+    count: 3
+  - id: "user_application_hardening"
+    name: "User Application Hardening"
+    count: 3
+  - id: "restrict_admin_privileges"
+    name: "Restrict Administrative Privileges"
+    count: 3
+  - id: "patch_operating_systems"
+    name: "Patch Operating Systems"
+    count: 3
+  - id: "multi_factor_authentication"
+    name: "Multi-factor Authentication"
+    count: 3
+  - id: "regular_backups"
+    name: "Regular Backups"
+    count: 3
+controls:
+  # 1. Application Control
+  - id: "E8-AC-ML1"
+    title: "Application Control on Workstations (User Profiles & Temp)"
+    strategy: "application_control"
+    maturity_level: "ML1"
+    description: "Application control is implemented on workstations to prevent execution of unapproved/malicious executables, software libraries, and scripts in user profiles and temporary directories."
+    mapped_ism_ids:
+      - "ISM-1582"
+  - id: "E8-AC-ML2"
+    title: "Application Control on Workstations and Servers"
+    strategy: "application_control"
+    maturity_level: "ML2"
+    description: "Application control is implemented on all workstations and internet-facing servers for executable files, software libraries, scripts, and installers."
+    mapped_ism_ids:
+      - "ISM-1407"
+  - id: "E8-AC-ML3"
+    title: "Cryptographic Application Whitelisting and Logging"
+    strategy: "application_control"
+    maturity_level: "ML3"
+    description: "Application control is implemented on all workstations and servers using cryptographic signatures and publisher rules; rule set changes are validated and logged to a centralized SIEM."
+    mapped_ism_ids:
+      - "ISM-1644"
+
+  # 2. Patch Applications
+  - id: "E8-PA-ML1"
+    title: "Monthly Application Patching for Critical Vulnerabilities"
+    strategy: "patch_applications"
+    maturity_level: "ML1"
+    description: "Patches, updates or vendor mitigations for applications with vulnerabilities assessed as critical by vendors or CVSS v3/v4 are applied within one month of release."
+    mapped_ism_ids:
+      - "ISM-1657"
+  - id: "E8-PA-ML2"
+    title: "Fortnightly Patching and 48-Hour Critical Exploit Patch SLA"
+    strategy: "patch_applications"
+    maturity_level: "ML2"
+    description: "Patches or vendor mitigations for critical application vulnerabilities are applied within two weeks; vulnerabilities with active exploits (CISA KEV) are applied within 48 hours."
+    mapped_ism_ids:
+      - "ISM-1507"
+  - id: "E8-PA-ML3"
+    title: "Automated Scanning, 48-Hour Patching, and Unsupported Software Removal"
+    strategy: "patch_applications"
+    maturity_level: "ML3"
+    description: "An automated vulnerability scanner is executed at least fortnightly; patches for critical vulnerabilities or active exploits are applied within 48 hours; unsupported applications are removed."
+    mapped_ism_ids:
+      - "ISM-1698"
+
+  # 3. Configure Microsoft Office Macro Settings
+  - id: "E8-OM-ML1"
+    title: "Block Internet Macros from Executing"
+    strategy: "configure_office_macros"
+    maturity_level: "ML1"
+    description: "Microsoft Office macros originating from the internet are blocked from running; users cannot override or enable macros blocked by policy."
+    mapped_ism_ids:
+      - "ISM-1484"
+  - id: "E8-OM-ML2"
+    title: "Trusted Locations and Digitally Signed Macros Only"
+    strategy: "configure_office_macros"
+    maturity_level: "ML2"
+    description: "Microsoft Office macros are only allowed to execute if stored in trusted locations or digitally signed by a trusted publisher; security settings cannot be altered by users."
+    mapped_ism_ids:
+      - "ISM-1485"
+  - id: "E8-OM-ML3"
+    title: "AMSI Runtime Macro Inspection and Centralized Logging"
+    strategy: "configure_office_macros"
+    maturity_level: "ML3"
+    description: "Antimalware Scan Interface (AMSI) runtime macro inspection is enforced; macro executions are logged; digitally signed macros are validated with certificate revocation checks."
+    mapped_ism_ids:
+      - "ISM-1648"
+
+  # 4. User Application Hardening
+  - id: "E8-AH-ML1"
+    title: "Web Browser Hardening and Flash/Java Disabling"
+    strategy: "user_application_hardening"
+    maturity_level: "ML1"
+    description: "Web browsers are configured to block untrusted extensions, block web advertisements, and disable Flash, Java, and obsolete web plugins."
+    mapped_ism_ids:
+      - "ISM-1400"
+  - id: "E8-AH-ML2"
+    title: "PowerShell Constrained Language Mode and PowerShell 2.0 Removal"
+    strategy: "user_application_hardening"
+    maturity_level: "ML2"
+    description: "PowerShell 2.0 is uninstalled; PowerShell Constrained Language Mode is enforced for standard non-administrative users."
+    mapped_ism_ids:
+      - "ISM-1662"
+  - id: "E8-AH-ML3"
+    title: "Advanced PowerShell Script Block Logging and PDF Hardening"
+    strategy: "user_application_hardening"
+    maturity_level: "ML3"
+    description: "PowerShell script block logging, transcription, and module logging are enabled centrally; PDF readers are configured to prevent execution of embedded executables and JavaScript."
+    mapped_ism_ids:
+      - "ISM-1663"
+
+  # 5. Restrict Administrative Privileges
+  - id: "E8-AP-ML1"
+    title: "Privilege Request Validation and Web/Email Separation"
+    strategy: "restrict_admin_privileges"
+    maturity_level: "ML1"
+    description: "Requests for privileged access are validated prior to approval; privileged accounts are prevented from accessing the internet, email, and social media."
+    mapped_ism_ids:
+      - "ISM-0401"
+  - id: "E8-AP-ML2"
+    title: "Dedicated Administrative Accounts and Monthly Audits"
+    strategy: "restrict_admin_privileges"
+    maturity_level: "ML2"
+    description: "Separate dedicated administrative accounts are mandated for system management; privileged access permissions and logs are audited at least monthly."
+    mapped_ism_ids:
+      - "ISM-1173"
+  - id: "E8-AP-ML3"
+    title: "Privileged Access Workstations (PAWs) and Credential Isolation"
+    strategy: "restrict_admin_privileges"
+    maturity_level: "ML3"
+    description: "Privileged administrative actions are restricted to dedicated Privileged Access Workstations (PAWs); credential caching and remote credential exposure are prohibited."
+    mapped_ism_ids:
+      - "ISM-1508"
+
+  # 6. Patch Operating Systems
+  - id: "E8-PO-ML1"
+    title: "Monthly Operating System Patching"
+    strategy: "patch_operating_systems"
+    maturity_level: "ML1"
+    description: "Patches, updates or vendor mitigations for operating systems with vulnerabilities assessed as critical are applied within one month of release."
+    mapped_ism_ids:
+      - "ISM-1492"
+  - id: "E8-PO-ML2"
+    title: "Fortnightly OS Patching and 48-Hour Critical Exploit Patch SLA"
+    strategy: "patch_operating_systems"
+    maturity_level: "ML2"
+    description: "Patches or mitigations for critical OS vulnerabilities are applied within two weeks; OS vulnerabilities with active exploits are applied within 48 hours."
+    mapped_ism_ids:
+      - "ISM-1510"
+  - id: "E8-PO-ML3"
+    title: "48-Hour Active Exploit Patching and Unsupported OS Replacement"
+    strategy: "patch_operating_systems"
+    maturity_level: "ML3"
+    description: "Operating system patches for vulnerabilities with active exploits are applied within 48 hours; unsupported operating systems are replaced or physically isolated."
+    mapped_ism_ids:
+      - "ISM-1699"
+
+  # 7. Multi-factor Authentication (MFA)
+  - id: "E8-MF-ML1"
+    title: "MFA for Remote Access and Sensitive Web Portals"
+    strategy: "multi_factor_authentication"
+    maturity_level: "ML1"
+    description: "Multi-factor authentication (MFA) is required for all remote access and web portals accessing sensitive business data or customer information."
+    mapped_ism_ids:
+      - "ISM-1401"
+  - id: "E8-MF-ML2"
+    title: "Phishing-Resistant MFA and Universal Administrative MFA"
+    strategy: "multi_factor_authentication"
+    maturity_level: "ML2"
+    description: "Phishing-resistant MFA (FIDO2/WebAuthn) or number-matching push MFA is required for all users accessing sensitive systems; MFA is mandatory for all administrative access."
+    mapped_ism_ids:
+      - "ISM-1504"
+  - id: "E8-MF-ML3"
+    title: "Hardware-Enforced Phishing-Resistant MFA Everywhere"
+    strategy: "multi_factor_authentication"
+    maturity_level: "ML3"
+    description: "Phishing-resistant MFA (FIDO2 security keys) is enforced hardware-wide for authentication to all systems, applications, workstations, and network boundaries."
+    mapped_ism_ids:
+      - "ISM-1681"
+
+  # 8. Regular Backups
+  - id: "E8-RB-ML1"
+    title: "Regular Backups of Critical Data, Software, and Config"
+    strategy: "regular_backups"
+    maturity_level: "ML1"
+    description: "Backups of critical data, software, and configuration settings are performed regularly in accordance with business requirements and stored with retention policies."
+    mapped_ism_ids:
+      - "ISM-1511"
+  - id: "E8-RB-ML2"
+    title: "Immutable / Offline Backups and Dedicated Backup Accounts"
+    strategy: "regular_backups"
+    maturity_level: "ML2"
+    description: "Backups are stored offline or in immutable cloud storage; backup access is restricted to dedicated backup administrative accounts with separate credentials."
+    mapped_ism_ids:
+      - "ISM-1512"
+  - id: "E8-RB-ML3"
+    title: "Annual Restoration Rehearsal and Orchestrated DR Testing"
+    strategy: "regular_backups"
+    maturity_level: "ML3"
+    description: "Full disaster recovery and backup restoration rehearsals are conducted at least annually to verify integrity, recovery time objectives (RTO), and recovery point objectives (RPO)."
+    mapped_ism_ids:
+      - "ISM-1701"

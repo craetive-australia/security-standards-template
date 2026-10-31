@@ -8,7 +8,7 @@
 | **Document Owner** | [CISO_NAME] / Incident Commander |
 | **Review Cycle** | Annual |
 | **Classification** | Internal |
-| **Framework Mappings** | ISO/IEC 27001:2022 (A.5.24, A.5.25, A.5.26, A.5.27, A.5.28), SOC 2 TSC (CC7.3), NIST CSF 2.0 (RS.MA-01, RS.RP-01) |
+| **Framework Mappings** | ISO/IEC 27001:2022 (A.5.24, A.5.25, A.5.26, A.5.27, A.5.28), SOC 2 TSC (CC7.3), NIST CSF 2.0 (RS.MA-01) |
 
 ## 1. Purpose
 This Incident Response Plan (IRP) establishes the framework and structured methodology for responding to cybersecurity incidents at [COMPANY_NAME]. The goal is to minimize damage, reduce recovery time and costs, and maintain business operations.
@@ -17,7 +17,7 @@ This Incident Response Plan (IRP) establishes the framework and structured metho
 This plan covers all information systems, networks, and data managed by [COMPANY_NAME] and applies to all personnel involved in incident response.
 
 ## 3. Phases of Incident Response
-*(ISO/IEC 27001:2022 A.5.24, A.5.25, A.5.26, A.5.27, A.5.28, SOC 2 CC7.3, NIST CSF 2.0 RS.MA-01, RS.RP-01)*
+*(ISO/IEC 27001:2022 A.5.24, A.5.25, A.5.26, A.5.27, A.5.28, SOC 2 CC7.3, NIST CSF 2.0 RS.MA-01)*
 
 ### 3.1 Preparation
 - Establish and train the Computer Security Incident Response Team (CSIRT).

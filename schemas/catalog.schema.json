@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://security-standards-template.local/schemas/catalog.schema.json",
+  "title": "Authoritative Reference Catalog Schema",
+  "description": "Schema validating external security framework catalog definitions.",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "version",
+    "authority",
+    "total_controls",
+    "controls"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "enum": [
+        "iso_27001_2022",
+        "soc2_tsc_2017",
+        "nist_csf_2_0",
+        "gdpr",
+        "nist_sp_800_53_rev5",
+        "asd_essential_eight"
+      ]
+    },
+    "name": { "type": "string" },
+    "version": { "type": "string" },
+    "authority": { "type": "string" },
+    "description": { "type": "string" },
+    "last_updated": { "type": "string" },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "count": { "type": "integer" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "families": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "count": { "type": "integer" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "functions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "count": { "type": "integer" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "strategies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "count": { "type": "integer" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "total_controls": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "controls": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/catalogEntry" }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "catalogEntry": {
+      "type": "object",
+      "required": ["id", "title"],
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "category": { "type": "string" },
+        "family": { "type": "string" },
+        "function": { "type": "string" },
+        "strategy": { "type": "string" },
+        "description": { "type": "string" },
+        "baseline": { "type": "string" },
+        "maturity_level": {
+          "type": "string",
+          "enum": ["ML1", "ML2", "ML3"]
+        },
+        "mapped_ism_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "references": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

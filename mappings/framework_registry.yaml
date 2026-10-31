@@ -1,2610 +1,2668 @@
-schema_version: 1.0.0
-version: 1.0.0
+schema_version: 2.0.0
+version: 2.0.0
 metadata:
   repository: security-standards-template
   title: Canonical Compliance-as-Code Control Registry
-  last_updated: '2026-10-26'
+  last_updated: '2026-10-31'
   author: Information Security Team
-  description: Centralized canonical control registry mapping internal ISMS security
-    controls to ISO/IEC 27001:2022, AICPA SOC 2 TSC, NIST CSF 2.0, and GDPR.
+  description: Centralized canonical control registry mapping internal ISMS security controls to ISO/IEC 27001:2022, AICPA
+    SOC 2 TSC, NIST CSF 2.0, GDPR, NIST SP 800-53 Rev. 5, and ASD Essential Eight.
 frameworks:
   iso_27001_2022:
     name: ISO/IEC 27001:2022 Annex A
     version: '2022'
     total_controls: 93
     categories:
-    - id: A.5
-      name: Organizational controls
-      count: 37
-    - id: A.6
-      name: People controls
-      count: 8
-    - id: A.7
-      name: Physical controls
-      count: 14
-    - id: A.8
-      name: Technological controls
-      count: 34
-  soc2_tsc:
+      - id: A.5
+        name: Organizational controls
+        count: 37
+      - id: A.6
+        name: People controls
+        count: 8
+      - id: A.7
+        name: Physical controls
+        count: 14
+      - id: A.8
+        name: Technological controls
+        count: 34
+  soc2_tsc_2017:
     name: AICPA SOC 2 Trust Services Criteria
     version: 2017/2022
-    total_criteria: 38
+    total_criteria: 61
     categories:
-    - id: CC
-      name: Common Criteria
-    - id: C
-      name: Confidentiality
-    - id: A
-      name: Availability
-    - id: PI
-      name: Processing Integrity
-    - id: P
-      name: Privacy
+      - id: CC
+        name: Common Criteria
+      - id: C
+        name: Confidentiality
+      - id: A
+        name: Availability
+      - id: PI
+        name: Processing Integrity
+      - id: P
+        name: Privacy
   nist_csf_2_0:
     name: NIST Cybersecurity Framework 2.0
     version: '2.0'
-    total_subcategories: 42
+    total_subcategories: 106
     functions:
-    - id: GV
-      name: GOVERN
-    - id: ID
-      name: IDENTIFY
-    - id: PR
-      name: PROTECT
-    - id: DE
-      name: DETECT
-    - id: RS
-      name: RESPOND
-    - id: RC
-      name: RECOVER
+      - id: GV
+        name: GOVERN
+      - id: ID
+        name: IDENTIFY
+      - id: PR
+        name: PROTECT
+      - id: DE
+        name: DETECT
+      - id: RS
+        name: RESPOND
+      - id: RC
+        name: RECOVER
   gdpr:
     name: General Data Protection Regulation (Regulation (EU) 2016/679)
     version: 2016/679
     total_articles: 13
     categories:
-    - Principles & Lawfulness
-    - Data Subject Rights
-    - Controller & Processor Obligations
-    - Security of Processing
-    - Breach Notification
-    - International Transfers
+      - Principles & Lawfulness
+      - Data Subject Rights
+      - Controller & Processor Obligations
+      - Security of Processing
+      - Breach Notification
+      - International Transfers
+  nist_sp_800_53_rev5:
+    name: NIST SP 800-53 Rev. 5 (Moderate Baseline)
+    version: Rev. 5
+    total_controls: 177
+    families:
+      - id: AC
+        name: Access Control
+      - id: AT
+        name: Awareness and Training
+      - id: AU
+        name: Audit and Accountability
+      - id: CA
+        name: Assessment, Authorization, and Monitoring
+      - id: CM
+        name: Configuration Management
+      - id: CP
+        name: Contingency Planning
+      - id: IA
+        name: Identification and Authentication
+      - id: IR
+        name: Incident Response
+      - id: MA
+        name: Maintenance
+      - id: MP
+        name: Media Protection
+      - id: PE
+        name: Physical and Environmental Protection
+      - id: PL
+        name: Planning
+      - id: PM
+        name: Program Management
+      - id: PS
+        name: Personnel Security
+      - id: PT
+        name: PII Processing and Transparency
+      - id: RA
+        name: Risk Assessment
+      - id: SA
+        name: System and Services Acquisition
+      - id: SC
+        name: System and Communications Protection
+      - id: SI
+        name: System and Information Integrity
+      - id: SR
+        name: Supply Chain Risk Management
+  asd_essential_eight:
+    name: ASD Essential Eight Maturity Model
+    version: '2023'
+    total_controls: 24
+    strategies:
+      - id: application_control
+        name: Application Control
+      - id: patch_applications
+        name: Patch Applications
+      - id: configure_office_macros
+        name: Configure Microsoft Office Macro Settings
+      - id: user_application_hardening
+        name: User Application Hardening
+      - id: restrict_admin_privileges
+        name: Restrict Administrative Privileges
+      - id: patch_operating_systems
+        name: Patch Operating Systems
+      - id: multi_factor_authentication
+        name: Multi-factor Authentication
+      - id: regular_backups
+        name: Regular Backups
 domains:
-- id: GV
-  name: Governance, Risk & Improvement
-- id: AM
-  name: Asset Management & Classification
-- id: AC
-  name: Access Control & Identity
-- id: CR
-  name: Cryptography & Key Management
-- id: PS
-  name: Physical & Environmental Security
-- id: OP
-  name: Operations Security
-- id: CM
-  name: Communications & Network Security
-- id: SD
-  name: Secure Development & Change Management
-- id: SP
-  name: Supplier & Third-Party Risk
-- id: HR
-  name: Human Resource Security
-- id: DP
-  name: Data Privacy & Protection
-- id: IR
-  name: Incident Management & Response
-- id: BC
-  name: Business Continuity & Disaster Recovery
-- id: AU
-  name: Acceptable Use, Endpoint & AI Security
-controls: &id001
-- id: CC-GV-01
-  name: Information Security Policy Framework
-  domain: Governance
-  description: A comprehensive set of information security policies, governance structures,
-    and management commitments must be established, approved by executive leadership,
-    published, and reviewed at planned intervals.
-  implementing_docs:
-  - docs/01_ISMS_Framework/01_Information_Security_Policy.md
-  - docs/01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md
-  mappings:
-    iso_27001_2022:
-    - A.5.1
-    iso_27001_2013_legacy:
-    - A.5.1.1
-    - A.5.1.2
-    soc2_tsc:
-    - CC1.1
-    - CC5.3
-    - CC3.1
-    - CC5.1
-    soc2_tsc_2017:
-    - CC1.1
-    - CC5.3
-    - CC3.1
-    - CC5.1
-    nist_csf_2_0:
-    - GV.PO-01
-    gdpr:
-    - Art. 24
-    gdpr_articles:
-    - Art. 24
-  implementing_documents:
-  - docs/01_ISMS_Framework/01_Information_Security_Policy.md
-  - docs/01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md
-- id: CC-GV-02
-  name: Security Roles and Responsibilities
-  domain: Governance
-  description: Information security roles and responsibilities must be explicitly
-    defined, allocated to competent personnel, and communicated across the organization.
-  implementing_docs:
-  - docs/01_ISMS_Framework/04_Roles_and_Responsibilities.md
-  mappings:
-    iso_27001_2022:
-    - A.5.2
-    iso_27001_2013_legacy:
-    - A.6.1.1
-    soc2_tsc:
-    - CC1.3
-    soc2_tsc_2017:
-    - CC1.3
-    nist_csf_2_0:
-    - GV.RR-01
-    gdpr:
-    - Art. 24
-    gdpr_articles:
-    - Art. 24
-  implementing_documents:
-  - docs/01_ISMS_Framework/04_Roles_and_Responsibilities.md
-- id: CC-GV-03
-  name: Management Responsibilities and Leadership Commitment
-  domain: Governance
-  description: Executive management must actively lead, support, and resource the
-    ISMS, requiring all personnel to apply information security in accordance with
-    established policies.
-  implementing_docs:
-  - docs/01_ISMS_Framework/04_Roles_and_Responsibilities.md
-  - docs/01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md
-  mappings:
-    iso_27001_2022:
-    - A.5.4
-    iso_27001_2013_legacy:
-    - A.7.2.1
-    soc2_tsc:
-    - CC1.4
-    soc2_tsc_2017:
-    - CC1.4
-    nist_csf_2_0:
-    - GV.RR-02
-    gdpr:
-    - Art. 24
-    gdpr_articles:
-    - Art. 24
-  implementing_documents:
-  - docs/01_ISMS_Framework/04_Roles_and_Responsibilities.md
-  - docs/01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md
-- id: CC-GV-04
-  name: Contact with Statutory and Regulatory Authorities
-  domain: Governance
-  description: Formal channels and procedures must be maintained for prompt engagement
-    with law enforcement, regulatory bodies, supervisory authorities, and emergency
-    response agencies.
-  implementing_docs:
-  - docs/03_Standards_and_Procedures/06_Incident_Response_Plan_IRP.md
-  - docs/03_Standards_and_Procedures/09_Data_Breach_Notification_Procedure.md
-  mappings:
-    iso_27001_2022:
-    - A.5.5
-    iso_27001_2013_legacy:
-    - A.6.1.3
-    soc2_tsc:
-    - CC2.1
-    soc2_tsc_2017:
-    - CC2.1
-    nist_csf_2_0:
-    - GV.CO-01
-    gdpr:
-    - Art. 33
-    - Art. 34
-    gdpr_articles:
-    - Art. 33
-    - Art. 34
-  implementing_documents:
-  - docs/03_Standards_and_Procedures/06_Incident_Response_Plan_IRP.md
-  - docs/03_Standards_and_Procedures/09_Data_Breach_Notification_Procedure.md
-- id: CC-GV-05
-  name: Contact with Special Interest Groups and Threat Forums
-  domain: Governance
-  description: The security organization must maintain active ties with professional
-    associations, threat intelligence exchanges, and industry cybersecurity forums
-    to remain current on emerging threats.
-  implementing_docs:
-  - docs/01_ISMS_Framework/01_Information_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.5.6
-    iso_27001_2013_legacy:
-    - A.6.1.4
-    soc2_tsc:
-    - CC2.1
-    soc2_tsc_2017:
-    - CC2.1
-    nist_csf_2_0:
-    - GV.CO-02
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/01_ISMS_Framework/01_Information_Security_Policy.md
-- id: CC-GV-06
-  name: Independent Review of Information Security
-  domain: Governance
-  description: The ISMS and implementation of security controls must be independently
-    audited and evaluated at planned intervals by objective internal or external auditors.
-  implementing_docs:
-  - docs/01_ISMS_Framework/03_Risk_Management_Methodology.md
-  - docs/01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md
-  - docs/04_Templates_and_Registers/08_Internal_Audit_and_CAPA_Register.md
-  mappings:
-    iso_27001_2022:
-    - A.5.35
-    iso_27001_2013_legacy:
-    - A.18.2.1
-    soc2_tsc:
-    - CC2.3
-    - CC4.1
-    - CC3.2
-    - CC4.2
-    soc2_tsc_2017:
-    - CC2.3
-    - CC4.1
-    - CC3.2
-    - CC4.2
-    nist_csf_2_0:
-    - GV.OV-01
-    gdpr:
-    - Art. 24
-    gdpr_articles:
-    - Art. 24
-  implementing_documents:
-  - docs/01_ISMS_Framework/03_Risk_Management_Methodology.md
-  - docs/01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md
-  - docs/04_Templates_and_Registers/08_Internal_Audit_and_CAPA_Register.md
-- id: CC-GV-07
-  name: Compliance with Security Policies and Technical Standards
-  domain: Governance
-  description: Managers and system owners must regularly review compliance of information
-    processing and procedures within their area of responsibility against security
-    standards and baselines.
-  implementing_docs:
-  - docs/01_ISMS_Framework/01_Information_Security_Policy.md
-  - docs/01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md
-  mappings:
-    iso_27001_2022:
-    - A.5.36
-    iso_27001_2013_legacy:
-    - A.18.2.2
-    soc2_tsc:
-    - CC2.2
-    - CC5.3
-    - CC5.2
-    soc2_tsc_2017:
-    - CC2.2
-    - CC5.3
-    - CC5.2
-    nist_csf_2_0:
-    - GV.PO-02
-    gdpr:
-    - Art. 24
-    gdpr_articles:
-    - Art. 24
-  implementing_documents:
-  - docs/01_ISMS_Framework/01_Information_Security_Policy.md
-  - docs/01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md
-- id: CC-GV-08
-  name: Documented Operating Procedures
-  domain: Governance
-  description: Standard operating procedures (SOPs) for information security operations,
-    system administration, and infrastructure maintenance must be documented, version-controlled,
-    and made available.
-  implementing_docs:
-  - docs/02_Policies/05_Operations_Security_Policy.md
-  - docs/01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md
-  mappings:
-    iso_27001_2022:
-    - A.5.37
-    iso_27001_2013_legacy:
-    - A.12.1.1
-    soc2_tsc:
-    - CC7.1
-    soc2_tsc_2017:
-    - CC7.1
-    nist_csf_2_0:
-    - PR.PS-01
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/05_Operations_Security_Policy.md
-  - docs/01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md
-- id: CC-AM-01
-  name: Information and Asset Inventory Management
-  domain: Asset Management
-  description: An accurate, comprehensive inventory of all information, software,
-    hardware, and cloud assets must be maintained with designated owners and lifecycle
-    tracking.
-  implementing_docs:
-  - docs/02_Policies/02_Asset_Management_Policy.md
-  - docs/04_Templates_and_Registers/01_Information_Asset_Register.md
-  mappings:
-    iso_27001_2022:
-    - A.5.9
-    iso_27001_2013_legacy:
-    - A.8.1.1
-    - A.8.1.2
-    soc2_tsc:
-    - CC6.1
-    soc2_tsc_2017:
-    - CC6.1
-    nist_csf_2_0:
-    - ID.AM-01
-    - ID.AM-02
-    gdpr:
-    - Art. 30
-    gdpr_articles:
-    - Art. 30
-  implementing_documents:
-  - docs/02_Policies/02_Asset_Management_Policy.md
-  - docs/04_Templates_and_Registers/01_Information_Asset_Register.md
-- id: CC-AM-02
-  name: Return of Corporate Assets
-  domain: Asset Management
-  description: All corporate equipment, access credentials, and intellectual property
-    in possession of employees and contractors must be recovered upon termination
-    of employment or contract.
-  implementing_docs:
-  - docs/02_Policies/08_HR_Security_Policy.md
-  - docs/02_Policies/02_Asset_Management_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.5.11
-    iso_27001_2013_legacy:
-    - A.8.1.4
-    soc2_tsc:
-    - CC6.2
-    soc2_tsc_2017:
-    - CC6.2
-    nist_csf_2_0:
-    - PR.AA-06
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/08_HR_Security_Policy.md
-  - docs/02_Policies/02_Asset_Management_Policy.md
-- id: CC-AM-03
-  name: Information Classification
-  domain: Asset Management
-  description: Information must be classified in accordance with its value, legal
-    sensitivity, and criticality to the organization into Public, Internal, Confidential,
-    and Restricted tiers.
-  implementing_docs:
-  - docs/02_Policies/02_Asset_Management_Policy.md
-  - docs/03_Standards_and_Procedures/02_Data_Classification_and_Handling_Standard.md
-  mappings:
-    iso_27001_2022:
-    - A.5.12
-    iso_27001_2013_legacy:
-    - A.8.2.1
-    soc2_tsc:
-    - CC6.1
-    - C1.1
-    soc2_tsc_2017:
-    - CC6.1
-    - C1.1
-    nist_csf_2_0:
-    - ID.AM-05
-    gdpr:
-    - Art. 5
-    gdpr_articles:
-    - Art. 5
-  implementing_documents:
-  - docs/02_Policies/02_Asset_Management_Policy.md
-  - docs/03_Standards_and_Procedures/02_Data_Classification_and_Handling_Standard.md
-- id: CC-AM-04
-  name: Information Labelling and Handling
-  domain: Asset Management
-  description: Procedures for labelling and handling classified assets must be enforced,
-    including default metadata classification and visual markings on Confidential
-    and Restricted data.
-  implementing_docs:
-  - docs/03_Standards_and_Procedures/02_Data_Classification_and_Handling_Standard.md
-  mappings:
-    iso_27001_2022:
-    - A.5.13
-    iso_27001_2013_legacy:
-    - A.8.2.2
-    soc2_tsc:
-    - CC6.1
-    - C1.1
-    soc2_tsc_2017:
-    - CC6.1
-    - C1.1
-    nist_csf_2_0:
-    - PR.DS-01
-    gdpr:
-    - Art. 32
-    gdpr_articles:
-    - Art. 32
-  implementing_documents:
-  - docs/03_Standards_and_Procedures/02_Data_Classification_and_Handling_Standard.md
-- id: CC-AM-05
-  name: Protection and Retention of Records
-  domain: Asset Management
-  description: Organizational and security records must be protected from loss, destruction,
-    and unauthorized alteration, in accordance with statutory retention schedules.
-  implementing_docs:
-  - docs/03_Standards_and_Procedures/03_Data_Retention_and_Destruction_Standard.md
-  mappings:
-    iso_27001_2022:
-    - A.5.33
-    iso_27001_2013_legacy:
-    - A.18.1.3
-    soc2_tsc:
-    - CC6.1
-    soc2_tsc_2017:
-    - CC6.1
-    nist_csf_2_0:
-    - PR.DS-11
-    gdpr:
-    - Art. 5
-    - Art. 30
-    gdpr_articles:
-    - Art. 5
-    - Art. 30
-  implementing_documents:
-  - docs/03_Standards_and_Procedures/03_Data_Retention_and_Destruction_Standard.md
-- id: CC-AM-06
-  name: Removable and Storage Media Management
-  domain: Asset Management
-  description: Storage media containing sensitive data must be encrypted, physically
-    secured during storage and transit, and restricted to authorized personnel.
-  implementing_docs:
-  - docs/03_Standards_and_Procedures/03_Data_Retention_and_Destruction_Standard.md
-  mappings:
-    iso_27001_2022:
-    - A.7.10
-    iso_27001_2013_legacy:
-    - A.11.2.7
-    - A.8.3.1
-    soc2_tsc:
-    - CC6.1
-    soc2_tsc_2017:
-    - CC6.1
-    nist_csf_2_0:
-    - PR.DS-03
-    gdpr:
-    - Art. 32
-    gdpr_articles:
-    - Art. 32
-  implementing_documents:
-  - docs/03_Standards_and_Procedures/03_Data_Retention_and_Destruction_Standard.md
-- id: CC-AM-07
-  name: Secure Media Sanitization and Equipment Disposal
-  domain: Asset Management
-  description: All storage devices and hardware slated for decommission or disposal
-    must undergo cryptographically verified sanitization aligned with NIST SP 800-88
-    Rev. 1 and IEEE 2883-2022.
-  implementing_docs:
-  - docs/03_Standards_and_Procedures/03_Data_Retention_and_Destruction_Standard.md
-  mappings:
-    iso_27001_2022:
-    - A.7.14
-    iso_27001_2013_legacy:
-    - A.11.2.5
-    - A.11.2.7
-    soc2_tsc:
-    - CC6.5
-    - C1.2
-    soc2_tsc_2017:
-    - CC6.5
-    - C1.2
-    nist_csf_2_0:
-    - PR.DS-03
-    gdpr:
-    - Art. 17
-    - Art. 32
-    gdpr_articles:
-    - Art. 17
-    - Art. 32
-  implementing_documents:
-  - docs/03_Standards_and_Procedures/03_Data_Retention_and_Destruction_Standard.md
-- id: CC-AC-01
-  name: Segregation of Duties and Conflict Avoidance
-  domain: Access Control
-  description: Conflicting responsibilities and operational duties must be separated
-    to prevent fraud, accidental errors, and circumvention of organizational security
-    controls.
-  implementing_docs:
-  - docs/02_Policies/01_Access_Control_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.5.3
-    iso_27001_2013_legacy:
-    - A.6.1.2
-    soc2_tsc:
-    - CC6.1
-    soc2_tsc_2017:
-    - CC6.1
-    nist_csf_2_0:
-    - PR.AA-01
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/01_Access_Control_Policy.md
-- id: CC-AC-02
-  name: Access Control Architecture and Least Privilege
-  domain: Access Control
-  description: Access to information, systems, and network services must be controlled
-    based on business necessity, role-based access control (RBAC), and principle of
-    least privilege.
-  implementing_docs:
-  - docs/02_Policies/01_Access_Control_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.5.15
-    iso_27001_2013_legacy:
-    - A.9.1.1
-    - A.9.1.2
-    soc2_tsc:
-    - CC6.1
-    soc2_tsc_2017:
-    - CC6.1
-    nist_csf_2_0:
-    - PR.AA-01
-    gdpr:
-    - Art. 32
-    gdpr_articles:
-    - Art. 32
-  implementing_documents:
-  - docs/02_Policies/01_Access_Control_Policy.md
-- id: CC-AC-03
-  name: Identity Lifecycle Management and Account Provisioning
-  domain: Access Control
-  description: The complete lifecycle of user identities (creation, modification,
-    suspension, revocation) must be managed through centralized identity provider
-    workflows.
-  implementing_docs:
-  - docs/02_Policies/01_Access_Control_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.5.16
-    iso_27001_2013_legacy:
-    - A.9.2.1
-    soc2_tsc:
-    - CC6.2
-    soc2_tsc_2017:
-    - CC6.2
-    nist_csf_2_0:
-    - PR.AA-02
-    gdpr:
-    - Art. 32
-    gdpr_articles:
-    - Art. 32
-  implementing_documents:
-  - docs/02_Policies/01_Access_Control_Policy.md
-- id: CC-AC-04
-  name: Authentication Information and NIST SP 800-63B Guidelines
-  domain: Access Control
-  description: 'User passwords and authenticators must adhere to modern NIST SP 800-63B
-    standards: 14-char minimum length, passphrase encouragement, compromised password
-    checks, and no arbitrary periodic expiration.'
-  implementing_docs:
-  - docs/03_Standards_and_Procedures/01_Password_and_Authentication_Standard.md
-  mappings:
-    iso_27001_2022:
-    - A.5.17
-    iso_27001_2013_legacy:
-    - A.9.2.4
-    - A.9.3.1
-    - A.9.4.3
-    soc2_tsc:
-    - CC6.1
-    soc2_tsc_2017:
-    - CC6.1
-    nist_csf_2_0:
-    - PR.AA-03
-    gdpr:
-    - Art. 32
-    gdpr_articles:
-    - Art. 32
-  implementing_documents:
-  - docs/03_Standards_and_Procedures/01_Password_and_Authentication_Standard.md
-- id: CC-AC-05
-  name: Access Rights Review and Recertification
-  domain: Access Control
-  description: 'User access rights must be formally reviewed and recertified at defined
-    intervals: privileged access monthly, critical systems quarterly, and standard
-    systems semi-annually.'
-  implementing_docs:
-  - docs/02_Policies/01_Access_Control_Policy.md
-  - docs/04_Templates_and_Registers/05_Access_Review_Log.md
-  mappings:
-    iso_27001_2022:
-    - A.5.18
-    iso_27001_2013_legacy:
-    - A.9.2.2
-    - A.9.2.5
-    - A.9.2.6
-    soc2_tsc:
-    - CC6.2
-    - CC6.3
-    soc2_tsc_2017:
-    - CC6.2
-    - CC6.3
-    nist_csf_2_0:
-    - PR.AA-04
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/01_Access_Control_Policy.md
-  - docs/04_Templates_and_Registers/05_Access_Review_Log.md
-- id: CC-AC-06
-  name: Privileged Access Management (PAM)
-  domain: Access Control
-  description: The allocation and use of privileged access rights must be restricted,
-    authenticated with phishing-resistant MFA, vaulted, and audited.
-  implementing_docs:
-  - docs/02_Policies/01_Access_Control_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.2
-    iso_27001_2013_legacy:
-    - A.9.2.3
-    soc2_tsc:
-    - CC6.3
-    soc2_tsc_2017:
-    - CC6.3
-    nist_csf_2_0:
-    - PR.AA-04
-    gdpr:
-    - Art. 32
-    gdpr_articles:
-    - Art. 32
-  implementing_documents:
-  - docs/02_Policies/01_Access_Control_Policy.md
-- id: CC-AC-07
-  name: Information Access Restriction and Granular Authorization
-  domain: Access Control
-  description: Access to information and application system functions must be restricted
-    in accordance with granular authorization controls and defined access policies.
-  implementing_docs:
-  - docs/02_Policies/01_Access_Control_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.3
-    iso_27001_2013_legacy:
-    - A.9.4.1
-    soc2_tsc:
-    - CC6.1
-    soc2_tsc_2017:
-    - CC6.1
-    nist_csf_2_0:
-    - PR.AA-01
-    gdpr:
-    - Art. 32
-    gdpr_articles:
-    - Art. 32
-  implementing_documents:
-  - docs/02_Policies/01_Access_Control_Policy.md
-- id: CC-AC-08
-  name: Secure Authentication and Phishing-Resistant MFA
-  domain: Access Control
-  description: Multi-Factor Authentication (MFA) utilizing FIDO2/WebAuthn hardware
-    tokens or number-matching push authenticators must be enforced across all workforce
-    logins.
-  implementing_docs:
-  - docs/03_Standards_and_Procedures/01_Password_and_Authentication_Standard.md
-  mappings:
-    iso_27001_2022:
-    - A.8.5
-    iso_27001_2013_legacy:
-    - A.9.4.2
-    soc2_tsc:
-    - CC6.1
-    soc2_tsc_2017:
-    - CC6.1
-    nist_csf_2_0:
-    - PR.AA-03
-    gdpr:
-    - Art. 32
-    gdpr_articles:
-    - Art. 32
-  implementing_documents:
-  - docs/03_Standards_and_Procedures/01_Password_and_Authentication_Standard.md
-- id: CC-AC-09
-  name: Restriction and Control of Privileged Utility Programs
-  domain: Access Control
-  description: The use of utility software programs that might be capable of overriding
-    system and application controls must be strictly restricted, controlled, and monitored.
-  implementing_docs:
-  - docs/02_Policies/01_Access_Control_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.18
-    iso_27001_2013_legacy:
-    - A.9.4.4
-    soc2_tsc:
-    - CC6.3
-    soc2_tsc_2017:
-    - CC6.3
-    nist_csf_2_0:
-    - PR.AA-04
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/01_Access_Control_Policy.md
-- id: CC-CR-01
-  name: Cryptographic Controls and Key Management Lifecycle
-  domain: Cryptography
-  description: Cryptographic algorithms and key management practices must align with
-    NIST SP 800-57, including AES-256 for data at rest, annual symmetric key rotation,
-    and automated KMS lifecycle controls.
-  implementing_docs:
-  - docs/02_Policies/03_Cryptography_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.24
-    iso_27001_2013_legacy:
-    - A.10.1.1
-    - A.10.1.2
-    soc2_tsc:
-    - CC6.1
-    - CC6.7
-    soc2_tsc_2017:
-    - CC6.1
-    - CC6.7
-    nist_csf_2_0:
-    - PR.DS-01
-    - PR.DS-02
-    gdpr:
-    - Art. 32
-    gdpr_articles:
-    - Art. 32
-  implementing_documents:
-  - docs/02_Policies/03_Cryptography_Policy.md
-- id: CC-CR-02
-  name: Data Encryption in Transit and TLS Configuration
-  domain: Cryptography
-  description: All communications across public networks or between data centers must
-    utilize TLS 1.3 (or TLS 1.2 with PFS cipher suites), disabling deprecated legacy
-    protocols.
-  implementing_docs:
-  - docs/02_Policies/03_Cryptography_Policy.md
-  - docs/02_Policies/06_Communications_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.5.14
-    iso_27001_2013_legacy:
-    - A.13.2.1
-    - A.13.2.2
-    soc2_tsc:
-    - CC6.6
-    - CC6.7
-    soc2_tsc_2017:
-    - CC6.6
-    - CC6.7
-    nist_csf_2_0:
-    - PR.DS-02
-    gdpr:
-    - Art. 32
-    gdpr_articles:
-    - Art. 32
-  implementing_documents:
-  - docs/02_Policies/03_Cryptography_Policy.md
-  - docs/02_Policies/06_Communications_Security_Policy.md
-- id: CC-CR-03
-  name: Post-Quantum Cryptography Readiness and Ephemeral Secrets
-  domain: Cryptography
-  description: The organization maintains cryptographic agility and tracks migration
-    to NIST post-quantum cryptographic standards (FIPS 203, 204, 205), enforcing <=90d
-    lifetimes for TLS and API secrets.
-  implementing_docs:
-  - docs/02_Policies/03_Cryptography_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.24
-    iso_27001_2013_legacy:
-    - A.10.1.2
-    soc2_tsc:
-    - CC6.7
-    soc2_tsc_2017:
-    - CC6.7
-    nist_csf_2_0:
-    - PR.DS-01
-    gdpr:
-    - Art. 32
-    gdpr_articles:
-    - Art. 32
-  implementing_documents:
-  - docs/02_Policies/03_Cryptography_Policy.md
-- id: CC-PS-01
-  name: Physical Security Perimeters and Barriers
-  domain: Physical Security
-  description: Physical security perimeters and access barriers must be implemented
-    to safeguard areas containing sensitive information processing facilities.
-  implementing_docs:
-  - docs/02_Policies/04_Physical_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.7.1
-    iso_27001_2013_legacy:
-    - A.11.1.1
-    soc2_tsc:
-    - CC6.4
-    soc2_tsc_2017:
-    - CC6.4
-    nist_csf_2_0:
-    - PR.PS-01
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/04_Physical_Security_Policy.md
-- id: CC-PS-02
-  name: Physical Entry Controls and Visitor Management
-  domain: Physical Security
-  description: Access to secure areas must be controlled by electronic access control,
-    visitor badge issuance, log retention, and escort requirements.
-  implementing_docs:
-  - docs/02_Policies/04_Physical_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.7.2
-    iso_27001_2013_legacy:
-    - A.11.1.2
-    - A.11.1.6
-    soc2_tsc:
-    - CC6.4
-    soc2_tsc_2017:
-    - CC6.4
-    nist_csf_2_0:
-    - PR.PS-02
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/04_Physical_Security_Policy.md
-- id: CC-PS-03
-  name: Securing Offices, Rooms and Facilities
-  domain: Physical Security
-  description: Physical security for offices, server rooms, and technical spaces must
-    be designed and applied to prevent unauthorized physical access and exposure.
-  implementing_docs:
-  - docs/02_Policies/04_Physical_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.7.3
-    iso_27001_2013_legacy:
-    - A.11.1.3
-    soc2_tsc:
-    - CC6.4
-    soc2_tsc_2017:
-    - CC6.4
-    nist_csf_2_0:
-    - PR.PS-03
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/04_Physical_Security_Policy.md
-- id: CC-PS-04
-  name: Physical Security Monitoring and Video Surveillance
-  domain: Physical Security
-  description: Premises and server rooms must be continuously monitored by surveillance
-    cameras (CCTV) and intrusion detection sensors with retained audit logs.
-  implementing_docs:
-  - docs/02_Policies/04_Physical_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.7.4
-    iso_27001_2013_legacy:
-    - None
-    soc2_tsc:
-    - CC6.4
-    soc2_tsc_2017:
-    - CC6.4
-    nist_csf_2_0:
-    - PR.PS-04
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/04_Physical_Security_Policy.md
-- id: CC-PS-05
-  name: Protection Against Environmental Threats
-  domain: Physical Security
-  description: Protection against natural disasters, fire, water ingress, and environmental
-    hazards must be designed and applied across all physical operating environments.
-  implementing_docs:
-  - docs/02_Policies/04_Physical_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.7.5
-    iso_27001_2013_legacy:
-    - A.11.1.4
-    soc2_tsc:
-    - CC6.4
-    soc2_tsc_2017:
-    - CC6.4
-    nist_csf_2_0:
-    - PR.PS-05
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/04_Physical_Security_Policy.md
-- id: CC-PS-06
-  name: Working in Secure Areas
-  domain: Physical Security
-  description: Security measures and guidelines for working in secure or confidential
-    areas must be designed and enforced (prohibiting unvetted photography or recording).
-  implementing_docs:
-  - docs/02_Policies/04_Physical_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.7.6
-    iso_27001_2013_legacy:
-    - A.11.1.5
-    soc2_tsc:
-    - CC6.4
-    soc2_tsc_2017:
-    - CC6.4
-    nist_csf_2_0:
-    - PR.PS-06
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/04_Physical_Security_Policy.md
-- id: CC-PS-07
-  name: Equipment Siting, Placement and Protection
-  domain: Physical Security
-  description: Equipment must be sited and protected to reduce the risks from environmental
-    threats, unauthorized access, and accidental damage.
-  implementing_docs:
-  - docs/02_Policies/04_Physical_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.7.8
-    iso_27001_2013_legacy:
-    - A.11.2.1
-    soc2_tsc:
-    - CC6.4
-    soc2_tsc_2017:
-    - CC6.4
-    nist_csf_2_0:
-    - PR.PS-08
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/04_Physical_Security_Policy.md
-- id: CC-PS-08
-  name: Supporting Utilities and Power Redundancy
-  domain: Physical Security
-  description: Equipment must be protected from power failures and other disruptions
-    caused by failures in supporting utilities through UPS and backup generators.
-  implementing_docs:
-  - docs/02_Policies/04_Physical_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.7.11
-    iso_27001_2013_legacy:
-    - A.11.2.2
-    soc2_tsc:
-    - CC6.4
-    soc2_tsc_2017:
-    - CC6.4
-    nist_csf_2_0:
-    - PR.PS-05
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/04_Physical_Security_Policy.md
-- id: CC-OP-01
-  name: Threat Intelligence Ingestion and Risk Prioritization
-  domain: Operations Security
-  description: Information relating to information security threats must be collected,
-    analyzed, and integrated into vulnerability management and threat defenses.
-  implementing_docs:
-  - docs/03_Standards_and_Procedures/04_Vulnerability_and_Patch_Management_Standard.md
-  mappings:
-    iso_27001_2022:
-    - A.5.7
-    iso_27001_2013_legacy:
-    - None
-    soc2_tsc:
-    - CC7.1
-    soc2_tsc_2017:
-    - CC7.1
-    nist_csf_2_0:
-    - ID.RA-02
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/03_Standards_and_Procedures/04_Vulnerability_and_Patch_Management_Standard.md
-- id: CC-OP-02
-  name: Equipment Maintenance and Servicing
-  domain: Operations Security
-  description: Information processing equipment must be correctly maintained to ensure
-    its continued availability, integrity, and operational security.
-  implementing_docs:
-  - docs/02_Policies/05_Operations_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.7.13
-    iso_27001_2013_legacy:
-    - A.11.2.4
-    soc2_tsc:
-    - CC6.4
-    soc2_tsc_2017:
-    - CC6.4
-    nist_csf_2_0:
-    - PR.PS-08
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/05_Operations_Security_Policy.md
-- id: CC-OP-03
-  name: Capacity Management and Cloud Resource Scaling
-  domain: Operations Security
-  description: The use of computing, memory, storage, and network resources must be
-    monitored and adjusted to satisfy future processing capacity demands.
-  implementing_docs:
-  - docs/02_Policies/05_Operations_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.6
-    iso_27001_2013_legacy:
-    - A.12.1.3
-    soc2_tsc:
-    - CC7.1
-    soc2_tsc_2017:
-    - CC7.1
-    nist_csf_2_0:
-    - PR.PS-01
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/05_Operations_Security_Policy.md
-- id: CC-OP-04
-  name: Malware Protection and Endpoint Detection and Response
-  domain: Operations Security
-  description: Detection, prevention, and recovery controls to protect against malware
-    must be implemented on all endpoints and servers, backed by next-gen EDR.
-  implementing_docs:
-  - docs/02_Policies/05_Operations_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.7
-    iso_27001_2013_legacy:
-    - A.12.2.1
-    soc2_tsc:
-    - CC6.8
-    soc2_tsc_2017:
-    - CC6.8
-    nist_csf_2_0:
-    - DE.CM-04
-    gdpr:
-    - Art. 32
-    gdpr_articles:
-    - Art. 32
-  implementing_documents:
-  - docs/02_Policies/05_Operations_Security_Policy.md
-- id: CC-OP-05
-  name: Technical Vulnerability Management and Remediation SLAs
-  domain: Operations Security
-  description: Information about technical vulnerabilities must be evaluated against
-    CVSS v4.0, CISA KEV, and EPSS, enforcing remediation SLAs (<=48h critical, <=14d
-    high).
-  implementing_docs:
-  - docs/03_Standards_and_Procedures/04_Vulnerability_and_Patch_Management_Standard.md
-  mappings:
-    iso_27001_2022:
-    - A.8.8
-    iso_27001_2013_legacy:
-    - A.12.6.1
-    soc2_tsc:
-    - CC7.1
-    soc2_tsc_2017:
-    - CC7.1
-    nist_csf_2_0:
-    - ID.RA-01
-    gdpr:
-    - Art. 32
-    gdpr_articles:
-    - Art. 32
-  implementing_documents:
-  - docs/03_Standards_and_Procedures/04_Vulnerability_and_Patch_Management_Standard.md
-- id: CC-OP-06
-  name: Configuration Management and Infrastructure as Code Baselines
-  domain: Operations Security
-  description: Configurations, including security baselines for hardware, software,
-    services, and network devices, must be established, tracked, monitored, and automated
-    via IaC.
-  implementing_docs:
-  - docs/02_Policies/05_Operations_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.9
-    iso_27001_2013_legacy:
-    - None
-    soc2_tsc:
-    - CC8.1
-    soc2_tsc_2017:
-    - CC8.1
-    nist_csf_2_0:
-    - PR.PS-01
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/05_Operations_Security_Policy.md
-- id: CC-OP-07
-  name: Information Backup and Immutable Storage
-  domain: Operations Security
-  description: Backup copies of information, software, and systems must be maintained,
-    encrypted, stored in immutable air-gapped repositories, and tested regularly.
-  implementing_docs:
-  - docs/02_Policies/05_Operations_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.13
-    iso_27001_2013_legacy:
-    - A.12.3.1
-    soc2_tsc:
-    - CC7.5
-    - A1.2
-    soc2_tsc_2017:
-    - CC7.5
-    - A1.2
-    nist_csf_2_0:
-    - PR.DS-09
-    gdpr:
-    - Art. 32
-    gdpr_articles:
-    - Art. 32
-  implementing_documents:
-  - docs/02_Policies/05_Operations_Security_Policy.md
-- id: CC-OP-08
-  name: Audit Logging, SIEM Aggregation and Retention
-  domain: Operations Security
-  description: Logs recording user activities, exceptions, faults, and security events
-    must be generated, stored (90d hot + 365d cold), protected against tampering,
-    and analyzed in SIEM.
-  implementing_docs:
-  - docs/02_Policies/05_Operations_Security_Policy.md
-  - docs/03_Standards_and_Procedures/03_Data_Retention_and_Destruction_Standard.md
-  mappings:
-    iso_27001_2022:
-    - A.8.15
-    iso_27001_2013_legacy:
-    - A.12.4.1
-    - A.12.4.2
-    - A.12.4.3
-    soc2_tsc:
-    - CC7.2
-    soc2_tsc_2017:
-    - CC7.2
-    nist_csf_2_0:
-    - DE.AE-03
-    gdpr:
-    - Art. 32
-    gdpr_articles:
-    - Art. 32
-  implementing_documents:
-  - docs/02_Policies/05_Operations_Security_Policy.md
-  - docs/03_Standards_and_Procedures/03_Data_Retention_and_Destruction_Standard.md
-- id: CC-OP-09
-  name: Continuous Security Monitoring and Behavioral Anomaly Detection
-  domain: Operations Security
-  description: Networks, systems, and applications must be monitored for anomalous
-    behavior and potential security incidents, evaluating events against baselines.
-  implementing_docs:
-  - docs/02_Policies/05_Operations_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.16
-    iso_27001_2013_legacy:
-    - None
-    soc2_tsc:
-    - CC7.2
-    soc2_tsc_2017:
-    - CC7.2
-    nist_csf_2_0:
-    - DE.CM-01
-    gdpr:
-    - Art. 32
-    gdpr_articles:
-    - Art. 32
-  implementing_documents:
-  - docs/02_Policies/05_Operations_Security_Policy.md
-- id: CC-OP-10
-  name: Clock Synchronization via NTP
-  domain: Operations Security
-  description: The clocks of all information processing systems within the organization
-    must be synchronized to an agreed reference time source (NTP).
-  implementing_docs:
-  - docs/02_Policies/05_Operations_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.17
-    iso_27001_2013_legacy:
-    - A.12.4.4
-    soc2_tsc:
-    - CC7.2
-    soc2_tsc_2017:
-    - CC7.2
-    nist_csf_2_0:
-    - PR.IR-01
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/05_Operations_Security_Policy.md
-- id: CC-OP-11
-  name: Software Installation Controls and Application Whitelisting
-  domain: Operations Security
-  description: Rules and automated restrictions governing the installation of software
-    by users on operational systems must be implemented.
-  implementing_docs:
-  - docs/02_Policies/05_Operations_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.19
-    iso_27001_2013_legacy:
-    - A.12.6.2
-    soc2_tsc:
-    - CC8.1
-    soc2_tsc_2017:
-    - CC8.1
-    nist_csf_2_0:
-    - PR.PS-01
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/05_Operations_Security_Policy.md
-- id: CC-OP-12
-  name: Protection of Operational Systems During Security Audits
-  domain: Operations Security
-  description: Audit activities and penetration tests involving checks on operational
-    systems must be planned and agreed between the auditor and management to minimize
-    business disruption.
-  implementing_docs:
-  - docs/02_Policies/05_Operations_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.34
-    iso_27001_2013_legacy:
-    - A.12.7.1
-    soc2_tsc:
-    - CC2.3
-    soc2_tsc_2017:
-    - CC2.3
-    nist_csf_2_0:
-    - PR.PS-01
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/05_Operations_Security_Policy.md
-- id: CC-CM-01
-  name: Information Transfer Policies and Agreements
-  domain: Communications Security
-  description: Formal transfer policies, procedures, and controls must be in place
-    to protect the transfer of information through the use of all types of communications
-    facilities.
-  implementing_docs:
-  - docs/02_Policies/06_Communications_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.5.14
-    iso_27001_2013_legacy:
-    - A.13.2.1
-    - A.13.2.2
-    soc2_tsc:
-    - CC6.6
-    - CC6.7
-    soc2_tsc_2017:
-    - CC6.6
-    - CC6.7
-    nist_csf_2_0:
-    - PR.DS-02
-    gdpr:
-    - Art. 32
-    - Art. 44
-    gdpr_articles:
-    - Art. 32
-    - Art. 44
-  implementing_documents:
-  - docs/02_Policies/06_Communications_Security_Policy.md
-- id: CC-CM-02
-  name: Cabling Security and Telecommunications Protection
-  domain: Communications Security
-  description: Cables carrying power, data, or supporting information services must
-    be protected from interception, interference, or physical damage.
-  implementing_docs:
-  - docs/02_Policies/06_Communications_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.7.12
-    iso_27001_2013_legacy:
-    - A.11.2.3
-    soc2_tsc:
-    - CC6.6
-    soc2_tsc_2017:
-    - CC6.6
-    nist_csf_2_0:
-    - PR.IR-01
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/06_Communications_Security_Policy.md
-- id: CC-CM-03
-  name: Network Security Architecture and Boundary Protection
-  domain: Communications Security
-  description: Networks must be secured, managed, and controlled to protect information
-    in systems and applications, including next-generation firewalls at all ingress/egress
-    points.
-  implementing_docs:
-  - docs/02_Policies/06_Communications_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.20
-    iso_27001_2013_legacy:
-    - A.13.1.1
-    soc2_tsc:
-    - CC6.6
-    soc2_tsc_2017:
-    - CC6.6
-    nist_csf_2_0:
-    - PR.IR-01
-    gdpr:
-    - Art. 32
-    gdpr_articles:
-    - Art. 32
-  implementing_documents:
-  - docs/02_Policies/06_Communications_Security_Policy.md
-- id: CC-CM-04
-  name: Security of Managed Network Services and Connectivity
-  domain: Communications Security
-  description: Security mechanisms, service levels, and service requirements of network
-    services must be identified, implemented, and monitored.
-  implementing_docs:
-  - docs/02_Policies/06_Communications_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.21
-    iso_27001_2013_legacy:
-    - A.13.1.2
-    soc2_tsc:
-    - CC6.6
-    soc2_tsc_2017:
-    - CC6.6
-    nist_csf_2_0:
-    - PR.IR-02
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/06_Communications_Security_Policy.md
-- id: CC-CM-05
-  name: Network Segregation, VPC Isolation and Micro-segmentation
-  domain: Communications Security
-  description: Groups of information services, users, and information systems must
-    be segregated on networks, isolating production VPCs from testing and office networks.
-  implementing_docs:
-  - docs/02_Policies/06_Communications_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.22
-    iso_27001_2013_legacy:
-    - A.13.1.3
-    soc2_tsc:
-    - CC6.6
-    soc2_tsc_2017:
-    - CC6.6
-    nist_csf_2_0:
-    - PR.IR-03
-    gdpr:
-    - Art. 32
-    gdpr_articles:
-    - Art. 32
-  implementing_documents:
-  - docs/02_Policies/06_Communications_Security_Policy.md
-- id: CC-CM-06
-  name: Web Filtering, DNS Security and Anti-Phishing Controls
-  domain: Communications Security
-  description: Access to external websites must be managed using DNS and URL filtering
-    to reduce exposure to malicious content, C2 servers, and credential phishing.
-  implementing_docs:
-  - docs/02_Policies/06_Communications_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.23
-    iso_27001_2013_legacy:
-    - None
-    soc2_tsc:
-    - CC6.6
-    soc2_tsc_2017:
-    - CC6.6
-    nist_csf_2_0:
-    - PR.PS-01
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/06_Communications_Security_Policy.md
-- id: CC-SD-01
-  name: Security in Project Management and Agile Lifecycles
-  domain: Secure Development
-  description: Information security must be integrated into project management methodology
-    across all product and infrastructure engineering lifecycles.
-  implementing_docs:
-  - docs/02_Policies/12_SDLC_and_Change_Management_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.5.8
-    iso_27001_2013_legacy:
-    - A.6.1.5
-    soc2_tsc:
-    - CC8.1
-    soc2_tsc_2017:
-    - CC8.1
-    nist_csf_2_0:
-    - PR.DS-07
-    gdpr:
-    - Art. 25
-    gdpr_articles:
-    - Art. 25
-  implementing_documents:
-  - docs/02_Policies/12_SDLC_and_Change_Management_Policy.md
-- id: CC-SD-02
-  name: Intellectual Property Rights and Source Code Licensing
-  domain: Secure Development
-  description: Appropriate procedures must be implemented to protect intellectual
-    property rights, software licenses, and proprietary source code assets.
-  implementing_docs:
-  - docs/02_Policies/12_SDLC_and_Change_Management_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.5.32
-    iso_27001_2013_legacy:
-    - A.18.1.2
-    soc2_tsc:
-    - CC6.1
-    soc2_tsc_2017:
-    - CC6.1
-    nist_csf_2_0:
-    - PR.DS-01
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/12_SDLC_and_Change_Management_Policy.md
-- id: CC-SD-03
-  name: Access Control to Source Code Repositories
-  domain: Secure Development
-  description: Read and write access to program source code, build pipelines, and
-    deployment tooling must be strictly controlled, requiring MFA and branch protection
-    rules.
-  implementing_docs:
-  - docs/02_Policies/12_SDLC_and_Change_Management_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.4
-    iso_27001_2013_legacy:
-    - A.9.4.5
-    soc2_tsc:
-    - CC8.1
-    soc2_tsc_2017:
-    - CC8.1
-    nist_csf_2_0:
-    - PR.DS-07
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/12_SDLC_and_Change_Management_Policy.md
-- id: CC-SD-04
-  name: Secure Development Lifecycle Governance
-  domain: Secure Development
-  description: Rules for the secure development of software and systems must be established
-    and applied to all development activities within the organization.
-  implementing_docs:
-  - docs/02_Policies/12_SDLC_and_Change_Management_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.25
-    iso_27001_2013_legacy:
-    - A.14.2.1
-    soc2_tsc:
-    - CC8.1
-    soc2_tsc_2017:
-    - CC8.1
-    nist_csf_2_0:
-    - PR.DS-07
-    gdpr:
-    - Art. 25
-    gdpr_articles:
-    - Art. 25
-  implementing_documents:
-  - docs/02_Policies/12_SDLC_and_Change_Management_Policy.md
-- id: CC-SD-05
-  name: Application Security Requirements and Threat Modeling
-  domain: Secure Development
-  description: Information security requirements must be identified, specified, and
-    approved when developing or acquiring applications, incorporating STRIDE threat
-    modeling.
-  implementing_docs:
-  - docs/03_Standards_and_Procedures/05_Secure_Coding_Standard.md
-  mappings:
-    iso_27001_2022:
-    - A.8.26
-    iso_27001_2013_legacy:
-    - A.14.1.2
-    - A.14.1.3
-    soc2_tsc:
-    - CC8.1
-    soc2_tsc_2017:
-    - CC8.1
-    nist_csf_2_0:
-    - PR.DS-07
-    gdpr:
-    - Art. 25
-    gdpr_articles:
-    - Art. 25
-  implementing_documents:
-  - docs/03_Standards_and_Procedures/05_Secure_Coding_Standard.md
-- id: CC-SD-06
-  name: Secure System Architecture and Engineering Principles
-  domain: Secure Development
-  description: Principles for engineering secure systems must be established, documented,
-    maintained, and applied to any information system development activities.
-  implementing_docs:
-  - docs/02_Policies/12_SDLC_and_Change_Management_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.27
-    iso_27001_2013_legacy:
-    - A.14.2.5
-    soc2_tsc:
-    - CC8.1
-    soc2_tsc_2017:
-    - CC8.1
-    nist_csf_2_0:
-    - PR.DS-07
-    gdpr:
-    - Art. 25
-    gdpr_articles:
-    - Art. 25
-  implementing_documents:
-  - docs/02_Policies/12_SDLC_and_Change_Management_Policy.md
-- id: CC-SD-07
-  name: Secure Coding Standards and Peer Code Review
-  domain: Secure Development
-  description: Secure coding principles must be applied to software development; peer
-    code review requires at least 1 approval for standard changes and 2 approvals
-    (including Security/CODEOWNERS) for Tier-1/security PRs.
-  implementing_docs:
-  - docs/03_Standards_and_Procedures/05_Secure_Coding_Standard.md
-  mappings:
-    iso_27001_2022:
-    - A.8.28
-    iso_27001_2013_legacy:
-    - None
-    soc2_tsc:
-    - CC8.1
-    soc2_tsc_2017:
-    - CC8.1
-    nist_csf_2_0:
-    - PR.DS-07
-    gdpr:
-    - Art. 25
-    gdpr_articles:
-    - Art. 25
-  implementing_documents:
-  - docs/03_Standards_and_Procedures/05_Secure_Coding_Standard.md
-- id: CC-SD-08
-  name: Automated Security Testing in CI/CD (SAST, DAST, SCA)
-  domain: Secure Development
-  description: Security testing activities must be defined and implemented in the
-    development life cycle, including pre-commit secret scanning, container scanning,
-    and artifact signing.
-  implementing_docs:
-  - docs/02_Policies/12_SDLC_and_Change_Management_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.29
-    iso_27001_2013_legacy:
-    - A.14.2.8
-    soc2_tsc:
-    - CC8.1
-    soc2_tsc_2017:
-    - CC8.1
-    nist_csf_2_0:
-    - PR.DS-07
-    gdpr:
-    - Art. 25
-    gdpr_articles:
-    - Art. 25
-  implementing_documents:
-  - docs/02_Policies/12_SDLC_and_Change_Management_Policy.md
-- id: CC-SD-09
-  name: Separation of Development, Test and Production Environments
-  domain: Secure Development
-  description: Development, testing, and production environments must be strictly
-    separated and secured to prevent unauthorized access or changes to the operational
-    environment.
-  implementing_docs:
-  - docs/02_Policies/12_SDLC_and_Change_Management_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.31
-    iso_27001_2013_legacy:
-    - A.12.1.4
-    soc2_tsc:
-    - CC8.1
-    soc2_tsc_2017:
-    - CC8.1
-    nist_csf_2_0:
-    - PR.DS-07
-    gdpr:
-    - Art. 32
-    gdpr_articles:
-    - Art. 32
-  implementing_documents:
-  - docs/02_Policies/12_SDLC_and_Change_Management_Policy.md
-- id: CC-SD-10
-  name: Change Management and Release Governance
-  domain: Secure Development
-  description: Changes to information processing facilities and systems must be subject
-    to change management procedures, automated CI gates, and rollback planning.
-  implementing_docs:
-  - docs/02_Policies/12_SDLC_and_Change_Management_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.32
-    iso_27001_2013_legacy:
-    - A.12.1.2
-    - A.14.2.2
-    - A.14.2.3
-    - A.14.2.4
-    soc2_tsc:
-    - CC8.1
-    soc2_tsc_2017:
-    - CC8.1
-    nist_csf_2_0:
-    - PR.PS-01
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/12_SDLC_and_Change_Management_Policy.md
-- id: CC-SD-11
-  name: Test Data Protection and Synthetic Data Generation
-  domain: Secure Development
-  description: Test data must be carefully selected, protected, and controlled; operational
-    personal data must not be copied to non-production environments without pseudonymization
-    or synthetic generation.
-  implementing_docs:
-  - docs/02_Policies/12_SDLC_and_Change_Management_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.33
-    iso_27001_2013_legacy:
-    - A.14.3.1
-    soc2_tsc:
-    - CC8.1
-    soc2_tsc_2017:
-    - CC8.1
-    nist_csf_2_0:
-    - PR.DS-07
-    gdpr:
-    - Art. 25
-    - Art. 32
-    gdpr_articles:
-    - Art. 25
-    - Art. 32
-  implementing_documents:
-  - docs/02_Policies/12_SDLC_and_Change_Management_Policy.md
-- id: CC-SP-01
-  name: Supplier Security Policy and Risk Management
-  domain: Supplier Management
-  description: Processes and procedures must be defined and implemented to mitigate
-    the security risks associated with the use of supplier products or services.
-  implementing_docs:
-  - docs/02_Policies/07_Supplier_Security_Policy.md
-  - docs/04_Templates_and_Registers/04_Vendor_Risk_Assessment_Template.md
-  mappings:
-    iso_27001_2022:
-    - A.5.19
-    iso_27001_2013_legacy:
-    - A.15.1.1
-    soc2_tsc:
-    - CC9.2
-    soc2_tsc_2017:
-    - CC9.2
-    nist_csf_2_0:
-    - GV.SC-04
-    gdpr:
-    - Art. 28
-    gdpr_articles:
-    - Art. 28
-  implementing_documents:
-  - docs/02_Policies/07_Supplier_Security_Policy.md
-  - docs/04_Templates_and_Registers/04_Vendor_Risk_Assessment_Template.md
-- id: CC-SP-02
-  name: Supplier Security Agreements, SLAs and DPAs
-  domain: Supplier Management
-  description: Relevant information security requirements and Data Processing Agreements
-    (DPAs) must be established and agreed upon with each supplier.
-  implementing_docs:
-  - docs/02_Policies/07_Supplier_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.5.20
-    iso_27001_2013_legacy:
-    - A.15.1.2
-    soc2_tsc:
-    - CC9.2
-    soc2_tsc_2017:
-    - CC9.2
-    nist_csf_2_0:
-    - GV.SC-06
-    gdpr:
-    - Art. 28
-    gdpr_articles:
-    - Art. 28
-  implementing_documents:
-  - docs/02_Policies/07_Supplier_Security_Policy.md
-- id: CC-SP-03
-  name: ICT Supply Chain Security and Software Bill of Materials (SBOM)
-  domain: Supplier Management
-  description: Processes and procedures must be defined and implemented to manage
-    the information security risks associated with the ICT products and services supply
-    chain, including SBOM validation.
-  implementing_docs:
-  - docs/02_Policies/07_Supplier_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.5.21
-    iso_27001_2013_legacy:
-    - A.15.1.3
-    soc2_tsc:
-    - CC9.2
-    soc2_tsc_2017:
-    - CC9.2
-    nist_csf_2_0:
-    - GV.SC-07
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/07_Supplier_Security_Policy.md
-- id: CC-SP-04
-  name: Supplier Service Monitoring, Audits and Review
-  domain: Supplier Management
-  description: The organization must regularly monitor, review, and evaluate supplier
-    service delivery and security practices in line with vendor tiering.
-  implementing_docs:
-  - docs/02_Policies/07_Supplier_Security_Policy.md
-  - docs/04_Templates_and_Registers/04_Vendor_Risk_Assessment_Template.md
-  mappings:
-    iso_27001_2022:
-    - A.5.22
-    iso_27001_2013_legacy:
-    - A.15.2.1
-    - A.15.2.2
-    soc2_tsc:
-    - CC9.2
-    soc2_tsc_2017:
-    - CC9.2
-    nist_csf_2_0:
-    - GV.SC-08
-    gdpr:
-    - Art. 28
-    gdpr_articles:
-    - Art. 28
-  implementing_documents:
-  - docs/02_Policies/07_Supplier_Security_Policy.md
-  - docs/04_Templates_and_Registers/04_Vendor_Risk_Assessment_Template.md
-- id: CC-SP-05
-  name: Cloud Services Security Governance and Shared Responsibility
-  domain: Supplier Management
-  description: Processes for acquisition, use, management, and exit from cloud services
-    must be established in accordance with the cloud shared responsibility model.
-  implementing_docs:
-  - docs/02_Policies/05_Operations_Security_Policy.md
-  - docs/02_Policies/07_Supplier_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.5.23
-    iso_27001_2013_legacy:
-    - None
-    soc2_tsc:
-    - CC6.6
-    - CC9.2
-    soc2_tsc_2017:
-    - CC6.6
-    - CC9.2
-    nist_csf_2_0:
-    - PR.DS-01
-    gdpr:
-    - Art. 28
-    gdpr_articles:
-    - Art. 28
-  implementing_documents:
-  - docs/02_Policies/05_Operations_Security_Policy.md
-  - docs/02_Policies/07_Supplier_Security_Policy.md
-- id: CC-SP-06
-  name: Outsourced Software Development Governance
-  domain: Supplier Management
-  description: The organization must direct, monitor, and review the security activities
-    of outsourced system and software development contractors.
-  implementing_docs:
-  - docs/02_Policies/07_Supplier_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.30
-    iso_27001_2013_legacy:
-    - A.14.2.7
-    soc2_tsc:
-    - CC9.2
-    soc2_tsc_2017:
-    - CC9.2
-    nist_csf_2_0:
-    - GV.SC-07
-    gdpr:
-    - Art. 28
-    gdpr_articles:
-    - Art. 28
-  implementing_documents:
-  - docs/02_Policies/07_Supplier_Security_Policy.md
-- id: CC-HR-01
-  name: Personnel Screening and Background Checks
-  domain: Human Resources
-  description: Background verification checks on all candidates for employment must
-    be carried out in accordance with relevant laws, regulations, and ethics.
-  implementing_docs:
-  - docs/02_Policies/08_HR_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.6.1
-    iso_27001_2013_legacy:
-    - A.7.1.1
-    soc2_tsc:
-    - CC1.2
-    soc2_tsc_2017:
-    - CC1.2
-    nist_csf_2_0:
-    - PR.AT-01
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/08_HR_Security_Policy.md
-- id: CC-HR-02
-  name: Terms and Conditions of Employment
-  domain: Human Resources
-  description: The employment contractual agreements must state the personnel and
-    organization responsibilities for information security.
-  implementing_docs:
-  - docs/02_Policies/08_HR_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.6.2
-    iso_27001_2013_legacy:
-    - A.7.1.2
-    soc2_tsc:
-    - CC1.1
-    soc2_tsc_2017:
-    - CC1.1
-    nist_csf_2_0:
-    - PR.AT-01
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/08_HR_Security_Policy.md
-- id: CC-HR-03
-  name: Security Awareness, Training and Phishing Simulations
-  domain: Human Resources
-  description: All personnel must receive appropriate security awareness education,
-    training, and regular updates relevant to their job function, supplemented by
-    monthly phishing tests.
-  implementing_docs:
-  - docs/02_Policies/08_HR_Security_Policy.md
-  - docs/01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md
-  mappings:
-    iso_27001_2022:
-    - A.6.3
-    iso_27001_2013_legacy:
-    - A.7.2.2
-    soc2_tsc:
-    - CC2.2
-    soc2_tsc_2017:
-    - CC2.2
-    nist_csf_2_0:
-    - PR.AT-02
-    gdpr:
-    - Art. 39
-    gdpr_articles:
-    - Art. 39
-  implementing_documents:
-  - docs/02_Policies/08_HR_Security_Policy.md
-  - docs/01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md
-- id: CC-HR-04
-  name: Disciplinary Process for Security Policy Violations
-  domain: Human Resources
-  description: A formal and communicated disciplinary process must be in place to
-    take action against personnel who have committed an information security violation.
-  implementing_docs:
-  - docs/02_Policies/08_HR_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.6.4
-    iso_27001_2013_legacy:
-    - A.7.2.3
-    soc2_tsc:
-    - CC1.1
-    - CC1.5
-    soc2_tsc_2017:
-    - CC1.1
-    - CC1.5
-    nist_csf_2_0:
-    - PR.AT-01
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/08_HR_Security_Policy.md
-- id: CC-HR-05
-  name: Responsibilities After Termination or Change of Employment
-  domain: Human Resources
-  description: Information security responsibilities and duties that remain valid
-    after termination or change of employment must be defined, enforced, and communicated.
-  implementing_docs:
-  - docs/02_Policies/08_HR_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.6.5
-    iso_27001_2013_legacy:
-    - A.7.3.1
-    soc2_tsc:
-    - CC6.2
-    soc2_tsc_2017:
-    - CC6.2
-    nist_csf_2_0:
-    - PR.AA-06
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/08_HR_Security_Policy.md
-- id: CC-HR-06
-  name: Confidentiality and Non-Disclosure Agreements
-  domain: Human Resources
-  description: Non-disclosure or confidentiality agreements reflecting the organization
-    needs for protection of information must be identified, documented, and regularly
-    reviewed.
-  implementing_docs:
-  - docs/02_Policies/08_HR_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.6.6
-    iso_27001_2013_legacy:
-    - A.13.2.4
-    soc2_tsc:
-    - CC1.1
-    soc2_tsc_2017:
-    - CC1.1
-    nist_csf_2_0:
-    - PR.AT-01
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/08_HR_Security_Policy.md
-- id: CC-DP-01
-  name: Legal, Statutory, Regulatory and Contractual Compliance
-  domain: Data Privacy
-  description: All applicable statutory, regulatory, and contractual requirements
-    must be identified, documented, and reviewed periodically.
-  implementing_docs:
-  - docs/01_ISMS_Framework/02_Context_of_the_Organization.md
-  - docs/02_Policies/09_Data_Privacy_and_Protection_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.5.31
-    iso_27001_2013_legacy:
-    - A.18.1.1
-    soc2_tsc:
-    - CC2.1
-    soc2_tsc_2017:
-    - CC2.1
-    nist_csf_2_0:
-    - GV.OC-03
-    gdpr:
-    - Art. 5
-    - Art. 6
-    gdpr_articles:
-    - Art. 5
-    - Art. 6
-  implementing_documents:
-  - docs/01_ISMS_Framework/02_Context_of_the_Organization.md
-  - docs/02_Policies/09_Data_Privacy_and_Protection_Policy.md
-- id: CC-DP-02
-  name: Privacy and Protection of Personally Identifiable Information (PII)
-  domain: Data Privacy
-  description: The organization must ensure the protection of personal data and compliance
-    with GDPR and applicable privacy legislation through RoPA, DPIA, and DPO oversight.
-  implementing_docs:
-  - docs/02_Policies/09_Data_Privacy_and_Protection_Policy.md
-  - docs/04_Templates_and_Registers/06_RoPA_Template.md
-  - docs/04_Templates_and_Registers/07_DPIA_Template.md
-  mappings:
-    iso_27001_2022:
-    - A.5.34
-    iso_27001_2013_legacy:
-    - A.18.1.4
-    soc2_tsc:
-    - P1.1
-    - P2.1
-    - P3.1
-    - P4.1
-    - P5.1
-    - P6.1
-    - P7.1
-    - P8.1
-    soc2_tsc_2017:
-    - P1.1
-    - P2.1
-    - P3.1
-    - P4.1
-    - P5.1
-    - P6.1
-    - P7.1
-    - P8.1
-    nist_csf_2_0:
-    - PR.DS-10
-    gdpr:
-    - Art. 5
-    - Art. 6
-    - Art. 9
-    - Art. 12
-    - Art. 15
-    - Art. 25
-    - Art. 35
-    - Art. 37
-    gdpr_articles:
-    - Art. 5
-    - Art. 6
-    - Art. 9
-    - Art. 12
-    - Art. 15
-    - Art. 25
-    - Art. 35
-    - Art. 37
-  implementing_documents:
-  - docs/02_Policies/09_Data_Privacy_and_Protection_Policy.md
-  - docs/04_Templates_and_Registers/06_RoPA_Template.md
-  - docs/04_Templates_and_Registers/07_DPIA_Template.md
-- id: CC-DP-03
-  name: Information Deletion and Right to Erasure
-  domain: Data Privacy
-  description: Information stored in information systems, devices or in any other
-    storage media must be deleted when no longer required, fulfilling GDPR Right to
-    Erasure.
-  implementing_docs:
-  - docs/03_Standards_and_Procedures/03_Data_Retention_and_Destruction_Standard.md
-  - docs/02_Policies/09_Data_Privacy_and_Protection_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.10
-    iso_27001_2013_legacy:
-    - None
-    soc2_tsc:
-    - CC6.5
-    - P4.1
-    soc2_tsc_2017:
-    - CC6.5
-    - P4.1
-    nist_csf_2_0:
-    - PR.DS-11
-    gdpr:
-    - Art. 17
-    gdpr_articles:
-    - Art. 17
-  implementing_documents:
-  - docs/03_Standards_and_Procedures/03_Data_Retention_and_Destruction_Standard.md
-  - docs/02_Policies/09_Data_Privacy_and_Protection_Policy.md
-- id: CC-DP-04
-  name: Data Masking, Pseudonymization and Anonymization
-  domain: Data Privacy
-  description: Data masking, pseudonymization, and tokenization techniques must be
-    applied to protect sensitive personal and business data in non-production environments.
-  implementing_docs:
-  - docs/02_Policies/09_Data_Privacy_and_Protection_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.11
-    iso_27001_2013_legacy:
-    - None
-    soc2_tsc:
-    - CC6.1
-    - C1.1
-    soc2_tsc_2017:
-    - CC6.1
-    - C1.1
-    nist_csf_2_0:
-    - PR.DS-01
-    gdpr:
-    - Art. 25
-    - Art. 32
-    gdpr_articles:
-    - Art. 25
-    - Art. 32
-  implementing_documents:
-  - docs/02_Policies/09_Data_Privacy_and_Protection_Policy.md
-- id: CC-DP-05
-  name: Data Leakage Prevention (DLP) and Exfiltration Safeguards
-  domain: Data Privacy
-  description: Data leakage prevention measures must be applied to systems, networks
-    and any other devices that process, store or transmit sensitive information.
-  implementing_docs:
-  - docs/03_Standards_and_Procedures/02_Data_Classification_and_Handling_Standard.md
-  mappings:
-    iso_27001_2022:
-    - A.8.12
-    iso_27001_2013_legacy:
-    - None
-    soc2_tsc:
-    - CC6.7
-    - C1.1
-    soc2_tsc_2017:
-    - CC6.7
-    - C1.1
-    nist_csf_2_0:
-    - PR.DS-05
-    gdpr:
-    - Art. 32
-    gdpr_articles:
-    - Art. 32
-  implementing_documents:
-  - docs/03_Standards_and_Procedures/02_Data_Classification_and_Handling_Standard.md
-- id: CC-IR-01
-  name: Incident Management Planning, Roles and CSIRT Playbooks
-  domain: Incident Management
-  description: The organization must plan and prepare for managing information security
-    incidents by defining roles, responsibilities, severity levels, and CSIRT playbooks.
-  implementing_docs:
-  - docs/02_Policies/10_Incident_Management_Policy.md
-  - docs/03_Standards_and_Procedures/06_Incident_Response_Plan_IRP.md
-  mappings:
-    iso_27001_2022:
-    - A.5.24
-    iso_27001_2013_legacy:
-    - A.16.1.1
-    soc2_tsc:
-    - CC7.3
-    soc2_tsc_2017:
-    - CC7.3
-    nist_csf_2_0:
-    - RS.MA-01
-    gdpr:
-    - Art. 33
-    gdpr_articles:
-    - Art. 33
-  implementing_documents:
-  - docs/02_Policies/10_Incident_Management_Policy.md
-  - docs/03_Standards_and_Procedures/06_Incident_Response_Plan_IRP.md
-- id: CC-IR-02
-  name: Assessment and Classification of Security Events
-  domain: Incident Management
-  description: The organization must assess information security events and decide
-    if they are to be classified as information security incidents based on impact
-    criteria.
-  implementing_docs:
-  - docs/02_Policies/10_Incident_Management_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.5.25
-    iso_27001_2013_legacy:
-    - A.16.1.4
-    soc2_tsc:
-    - CC7.3
-    soc2_tsc_2017:
-    - CC7.3
-    nist_csf_2_0:
-    - RS.AN-03
-    gdpr:
-    - Art. 33
-    gdpr_articles:
-    - Art. 33
-  implementing_documents:
-  - docs/02_Policies/10_Incident_Management_Policy.md
-- id: CC-IR-03
-  name: Incident Containment, Eradication and Response
-  domain: Incident Management
-  description: Information security incidents must be responded to in accordance with
-    the documented incident response plan and severity containment procedures.
-  implementing_docs:
-  - docs/03_Standards_and_Procedures/06_Incident_Response_Plan_IRP.md
-  mappings:
-    iso_27001_2022:
-    - A.5.26
-    iso_27001_2013_legacy:
-    - A.16.1.5
-    soc2_tsc:
-    - CC7.3
-    soc2_tsc_2017:
-    - CC7.3
-    nist_csf_2_0:
-    - RS.RP-01
-    gdpr:
-    - Art. 33
-    gdpr_articles:
-    - Art. 33
-  implementing_documents:
-  - docs/03_Standards_and_Procedures/06_Incident_Response_Plan_IRP.md
-- id: CC-IR-04
-  name: Post-Incident Review, Root Cause Analysis and Lessons Learned
-  domain: Incident Management
-  description: Knowledge gained from information security incidents must be used to
-    strengthen controls, holding post-mortems within 5 days for Sev1/2 and 10 days
-    for Sev3.
-  implementing_docs:
-  - docs/02_Policies/10_Incident_Management_Policy.md
-  - docs/04_Templates_and_Registers/03_Security_Incident_Log.md
-  mappings:
-    iso_27001_2022:
-    - A.5.27
-    iso_27001_2013_legacy:
-    - A.16.1.6
-    soc2_tsc:
-    - CC7.3
-    soc2_tsc_2017:
-    - CC7.3
-    nist_csf_2_0:
-    - RS.AN-04
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/10_Incident_Management_Policy.md
-  - docs/04_Templates_and_Registers/03_Security_Incident_Log.md
-- id: CC-IR-05
-  name: Collection and Preservation of Forensic Evidence
-  domain: Incident Management
-  description: The organization must identify, collect, acquire, and preserve evidence
-    related to information security incidents in accordance with legal admissibility
-    standards.
-  implementing_docs:
-  - docs/03_Standards_and_Procedures/06_Incident_Response_Plan_IRP.md
-  mappings:
-    iso_27001_2022:
-    - A.5.28
-    iso_27001_2013_legacy:
-    - A.16.1.7
-    soc2_tsc:
-    - CC7.4
-    soc2_tsc_2017:
-    - CC7.4
-    nist_csf_2_0:
-    - RS.AN-05
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/03_Standards_and_Procedures/06_Incident_Response_Plan_IRP.md
-- id: CC-IR-06
-  name: Security Event and Anomaly Reporting
-  domain: Incident Management
-  description: The organization must provide a mechanism for all personnel to report
-    observed or suspected information security events through designated channels.
-  implementing_docs:
-  - docs/02_Policies/10_Incident_Management_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.6.8
-    iso_27001_2013_legacy:
-    - A.16.1.2
-    - A.16.1.3
-    soc2_tsc:
-    - CC7.3
-    soc2_tsc_2017:
-    - CC7.3
-    nist_csf_2_0:
-    - DE.AE-02
-    gdpr:
-    - Art. 33
-    gdpr_articles:
-    - Art. 33
-  implementing_documents:
-  - docs/02_Policies/10_Incident_Management_Policy.md
-- id: CC-BC-01
-  name: Information Security During Disruption and Emergency Operations
-  domain: Business Continuity
-  description: The organization must plan how to maintain information security at
-    an appropriate level during disruption, emergency operations, or disaster recovery.
-  implementing_docs:
-  - docs/02_Policies/11_Business_Continuity_Policy.md
-  - docs/03_Standards_and_Procedures/07_Business_Continuity_Plan_BCP.md
-  mappings:
-    iso_27001_2022:
-    - A.5.29
-    iso_27001_2013_legacy:
-    - A.17.1.1
-    - A.17.1.2
-    soc2_tsc:
-    - CC7.5
-    - A1.1
-    soc2_tsc_2017:
-    - CC7.5
-    - A1.1
-    nist_csf_2_0:
-    - RC.RP-01
-    gdpr:
-    - Art. 32
-    gdpr_articles:
-    - Art. 32
-  implementing_documents:
-  - docs/02_Policies/11_Business_Continuity_Policy.md
-  - docs/03_Standards_and_Procedures/07_Business_Continuity_Plan_BCP.md
-- id: CC-BC-02
-  name: ICT Readiness for Business Continuity and Disaster Recovery
-  domain: Business Continuity
-  description: ICT readiness must be planned, implemented, maintained, and tested
-    based on business continuity objectives (RTO, RPO) and resilience requirements.
-  implementing_docs:
-  - docs/03_Standards_and_Procedures/08_Disaster_Recovery_Plan_DRP.md
-  mappings:
-    iso_27001_2022:
-    - A.5.30
-    iso_27001_2013_legacy:
-    - A.17.1.3
-    soc2_tsc:
-    - CC7.5
-    - CC9.1
-    - A1.2
-    soc2_tsc_2017:
-    - CC7.5
-    - CC9.1
-    - A1.2
-    nist_csf_2_0:
-    - RC.RP-02
-    gdpr:
-    - Art. 32
-    gdpr_articles:
-    - Art. 32
-  implementing_documents:
-  - docs/03_Standards_and_Procedures/08_Disaster_Recovery_Plan_DRP.md
-- id: CC-BC-03
-  name: Redundancy of Processing Facilities and High Availability
-  domain: Business Continuity
-  description: Information processing facilities must be implemented with redundancy
-    sufficient to meet availability requirements and eliminate single points of failure.
-  implementing_docs:
-  - docs/02_Policies/11_Business_Continuity_Policy.md
-  - docs/03_Standards_and_Procedures/08_Disaster_Recovery_Plan_DRP.md
-  mappings:
-    iso_27001_2022:
-    - A.8.14
-    iso_27001_2013_legacy:
-    - A.17.2.1
-    soc2_tsc:
-    - CC7.5
-    - A1.3
-    soc2_tsc_2017:
-    - CC7.5
-    - A1.3
-    nist_csf_2_0:
-    - PR.DS-09
-    gdpr:
-    - Art. 32
-    gdpr_articles:
-    - Art. 32
-  implementing_documents:
-  - docs/02_Policies/11_Business_Continuity_Policy.md
-  - docs/03_Standards_and_Procedures/08_Disaster_Recovery_Plan_DRP.md
-- id: CC-BC-04
-  name: Business Impact Analysis and Recovery Objectives (RTO/RPO)
-  domain: Business Continuity
-  description: Business impact analysis (BIA) must be conducted to establish recovery
-    time objectives (RTO) and recovery point objectives (RPO) for all critical systems.
-  implementing_docs:
-  - docs/02_Policies/11_Business_Continuity_Policy.md
-  - docs/03_Standards_and_Procedures/07_Business_Continuity_Plan_BCP.md
-  mappings:
-    iso_27001_2022:
-    - A.5.29
-    - A.5.30
-    iso_27001_2013_legacy:
-    - A.17.1.1
-    soc2_tsc:
-    - A1.1
-    soc2_tsc_2017:
-    - A1.1
-    nist_csf_2_0:
-    - RC.RP-01
-    gdpr:
-    - Art. 32
-    gdpr_articles:
-    - Art. 32
-  implementing_documents:
-  - docs/02_Policies/11_Business_Continuity_Policy.md
-  - docs/03_Standards_and_Procedures/07_Business_Continuity_Plan_BCP.md
-- id: CC-AU-01
-  name: Acceptable Use of Corporate IT Assets
-  domain: Acceptable Use
-  description: Rules for the acceptable use and handling of information and other
-    associated assets must be identified, documented, and implemented.
-  implementing_docs:
-  - docs/02_Policies/02_Asset_Management_Policy.md
-  - docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.5.10
-    iso_27001_2013_legacy:
-    - A.8.1.3
-    soc2_tsc:
-    - CC6.1
-    soc2_tsc_2017:
-    - CC6.1
-    nist_csf_2_0:
-    - PR.AA-01
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/02_Asset_Management_Policy.md
-  - docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md
-- id: CC-AU-02
-  name: Teleworking and Remote Working Controls
-  domain: Acceptable Use
-  description: Security measures must be implemented when personnel are teleworking
-    or working remotely to safeguard information accessed, processed or stored off-site.
-  implementing_docs:
-  - docs/02_Policies/01_Access_Control_Policy.md
-  - docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.6.7
-    iso_27001_2013_legacy:
-    - A.6.2.2
-    soc2_tsc:
-    - CC6.6
-    - CC6.7
-    soc2_tsc_2017:
-    - CC6.6
-    - CC6.7
-    nist_csf_2_0:
-    - PR.AA-05
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/01_Access_Control_Policy.md
-  - docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md
-- id: CC-AU-03
-  name: Clear Desk and Clear Screen Controls
-  domain: Acceptable Use
-  description: Clear desk rules for papers and removable storage media and clear screen
-    rules for information processing facilities must be defined and enforced.
-  implementing_docs:
-  - docs/02_Policies/04_Physical_Security_Policy.md
-  - docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.7.7
-    iso_27001_2013_legacy:
-    - A.11.2.9
-    soc2_tsc:
-    - CC6.1
-    soc2_tsc_2017:
-    - CC6.1
-    nist_csf_2_0:
-    - PR.PS-07
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/04_Physical_Security_Policy.md
-  - docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md
-- id: CC-AU-04
-  name: Security of Off-Premises Corporate Assets
-  domain: Acceptable Use
-  description: Off-site assets must be protected, taking into account the different
-    risks of working outside the organization premises.
-  implementing_docs:
-  - docs/02_Policies/02_Asset_Management_Policy.md
-  - docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.7.9
-    iso_27001_2013_legacy:
-    - A.11.2.6
-    soc2_tsc:
-    - CC6.4
-    soc2_tsc_2017:
-    - CC6.4
-    nist_csf_2_0:
-    - PR.PS-09
-    gdpr: []
-    gdpr_articles: []
-  implementing_documents:
-  - docs/02_Policies/02_Asset_Management_Policy.md
-  - docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md
-- id: CC-AU-05
-  name: User Endpoint Security, Full Disk Encryption and MDM
-  domain: Acceptable Use
-  description: Information stored on, processed by, or accessible via user endpoint
-    devices must be protected with mandatory MDM enrollment, AES-256 FDE, and inactivity
-    screen locks.
-  implementing_docs:
-  - docs/02_Policies/02_Asset_Management_Policy.md
-  - docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.8.1
-    iso_27001_2013_legacy:
-    - A.6.2.1
-    - A.11.2.8
-    soc2_tsc:
-    - CC6.1
-    soc2_tsc_2017:
-    - CC6.1
-    nist_csf_2_0:
-    - PR.AA-05
-    gdpr:
-    - Art. 32
-    gdpr_articles:
-    - Art. 32
-  implementing_documents:
-  - docs/02_Policies/02_Asset_Management_Policy.md
-  - docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md
-- id: CC-AU-06
-  name: Generative AI, Large Language Models and Machine Learning Governance
-  domain: Acceptable Use
-  description: Governance and usage criteria for Generative AI and LLMs must be established
-    per ISO/IEC 42001 and NIST AI RMF, including AI asset tiering and human-in-the-loop
-    review.
-  implementing_docs:
-  - docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.5.10
-    - A.8.1
-    - A.8.23
-    iso_27001_2013_legacy:
-    - None
-    soc2_tsc:
-    - CC6.1
-    - CC6.6
-    soc2_tsc_2017:
-    - CC6.1
-    - CC6.6
-    nist_csf_2_0:
-    - GV.PO-01
-    - PR.PS-01
-    gdpr:
-    - Art. 25
-    gdpr_articles:
-    - Art. 25
-  implementing_documents:
-  - docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md
-- id: CC-AU-07
-  name: AI Data Protection, Prompt Security and Shadow AI Prohibition
-  domain: Acceptable Use
-  description: Protection against prompt injection, unredacted PII submission to LLMs,
-    training data poisoning, and unauthorized shadow AI tooling must be strictly enforced.
-  implementing_docs:
-  - docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md
-  mappings:
-    iso_27001_2022:
-    - A.5.1
-    - A.5.10
-    - A.8.12
-    iso_27001_2013_legacy:
-    - None
-    soc2_tsc:
-    - CC6.1
-    - CC6.7
-    soc2_tsc_2017:
-    - CC6.1
-    - CC6.7
-    nist_csf_2_0:
-    - PR.DS-05
-    - PR.AT-01
-    gdpr:
-    - Art. 25
-    - Art. 32
-    gdpr_articles:
-    - Art. 25
-    - Art. 32
-  implementing_documents:
-  - docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md
-canonical_controls: *id001
+  - id: GV
+    name: Governance, Risk & Improvement
+  - id: AM
+    name: Asset Management & Classification
+  - id: AC
+    name: Access Control & Identity
+  - id: CR
+    name: Cryptography & Key Management
+  - id: PS
+    name: Physical & Environmental Security
+  - id: OP
+    name: Operations Security
+  - id: CM
+    name: Communications & Network Security
+  - id: SD
+    name: Secure Development & Change Management
+  - id: SP
+    name: Supplier & Third-Party Risk
+  - id: HR
+    name: Human Resource Security
+  - id: DP
+    name: Data Privacy & Protection
+  - id: IR
+    name: Incident Management & Response
+  - id: BC
+    name: Business Continuity & Disaster Recovery
+  - id: AU
+    name: Acceptable Use, Endpoint & AI Security
+controls:
+  - id: CC-GV-01
+    name: Information Security Policy Framework
+    domain: Governance
+    description: A comprehensive set of information security policies, governance structures, and management commitments must
+      be established, approved by executive leadership, published, and reviewed at planned intervals.
+    implementing_docs:
+      - docs/01_ISMS_Framework/01_Information_Security_Policy.md
+      - docs/01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md
+    mappings:
+      iso_27001_2022:
+        - A.5.1
+      iso_27001_2013_legacy:
+        - A.5.1.1
+        - A.5.1.2
+      soc2_tsc_2017:
+        - CC1.1
+        - CC5.3
+        - CC3.1
+        - CC5.1
+      nist_csf_2_0:
+        - GV.PO-01
+      gdpr_articles:
+        - Art. 24
+      nist_sp_800_53_rev5:
+        - id: PL-1
+          relationship: equivalent-to
+        - id: PM-1
+          relationship: equivalent-to
+        - id: CA-1
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-GV-02
+    name: Security Roles and Responsibilities
+    domain: Governance
+    description: Information security roles and responsibilities must be explicitly defined, allocated to competent personnel,
+      and communicated across the organization.
+    implementing_docs:
+      - docs/01_ISMS_Framework/04_Roles_and_Responsibilities.md
+    mappings:
+      iso_27001_2022:
+        - A.5.2
+      iso_27001_2013_legacy:
+        - A.6.1.1
+      soc2_tsc_2017:
+        - CC1.3
+      nist_csf_2_0:
+        - GV.RR-01
+      gdpr_articles:
+        - Art. 24
+      nist_sp_800_53_rev5:
+        - id: PM-2
+          relationship: equivalent-to
+        - id: PL-2
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-GV-03
+    name: Management Responsibilities and Leadership Commitment
+    domain: Governance
+    description: Executive management must actively lead, support, and resource the ISMS, requiring all personnel to apply
+      information security in accordance with established policies.
+    implementing_docs:
+      - docs/01_ISMS_Framework/04_Roles_and_Responsibilities.md
+      - docs/01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md
+    mappings:
+      iso_27001_2022:
+        - A.5.4
+      iso_27001_2013_legacy:
+        - A.7.2.1
+      soc2_tsc_2017:
+        - CC1.4
+      nist_csf_2_0:
+        - GV.RR-02
+      gdpr_articles:
+        - Art. 24
+      nist_sp_800_53_rev5:
+        - id: AC-5
+          relationship: equivalent-to
+        - id: PS-7
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-GV-04
+    name: Contact with Statutory and Regulatory Authorities
+    domain: Governance
+    description: Formal channels and procedures must be maintained for prompt engagement with law enforcement, regulatory
+      bodies, supervisory authorities, and emergency response agencies.
+    implementing_docs:
+      - docs/03_Standards_and_Procedures/06_Incident_Response_Plan_IRP.md
+      - docs/03_Standards_and_Procedures/09_Data_Breach_Notification_Procedure.md
+    mappings:
+      iso_27001_2022:
+        - A.5.5
+      iso_27001_2013_legacy:
+        - A.6.1.3
+      soc2_tsc_2017:
+        - CC2.1
+      nist_csf_2_0:
+        - RS.CO-02
+      gdpr_articles:
+        - Art. 33
+        - Art. 34
+      nist_sp_800_53_rev5:
+        - id: IR-6
+          relationship: equivalent-to
+        - id: PM-4
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-GV-05
+    name: Contact with Special Interest Groups and Threat Forums
+    domain: Governance
+    description: The security organization must maintain active ties with professional associations, threat intelligence exchanges,
+      and industry cybersecurity forums to remain current on emerging threats.
+    implementing_docs:
+      - docs/01_ISMS_Framework/01_Information_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.5.6
+      iso_27001_2013_legacy:
+        - A.6.1.4
+      soc2_tsc_2017:
+        - CC2.1
+      nist_csf_2_0:
+        - ID.RA-02
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: SI-5
+          relationship: equivalent-to
+        - id: PM-16
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-GV-06
+    name: Independent Review of Information Security
+    domain: Governance
+    description: The ISMS and implementation of security controls must be independently audited and evaluated at planned intervals
+      by objective internal or external auditors.
+    implementing_docs:
+      - docs/01_ISMS_Framework/03_Risk_Management_Methodology.md
+      - docs/01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md
+      - docs/04_Templates_and_Registers/08_Internal_Audit_and_CAPA_Register.md
+    mappings:
+      iso_27001_2022:
+        - A.5.35
+      iso_27001_2013_legacy:
+        - A.18.2.1
+      soc2_tsc_2017:
+        - CC2.3
+        - CC4.1
+        - CC3.2
+        - CC4.2
+      nist_csf_2_0:
+        - GV.OV-01
+      gdpr_articles:
+        - Art. 24
+      nist_sp_800_53_rev5:
+        - id: SA-3
+          relationship: equivalent-to
+        - id: CA-3
+          relationship: subset-of
+        - id: PM-3
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-GV-07
+    name: Compliance with Security Policies and Technical Standards
+    domain: Governance
+    description: Managers and system owners must regularly review compliance of information processing and procedures within
+      their area of responsibility against security standards and baselines.
+    implementing_docs:
+      - docs/01_ISMS_Framework/01_Information_Security_Policy.md
+      - docs/01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md
+    mappings:
+      iso_27001_2022:
+        - A.5.36
+      iso_27001_2013_legacy:
+        - A.18.2.2
+      soc2_tsc_2017:
+        - CC2.2
+        - CC5.3
+        - CC5.2
+      nist_csf_2_0:
+        - GV.PO-02
+      gdpr_articles:
+        - Art. 24
+      nist_sp_800_53_rev5: []
+      asd_essential_eight: []
+  - id: CC-GV-08
+    name: Documented Operating Procedures
+    domain: Governance
+    description: Standard operating procedures (SOPs) for information security operations, system administration, and infrastructure
+      maintenance must be documented, version-controlled, and made available.
+    implementing_docs:
+      - docs/02_Policies/05_Operations_Security_Policy.md
+      - docs/01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md
+    mappings:
+      iso_27001_2022:
+        - A.5.37
+      iso_27001_2013_legacy:
+        - A.12.1.1
+      soc2_tsc_2017:
+        - CC7.1
+      nist_csf_2_0:
+        - PR.PS-01
+      gdpr_articles: []
+      nist_sp_800_53_rev5: []
+      asd_essential_eight: []
+  - id: CC-AM-01
+    name: Information and Asset Inventory Management
+    domain: Asset Management
+    description: An accurate, comprehensive inventory of all information, software, hardware, and cloud assets must be maintained
+      with designated owners and lifecycle tracking.
+    implementing_docs:
+      - docs/02_Policies/02_Asset_Management_Policy.md
+      - docs/04_Templates_and_Registers/01_Information_Asset_Register.md
+    mappings:
+      iso_27001_2022:
+        - A.5.9
+      iso_27001_2013_legacy:
+        - A.8.1.1
+        - A.8.1.2
+      soc2_tsc_2017:
+        - CC6.1
+      nist_csf_2_0:
+        - ID.AM-01
+        - ID.AM-02
+      gdpr_articles:
+        - Art. 30
+      nist_sp_800_53_rev5:
+        - id: CM-8
+          relationship: equivalent-to
+        - id: IA-3
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-AM-02
+    name: Return of Corporate Assets
+    domain: Asset Management
+    description: All corporate equipment, access credentials, and intellectual property in possession of employees and contractors
+      must be recovered upon termination of employment or contract.
+    implementing_docs:
+      - docs/02_Policies/08_HR_Security_Policy.md
+      - docs/02_Policies/02_Asset_Management_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.5.11
+      iso_27001_2013_legacy:
+        - A.8.1.4
+      soc2_tsc_2017:
+        - CC6.2
+      nist_csf_2_0:
+        - PR.AA-06
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: AC-20
+          relationship: equivalent-to
+        - id: PL-4
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-AM-03
+    name: Information Classification
+    domain: Asset Management
+    description: Information must be classified in accordance with its value, legal sensitivity, and criticality to the organization
+      into Public, Internal, Confidential, and Restricted tiers.
+    implementing_docs:
+      - docs/02_Policies/02_Asset_Management_Policy.md
+      - docs/03_Standards_and_Procedures/02_Data_Classification_and_Handling_Standard.md
+    mappings:
+      iso_27001_2022:
+        - A.5.12
+      iso_27001_2013_legacy:
+        - A.8.2.1
+      soc2_tsc_2017:
+        - CC6.1
+        - C1.1
+      nist_csf_2_0:
+        - ID.AM-05
+      gdpr_articles:
+        - Art. 5
+      nist_sp_800_53_rev5:
+        - id: PS-4
+          relationship: equivalent-to
+        - id: MP-6
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-AM-04
+    name: Information Labelling and Handling
+    domain: Asset Management
+    description: Procedures for labelling and handling classified assets must be enforced, including default metadata classification
+      and visual markings on Confidential and Restricted data.
+    implementing_docs:
+      - docs/03_Standards_and_Procedures/02_Data_Classification_and_Handling_Standard.md
+    mappings:
+      iso_27001_2022:
+        - A.5.13
+      iso_27001_2013_legacy:
+        - A.8.2.2
+      soc2_tsc_2017:
+        - CC6.1
+        - C1.1
+      nist_csf_2_0:
+        - PR.DS-01
+      gdpr_articles:
+        - Art. 32
+      nist_sp_800_53_rev5:
+        - id: RA-2
+          relationship: equivalent-to
+        - id: MP-2
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-AM-05
+    name: Protection and Retention of Records
+    domain: Asset Management
+    description: Organizational and security records must be protected from loss, destruction, and unauthorized alteration,
+      in accordance with statutory retention schedules.
+    implementing_docs:
+      - docs/03_Standards_and_Procedures/03_Data_Retention_and_Destruction_Standard.md
+    mappings:
+      iso_27001_2022:
+        - A.5.33
+      iso_27001_2013_legacy:
+        - A.18.1.3
+      soc2_tsc_2017:
+        - CC6.1
+      nist_csf_2_0:
+        - PR.DS-11
+      gdpr_articles:
+        - Art. 5
+        - Art. 30
+      nist_sp_800_53_rev5:
+        - id: MP-3
+          relationship: equivalent-to
+        - id: AC-3
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-AM-06
+    name: Removable and Storage Media Management
+    domain: Asset Management
+    description: Storage media containing sensitive data must be encrypted, physically secured during storage and transit,
+      and restricted to authorized personnel.
+    implementing_docs:
+      - docs/03_Standards_and_Procedures/03_Data_Retention_and_Destruction_Standard.md
+    mappings:
+      iso_27001_2022:
+        - A.7.10
+      iso_27001_2013_legacy:
+        - A.11.2.7
+        - A.8.3.1
+      soc2_tsc_2017:
+        - CC6.1
+      nist_csf_2_0:
+        - PR.PS-03
+      gdpr_articles:
+        - Art. 32
+      nist_sp_800_53_rev5:
+        - id: SC-8
+          relationship: equivalent-to
+        - id: MP-5
+          relationship: equivalent-to
+        - id: AC-4
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-AM-07
+    name: Secure Media Sanitization and Equipment Disposal
+    domain: Asset Management
+    description: All storage devices and hardware slated for decommission or disposal must undergo cryptographically verified
+      sanitization aligned with NIST SP 800-88 Rev. 1 and IEEE 2883-2022.
+    implementing_docs:
+      - docs/03_Standards_and_Procedures/03_Data_Retention_and_Destruction_Standard.md
+    mappings:
+      iso_27001_2022:
+        - A.7.14
+      iso_27001_2013_legacy:
+        - A.11.2.5
+        - A.11.2.7
+      soc2_tsc_2017:
+        - CC6.5
+        - C1.2
+      nist_csf_2_0:
+        - PR.PS-03
+      gdpr_articles:
+        - Art. 17
+        - Art. 32
+      nist_sp_800_53_rev5: []
+      asd_essential_eight: []
+  - id: CC-AC-01
+    name: Segregation of Duties and Conflict Avoidance
+    domain: Access Control
+    description: Conflicting responsibilities and operational duties must be separated to prevent fraud, accidental errors,
+      and circumvention of organizational security controls.
+    implementing_docs:
+      - docs/02_Policies/01_Access_Control_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.5.3
+      iso_27001_2013_legacy:
+        - A.6.1.2
+      soc2_tsc_2017:
+        - CC6.1
+      nist_csf_2_0:
+        - PR.AA-01
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: AC-1
+          relationship: equivalent-to
+        - id: AC-3
+          relationship: equivalent-to
+      asd_essential_eight: []
+  - id: CC-AC-02
+    name: Access Control Architecture and Least Privilege
+    domain: Access Control
+    description: Access to information, systems, and network services must be controlled based on business necessity, role-based
+      access control (RBAC), and principle of least privilege.
+    implementing_docs:
+      - docs/02_Policies/01_Access_Control_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.5.15
+      iso_27001_2013_legacy:
+        - A.9.1.1
+        - A.9.1.2
+      soc2_tsc_2017:
+        - CC6.1
+      nist_csf_2_0:
+        - PR.AA-01
+      gdpr_articles:
+        - Art. 32
+      nist_sp_800_53_rev5:
+        - id: AC-2
+          relationship: equivalent-to
+        - id: IA-4
+          relationship: subset-of
+      asd_essential_eight:
+        - id: E8-AP-ML1
+          relationship: subset-of
+  - id: CC-AC-03
+    name: Identity Lifecycle Management and Account Provisioning
+    domain: Access Control
+    description: The complete lifecycle of user identities (creation, modification, suspension, revocation) must be managed
+      through centralized identity provider workflows.
+    implementing_docs:
+      - docs/02_Policies/01_Access_Control_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.5.16
+      iso_27001_2013_legacy:
+        - A.9.2.1
+      soc2_tsc_2017:
+        - CC6.2
+      nist_csf_2_0:
+        - PR.AA-02
+      gdpr_articles:
+        - Art. 32
+      nist_sp_800_53_rev5:
+        - id: AC-6
+          relationship: equivalent-to
+        - id: AC-2
+          relationship: subset-of
+      asd_essential_eight:
+        - id: E8-AP-ML1
+          relationship: subset-of
+        - id: E8-AP-ML2
+          relationship: equivalent-to
+        - id: E8-AP-ML3
+          relationship: superset-of
+  - id: CC-AC-04
+    name: Authentication Information and NIST SP 800-63B Guidelines
+    domain: Access Control
+    description: 'User passwords and authenticators must adhere to modern NIST SP 800-63B standards: 14-char minimum length,
+      passphrase encouragement, compromised password checks, and no arbitrary periodic expiration.'
+    implementing_docs:
+      - docs/03_Standards_and_Procedures/01_Password_and_Authentication_Standard.md
+    mappings:
+      iso_27001_2022:
+        - A.5.17
+      iso_27001_2013_legacy:
+        - A.9.2.4
+        - A.9.3.1
+        - A.9.4.3
+      soc2_tsc_2017:
+        - CC6.1
+      nist_csf_2_0:
+        - PR.AA-03
+      gdpr_articles:
+        - Art. 32
+      nist_sp_800_53_rev5:
+        - id: AC-2
+          relationship: equivalent-to
+        - id: CA-7
+          relationship: subset-of
+      asd_essential_eight:
+        - id: E8-AP-ML2
+          relationship: subset-of
+  - id: CC-AC-05
+    name: Access Rights Review and Recertification
+    domain: Access Control
+    description: 'User access rights must be formally reviewed and recertified at defined intervals: privileged access monthly,
+      critical systems quarterly, and standard systems semi-annually.'
+    implementing_docs:
+      - docs/02_Policies/01_Access_Control_Policy.md
+      - docs/04_Templates_and_Registers/05_Access_Review_Log.md
+    mappings:
+      iso_27001_2022:
+        - A.5.18
+      iso_27001_2013_legacy:
+        - A.9.2.2
+        - A.9.2.5
+        - A.9.2.6
+      soc2_tsc_2017:
+        - CC6.2
+        - CC6.3
+      nist_csf_2_0:
+        - PR.AA-04
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: IA-1
+          relationship: equivalent-to
+        - id: IA-2
+          relationship: equivalent-to
+        - id: IA-8
+          relationship: subset-of
+        - id: AC-7
+          relationship: subset-of
+      asd_essential_eight:
+        - id: E8-MF-ML1
+          relationship: subset-of
+        - id: E8-MF-ML2
+          relationship: equivalent-to
+        - id: E8-MF-ML3
+          relationship: superset-of
+  - id: CC-AC-06
+    name: Privileged Access Management (PAM)
+    domain: Access Control
+    description: The allocation and use of privileged access rights must be restricted, authenticated with phishing-resistant
+      MFA, vaulted, and audited.
+    implementing_docs:
+      - docs/02_Policies/01_Access_Control_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.2
+      iso_27001_2013_legacy:
+        - A.9.2.3
+      soc2_tsc_2017:
+        - CC6.3
+      nist_csf_2_0:
+        - PR.AA-04
+      gdpr_articles:
+        - Art. 32
+      nist_sp_800_53_rev5:
+        - id: IA-5
+          relationship: equivalent-to
+        - id: IA-6
+          relationship: subset-of
+      asd_essential_eight:
+        - id: E8-MF-ML1
+          relationship: intersects-with
+        - id: E8-MF-ML2
+          relationship: intersects-with
+  - id: CC-AC-07
+    name: Information Access Restriction and Granular Authorization
+    domain: Access Control
+    description: Access to information and application system functions must be restricted in accordance with granular authorization
+      controls and defined access policies.
+    implementing_docs:
+      - docs/02_Policies/01_Access_Control_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.3
+      iso_27001_2013_legacy:
+        - A.9.4.1
+      soc2_tsc_2017:
+        - CC6.1
+      nist_csf_2_0:
+        - PR.AA-01
+      gdpr_articles:
+        - Art. 32
+      nist_sp_800_53_rev5:
+        - id: AC-6
+          relationship: subset-of
+        - id: CM-7
+          relationship: subset-of
+      asd_essential_eight:
+        - id: E8-AP-ML2
+          relationship: intersects-with
+        - id: E8-AP-ML3
+          relationship: intersects-with
+  - id: CC-AC-08
+    name: Secure Authentication and Phishing-Resistant MFA
+    domain: Access Control
+    description: Multi-Factor Authentication (MFA) utilizing FIDO2/WebAuthn hardware tokens or number-matching push authenticators
+      must be enforced across all workforce logins.
+    implementing_docs:
+      - docs/03_Standards_and_Procedures/01_Password_and_Authentication_Standard.md
+    mappings:
+      iso_27001_2022:
+        - A.8.5
+      iso_27001_2013_legacy:
+        - A.9.4.2
+      soc2_tsc_2017:
+        - CC6.1
+      nist_csf_2_0:
+        - PR.AA-03
+      gdpr_articles:
+        - Art. 32
+      nist_sp_800_53_rev5: []
+      asd_essential_eight: []
+  - id: CC-AC-09
+    name: Restriction and Control of Privileged Utility Programs
+    domain: Access Control
+    description: The use of utility software programs that might be capable of overriding system and application controls
+      must be strictly restricted, controlled, and monitored.
+    implementing_docs:
+      - docs/02_Policies/01_Access_Control_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.18
+      iso_27001_2013_legacy:
+        - A.9.4.4
+      soc2_tsc_2017:
+        - CC6.3
+      nist_csf_2_0:
+        - PR.AA-04
+      gdpr_articles: []
+      nist_sp_800_53_rev5: []
+      asd_essential_eight: []
+  - id: CC-CR-01
+    name: Cryptographic Controls and Key Management Lifecycle
+    domain: Cryptography
+    description: Cryptographic algorithms and key management practices must align with NIST SP 800-57, including AES-256 for
+      data at rest, annual symmetric key rotation, and automated KMS lifecycle controls.
+    implementing_docs:
+      - docs/02_Policies/03_Cryptography_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.24
+      iso_27001_2013_legacy:
+        - A.10.1.1
+        - A.10.1.2
+      soc2_tsc_2017:
+        - CC6.1
+        - CC6.7
+      nist_csf_2_0:
+        - PR.DS-01
+        - PR.DS-02
+      gdpr_articles:
+        - Art. 32
+      nist_sp_800_53_rev5:
+        - id: SC-1
+          relationship: equivalent-to
+        - id: SC-13
+          relationship: equivalent-to
+      asd_essential_eight: []
+  - id: CC-CR-02
+    name: Data Encryption in Transit and TLS Configuration
+    domain: Cryptography
+    description: All communications across public networks or between data centers must utilize TLS 1.3 (or TLS 1.2 with PFS
+      cipher suites), disabling deprecated legacy protocols.
+    implementing_docs:
+      - docs/02_Policies/03_Cryptography_Policy.md
+      - docs/02_Policies/06_Communications_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.5.14
+      iso_27001_2013_legacy:
+        - A.13.2.1
+        - A.13.2.2
+      soc2_tsc_2017:
+        - CC6.6
+        - CC6.7
+      nist_csf_2_0:
+        - PR.DS-02
+      gdpr_articles:
+        - Art. 32
+      nist_sp_800_53_rev5:
+        - id: SC-12
+          relationship: equivalent-to
+        - id: IA-3
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-CR-03
+    name: Post-Quantum Cryptography Readiness and Ephemeral Secrets
+    domain: Cryptography
+    description: The organization maintains cryptographic agility and tracks migration to NIST post-quantum cryptographic
+      standards (FIPS 203, 204, 205), enforcing <=90d lifetimes for TLS and API secrets.
+    implementing_docs:
+      - docs/02_Policies/03_Cryptography_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.24
+      iso_27001_2013_legacy:
+        - A.10.1.2
+      soc2_tsc_2017:
+        - CC6.7
+      nist_csf_2_0:
+        - PR.DS-01
+      gdpr_articles:
+        - Art. 32
+      nist_sp_800_53_rev5:
+        - id: SC-28
+          relationship: equivalent-to
+        - id: SC-12
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-PS-01
+    name: Physical Security Perimeters and Barriers
+    domain: Physical Security
+    description: Physical security perimeters and access barriers must be implemented to safeguard areas containing sensitive
+      information processing facilities.
+    implementing_docs:
+      - docs/02_Policies/04_Physical_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.7.1
+      iso_27001_2013_legacy:
+        - A.11.1.1
+      soc2_tsc_2017:
+        - CC6.4
+      nist_csf_2_0:
+        - PR.PS-01
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: PE-1
+          relationship: equivalent-to
+        - id: PE-3
+          relationship: equivalent-to
+      asd_essential_eight: []
+  - id: CC-PS-02
+    name: Physical Entry Controls and Visitor Management
+    domain: Physical Security
+    description: Access to secure areas must be controlled by electronic access control, visitor badge issuance, log retention,
+      and escort requirements.
+    implementing_docs:
+      - docs/02_Policies/04_Physical_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.7.2
+      iso_27001_2013_legacy:
+        - A.11.1.2
+        - A.11.1.6
+      soc2_tsc_2017:
+        - CC6.4
+      nist_csf_2_0:
+        - PR.PS-02
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: PE-2
+          relationship: equivalent-to
+        - id: PE-3
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-PS-03
+    name: Securing Offices, Rooms and Facilities
+    domain: Physical Security
+    description: Physical security for offices, server rooms, and technical spaces must be designed and applied to prevent
+      unauthorized physical access and exposure.
+    implementing_docs:
+      - docs/02_Policies/04_Physical_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.7.3
+      iso_27001_2013_legacy:
+        - A.11.1.3
+      soc2_tsc_2017:
+        - CC6.4
+      nist_csf_2_0:
+        - PR.PS-03
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: PE-4
+          relationship: equivalent-to
+        - id: PE-5
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-PS-04
+    name: Physical Security Monitoring and Video Surveillance
+    domain: Physical Security
+    description: Premises and server rooms must be continuously monitored by surveillance cameras (CCTV) and intrusion detection
+      sensors with retained audit logs.
+    implementing_docs:
+      - docs/02_Policies/04_Physical_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.7.4
+      iso_27001_2013_legacy: []
+      soc2_tsc_2017:
+        - CC6.4
+      nist_csf_2_0:
+        - PR.PS-04
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: PE-6
+          relationship: equivalent-to
+        - id: PE-2
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-PS-05
+    name: Protection Against Environmental Threats
+    domain: Physical Security
+    description: Protection against natural disasters, fire, water ingress, and environmental hazards must be designed and
+      applied across all physical operating environments.
+    implementing_docs:
+      - docs/02_Policies/04_Physical_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.7.5
+      iso_27001_2013_legacy:
+        - A.11.1.4
+      soc2_tsc_2017:
+        - CC6.4
+      nist_csf_2_0:
+        - PR.PS-05
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: PE-12
+          relationship: equivalent-to
+        - id: PE-13
+          relationship: equivalent-to
+        - id: PE-14
+          relationship: equivalent-to
+        - id: PE-15
+          relationship: equivalent-to
+      asd_essential_eight: []
+  - id: CC-PS-06
+    name: Working in Secure Areas
+    domain: Physical Security
+    description: Security measures and guidelines for working in secure or confidential areas must be designed and enforced
+      (prohibiting unvetted photography or recording).
+    implementing_docs:
+      - docs/02_Policies/04_Physical_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.7.6
+      iso_27001_2013_legacy:
+        - A.11.1.5
+      soc2_tsc_2017:
+        - CC6.4
+      nist_csf_2_0:
+        - PR.PS-06
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: PE-5
+          relationship: equivalent-to
+        - id: PE-4
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-PS-07
+    name: Equipment Siting, Placement and Protection
+    domain: Physical Security
+    description: Equipment must be sited and protected to reduce the risks from environmental threats, unauthorized access,
+      and accidental damage.
+    implementing_docs:
+      - docs/02_Policies/04_Physical_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.7.8
+      iso_27001_2013_legacy:
+        - A.11.2.1
+      soc2_tsc_2017:
+        - CC6.4
+      nist_csf_2_0:
+        - PR.IR-02
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: PE-16
+          relationship: equivalent-to
+      asd_essential_eight: []
+  - id: CC-PS-08
+    name: Supporting Utilities and Power Redundancy
+    domain: Physical Security
+    description: Equipment must be protected from power failures and other disruptions caused by failures in supporting utilities
+      through UPS and backup generators.
+    implementing_docs:
+      - docs/02_Policies/04_Physical_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.7.11
+      iso_27001_2013_legacy:
+        - A.11.2.2
+      soc2_tsc_2017:
+        - CC6.4
+      nist_csf_2_0:
+        - PR.PS-05
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: PE-8
+          relationship: equivalent-to
+        - id: PE-10
+          relationship: equivalent-to
+        - id: PE-11
+          relationship: equivalent-to
+        - id: MA-3
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-OP-01
+    name: Threat Intelligence Ingestion and Risk Prioritization
+    domain: Operations Security
+    description: Information relating to information security threats must be collected, analyzed, and integrated into vulnerability
+      management and threat defenses.
+    implementing_docs:
+      - docs/03_Standards_and_Procedures/04_Vulnerability_and_Patch_Management_Standard.md
+    mappings:
+      iso_27001_2022:
+        - A.5.7
+      iso_27001_2013_legacy: []
+      soc2_tsc_2017:
+        - CC7.1
+      nist_csf_2_0:
+        - ID.RA-02
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: RA-3
+          relationship: equivalent-to
+        - id: SI-5
+          relationship: equivalent-to
+        - id: CA-7
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-OP-02
+    name: Equipment Maintenance and Servicing
+    domain: Operations Security
+    description: Information processing equipment must be correctly maintained to ensure its continued availability, integrity,
+      and operational security.
+    implementing_docs:
+      - docs/02_Policies/05_Operations_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.7.13
+      iso_27001_2013_legacy:
+        - A.11.2.4
+      soc2_tsc_2017:
+        - CC6.4
+      nist_csf_2_0:
+        - PR.PS-03
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: SI-1
+          relationship: equivalent-to
+        - id: SI-3
+          relationship: equivalent-to
+        - id: CM-7
+          relationship: subset-of
+      asd_essential_eight:
+        - id: E8-AC-ML1
+          relationship: subset-of
+        - id: E8-AC-ML2
+          relationship: equivalent-to
+        - id: E8-AC-ML3
+          relationship: superset-of
+  - id: CC-OP-03
+    name: Capacity Management and Cloud Resource Scaling
+    domain: Operations Security
+    description: The use of computing, memory, storage, and network resources must be monitored and adjusted to satisfy future
+      processing capacity demands.
+    implementing_docs:
+      - docs/02_Policies/05_Operations_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.6
+      iso_27001_2013_legacy:
+        - A.12.1.3
+      soc2_tsc_2017:
+        - CC7.1
+      nist_csf_2_0:
+        - PR.PS-01
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: MA-1
+          relationship: equivalent-to
+        - id: MA-2
+          relationship: equivalent-to
+        - id: MA-4
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-OP-04
+    name: Malware Protection and Endpoint Detection and Response
+    domain: Operations Security
+    description: Detection, prevention, and recovery controls to protect against malware must be implemented on all endpoints
+      and servers, backed by next-gen EDR.
+    implementing_docs:
+      - docs/02_Policies/05_Operations_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.7
+      iso_27001_2013_legacy:
+        - A.12.2.1
+      soc2_tsc_2017:
+        - CC6.8
+      nist_csf_2_0:
+        - DE.CM-09
+      gdpr_articles:
+        - Art. 32
+      nist_sp_800_53_rev5:
+        - id: CP-9
+          relationship: equivalent-to
+        - id: CP-10
+          relationship: subset-of
+      asd_essential_eight:
+        - id: E8-RB-ML1
+          relationship: subset-of
+        - id: E8-RB-ML2
+          relationship: equivalent-to
+        - id: E8-RB-ML3
+          relationship: superset-of
+  - id: CC-OP-05
+    name: Technical Vulnerability Management and Remediation SLAs
+    domain: Operations Security
+    description: Information about technical vulnerabilities must be evaluated against CVSS v4.0, CISA KEV, and EPSS, enforcing
+      remediation SLAs (<=48h critical, <=14d high).
+    implementing_docs:
+      - docs/03_Standards_and_Procedures/04_Vulnerability_and_Patch_Management_Standard.md
+    mappings:
+      iso_27001_2022:
+        - A.8.8
+      iso_27001_2013_legacy:
+        - A.12.6.1
+      soc2_tsc_2017:
+        - CC7.1
+      nist_csf_2_0:
+        - ID.RA-01
+      gdpr_articles:
+        - Art. 32
+      nist_sp_800_53_rev5:
+        - id: AU-1
+          relationship: equivalent-to
+        - id: AU-2
+          relationship: equivalent-to
+        - id: AU-3
+          relationship: equivalent-to
+        - id: AU-6
+          relationship: equivalent-to
+        - id: AU-12
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-OP-06
+    name: Configuration Management and Infrastructure as Code Baselines
+    domain: Operations Security
+    description: Configurations, including security baselines for hardware, software, services, and network devices, must
+      be established, tracked, monitored, and automated via IaC.
+    implementing_docs:
+      - docs/02_Policies/05_Operations_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.9
+      iso_27001_2013_legacy: []
+      soc2_tsc_2017:
+        - CC8.1
+      nist_csf_2_0:
+        - PR.PS-01
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: SC-28
+          relationship: equivalent-to
+        - id: PT-2
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-OP-07
+    name: Information Backup and Immutable Storage
+    domain: Operations Security
+    description: Backup copies of information, software, and systems must be maintained, encrypted, stored in immutable air-gapped
+      repositories, and tested regularly.
+    implementing_docs:
+      - docs/02_Policies/05_Operations_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.13
+      iso_27001_2013_legacy:
+        - A.12.3.1
+      soc2_tsc_2017:
+        - CC7.5
+        - A1.2
+      nist_csf_2_0:
+        - PR.DS-11
+      gdpr_articles:
+        - Art. 32
+      nist_sp_800_53_rev5:
+        - id: RA-5
+          relationship: equivalent-to
+        - id: SI-2
+          relationship: equivalent-to
+      asd_essential_eight:
+        - id: E8-PA-ML1
+          relationship: subset-of
+        - id: E8-PA-ML2
+          relationship: equivalent-to
+        - id: E8-PA-ML3
+          relationship: superset-of
+        - id: E8-PO-ML1
+          relationship: subset-of
+        - id: E8-PO-ML2
+          relationship: equivalent-to
+        - id: E8-PO-ML3
+          relationship: superset-of
+  - id: CC-OP-08
+    name: Audit Logging, SIEM Aggregation and Retention
+    domain: Operations Security
+    description: Logs recording user activities, exceptions, faults, and security events must be generated, stored (90d hot
+      + 365d cold), protected against tampering, and analyzed in SIEM.
+    implementing_docs:
+      - docs/02_Policies/05_Operations_Security_Policy.md
+      - docs/03_Standards_and_Procedures/03_Data_Retention_and_Destruction_Standard.md
+    mappings:
+      iso_27001_2022:
+        - A.8.15
+      iso_27001_2013_legacy:
+        - A.12.4.1
+        - A.12.4.2
+        - A.12.4.3
+      soc2_tsc_2017:
+        - CC7.2
+      nist_csf_2_0:
+        - DE.AE-03
+      gdpr_articles:
+        - Art. 32
+      nist_sp_800_53_rev5:
+        - id: AU-4
+          relationship: equivalent-to
+        - id: AU-9
+          relationship: equivalent-to
+        - id: AU-11
+          relationship: equivalent-to
+        - id: CA-2
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-OP-09
+    name: Continuous Security Monitoring and Behavioral Anomaly Detection
+    domain: Operations Security
+    description: Networks, systems, and applications must be monitored for anomalous behavior and potential security incidents,
+      evaluating events against baselines.
+    implementing_docs:
+      - docs/02_Policies/05_Operations_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.16
+      iso_27001_2013_legacy: []
+      soc2_tsc_2017:
+        - CC7.2
+      nist_csf_2_0:
+        - DE.CM-01
+      gdpr_articles:
+        - Art. 32
+      nist_sp_800_53_rev5:
+        - id: SC-7
+          relationship: equivalent-to
+        - id: CM-7
+          relationship: subset-of
+      asd_essential_eight:
+        - id: E8-AH-ML1
+          relationship: intersects-with
+  - id: CC-OP-10
+    name: Clock Synchronization via NTP
+    domain: Operations Security
+    description: The clocks of all information processing systems within the organization must be synchronized to an agreed
+      reference time source (NTP).
+    implementing_docs:
+      - docs/02_Policies/05_Operations_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.17
+      iso_27001_2013_legacy:
+        - A.12.4.4
+      soc2_tsc_2017:
+        - CC7.2
+      nist_csf_2_0:
+        - PR.IR-01
+      gdpr_articles: []
+      nist_sp_800_53_rev5: []
+      asd_essential_eight: []
+  - id: CC-OP-11
+    name: Software Installation Controls and Application Whitelisting
+    domain: Operations Security
+    description: Rules and automated restrictions governing the installation of software by users on operational systems must
+      be implemented.
+    implementing_docs:
+      - docs/02_Policies/05_Operations_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.19
+      iso_27001_2013_legacy:
+        - A.12.6.2
+      soc2_tsc_2017:
+        - CC8.1
+      nist_csf_2_0:
+        - PR.PS-01
+      gdpr_articles: []
+      nist_sp_800_53_rev5: []
+      asd_essential_eight: []
+  - id: CC-OP-12
+    name: Protection of Operational Systems During Security Audits
+    domain: Operations Security
+    description: Audit activities and penetration tests involving checks on operational systems must be planned and agreed
+      between the auditor and management to minimize business disruption.
+    implementing_docs:
+      - docs/02_Policies/05_Operations_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.34
+      iso_27001_2013_legacy:
+        - A.12.7.1
+      soc2_tsc_2017:
+        - CC2.3
+      nist_csf_2_0:
+        - PR.PS-01
+      gdpr_articles: []
+      nist_sp_800_53_rev5: []
+      asd_essential_eight: []
+  - id: CC-CM-01
+    name: Information Transfer Policies and Agreements
+    domain: Communications Security
+    description: Formal transfer policies, procedures, and controls must be in place to protect the transfer of information
+      through the use of all types of communications facilities.
+    implementing_docs:
+      - docs/02_Policies/06_Communications_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.5.14
+      iso_27001_2013_legacy:
+        - A.13.2.1
+        - A.13.2.2
+      soc2_tsc_2017:
+        - CC6.6
+        - CC6.7
+      nist_csf_2_0:
+        - PR.DS-02
+      gdpr_articles:
+        - Art. 32
+        - Art. 44
+      nist_sp_800_53_rev5:
+        - id: SC-7
+          relationship: equivalent-to
+        - id: AC-4
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-CM-02
+    name: Cabling Security and Telecommunications Protection
+    domain: Communications Security
+    description: Cables carrying power, data, or supporting information services must be protected from interception, interference,
+      or physical damage.
+    implementing_docs:
+      - docs/02_Policies/06_Communications_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.7.12
+      iso_27001_2013_legacy:
+        - A.11.2.3
+      soc2_tsc_2017:
+        - CC6.6
+      nist_csf_2_0:
+        - PR.IR-01
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: SC-8
+          relationship: equivalent-to
+        - id: CA-3
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-CM-03
+    name: Network Security Architecture and Boundary Protection
+    domain: Communications Security
+    description: Networks must be secured, managed, and controlled to protect information in systems and applications, including
+      next-generation firewalls at all ingress/egress points.
+    implementing_docs:
+      - docs/02_Policies/06_Communications_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.20
+      iso_27001_2013_legacy:
+        - A.13.1.1
+      soc2_tsc_2017:
+        - CC6.6
+      nist_csf_2_0:
+        - PR.IR-01
+      gdpr_articles:
+        - Art. 32
+      nist_sp_800_53_rev5:
+        - id: SC-7
+          relationship: equivalent-to
+        - id: AC-4
+          relationship: equivalent-to
+      asd_essential_eight: []
+  - id: CC-CM-04
+    name: Security of Managed Network Services and Connectivity
+    domain: Communications Security
+    description: Security mechanisms, service levels, and service requirements of network services must be identified, implemented,
+      and monitored.
+    implementing_docs:
+      - docs/02_Policies/06_Communications_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.21
+      iso_27001_2013_legacy:
+        - A.13.1.2
+      soc2_tsc_2017:
+        - CC6.6
+      nist_csf_2_0:
+        - PR.IR-02
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: AC-17
+          relationship: equivalent-to
+        - id: SC-10
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-CM-05
+    name: Network Segregation, VPC Isolation and Micro-segmentation
+    domain: Communications Security
+    description: Groups of information services, users, and information systems must be segregated on networks, isolating
+      production VPCs from testing and office networks.
+    implementing_docs:
+      - docs/02_Policies/06_Communications_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.22
+      iso_27001_2013_legacy:
+        - A.13.1.3
+      soc2_tsc_2017:
+        - CC6.6
+      nist_csf_2_0:
+        - PR.IR-03
+      gdpr_articles:
+        - Art. 32
+      nist_sp_800_53_rev5:
+        - id: SC-8
+          relationship: equivalent-to
+        - id: AU-8
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-CM-06
+    name: Web Filtering, DNS Security and Anti-Phishing Controls
+    domain: Communications Security
+    description: Access to external websites must be managed using DNS and URL filtering to reduce exposure to malicious content,
+      C2 servers, and credential phishing.
+    implementing_docs:
+      - docs/02_Policies/06_Communications_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.23
+      iso_27001_2013_legacy: []
+      soc2_tsc_2017:
+        - CC6.6
+      nist_csf_2_0:
+        - PR.PS-01
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: MP-6
+          relationship: equivalent-to
+        - id: PT-3
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-SD-01
+    name: Security in Project Management and Agile Lifecycles
+    domain: Secure Development
+    description: Information security must be integrated into project management methodology across all product and infrastructure
+      engineering lifecycles.
+    implementing_docs:
+      - docs/02_Policies/12_SDLC_and_Change_Management_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.5.8
+      iso_27001_2013_legacy:
+        - A.6.1.5
+      soc2_tsc_2017:
+        - CC8.1
+      nist_csf_2_0:
+        - PR.PS-06
+      gdpr_articles:
+        - Art. 25
+      nist_sp_800_53_rev5:
+        - id: SA-3
+          relationship: equivalent-to
+        - id: SA-8
+          relationship: equivalent-to
+      asd_essential_eight: []
+  - id: CC-SD-02
+    name: Intellectual Property Rights and Source Code Licensing
+    domain: Secure Development
+    description: Appropriate procedures must be implemented to protect intellectual property rights, software licenses, and
+      proprietary source code assets.
+    implementing_docs:
+      - docs/02_Policies/12_SDLC_and_Change_Management_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.5.32
+      iso_27001_2013_legacy:
+        - A.18.1.2
+      soc2_tsc_2017:
+        - CC6.1
+      nist_csf_2_0:
+        - PR.DS-01
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: SA-4
+          relationship: equivalent-to
+        - id: SA-5
+          relationship: subset-of
+        - id: RA-3
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-SD-03
+    name: Access Control to Source Code Repositories
+    domain: Secure Development
+    description: Read and write access to program source code, build pipelines, and deployment tooling must be strictly controlled,
+      requiring MFA and branch protection rules.
+    implementing_docs:
+      - docs/02_Policies/12_SDLC_and_Change_Management_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.4
+      iso_27001_2013_legacy:
+        - A.9.4.5
+      soc2_tsc_2017:
+        - CC8.1
+      nist_csf_2_0:
+        - PR.PS-06
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: SA-8
+          relationship: equivalent-to
+        - id: SC-2
+          relationship: equivalent-to
+        - id: PL-8
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-SD-04
+    name: Secure Development Lifecycle Governance
+    domain: Secure Development
+    description: Rules for the secure development of software and systems must be established and applied to all development
+      activities within the organization.
+    implementing_docs:
+      - docs/02_Policies/12_SDLC_and_Change_Management_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.25
+      iso_27001_2013_legacy:
+        - A.14.2.1
+      soc2_tsc_2017:
+        - CC8.1
+      nist_csf_2_0:
+        - PR.PS-06
+      gdpr_articles:
+        - Art. 25
+      nist_sp_800_53_rev5:
+        - id: SA-11
+          relationship: equivalent-to
+        - id: SI-10
+          relationship: subset-of
+        - id: SI-11
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-SD-05
+    name: Application Security Requirements and Threat Modeling
+    domain: Secure Development
+    description: Information security requirements must be identified, specified, and approved when developing or acquiring
+      applications, incorporating STRIDE threat modeling.
+    implementing_docs:
+      - docs/03_Standards_and_Procedures/05_Secure_Coding_Standard.md
+    mappings:
+      iso_27001_2022:
+        - A.8.26
+      iso_27001_2013_legacy:
+        - A.14.1.2
+        - A.14.1.3
+      soc2_tsc_2017:
+        - CC8.1
+      nist_csf_2_0:
+        - PR.PS-06
+      gdpr_articles:
+        - Art. 25
+      nist_sp_800_53_rev5:
+        - id: CM-2
+          relationship: equivalent-to
+        - id: CM-5
+          relationship: equivalent-to
+      asd_essential_eight: []
+  - id: CC-SD-06
+    name: Secure System Architecture and Engineering Principles
+    domain: Secure Development
+    description: Principles for engineering secure systems must be established, documented, maintained, and applied to any
+      information system development activities.
+    implementing_docs:
+      - docs/02_Policies/12_SDLC_and_Change_Management_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.27
+      iso_27001_2013_legacy:
+        - A.14.2.5
+      soc2_tsc_2017:
+        - CC8.1
+      nist_csf_2_0:
+        - PR.PS-06
+      gdpr_articles:
+        - Art. 25
+      nist_sp_800_53_rev5:
+        - id: CM-1
+          relationship: equivalent-to
+        - id: CM-3
+          relationship: equivalent-to
+        - id: CM-4
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-SD-07
+    name: Secure Coding Standards and Peer Code Review
+    domain: Secure Development
+    description: Secure coding principles must be applied to software development; peer code review requires at least 1 approval
+      for standard changes and 2 approvals (including Security/CODEOWNERS) for Tier-1/security PRs.
+    implementing_docs:
+      - docs/03_Standards_and_Procedures/05_Secure_Coding_Standard.md
+    mappings:
+      iso_27001_2022:
+        - A.8.28
+      iso_27001_2013_legacy: []
+      soc2_tsc_2017:
+        - CC8.1
+      nist_csf_2_0:
+        - PR.PS-06
+      gdpr_articles:
+        - Art. 25
+      nist_sp_800_53_rev5:
+        - id: SA-10
+          relationship: equivalent-to
+        - id: AT-3
+          relationship: equivalent-to
+      asd_essential_eight: []
+  - id: CC-SD-08
+    name: Automated Security Testing in CI/CD (SAST, DAST, SCA)
+    domain: Secure Development
+    description: Security testing activities must be defined and implemented in the development life cycle, including pre-commit
+      secret scanning, container scanning, and artifact signing.
+    implementing_docs:
+      - docs/02_Policies/12_SDLC_and_Change_Management_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.29
+      iso_27001_2013_legacy:
+        - A.14.2.8
+      soc2_tsc_2017:
+        - CC8.1
+      nist_csf_2_0:
+        - PR.PS-06
+      gdpr_articles:
+        - Art. 25
+      nist_sp_800_53_rev5:
+        - id: SA-4
+          relationship: equivalent-to
+        - id: SR-3
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-SD-09
+    name: Separation of Development, Test and Production Environments
+    domain: Secure Development
+    description: Development, testing, and production environments must be strictly separated and secured to prevent unauthorized
+      access or changes to the operational environment.
+    implementing_docs:
+      - docs/02_Policies/12_SDLC_and_Change_Management_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.31
+      iso_27001_2013_legacy:
+        - A.12.1.4
+      soc2_tsc_2017:
+        - CC8.1
+      nist_csf_2_0:
+        - PR.PS-06
+      gdpr_articles:
+        - Art. 32
+      nist_sp_800_53_rev5:
+        - id: SR-1
+          relationship: equivalent-to
+        - id: SR-8
+          relationship: equivalent-to
+        - id: CM-10
+          relationship: equivalent-to
+        - id: CM-11
+          relationship: subset-of
+      asd_essential_eight:
+        - id: E8-PA-ML2
+          relationship: intersects-with
+        - id: E8-PA-ML3
+          relationship: intersects-with
+        - id: E8-PO-ML2
+          relationship: intersects-with
+  - id: CC-SD-10
+    name: Change Management and Release Governance
+    domain: Secure Development
+    description: Changes to information processing facilities and systems must be subject to change management procedures,
+      automated CI gates, and rollback planning.
+    implementing_docs:
+      - docs/02_Policies/12_SDLC_and_Change_Management_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.32
+      iso_27001_2013_legacy:
+        - A.12.1.2
+        - A.14.2.2
+        - A.14.2.3
+        - A.14.2.4
+      soc2_tsc_2017:
+        - CC8.1
+      nist_csf_2_0:
+        - PR.PS-01
+      gdpr_articles: []
+      nist_sp_800_53_rev5: []
+      asd_essential_eight: []
+  - id: CC-SD-11
+    name: Test Data Protection and Synthetic Data Generation
+    domain: Secure Development
+    description: Test data must be carefully selected, protected, and controlled; operational personal data must not be copied
+      to non-production environments without pseudonymization or synthetic generation.
+    implementing_docs:
+      - docs/02_Policies/12_SDLC_and_Change_Management_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.33
+      iso_27001_2013_legacy:
+        - A.14.3.1
+      soc2_tsc_2017:
+        - CC8.1
+      nist_csf_2_0:
+        - PR.PS-06
+      gdpr_articles:
+        - Art. 25
+        - Art. 32
+      nist_sp_800_53_rev5: []
+      asd_essential_eight: []
+  - id: CC-SP-01
+    name: Supplier Security Policy and Risk Management
+    domain: Supplier Management
+    description: Processes and procedures must be defined and implemented to mitigate the security risks associated with the
+      use of supplier products or services.
+    implementing_docs:
+      - docs/02_Policies/07_Supplier_Security_Policy.md
+      - docs/04_Templates_and_Registers/04_Vendor_Risk_Assessment_Template.md
+    mappings:
+      iso_27001_2022:
+        - A.5.19
+      iso_27001_2013_legacy:
+        - A.15.1.1
+      soc2_tsc_2017:
+        - CC9.2
+      nist_csf_2_0:
+        - GV.SC-04
+      gdpr_articles:
+        - Art. 28
+      nist_sp_800_53_rev5:
+        - id: SA-9
+          relationship: equivalent-to
+        - id: SR-1
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-SP-02
+    name: Supplier Security Agreements, SLAs and DPAs
+    domain: Supplier Management
+    description: Relevant information security requirements and Data Processing Agreements (DPAs) must be established and
+      agreed upon with each supplier.
+    implementing_docs:
+      - docs/02_Policies/07_Supplier_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.5.20
+      iso_27001_2013_legacy:
+        - A.15.1.2
+      soc2_tsc_2017:
+        - CC9.2
+      nist_csf_2_0:
+        - GV.SC-06
+      gdpr_articles:
+        - Art. 28
+      nist_sp_800_53_rev5:
+        - id: SA-4
+          relationship: equivalent-to
+        - id: SR-3
+          relationship: equivalent-to
+      asd_essential_eight: []
+  - id: CC-SP-03
+    name: ICT Supply Chain Security and Software Bill of Materials (SBOM)
+    domain: Supplier Management
+    description: Processes and procedures must be defined and implemented to manage the information security risks associated
+      with the ICT products and services supply chain, including SBOM validation.
+    implementing_docs:
+      - docs/02_Policies/07_Supplier_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.5.21
+      iso_27001_2013_legacy:
+        - A.15.1.3
+      soc2_tsc_2017:
+        - CC9.2
+      nist_csf_2_0:
+        - GV.SC-07
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: SR-2
+          relationship: equivalent-to
+        - id: SR-5
+          relationship: equivalent-to
+        - id: SR-6
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-SP-04
+    name: Supplier Service Monitoring, Audits and Review
+    domain: Supplier Management
+    description: The organization must regularly monitor, review, and evaluate supplier service delivery and security practices
+      in line with vendor tiering.
+    implementing_docs:
+      - docs/02_Policies/07_Supplier_Security_Policy.md
+      - docs/04_Templates_and_Registers/04_Vendor_Risk_Assessment_Template.md
+    mappings:
+      iso_27001_2022:
+        - A.5.22
+      iso_27001_2013_legacy:
+        - A.15.2.1
+        - A.15.2.2
+      soc2_tsc_2017:
+        - CC9.2
+      nist_csf_2_0:
+        - GV.SC-08
+      gdpr_articles:
+        - Art. 28
+      nist_sp_800_53_rev5:
+        - id: CA-7
+          relationship: equivalent-to
+        - id: SR-6
+          relationship: equivalent-to
+      asd_essential_eight: []
+  - id: CC-SP-05
+    name: Cloud Services Security Governance and Shared Responsibility
+    domain: Supplier Management
+    description: Processes for acquisition, use, management, and exit from cloud services must be established in accordance
+      with the cloud shared responsibility model.
+    implementing_docs:
+      - docs/02_Policies/05_Operations_Security_Policy.md
+      - docs/02_Policies/07_Supplier_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.5.23
+      iso_27001_2013_legacy: []
+      soc2_tsc_2017:
+        - CC6.6
+        - CC9.2
+      nist_csf_2_0:
+        - PR.DS-01
+      gdpr_articles:
+        - Art. 28
+      nist_sp_800_53_rev5:
+        - id: SA-9
+          relationship: equivalent-to
+        - id: AC-20
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-SP-06
+    name: Outsourced Software Development Governance
+    domain: Supplier Management
+    description: The organization must direct, monitor, and review the security activities of outsourced system and software
+      development contractors.
+    implementing_docs:
+      - docs/02_Policies/07_Supplier_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.30
+      iso_27001_2013_legacy:
+        - A.14.2.7
+      soc2_tsc_2017:
+        - CC9.2
+      nist_csf_2_0:
+        - GV.SC-07
+      gdpr_articles:
+        - Art. 28
+      nist_sp_800_53_rev5:
+        - id: PS-4
+          relationship: equivalent-to
+        - id: SR-9
+          relationship: equivalent-to
+      asd_essential_eight: []
+  - id: CC-HR-01
+    name: Personnel Screening and Background Checks
+    domain: Human Resources
+    description: Background verification checks on all candidates for employment must be carried out in accordance with relevant
+      laws, regulations, and ethics.
+    implementing_docs:
+      - docs/02_Policies/08_HR_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.6.1
+      iso_27001_2013_legacy:
+        - A.7.1.1
+      soc2_tsc_2017:
+        - CC1.2
+      nist_csf_2_0:
+        - PR.AT-01
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: PS-1
+          relationship: equivalent-to
+        - id: PS-2
+          relationship: equivalent-to
+        - id: PS-3
+          relationship: equivalent-to
+      asd_essential_eight: []
+  - id: CC-HR-02
+    name: Terms and Conditions of Employment
+    domain: Human Resources
+    description: The employment contractual agreements must state the personnel and organization responsibilities for information
+      security.
+    implementing_docs:
+      - docs/02_Policies/08_HR_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.6.2
+      iso_27001_2013_legacy:
+        - A.7.1.2
+      soc2_tsc_2017:
+        - CC1.1
+      nist_csf_2_0:
+        - PR.AT-01
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: PS-6
+          relationship: equivalent-to
+        - id: PL-4
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-HR-03
+    name: Security Awareness, Training and Phishing Simulations
+    domain: Human Resources
+    description: All personnel must receive appropriate security awareness education, training, and regular updates relevant
+      to their job function, supplemented by monthly phishing tests.
+    implementing_docs:
+      - docs/02_Policies/08_HR_Security_Policy.md
+      - docs/01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md
+    mappings:
+      iso_27001_2022:
+        - A.6.3
+      iso_27001_2013_legacy:
+        - A.7.2.2
+      soc2_tsc_2017:
+        - CC2.2
+      nist_csf_2_0:
+        - PR.AT-02
+      gdpr_articles:
+        - Art. 39
+      nist_sp_800_53_rev5:
+        - id: AT-1
+          relationship: equivalent-to
+        - id: AT-2
+          relationship: equivalent-to
+        - id: AT-4
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-HR-04
+    name: Disciplinary Process for Security Policy Violations
+    domain: Human Resources
+    description: A formal and communicated disciplinary process must be in place to take action against personnel who have
+      committed an information security violation.
+    implementing_docs:
+      - docs/02_Policies/08_HR_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.6.4
+      iso_27001_2013_legacy:
+        - A.7.2.3
+      soc2_tsc_2017:
+        - CC1.1
+        - CC1.5
+      nist_csf_2_0:
+        - PR.AT-01
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: PS-8
+          relationship: equivalent-to
+      asd_essential_eight: []
+  - id: CC-HR-05
+    name: Responsibilities After Termination or Change of Employment
+    domain: Human Resources
+    description: Information security responsibilities and duties that remain valid after termination or change of employment
+      must be defined, enforced, and communicated.
+    implementing_docs:
+      - docs/02_Policies/08_HR_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.6.5
+      iso_27001_2013_legacy:
+        - A.7.3.1
+      soc2_tsc_2017:
+        - CC6.2
+      nist_csf_2_0:
+        - PR.AA-06
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: PS-4
+          relationship: equivalent-to
+        - id: PS-5
+          relationship: equivalent-to
+      asd_essential_eight: []
+  - id: CC-HR-06
+    name: Confidentiality and Non-Disclosure Agreements
+    domain: Human Resources
+    description: Non-disclosure or confidentiality agreements reflecting the organization needs for protection of information
+      must be identified, documented, and regularly reviewed.
+    implementing_docs:
+      - docs/02_Policies/08_HR_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.6.6
+      iso_27001_2013_legacy:
+        - A.13.2.4
+      soc2_tsc_2017:
+        - CC1.1
+      nist_csf_2_0:
+        - PR.AT-01
+      gdpr_articles: []
+      nist_sp_800_53_rev5: []
+      asd_essential_eight: []
+  - id: CC-DP-01
+    name: Legal, Statutory, Regulatory and Contractual Compliance
+    domain: Data Privacy
+    description: All applicable statutory, regulatory, and contractual requirements must be identified, documented, and reviewed
+      periodically.
+    implementing_docs:
+      - docs/01_ISMS_Framework/02_Context_of_the_Organization.md
+      - docs/02_Policies/09_Data_Privacy_and_Protection_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.5.31
+      iso_27001_2013_legacy:
+        - A.18.1.1
+      soc2_tsc_2017:
+        - CC2.1
+      nist_csf_2_0:
+        - GV.OC-03
+      gdpr_articles:
+        - Art. 5
+        - Art. 6
+      nist_sp_800_53_rev5:
+        - id: PT-1
+          relationship: equivalent-to
+        - id: PT-2
+          relationship: equivalent-to
+      asd_essential_eight: []
+  - id: CC-DP-02
+    name: Privacy and Protection of Personally Identifiable Information (PII)
+    domain: Data Privacy
+    description: The organization must ensure the protection of personal data and compliance with GDPR and applicable privacy
+      legislation through RoPA, DPIA, and DPO oversight.
+    implementing_docs:
+      - docs/02_Policies/09_Data_Privacy_and_Protection_Policy.md
+      - docs/04_Templates_and_Registers/06_RoPA_Template.md
+      - docs/04_Templates_and_Registers/07_DPIA_Template.md
+    mappings:
+      iso_27001_2022:
+        - A.5.34
+      iso_27001_2013_legacy:
+        - A.18.1.4
+      soc2_tsc_2017:
+        - P1.1
+        - P2.1
+        - P3.1
+        - P4.1
+        - P5.1
+        - P6.1
+        - P7.1
+        - P8.1
+      nist_csf_2_0:
+        - PR.DS-10
+      gdpr_articles:
+        - Art. 5
+        - Art. 6
+        - Art. 9
+        - Art. 12
+        - Art. 15
+        - Art. 25
+        - Art. 35
+        - Art. 37
+      nist_sp_800_53_rev5:
+        - id: PT-3
+          relationship: equivalent-to
+      asd_essential_eight: []
+  - id: CC-DP-03
+    name: Information Deletion and Right to Erasure
+    domain: Data Privacy
+    description: Information stored in information systems, devices or in any other storage media must be deleted when no
+      longer required, fulfilling GDPR Right to Erasure.
+    implementing_docs:
+      - docs/03_Standards_and_Procedures/03_Data_Retention_and_Destruction_Standard.md
+      - docs/02_Policies/09_Data_Privacy_and_Protection_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.10
+      iso_27001_2013_legacy: []
+      soc2_tsc_2017:
+        - CC6.5
+        - P4.1
+      nist_csf_2_0:
+        - PR.DS-11
+      gdpr_articles:
+        - Art. 17
+      nist_sp_800_53_rev5:
+        - id: PT-4
+          relationship: equivalent-to
+        - id: SA-8
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-DP-04
+    name: Data Masking, Pseudonymization and Anonymization
+    domain: Data Privacy
+    description: Data masking, pseudonymization, and tokenization techniques must be applied to protect sensitive personal
+      and business data in non-production environments.
+    implementing_docs:
+      - docs/02_Policies/09_Data_Privacy_and_Protection_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.11
+      iso_27001_2013_legacy: []
+      soc2_tsc_2017:
+        - CC6.1
+        - C1.1
+      nist_csf_2_0:
+        - PR.DS-01
+      gdpr_articles:
+        - Art. 25
+        - Art. 32
+      nist_sp_800_53_rev5:
+        - id: PT-7
+          relationship: equivalent-to
+        - id: RA-3
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-DP-05
+    name: Data Leakage Prevention (DLP) and Exfiltration Safeguards
+    domain: Data Privacy
+    description: Data leakage prevention measures must be applied to systems, networks and any other devices that process,
+      store or transmit sensitive information.
+    implementing_docs:
+      - docs/03_Standards_and_Procedures/02_Data_Classification_and_Handling_Standard.md
+    mappings:
+      iso_27001_2022:
+        - A.8.12
+      iso_27001_2013_legacy: []
+      soc2_tsc_2017:
+        - CC6.7
+        - C1.1
+      nist_csf_2_0:
+        - PR.DS-01
+      gdpr_articles:
+        - Art. 32
+      nist_sp_800_53_rev5:
+        - id: SC-7
+          relationship: subset-of
+        - id: SI-12
+          relationship: equivalent-to
+      asd_essential_eight: []
+  - id: CC-IR-01
+    name: Incident Management Planning, Roles and CSIRT Playbooks
+    domain: Incident Management
+    description: The organization must plan and prepare for managing information security incidents by defining roles, responsibilities,
+      severity levels, and CSIRT playbooks.
+    implementing_docs:
+      - docs/02_Policies/10_Incident_Management_Policy.md
+      - docs/03_Standards_and_Procedures/06_Incident_Response_Plan_IRP.md
+    mappings:
+      iso_27001_2022:
+        - A.5.24
+      iso_27001_2013_legacy:
+        - A.16.1.1
+      soc2_tsc_2017:
+        - CC7.3
+      nist_csf_2_0:
+        - RS.MA-01
+      gdpr_articles:
+        - Art. 33
+      nist_sp_800_53_rev5:
+        - id: IR-1
+          relationship: equivalent-to
+        - id: IR-8
+          relationship: equivalent-to
+      asd_essential_eight: []
+  - id: CC-IR-02
+    name: Assessment and Classification of Security Events
+    domain: Incident Management
+    description: The organization must assess information security events and decide if they are to be classified as information
+      security incidents based on impact criteria.
+    implementing_docs:
+      - docs/02_Policies/10_Incident_Management_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.5.25
+      iso_27001_2013_legacy:
+        - A.16.1.4
+      soc2_tsc_2017:
+        - CC7.3
+      nist_csf_2_0:
+        - RS.AN-03
+      gdpr_articles:
+        - Art. 33
+      nist_sp_800_53_rev5:
+        - id: IR-4
+          relationship: equivalent-to
+        - id: SI-4
+          relationship: equivalent-to
+      asd_essential_eight: []
+  - id: CC-IR-03
+    name: Incident Containment, Eradication and Response
+    domain: Incident Management
+    description: Information security incidents must be responded to in accordance with the documented incident response plan
+      and severity containment procedures.
+    implementing_docs:
+      - docs/03_Standards_and_Procedures/06_Incident_Response_Plan_IRP.md
+    mappings:
+      iso_27001_2022:
+        - A.5.26
+      iso_27001_2013_legacy:
+        - A.16.1.5
+      soc2_tsc_2017:
+        - CC7.3
+      nist_csf_2_0:
+        - RS.MA-01
+      gdpr_articles:
+        - Art. 33
+      nist_sp_800_53_rev5:
+        - id: IR-4
+          relationship: equivalent-to
+        - id: IR-5
+          relationship: equivalent-to
+      asd_essential_eight: []
+  - id: CC-IR-04
+    name: Post-Incident Review, Root Cause Analysis and Lessons Learned
+    domain: Incident Management
+    description: Knowledge gained from information security incidents must be used to strengthen controls, holding post-mortems
+      within 5 days for Sev1/2 and 10 days for Sev3.
+    implementing_docs:
+      - docs/02_Policies/10_Incident_Management_Policy.md
+      - docs/04_Templates_and_Registers/03_Security_Incident_Log.md
+    mappings:
+      iso_27001_2022:
+        - A.5.27
+      iso_27001_2013_legacy:
+        - A.16.1.6
+      soc2_tsc_2017:
+        - CC7.3
+      nist_csf_2_0:
+        - RS.AN-03
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: IR-4
+          relationship: subset-of
+        - id: CA-7
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-IR-05
+    name: Collection and Preservation of Forensic Evidence
+    domain: Incident Management
+    description: The organization must identify, collect, acquire, and preserve evidence related to information security incidents
+      in accordance with legal admissibility standards.
+    implementing_docs:
+      - docs/03_Standards_and_Procedures/06_Incident_Response_Plan_IRP.md
+    mappings:
+      iso_27001_2022:
+        - A.5.28
+      iso_27001_2013_legacy:
+        - A.16.1.7
+      soc2_tsc_2017:
+        - CC7.4
+      nist_csf_2_0:
+        - RS.AN-07
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: AU-9
+          relationship: subset-of
+        - id: IR-5
+          relationship: equivalent-to
+      asd_essential_eight: []
+  - id: CC-IR-06
+    name: Security Event and Anomaly Reporting
+    domain: Incident Management
+    description: The organization must provide a mechanism for all personnel to report observed or suspected information security
+      events through designated channels.
+    implementing_docs:
+      - docs/02_Policies/10_Incident_Management_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.6.8
+      iso_27001_2013_legacy:
+        - A.16.1.2
+        - A.16.1.3
+      soc2_tsc_2017:
+        - CC7.3
+      nist_csf_2_0:
+        - DE.AE-02
+      gdpr_articles:
+        - Art. 33
+      nist_sp_800_53_rev5:
+        - id: IR-6
+          relationship: equivalent-to
+      asd_essential_eight: []
+  - id: CC-BC-01
+    name: Information Security During Disruption and Emergency Operations
+    domain: Business Continuity
+    description: The organization must plan how to maintain information security at an appropriate level during disruption,
+      emergency operations, or disaster recovery.
+    implementing_docs:
+      - docs/02_Policies/11_Business_Continuity_Policy.md
+      - docs/03_Standards_and_Procedures/07_Business_Continuity_Plan_BCP.md
+    mappings:
+      iso_27001_2022:
+        - A.5.29
+      iso_27001_2013_legacy:
+        - A.17.1.1
+        - A.17.1.2
+      soc2_tsc_2017:
+        - CC7.5
+        - A1.1
+      nist_csf_2_0:
+        - RC.RP-01
+      gdpr_articles:
+        - Art. 32
+      nist_sp_800_53_rev5:
+        - id: CP-1
+          relationship: equivalent-to
+        - id: CP-2
+          relationship: equivalent-to
+      asd_essential_eight: []
+  - id: CC-BC-02
+    name: ICT Readiness for Business Continuity and Disaster Recovery
+    domain: Business Continuity
+    description: ICT readiness must be planned, implemented, maintained, and tested based on business continuity objectives
+      (RTO, RPO) and resilience requirements.
+    implementing_docs:
+      - docs/03_Standards_and_Procedures/08_Disaster_Recovery_Plan_DRP.md
+    mappings:
+      iso_27001_2022:
+        - A.5.30
+      iso_27001_2013_legacy:
+        - A.17.1.3
+      soc2_tsc_2017:
+        - CC7.5
+        - CC9.1
+        - A1.2
+      nist_csf_2_0:
+        - RC.RP-02
+      gdpr_articles:
+        - Art. 32
+      nist_sp_800_53_rev5:
+        - id: CP-6
+          relationship: equivalent-to
+        - id: CP-7
+          relationship: equivalent-to
+        - id: CP-8
+          relationship: subset-of
+      asd_essential_eight:
+        - id: E8-RB-ML1
+          relationship: intersects-with
+        - id: E8-RB-ML2
+          relationship: equivalent-to
+        - id: E8-RB-ML3
+          relationship: intersects-with
+  - id: CC-BC-03
+    name: Redundancy of Processing Facilities and High Availability
+    domain: Business Continuity
+    description: Information processing facilities must be implemented with redundancy sufficient to meet availability requirements
+      and eliminate single points of failure.
+    implementing_docs:
+      - docs/02_Policies/11_Business_Continuity_Policy.md
+      - docs/03_Standards_and_Procedures/08_Disaster_Recovery_Plan_DRP.md
+    mappings:
+      iso_27001_2022:
+        - A.8.14
+      iso_27001_2013_legacy:
+        - A.17.2.1
+      soc2_tsc_2017:
+        - CC7.5
+        - A1.3
+      nist_csf_2_0:
+        - PR.IR-04
+      gdpr_articles:
+        - Art. 32
+      nist_sp_800_53_rev5:
+        - id: CP-3
+          relationship: equivalent-to
+        - id: CP-4
+          relationship: equivalent-to
+      asd_essential_eight: []
+  - id: CC-BC-04
+    name: Business Impact Analysis and Recovery Objectives (RTO/RPO)
+    domain: Business Continuity
+    description: Business impact analysis (BIA) must be conducted to establish recovery time objectives (RTO) and recovery
+      point objectives (RPO) for all critical systems.
+    implementing_docs:
+      - docs/02_Policies/11_Business_Continuity_Policy.md
+      - docs/03_Standards_and_Procedures/07_Business_Continuity_Plan_BCP.md
+    mappings:
+      iso_27001_2022:
+        - A.5.29
+        - A.5.30
+      iso_27001_2013_legacy:
+        - A.17.1.1
+      soc2_tsc_2017:
+        - A1.1
+      nist_csf_2_0:
+        - RC.RP-01
+      gdpr_articles:
+        - Art. 32
+      nist_sp_800_53_rev5:
+        - id: CP-2
+          relationship: subset-of
+        - id: CP-10
+          relationship: equivalent-to
+      asd_essential_eight: []
+  - id: CC-AU-01
+    name: Acceptable Use of Corporate IT Assets
+    domain: Acceptable Use
+    description: Rules for the acceptable use and handling of information and other associated assets must be identified,
+      documented, and implemented.
+    implementing_docs:
+      - docs/02_Policies/02_Asset_Management_Policy.md
+      - docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.5.10
+      iso_27001_2013_legacy:
+        - A.8.1.3
+      soc2_tsc_2017:
+        - CC6.1
+      nist_csf_2_0:
+        - PR.AA-01
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: PL-4
+          relationship: equivalent-to
+        - id: AC-20
+          relationship: subset-of
+      asd_essential_eight:
+        - id: E8-AC-ML1
+          relationship: intersects-with
+        - id: E8-AC-ML2
+          relationship: intersects-with
+        - id: E8-OM-ML1
+          relationship: intersects-with
+        - id: E8-OM-ML2
+          relationship: equivalent-to
+        - id: E8-OM-ML3
+          relationship: superset-of
+        - id: E8-AH-ML1
+          relationship: equivalent-to
+        - id: E8-AH-ML2
+          relationship: equivalent-to
+        - id: E8-AH-ML3
+          relationship: superset-of
+  - id: CC-AU-02
+    name: Teleworking and Remote Working Controls
+    domain: Acceptable Use
+    description: Security measures must be implemented when personnel are teleworking or working remotely to safeguard information
+      accessed, processed or stored off-site.
+    implementing_docs:
+      - docs/02_Policies/01_Access_Control_Policy.md
+      - docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.6.7
+      iso_27001_2013_legacy:
+        - A.6.2.2
+      soc2_tsc_2017:
+        - CC6.6
+        - CC6.7
+      nist_csf_2_0:
+        - PR.AA-05
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: AC-19
+          relationship: equivalent-to
+        - id: AC-20
+          relationship: subset-of
+      asd_essential_eight:
+        - id: E8-OM-ML1
+          relationship: subset-of
+        - id: E8-OM-ML2
+          relationship: subset-of
+  - id: CC-AU-03
+    name: Clear Desk and Clear Screen Controls
+    domain: Acceptable Use
+    description: Clear desk rules for papers and removable storage media and clear screen rules for information processing
+      facilities must be defined and enforced.
+    implementing_docs:
+      - docs/02_Policies/04_Physical_Security_Policy.md
+      - docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.7.7
+      iso_27001_2013_legacy:
+        - A.11.2.9
+      soc2_tsc_2017:
+        - CC6.1
+      nist_csf_2_0:
+        - PR.AA-06
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: AC-14
+          relationship: equivalent-to
+        - id: PE-5
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-AU-04
+    name: Security of Off-Premises Corporate Assets
+    domain: Acceptable Use
+    description: Off-site assets must be protected, taking into account the different risks of working outside the organization
+      premises.
+    implementing_docs:
+      - docs/02_Policies/02_Asset_Management_Policy.md
+      - docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.7.9
+      iso_27001_2013_legacy:
+        - A.11.2.6
+      soc2_tsc_2017:
+        - CC6.4
+      nist_csf_2_0:
+        - PR.PS-01
+      gdpr_articles: []
+      nist_sp_800_53_rev5:
+        - id: AC-17
+          relationship: equivalent-to
+        - id: PE-17
+          relationship: subset-of
+      asd_essential_eight: []
+  - id: CC-AU-05
+    name: User Endpoint Security, Full Disk Encryption and MDM
+    domain: Acceptable Use
+    description: Information stored on, processed by, or accessible via user endpoint devices must be protected with mandatory
+      MDM enrollment, AES-256 FDE, and inactivity screen locks.
+    implementing_docs:
+      - docs/02_Policies/02_Asset_Management_Policy.md
+      - docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.8.1
+      iso_27001_2013_legacy:
+        - A.6.2.1
+        - A.11.2.8
+      soc2_tsc_2017:
+        - CC6.1
+      nist_csf_2_0:
+        - PR.AA-05
+      gdpr_articles:
+        - Art. 32
+      nist_sp_800_53_rev5:
+        - id: MP-7
+          relationship: equivalent-to
+      asd_essential_eight: []
+  - id: CC-AU-06
+    name: Generative AI, Large Language Models and Machine Learning Governance
+    domain: Acceptable Use
+    description: Governance and usage criteria for Generative AI and LLMs must be established per ISO/IEC 42001 and NIST AI
+      RMF, including AI asset tiering and human-in-the-loop review.
+    implementing_docs:
+      - docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.5.10
+        - A.8.1
+        - A.8.23
+      iso_27001_2013_legacy: []
+      soc2_tsc_2017:
+        - CC6.1
+        - CC6.6
+      nist_csf_2_0:
+        - GV.PO-01
+        - PR.PS-01
+      gdpr_articles:
+        - Art. 25
+      nist_sp_800_53_rev5:
+        - id: RA-3
+          relationship: subset-of
+        - id: SI-3
+          relationship: subset-of
+        - id: SA-8
+          relationship: subset-of
+      asd_essential_eight:
+        - id: E8-AC-ML2
+          relationship: subset-of
+        - id: E8-AH-ML2
+          relationship: intersects-with
+  - id: CC-AU-07
+    name: AI Data Protection, Prompt Security and Shadow AI Prohibition
+    domain: Acceptable Use
+    description: Protection against prompt injection, unredacted PII submission to LLMs, training data poisoning, and unauthorized
+      shadow AI tooling must be strictly enforced.
+    implementing_docs:
+      - docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md
+    mappings:
+      iso_27001_2022:
+        - A.5.1
+        - A.5.10
+        - A.8.12
+      iso_27001_2013_legacy: []
+      soc2_tsc_2017:
+        - CC6.1
+        - CC6.7
+      nist_csf_2_0:
+        - PR.DS-01
+        - PR.AT-01
+      gdpr_articles:
+        - Art. 25
+        - Art. 32
+      nist_sp_800_53_rev5:
+        - id: SC-7
+          relationship: subset-of
+        - id: SI-12
+          relationship: subset-of
+      asd_essential_eight: []
