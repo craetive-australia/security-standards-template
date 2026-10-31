@@ -1,0 +1,286 @@
+{
+  "profile": {
+    "imports": [
+      {
+        "href": "./catalog.json",
+        "include-controls": [
+          {
+            "with-id": "cc-ac-01"
+          },
+          {
+            "with-id": "cc-ac-02"
+          },
+          {
+            "with-id": "cc-ac-03"
+          },
+          {
+            "with-id": "cc-ac-04"
+          },
+          {
+            "with-id": "cc-ac-05"
+          },
+          {
+            "with-id": "cc-ac-06"
+          },
+          {
+            "with-id": "cc-ac-07"
+          },
+          {
+            "with-id": "cc-am-01"
+          },
+          {
+            "with-id": "cc-am-02"
+          },
+          {
+            "with-id": "cc-am-03"
+          },
+          {
+            "with-id": "cc-am-04"
+          },
+          {
+            "with-id": "cc-am-05"
+          },
+          {
+            "with-id": "cc-am-06"
+          },
+          {
+            "with-id": "cc-au-01"
+          },
+          {
+            "with-id": "cc-au-02"
+          },
+          {
+            "with-id": "cc-au-03"
+          },
+          {
+            "with-id": "cc-au-04"
+          },
+          {
+            "with-id": "cc-au-05"
+          },
+          {
+            "with-id": "cc-au-06"
+          },
+          {
+            "with-id": "cc-au-07"
+          },
+          {
+            "with-id": "cc-bc-01"
+          },
+          {
+            "with-id": "cc-bc-02"
+          },
+          {
+            "with-id": "cc-bc-03"
+          },
+          {
+            "with-id": "cc-bc-04"
+          },
+          {
+            "with-id": "cc-cm-01"
+          },
+          {
+            "with-id": "cc-cm-02"
+          },
+          {
+            "with-id": "cc-cm-03"
+          },
+          {
+            "with-id": "cc-cm-04"
+          },
+          {
+            "with-id": "cc-cm-05"
+          },
+          {
+            "with-id": "cc-cm-06"
+          },
+          {
+            "with-id": "cc-cr-01"
+          },
+          {
+            "with-id": "cc-cr-02"
+          },
+          {
+            "with-id": "cc-cr-03"
+          },
+          {
+            "with-id": "cc-dp-01"
+          },
+          {
+            "with-id": "cc-dp-02"
+          },
+          {
+            "with-id": "cc-dp-03"
+          },
+          {
+            "with-id": "cc-dp-04"
+          },
+          {
+            "with-id": "cc-dp-05"
+          },
+          {
+            "with-id": "cc-gv-01"
+          },
+          {
+            "with-id": "cc-gv-02"
+          },
+          {
+            "with-id": "cc-gv-03"
+          },
+          {
+            "with-id": "cc-gv-04"
+          },
+          {
+            "with-id": "cc-gv-05"
+          },
+          {
+            "with-id": "cc-gv-06"
+          },
+          {
+            "with-id": "cc-hr-01"
+          },
+          {
+            "with-id": "cc-hr-02"
+          },
+          {
+            "with-id": "cc-hr-03"
+          },
+          {
+            "with-id": "cc-hr-04"
+          },
+          {
+            "with-id": "cc-hr-05"
+          },
+          {
+            "with-id": "cc-ir-01"
+          },
+          {
+            "with-id": "cc-ir-02"
+          },
+          {
+            "with-id": "cc-ir-03"
+          },
+          {
+            "with-id": "cc-ir-04"
+          },
+          {
+            "with-id": "cc-ir-05"
+          },
+          {
+            "with-id": "cc-ir-06"
+          },
+          {
+            "with-id": "cc-op-01"
+          },
+          {
+            "with-id": "cc-op-02"
+          },
+          {
+            "with-id": "cc-op-03"
+          },
+          {
+            "with-id": "cc-op-04"
+          },
+          {
+            "with-id": "cc-op-05"
+          },
+          {
+            "with-id": "cc-op-06"
+          },
+          {
+            "with-id": "cc-op-07"
+          },
+          {
+            "with-id": "cc-op-08"
+          },
+          {
+            "with-id": "cc-op-09"
+          },
+          {
+            "with-id": "cc-ps-01"
+          },
+          {
+            "with-id": "cc-ps-02"
+          },
+          {
+            "with-id": "cc-ps-03"
+          },
+          {
+            "with-id": "cc-ps-04"
+          },
+          {
+            "with-id": "cc-ps-05"
+          },
+          {
+            "with-id": "cc-ps-06"
+          },
+          {
+            "with-id": "cc-ps-07"
+          },
+          {
+            "with-id": "cc-ps-08"
+          },
+          {
+            "with-id": "cc-sd-01"
+          },
+          {
+            "with-id": "cc-sd-02"
+          },
+          {
+            "with-id": "cc-sd-03"
+          },
+          {
+            "with-id": "cc-sd-04"
+          },
+          {
+            "with-id": "cc-sd-05"
+          },
+          {
+            "with-id": "cc-sd-06"
+          },
+          {
+            "with-id": "cc-sd-07"
+          },
+          {
+            "with-id": "cc-sd-08"
+          },
+          {
+            "with-id": "cc-sd-09"
+          },
+          {
+            "with-id": "cc-sp-01"
+          },
+          {
+            "with-id": "cc-sp-02"
+          },
+          {
+            "with-id": "cc-sp-03"
+          },
+          {
+            "with-id": "cc-sp-04"
+          },
+          {
+            "with-id": "cc-sp-05"
+          },
+          {
+            "with-id": "cc-sp-06"
+          }
+        ]
+      }
+    ],
+    "merge": {
+      "combine": {
+        "method": "merge"
+      }
+    },
+    "metadata": {
+      "last-modified": "2026-10-31T00:00:00Z",
+      "oscal-version": "1.2.0",
+      "published": "2026-10-31T00:00:00Z",
+      "remarks": "OSCAL profile selecting canonical controls satisfying the NIST SP 800-53 Rev. 5 Moderate baseline",
+      "title": "NIST SP 800-53 Rev. 5 Moderate Baseline ISMS Profile",
+      "version": "2.0.0"
+    },
+    "uuid": "afd3a8fa-6a25-5264-a8e5-28032cb54ecf"
+  }
+}

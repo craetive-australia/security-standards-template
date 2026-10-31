@@ -1,0 +1,1190 @@
+{
+  "component-definition": {
+    "components": [
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 01_Information_Security_Policy.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-gv-01",
+                "description": "Implemented via guidelines defined in 01_Information_Security_Policy.md",
+                "uuid": "001bc4be-92e0-5f98-aea2-68a5a70d1e73"
+              },
+              {
+                "control-id": "cc-gv-05",
+                "description": "Implemented via guidelines defined in 01_Information_Security_Policy.md",
+                "uuid": "57e26d59-ba01-576e-ae31-11545ffb9d94"
+              },
+              {
+                "control-id": "cc-gv-07",
+                "description": "Implemented via guidelines defined in 01_Information_Security_Policy.md",
+                "uuid": "38ec6ccb-94f8-5dd4-ac4e-2b76a7b152d2"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "9ab9e3af-d138-5ad5-b0eb-e049e4c86cb7"
+          }
+        ],
+        "description": "Documentation component residing at docs/01_ISMS_Framework/01_Information_Security_Policy.md",
+        "title": "01 Information Security Policy",
+        "type": "governance",
+        "uuid": "b79124c1-b456-592f-b2c3-41a2db864446"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 02_Context_of_the_Organization.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-dp-01",
+                "description": "Implemented via guidelines defined in 02_Context_of_the_Organization.md",
+                "uuid": "7539dee6-0e78-58e6-9e34-a0c4e75195dd"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "38c0a7ae-3b82-5888-a4b6-26558938b3f9"
+          }
+        ],
+        "description": "Documentation component residing at docs/01_ISMS_Framework/02_Context_of_the_Organization.md",
+        "title": "02 Context of the Organization",
+        "type": "governance",
+        "uuid": "9a0e648c-66e8-5ec1-9e93-a6b7b8b37b47"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 03_Risk_Management_Methodology.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-gv-06",
+                "description": "Implemented via guidelines defined in 03_Risk_Management_Methodology.md",
+                "uuid": "8b836793-7267-5c7d-9aa5-701f9296ae6c"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "f0ad06a1-12db-5b1c-8ce3-afb74109618d"
+          }
+        ],
+        "description": "Documentation component residing at docs/01_ISMS_Framework/03_Risk_Management_Methodology.md",
+        "title": "03 Risk Management Methodology",
+        "type": "governance",
+        "uuid": "0407f9f4-b67c-59ce-8f0d-6658d36c6758"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 04_Roles_and_Responsibilities.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-gv-02",
+                "description": "Implemented via guidelines defined in 04_Roles_and_Responsibilities.md",
+                "uuid": "52678ae5-5371-57d8-a126-340527710eb3"
+              },
+              {
+                "control-id": "cc-gv-03",
+                "description": "Implemented via guidelines defined in 04_Roles_and_Responsibilities.md",
+                "uuid": "369cc9d0-80f1-5ccd-950d-9f0151cbc8bc"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "955e0ae6-f555-58d2-b978-a9cf629d7464"
+          }
+        ],
+        "description": "Documentation component residing at docs/01_ISMS_Framework/04_Roles_and_Responsibilities.md",
+        "title": "04 Roles and Responsibilities",
+        "type": "governance",
+        "uuid": "d369f821-9970-56ee-a99a-efce1d31e5c5"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 06_ISMS_Governance_Audit_and_Improvement.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-gv-01",
+                "description": "Implemented via guidelines defined in 06_ISMS_Governance_Audit_and_Improvement.md",
+                "uuid": "85715a57-d1c7-5246-a4cc-daacae2e30a7"
+              },
+              {
+                "control-id": "cc-gv-03",
+                "description": "Implemented via guidelines defined in 06_ISMS_Governance_Audit_and_Improvement.md",
+                "uuid": "48094268-1482-5a1d-aa3d-fae79e538ddc"
+              },
+              {
+                "control-id": "cc-gv-06",
+                "description": "Implemented via guidelines defined in 06_ISMS_Governance_Audit_and_Improvement.md",
+                "uuid": "b19871d3-9b22-5754-b337-c28abb316b14"
+              },
+              {
+                "control-id": "cc-gv-07",
+                "description": "Implemented via guidelines defined in 06_ISMS_Governance_Audit_and_Improvement.md",
+                "uuid": "82f4455b-523f-5ac9-a923-c1fc99857594"
+              },
+              {
+                "control-id": "cc-gv-08",
+                "description": "Implemented via guidelines defined in 06_ISMS_Governance_Audit_and_Improvement.md",
+                "uuid": "fc245e7f-86b7-5e55-8445-d860c611072e"
+              },
+              {
+                "control-id": "cc-hr-03",
+                "description": "Implemented via guidelines defined in 06_ISMS_Governance_Audit_and_Improvement.md",
+                "uuid": "1777a661-f952-5d18-955b-ba8508349656"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "949f2c22-c4f4-565b-a69c-e7eed218c031"
+          }
+        ],
+        "description": "Documentation component residing at docs/01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md",
+        "title": "06 ISMS Governance Audit and Improvement",
+        "type": "governance",
+        "uuid": "74a2f36f-494c-5793-9c1c-ee2977d0fefb"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 01_Access_Control_Policy.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-ac-01",
+                "description": "Implemented via guidelines defined in 01_Access_Control_Policy.md",
+                "uuid": "6b7a7d50-fd0f-5cd6-9ea3-209876e23a78"
+              },
+              {
+                "control-id": "cc-ac-02",
+                "description": "Implemented via guidelines defined in 01_Access_Control_Policy.md",
+                "uuid": "3ed5a2f1-5c8c-5832-9171-2f985c507d9e"
+              },
+              {
+                "control-id": "cc-ac-03",
+                "description": "Implemented via guidelines defined in 01_Access_Control_Policy.md",
+                "uuid": "1946fa6e-7958-5ef4-8e81-d91963835c14"
+              },
+              {
+                "control-id": "cc-ac-05",
+                "description": "Implemented via guidelines defined in 01_Access_Control_Policy.md",
+                "uuid": "7bae55b5-a847-5242-b9be-1184c267ce80"
+              },
+              {
+                "control-id": "cc-ac-06",
+                "description": "Implemented via guidelines defined in 01_Access_Control_Policy.md",
+                "uuid": "42926aba-a873-5c60-b2a5-9d3f697c0d93"
+              },
+              {
+                "control-id": "cc-ac-07",
+                "description": "Implemented via guidelines defined in 01_Access_Control_Policy.md",
+                "uuid": "e282a113-6bff-5337-8572-22590b6efdca"
+              },
+              {
+                "control-id": "cc-ac-09",
+                "description": "Implemented via guidelines defined in 01_Access_Control_Policy.md",
+                "uuid": "81609d36-b788-5be3-b3d1-2e70255a04c9"
+              },
+              {
+                "control-id": "cc-au-02",
+                "description": "Implemented via guidelines defined in 01_Access_Control_Policy.md",
+                "uuid": "3b33c17c-e882-5ac6-85e6-04c5b6d926f4"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "4c4cd010-0ae5-5d61-a916-748d661a8d4b"
+          }
+        ],
+        "description": "Documentation component residing at docs/02_Policies/01_Access_Control_Policy.md",
+        "title": "01 Access Control Policy",
+        "type": "policy",
+        "uuid": "57acaaf9-e187-58cb-91eb-53348fd5b331"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 02_Asset_Management_Policy.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-am-01",
+                "description": "Implemented via guidelines defined in 02_Asset_Management_Policy.md",
+                "uuid": "fa9cf46c-8535-5093-a09d-b8f1937a6f9f"
+              },
+              {
+                "control-id": "cc-am-02",
+                "description": "Implemented via guidelines defined in 02_Asset_Management_Policy.md",
+                "uuid": "0b7b163d-ab03-5964-99c6-92e4483f2cb1"
+              },
+              {
+                "control-id": "cc-am-03",
+                "description": "Implemented via guidelines defined in 02_Asset_Management_Policy.md",
+                "uuid": "288b9e26-a8b8-5e66-99e2-b07f94eb191f"
+              },
+              {
+                "control-id": "cc-au-01",
+                "description": "Implemented via guidelines defined in 02_Asset_Management_Policy.md",
+                "uuid": "0cc57b02-8744-5f0b-a52c-faf067821c63"
+              },
+              {
+                "control-id": "cc-au-04",
+                "description": "Implemented via guidelines defined in 02_Asset_Management_Policy.md",
+                "uuid": "754b5bfd-23d6-5d1c-9f3b-058e172a05f5"
+              },
+              {
+                "control-id": "cc-au-05",
+                "description": "Implemented via guidelines defined in 02_Asset_Management_Policy.md",
+                "uuid": "d01cb4a8-9c0d-55dd-8c7d-84bf1f1eecf6"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "abb3e9c7-8168-5b8f-82aa-736d5cb71ebe"
+          }
+        ],
+        "description": "Documentation component residing at docs/02_Policies/02_Asset_Management_Policy.md",
+        "title": "02 Asset Management Policy",
+        "type": "policy",
+        "uuid": "36f33ef4-f732-59f4-9c9b-50a6a4a8d35e"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 03_Cryptography_Policy.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-cr-01",
+                "description": "Implemented via guidelines defined in 03_Cryptography_Policy.md",
+                "uuid": "59251644-fc97-518b-a37b-2825cfe8f703"
+              },
+              {
+                "control-id": "cc-cr-02",
+                "description": "Implemented via guidelines defined in 03_Cryptography_Policy.md",
+                "uuid": "b25a840c-44c1-5bf5-bbab-d110bbf44f85"
+              },
+              {
+                "control-id": "cc-cr-03",
+                "description": "Implemented via guidelines defined in 03_Cryptography_Policy.md",
+                "uuid": "3d2064b7-f2a5-563e-9b6d-da33562ca65c"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "df31e236-1a4f-585b-8bde-e851b1b88290"
+          }
+        ],
+        "description": "Documentation component residing at docs/02_Policies/03_Cryptography_Policy.md",
+        "title": "03 Cryptography Policy",
+        "type": "policy",
+        "uuid": "67a9d96a-0a50-5746-9ace-1bbde6ae96d5"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 04_Physical_Security_Policy.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-au-03",
+                "description": "Implemented via guidelines defined in 04_Physical_Security_Policy.md",
+                "uuid": "3cf4791d-a59a-540d-9303-cd5c9e84d8b5"
+              },
+              {
+                "control-id": "cc-ps-01",
+                "description": "Implemented via guidelines defined in 04_Physical_Security_Policy.md",
+                "uuid": "8b69e7c4-b344-584b-a6a8-295e15152a87"
+              },
+              {
+                "control-id": "cc-ps-02",
+                "description": "Implemented via guidelines defined in 04_Physical_Security_Policy.md",
+                "uuid": "eec98473-3e90-58bd-89e9-3008142d8732"
+              },
+              {
+                "control-id": "cc-ps-03",
+                "description": "Implemented via guidelines defined in 04_Physical_Security_Policy.md",
+                "uuid": "b2b36f42-9df4-5c2c-ac8d-7be655e263c9"
+              },
+              {
+                "control-id": "cc-ps-04",
+                "description": "Implemented via guidelines defined in 04_Physical_Security_Policy.md",
+                "uuid": "491a3a44-edfe-5c46-abc9-0149a227c0eb"
+              },
+              {
+                "control-id": "cc-ps-05",
+                "description": "Implemented via guidelines defined in 04_Physical_Security_Policy.md",
+                "uuid": "ac11b6eb-7bd2-568b-b102-48959e6c4212"
+              },
+              {
+                "control-id": "cc-ps-06",
+                "description": "Implemented via guidelines defined in 04_Physical_Security_Policy.md",
+                "uuid": "48b707d0-2671-5fc6-b3bc-5c66a2eefed7"
+              },
+              {
+                "control-id": "cc-ps-07",
+                "description": "Implemented via guidelines defined in 04_Physical_Security_Policy.md",
+                "uuid": "e23d32f5-f90c-5f75-8d95-dcba8bde4182"
+              },
+              {
+                "control-id": "cc-ps-08",
+                "description": "Implemented via guidelines defined in 04_Physical_Security_Policy.md",
+                "uuid": "9ee11d28-4e86-580f-af7a-361d9529a1c5"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "9483c54e-d91c-5450-b7f9-b2a08ba455a5"
+          }
+        ],
+        "description": "Documentation component residing at docs/02_Policies/04_Physical_Security_Policy.md",
+        "title": "04 Physical Security Policy",
+        "type": "policy",
+        "uuid": "fc681d69-1920-500f-bf98-35057496dda0"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 05_Operations_Security_Policy.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-gv-08",
+                "description": "Implemented via guidelines defined in 05_Operations_Security_Policy.md",
+                "uuid": "7ed19de2-78a8-5e57-ad4f-162506ba8fc2"
+              },
+              {
+                "control-id": "cc-op-02",
+                "description": "Implemented via guidelines defined in 05_Operations_Security_Policy.md",
+                "uuid": "90d35e5e-463f-56b2-ab65-5c41d81cdc0c"
+              },
+              {
+                "control-id": "cc-op-03",
+                "description": "Implemented via guidelines defined in 05_Operations_Security_Policy.md",
+                "uuid": "0a94689f-5904-5efc-ade4-882d2f43bf16"
+              },
+              {
+                "control-id": "cc-op-04",
+                "description": "Implemented via guidelines defined in 05_Operations_Security_Policy.md",
+                "uuid": "7ef03a8f-3a3a-5781-b8c7-a8f4aa3f5e62"
+              },
+              {
+                "control-id": "cc-op-06",
+                "description": "Implemented via guidelines defined in 05_Operations_Security_Policy.md",
+                "uuid": "aef776a0-69c4-5724-a6cc-d5172f4e458c"
+              },
+              {
+                "control-id": "cc-op-07",
+                "description": "Implemented via guidelines defined in 05_Operations_Security_Policy.md",
+                "uuid": "f66279c8-20a9-5f8a-a83c-29e7c92f7ae5"
+              },
+              {
+                "control-id": "cc-op-08",
+                "description": "Implemented via guidelines defined in 05_Operations_Security_Policy.md",
+                "uuid": "bb17059d-4cc7-5539-8480-50a3e68f56bd"
+              },
+              {
+                "control-id": "cc-op-09",
+                "description": "Implemented via guidelines defined in 05_Operations_Security_Policy.md",
+                "uuid": "53051260-90ac-5152-9017-9ed412486979"
+              },
+              {
+                "control-id": "cc-op-10",
+                "description": "Implemented via guidelines defined in 05_Operations_Security_Policy.md",
+                "uuid": "6f154225-a1a6-5c8a-9c1b-c3672de823f7"
+              },
+              {
+                "control-id": "cc-op-11",
+                "description": "Implemented via guidelines defined in 05_Operations_Security_Policy.md",
+                "uuid": "21363031-5e36-5953-bca9-29ab6708d38c"
+              },
+              {
+                "control-id": "cc-op-12",
+                "description": "Implemented via guidelines defined in 05_Operations_Security_Policy.md",
+                "uuid": "0f0b92d5-288c-5f76-b371-9cdad6ef4127"
+              },
+              {
+                "control-id": "cc-sp-05",
+                "description": "Implemented via guidelines defined in 05_Operations_Security_Policy.md",
+                "uuid": "1336e1e5-341d-51de-be5a-5673cbcce3b0"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "996b22be-5b60-50f1-abd2-133568744656"
+          }
+        ],
+        "description": "Documentation component residing at docs/02_Policies/05_Operations_Security_Policy.md",
+        "title": "05 Operations Security Policy",
+        "type": "policy",
+        "uuid": "0f219470-9701-5e5b-8290-8cb2f935650c"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 06_Communications_Security_Policy.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-cm-01",
+                "description": "Implemented via guidelines defined in 06_Communications_Security_Policy.md",
+                "uuid": "1c9a0a61-f7ee-5a83-9f02-489764895c65"
+              },
+              {
+                "control-id": "cc-cm-02",
+                "description": "Implemented via guidelines defined in 06_Communications_Security_Policy.md",
+                "uuid": "05864e2e-fad3-5be8-93d4-f3d437c41960"
+              },
+              {
+                "control-id": "cc-cm-03",
+                "description": "Implemented via guidelines defined in 06_Communications_Security_Policy.md",
+                "uuid": "040d8933-1190-504e-84d7-46ad43c7bc11"
+              },
+              {
+                "control-id": "cc-cm-04",
+                "description": "Implemented via guidelines defined in 06_Communications_Security_Policy.md",
+                "uuid": "2f70ce0a-c51e-5ead-b409-6cfe9d0f6882"
+              },
+              {
+                "control-id": "cc-cm-05",
+                "description": "Implemented via guidelines defined in 06_Communications_Security_Policy.md",
+                "uuid": "d3e7cbf0-8960-5d40-b494-2f7dd95f86b8"
+              },
+              {
+                "control-id": "cc-cm-06",
+                "description": "Implemented via guidelines defined in 06_Communications_Security_Policy.md",
+                "uuid": "873c31df-ca2d-502e-8880-72682f7b0a4f"
+              },
+              {
+                "control-id": "cc-cr-02",
+                "description": "Implemented via guidelines defined in 06_Communications_Security_Policy.md",
+                "uuid": "73f822cd-24f0-5340-97a9-c607a523662e"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "d7809199-2813-5652-8e51-07dd79024255"
+          }
+        ],
+        "description": "Documentation component residing at docs/02_Policies/06_Communications_Security_Policy.md",
+        "title": "06 Communications Security Policy",
+        "type": "policy",
+        "uuid": "bb87efe8-4a83-519f-a357-56617938525e"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 07_Supplier_Security_Policy.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-sp-01",
+                "description": "Implemented via guidelines defined in 07_Supplier_Security_Policy.md",
+                "uuid": "b476c5c9-5ded-561d-9a6f-0be2fadc9bf9"
+              },
+              {
+                "control-id": "cc-sp-02",
+                "description": "Implemented via guidelines defined in 07_Supplier_Security_Policy.md",
+                "uuid": "3753e7d6-cbeb-548e-93b7-1fb1b6bf94e4"
+              },
+              {
+                "control-id": "cc-sp-03",
+                "description": "Implemented via guidelines defined in 07_Supplier_Security_Policy.md",
+                "uuid": "d2e022c4-9658-57c0-8f22-0807bd72c383"
+              },
+              {
+                "control-id": "cc-sp-04",
+                "description": "Implemented via guidelines defined in 07_Supplier_Security_Policy.md",
+                "uuid": "8eff83de-9532-5051-900b-f5c22a1bf752"
+              },
+              {
+                "control-id": "cc-sp-05",
+                "description": "Implemented via guidelines defined in 07_Supplier_Security_Policy.md",
+                "uuid": "001abdba-f3fa-550e-824e-63b64811a99f"
+              },
+              {
+                "control-id": "cc-sp-06",
+                "description": "Implemented via guidelines defined in 07_Supplier_Security_Policy.md",
+                "uuid": "66e05ba5-2339-5ada-b060-6e2c3db08dde"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "20d4e23e-b946-5658-96eb-174c337403fa"
+          }
+        ],
+        "description": "Documentation component residing at docs/02_Policies/07_Supplier_Security_Policy.md",
+        "title": "07 Supplier Security Policy",
+        "type": "policy",
+        "uuid": "8d2c7e6a-34ef-5578-95fc-60138f89d6e7"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 08_HR_Security_Policy.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-am-02",
+                "description": "Implemented via guidelines defined in 08_HR_Security_Policy.md",
+                "uuid": "a5303d54-81f7-561f-a3e2-8b5cab4790a4"
+              },
+              {
+                "control-id": "cc-hr-01",
+                "description": "Implemented via guidelines defined in 08_HR_Security_Policy.md",
+                "uuid": "56e3b620-da45-5039-95b4-6476e00d2bdd"
+              },
+              {
+                "control-id": "cc-hr-02",
+                "description": "Implemented via guidelines defined in 08_HR_Security_Policy.md",
+                "uuid": "b5123715-6a4e-5206-98ac-4dec2006eced"
+              },
+              {
+                "control-id": "cc-hr-03",
+                "description": "Implemented via guidelines defined in 08_HR_Security_Policy.md",
+                "uuid": "77928806-4b3d-5547-8986-2f789f24e5d2"
+              },
+              {
+                "control-id": "cc-hr-04",
+                "description": "Implemented via guidelines defined in 08_HR_Security_Policy.md",
+                "uuid": "b6865af0-cf96-5715-a11b-5c01b53a7b38"
+              },
+              {
+                "control-id": "cc-hr-05",
+                "description": "Implemented via guidelines defined in 08_HR_Security_Policy.md",
+                "uuid": "a0121034-7dc0-5270-8d76-0f6b95580f20"
+              },
+              {
+                "control-id": "cc-hr-06",
+                "description": "Implemented via guidelines defined in 08_HR_Security_Policy.md",
+                "uuid": "90bf8337-3d6f-5e40-ba1a-95fce972aa8a"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "0634ce08-a4ee-5e91-9c0a-4fd887775c15"
+          }
+        ],
+        "description": "Documentation component residing at docs/02_Policies/08_HR_Security_Policy.md",
+        "title": "08 HR Security Policy",
+        "type": "policy",
+        "uuid": "045dd2db-5f90-54e9-99cc-24aa8eb24441"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 09_Data_Privacy_and_Protection_Policy.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-dp-01",
+                "description": "Implemented via guidelines defined in 09_Data_Privacy_and_Protection_Policy.md",
+                "uuid": "2776bf62-6593-579b-a27f-ad3cb2f614ce"
+              },
+              {
+                "control-id": "cc-dp-02",
+                "description": "Implemented via guidelines defined in 09_Data_Privacy_and_Protection_Policy.md",
+                "uuid": "483708d8-27c0-5585-8582-2e1931600934"
+              },
+              {
+                "control-id": "cc-dp-03",
+                "description": "Implemented via guidelines defined in 09_Data_Privacy_and_Protection_Policy.md",
+                "uuid": "3a8b1747-dd22-5830-8ce9-6926ca4e1ccb"
+              },
+              {
+                "control-id": "cc-dp-04",
+                "description": "Implemented via guidelines defined in 09_Data_Privacy_and_Protection_Policy.md",
+                "uuid": "452dc7e3-0908-5343-9abd-cc9acb249bd4"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "834ef18c-b1a4-5296-9d1e-b5121cf5f11f"
+          }
+        ],
+        "description": "Documentation component residing at docs/02_Policies/09_Data_Privacy_and_Protection_Policy.md",
+        "title": "09 Data Privacy and Protection Policy",
+        "type": "policy",
+        "uuid": "817c01d8-252e-5a86-a95e-2291242bfdf2"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 10_Incident_Management_Policy.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-ir-01",
+                "description": "Implemented via guidelines defined in 10_Incident_Management_Policy.md",
+                "uuid": "ed92a336-08c7-5148-a110-75f4d16a91c9"
+              },
+              {
+                "control-id": "cc-ir-02",
+                "description": "Implemented via guidelines defined in 10_Incident_Management_Policy.md",
+                "uuid": "11711728-a921-545d-844e-952a37c5ecc1"
+              },
+              {
+                "control-id": "cc-ir-04",
+                "description": "Implemented via guidelines defined in 10_Incident_Management_Policy.md",
+                "uuid": "6ea0f24e-0246-5d02-afb0-8ba10d099ad3"
+              },
+              {
+                "control-id": "cc-ir-06",
+                "description": "Implemented via guidelines defined in 10_Incident_Management_Policy.md",
+                "uuid": "afed9db0-cc75-5159-bd08-48a5fe85952e"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "623cf127-8ace-5c4b-a600-f17c774d1b34"
+          }
+        ],
+        "description": "Documentation component residing at docs/02_Policies/10_Incident_Management_Policy.md",
+        "title": "10 Incident Management Policy",
+        "type": "policy",
+        "uuid": "ed1204f6-c5e1-5718-a29a-5a913ffa9284"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 11_Business_Continuity_Policy.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-bc-01",
+                "description": "Implemented via guidelines defined in 11_Business_Continuity_Policy.md",
+                "uuid": "7bb0e942-99f9-5ae7-a767-3a9a2be05640"
+              },
+              {
+                "control-id": "cc-bc-03",
+                "description": "Implemented via guidelines defined in 11_Business_Continuity_Policy.md",
+                "uuid": "a82c63f2-f9b0-5fd2-8c3d-e88ff8b27460"
+              },
+              {
+                "control-id": "cc-bc-04",
+                "description": "Implemented via guidelines defined in 11_Business_Continuity_Policy.md",
+                "uuid": "56fdefdf-6309-5fc5-bbdd-8124ec45633a"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "af8805e5-ea45-58d1-a2fa-9c380e49e852"
+          }
+        ],
+        "description": "Documentation component residing at docs/02_Policies/11_Business_Continuity_Policy.md",
+        "title": "11 Business Continuity Policy",
+        "type": "policy",
+        "uuid": "06f85014-8867-55ec-9104-90737e4e46db"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 12_SDLC_and_Change_Management_Policy.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-sd-01",
+                "description": "Implemented via guidelines defined in 12_SDLC_and_Change_Management_Policy.md",
+                "uuid": "2e0e2d9d-5c98-547d-a978-7cea546ede9e"
+              },
+              {
+                "control-id": "cc-sd-02",
+                "description": "Implemented via guidelines defined in 12_SDLC_and_Change_Management_Policy.md",
+                "uuid": "c99c1235-8747-598c-b8fa-297f7fd4c91f"
+              },
+              {
+                "control-id": "cc-sd-03",
+                "description": "Implemented via guidelines defined in 12_SDLC_and_Change_Management_Policy.md",
+                "uuid": "22baa44c-d443-5846-9433-7e6258ff8ef6"
+              },
+              {
+                "control-id": "cc-sd-04",
+                "description": "Implemented via guidelines defined in 12_SDLC_and_Change_Management_Policy.md",
+                "uuid": "2f93cf8e-e935-5b00-a1b4-e96c10ab0154"
+              },
+              {
+                "control-id": "cc-sd-06",
+                "description": "Implemented via guidelines defined in 12_SDLC_and_Change_Management_Policy.md",
+                "uuid": "8f0eb735-b6fa-54cb-a45c-79f9391616e0"
+              },
+              {
+                "control-id": "cc-sd-08",
+                "description": "Implemented via guidelines defined in 12_SDLC_and_Change_Management_Policy.md",
+                "uuid": "9414a889-88a9-5a62-b874-da6168682658"
+              },
+              {
+                "control-id": "cc-sd-09",
+                "description": "Implemented via guidelines defined in 12_SDLC_and_Change_Management_Policy.md",
+                "uuid": "dccffb4e-eed3-5044-8f9b-ac1e4a655ffa"
+              },
+              {
+                "control-id": "cc-sd-10",
+                "description": "Implemented via guidelines defined in 12_SDLC_and_Change_Management_Policy.md",
+                "uuid": "049ef6d1-f9f7-5e9b-bcfe-aa891a98bc55"
+              },
+              {
+                "control-id": "cc-sd-11",
+                "description": "Implemented via guidelines defined in 12_SDLC_and_Change_Management_Policy.md",
+                "uuid": "2dd56651-f43b-535c-8f7b-73e79ccc458f"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "ee817995-bd8f-5426-9c27-66ab68c0ce8c"
+          }
+        ],
+        "description": "Documentation component residing at docs/02_Policies/12_SDLC_and_Change_Management_Policy.md",
+        "title": "12 SDLC and Change Management Policy",
+        "type": "policy",
+        "uuid": "9e52b702-0685-56e3-a772-2d59b70a23f4"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 13_Acceptable_Use_and_AI_Security_Policy.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-au-01",
+                "description": "Implemented via guidelines defined in 13_Acceptable_Use_and_AI_Security_Policy.md",
+                "uuid": "43e17eb6-7bc0-5a8c-b0ef-45b54d4ed636"
+              },
+              {
+                "control-id": "cc-au-02",
+                "description": "Implemented via guidelines defined in 13_Acceptable_Use_and_AI_Security_Policy.md",
+                "uuid": "a387e9c7-c57e-55dc-82e6-b85f77b0fdf3"
+              },
+              {
+                "control-id": "cc-au-03",
+                "description": "Implemented via guidelines defined in 13_Acceptable_Use_and_AI_Security_Policy.md",
+                "uuid": "d617a840-5725-56d2-8788-f5bfb71259f8"
+              },
+              {
+                "control-id": "cc-au-04",
+                "description": "Implemented via guidelines defined in 13_Acceptable_Use_and_AI_Security_Policy.md",
+                "uuid": "1a807980-3fa3-5bc8-85f1-8a4d569eb51d"
+              },
+              {
+                "control-id": "cc-au-05",
+                "description": "Implemented via guidelines defined in 13_Acceptable_Use_and_AI_Security_Policy.md",
+                "uuid": "c517e028-3016-5966-951a-ed4b67ea9020"
+              },
+              {
+                "control-id": "cc-au-06",
+                "description": "Implemented via guidelines defined in 13_Acceptable_Use_and_AI_Security_Policy.md",
+                "uuid": "17b79099-80e9-5afc-b6e2-4d67d0954be7"
+              },
+              {
+                "control-id": "cc-au-07",
+                "description": "Implemented via guidelines defined in 13_Acceptable_Use_and_AI_Security_Policy.md",
+                "uuid": "012fbbc1-6ad9-5fe1-b7e6-1ccdfbbc90f3"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "7d84cce6-326d-5192-81c0-7ce9d7fcb66a"
+          }
+        ],
+        "description": "Documentation component residing at docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md",
+        "title": "13 Acceptable Use and AI Security Policy",
+        "type": "policy",
+        "uuid": "931c34f7-8b7e-589d-aff3-7b51f47c7ced"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 01_Password_and_Authentication_Standard.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-ac-04",
+                "description": "Implemented via guidelines defined in 01_Password_and_Authentication_Standard.md",
+                "uuid": "c68a28b9-7519-54bc-9041-8764f2abd0a8"
+              },
+              {
+                "control-id": "cc-ac-08",
+                "description": "Implemented via guidelines defined in 01_Password_and_Authentication_Standard.md",
+                "uuid": "28991bc4-bb73-554c-a74f-0fd4b25e6467"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "88368e52-7702-5469-a347-32931e58de27"
+          }
+        ],
+        "description": "Documentation component residing at docs/03_Standards_and_Procedures/01_Password_and_Authentication_Standard.md",
+        "title": "01 Password and Authentication Standard",
+        "type": "standard",
+        "uuid": "60bd2af7-c450-574b-ad0d-801b3fddc33d"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 02_Data_Classification_and_Handling_Standard.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-am-03",
+                "description": "Implemented via guidelines defined in 02_Data_Classification_and_Handling_Standard.md",
+                "uuid": "738e29cd-f689-5da7-bd9d-eb8c865fc0e9"
+              },
+              {
+                "control-id": "cc-am-04",
+                "description": "Implemented via guidelines defined in 02_Data_Classification_and_Handling_Standard.md",
+                "uuid": "07ad75e9-57df-5132-8beb-6378f653bbdd"
+              },
+              {
+                "control-id": "cc-dp-05",
+                "description": "Implemented via guidelines defined in 02_Data_Classification_and_Handling_Standard.md",
+                "uuid": "8d413ef0-c486-5108-9000-42d6eb707f22"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "1a3e96a4-4140-5437-80fd-26b4ed9f85b9"
+          }
+        ],
+        "description": "Documentation component residing at docs/03_Standards_and_Procedures/02_Data_Classification_and_Handling_Standard.md",
+        "title": "02 Data Classification and Handling Standard",
+        "type": "standard",
+        "uuid": "d3f50f6f-1e44-5eba-86fd-6db22408d044"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 03_Data_Retention_and_Destruction_Standard.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-am-05",
+                "description": "Implemented via guidelines defined in 03_Data_Retention_and_Destruction_Standard.md",
+                "uuid": "acfeff02-79b8-5877-8503-0c8857b745fd"
+              },
+              {
+                "control-id": "cc-am-06",
+                "description": "Implemented via guidelines defined in 03_Data_Retention_and_Destruction_Standard.md",
+                "uuid": "47d2c7b0-a15b-512f-ba1d-944ba22d1c86"
+              },
+              {
+                "control-id": "cc-am-07",
+                "description": "Implemented via guidelines defined in 03_Data_Retention_and_Destruction_Standard.md",
+                "uuid": "c50d3a7c-7896-59ed-a3c2-a7cc6f494718"
+              },
+              {
+                "control-id": "cc-dp-03",
+                "description": "Implemented via guidelines defined in 03_Data_Retention_and_Destruction_Standard.md",
+                "uuid": "64623342-fa00-5d7e-b360-a22601ff6170"
+              },
+              {
+                "control-id": "cc-op-08",
+                "description": "Implemented via guidelines defined in 03_Data_Retention_and_Destruction_Standard.md",
+                "uuid": "189b77a8-6e03-5716-9352-16cb5d7e310f"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "e9af54a2-e8a6-5414-af1f-545ad7e635b6"
+          }
+        ],
+        "description": "Documentation component residing at docs/03_Standards_and_Procedures/03_Data_Retention_and_Destruction_Standard.md",
+        "title": "03 Data Retention and Destruction Standard",
+        "type": "standard",
+        "uuid": "684260ea-3a87-5293-a6c9-590c06e2cfe1"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 04_Vulnerability_and_Patch_Management_Standard.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-op-01",
+                "description": "Implemented via guidelines defined in 04_Vulnerability_and_Patch_Management_Standard.md",
+                "uuid": "f3282f15-69cf-538d-b518-4f15fb0482a3"
+              },
+              {
+                "control-id": "cc-op-05",
+                "description": "Implemented via guidelines defined in 04_Vulnerability_and_Patch_Management_Standard.md",
+                "uuid": "5ddf342c-4eee-58b2-a855-7082435dbfd2"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "c2229d2d-5e11-51d8-abfb-698c683e1696"
+          }
+        ],
+        "description": "Documentation component residing at docs/03_Standards_and_Procedures/04_Vulnerability_and_Patch_Management_Standard.md",
+        "title": "04 Vulnerability and Patch Management Standard",
+        "type": "standard",
+        "uuid": "299fe46b-145a-5829-920e-79bdad1b00e1"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 05_Secure_Coding_Standard.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-sd-05",
+                "description": "Implemented via guidelines defined in 05_Secure_Coding_Standard.md",
+                "uuid": "6d588ab9-4fe3-5695-a8ab-7b21ade21d1f"
+              },
+              {
+                "control-id": "cc-sd-07",
+                "description": "Implemented via guidelines defined in 05_Secure_Coding_Standard.md",
+                "uuid": "8f961a40-aabd-5607-b0f4-6a1333a391e8"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "67d952da-53a2-5428-8580-d4887f3f78cf"
+          }
+        ],
+        "description": "Documentation component residing at docs/03_Standards_and_Procedures/05_Secure_Coding_Standard.md",
+        "title": "05 Secure Coding Standard",
+        "type": "standard",
+        "uuid": "460501c2-2f46-5726-8046-5c607bee1770"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 06_Incident_Response_Plan_IRP.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-gv-04",
+                "description": "Implemented via guidelines defined in 06_Incident_Response_Plan_IRP.md",
+                "uuid": "07cc708e-46c6-55bb-b0c7-3a7be896c439"
+              },
+              {
+                "control-id": "cc-ir-01",
+                "description": "Implemented via guidelines defined in 06_Incident_Response_Plan_IRP.md",
+                "uuid": "3fe84fae-a6b8-56bd-a271-b053da510971"
+              },
+              {
+                "control-id": "cc-ir-03",
+                "description": "Implemented via guidelines defined in 06_Incident_Response_Plan_IRP.md",
+                "uuid": "a0b834e4-e541-5191-b83c-c241ea5ff857"
+              },
+              {
+                "control-id": "cc-ir-05",
+                "description": "Implemented via guidelines defined in 06_Incident_Response_Plan_IRP.md",
+                "uuid": "f18457c7-8786-59ac-ac74-f93991a95542"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "25ad4eb5-fa33-5407-acd4-af3231793bf0"
+          }
+        ],
+        "description": "Documentation component residing at docs/03_Standards_and_Procedures/06_Incident_Response_Plan_IRP.md",
+        "title": "06 Incident Response Plan IRP",
+        "type": "standard",
+        "uuid": "b0501d97-edd8-514d-812a-3aa0c18c45db"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 07_Business_Continuity_Plan_BCP.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-bc-01",
+                "description": "Implemented via guidelines defined in 07_Business_Continuity_Plan_BCP.md",
+                "uuid": "e20cdbad-a718-5328-bb74-9dbf1008587d"
+              },
+              {
+                "control-id": "cc-bc-04",
+                "description": "Implemented via guidelines defined in 07_Business_Continuity_Plan_BCP.md",
+                "uuid": "ab196061-764f-5d34-8b2e-39b042a67f4e"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "b931bd51-dfca-5e31-b5b6-ea9f1c1236f9"
+          }
+        ],
+        "description": "Documentation component residing at docs/03_Standards_and_Procedures/07_Business_Continuity_Plan_BCP.md",
+        "title": "07 Business Continuity Plan BCP",
+        "type": "standard",
+        "uuid": "281b0546-fdc7-5387-b114-b2688e52ec9d"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 08_Disaster_Recovery_Plan_DRP.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-bc-02",
+                "description": "Implemented via guidelines defined in 08_Disaster_Recovery_Plan_DRP.md",
+                "uuid": "e8dcf510-dfe4-5e77-ad7d-cc673500ce90"
+              },
+              {
+                "control-id": "cc-bc-03",
+                "description": "Implemented via guidelines defined in 08_Disaster_Recovery_Plan_DRP.md",
+                "uuid": "bdae21f9-3751-5e45-8d25-7520340b88cb"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "dda62672-32b3-5b9b-a202-02aa95a23e8e"
+          }
+        ],
+        "description": "Documentation component residing at docs/03_Standards_and_Procedures/08_Disaster_Recovery_Plan_DRP.md",
+        "title": "08 Disaster Recovery Plan DRP",
+        "type": "standard",
+        "uuid": "871a428e-ac60-54e7-aa87-eb6b42118bee"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 09_Data_Breach_Notification_Procedure.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-gv-04",
+                "description": "Implemented via guidelines defined in 09_Data_Breach_Notification_Procedure.md",
+                "uuid": "bde70949-e520-51b9-814b-490741ea2080"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "00fc48da-47b6-5c58-8860-6d2765933605"
+          }
+        ],
+        "description": "Documentation component residing at docs/03_Standards_and_Procedures/09_Data_Breach_Notification_Procedure.md",
+        "title": "09 Data Breach Notification Procedure",
+        "type": "standard",
+        "uuid": "894672d6-58d9-59fe-9ea1-9cb01c7f566c"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 01_Information_Asset_Register.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-am-01",
+                "description": "Implemented via guidelines defined in 01_Information_Asset_Register.md",
+                "uuid": "2c355264-88d8-5fab-b0c2-f118c24a4207"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "5391dcad-efdb-5a6f-8f9b-a1d111d59d74"
+          }
+        ],
+        "description": "Documentation component residing at docs/04_Templates_and_Registers/01_Information_Asset_Register.md",
+        "title": "01 Information Asset Register",
+        "type": "governance",
+        "uuid": "5ed3b43f-db18-5f48-bb53-0b10d1e3bd56"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 03_Security_Incident_Log.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-ir-04",
+                "description": "Implemented via guidelines defined in 03_Security_Incident_Log.md",
+                "uuid": "c6334845-bfb3-5de8-aa9a-68941b0baa66"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "6c6dfa17-28c9-5713-861b-b60146ed83a1"
+          }
+        ],
+        "description": "Documentation component residing at docs/04_Templates_and_Registers/03_Security_Incident_Log.md",
+        "title": "03 Security Incident Log",
+        "type": "governance",
+        "uuid": "494237a0-2ba4-5f3d-b59a-9a43b43e8ac6"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 04_Vendor_Risk_Assessment_Template.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-sp-01",
+                "description": "Implemented via guidelines defined in 04_Vendor_Risk_Assessment_Template.md",
+                "uuid": "147b7704-e555-5ba4-a2d0-d062b548db6e"
+              },
+              {
+                "control-id": "cc-sp-04",
+                "description": "Implemented via guidelines defined in 04_Vendor_Risk_Assessment_Template.md",
+                "uuid": "0ef14c9b-85d5-556b-b0f0-99cc41057610"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "4d848116-137f-57f9-8c04-4e7be27abe13"
+          }
+        ],
+        "description": "Documentation component residing at docs/04_Templates_and_Registers/04_Vendor_Risk_Assessment_Template.md",
+        "title": "04 Vendor Risk Assessment Template",
+        "type": "governance",
+        "uuid": "71e7a6f4-56d7-5b4f-86c9-e62c16200bef"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 05_Access_Review_Log.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-ac-05",
+                "description": "Implemented via guidelines defined in 05_Access_Review_Log.md",
+                "uuid": "eebafb18-4456-5e97-aefd-3ce4430ab05a"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "12622cf9-9d87-5620-8044-37fd2d204554"
+          }
+        ],
+        "description": "Documentation component residing at docs/04_Templates_and_Registers/05_Access_Review_Log.md",
+        "title": "05 Access Review Log",
+        "type": "governance",
+        "uuid": "0334be7f-34e8-5aa2-9eae-b2b5e0ef515b"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 06_RoPA_Template.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-dp-02",
+                "description": "Implemented via guidelines defined in 06_RoPA_Template.md",
+                "uuid": "ea21dfc2-6654-57cc-98c4-a9087cf93d69"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "6150d54d-5dc5-5798-84b0-b698bdab5b0b"
+          }
+        ],
+        "description": "Documentation component residing at docs/04_Templates_and_Registers/06_RoPA_Template.md",
+        "title": "06 RoPA Template",
+        "type": "governance",
+        "uuid": "cc8a901c-47c4-5971-b06a-5b76b1f07dcb"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 07_DPIA_Template.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-dp-02",
+                "description": "Implemented via guidelines defined in 07_DPIA_Template.md",
+                "uuid": "74c4663b-f1bc-5adb-aef5-4665208883db"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "d2f44491-1f31-51f6-8023-ab8f7f2ab060"
+          }
+        ],
+        "description": "Documentation component residing at docs/04_Templates_and_Registers/07_DPIA_Template.md",
+        "title": "07 DPIA Template",
+        "type": "governance",
+        "uuid": "ec8a47ab-7f1d-5daa-8344-24141aa7a077"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Controls operationalized by 08_Internal_Audit_and_CAPA_Register.md",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-gv-06",
+                "description": "Implemented via guidelines defined in 08_Internal_Audit_and_CAPA_Register.md",
+                "uuid": "ce42d842-dbe3-5414-8462-9cd7d4d1e077"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "0fae3773-fcc4-5c4a-8b35-62342c16dba0"
+          }
+        ],
+        "description": "Documentation component residing at docs/04_Templates_and_Registers/08_Internal_Audit_and_CAPA_Register.md",
+        "title": "08 Internal Audit and CAPA Register",
+        "type": "governance",
+        "uuid": "7bb76d11-c317-5ca2-9193-3f772b76b902"
+      },
+      {
+        "control-implementations": [
+          {
+            "description": "Continuous validation and verification of ISMS controls",
+            "implemented-requirements": [
+              {
+                "control-id": "cc-gv-03",
+                "description": "Continuous automated validation of ISMS controls and evidence integrity",
+                "uuid": "1bdbcff4-1065-5015-95ad-0f522351e2a3"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "311d81ce-14f5-5ff4-85d9-0bc5a24f95f4"
+          }
+        ],
+        "description": "Python CLI toolset (validate_isms.py, export_oscal.py, check_adoption.py) providing continuous compliance verification",
+        "title": "ISMS Automation and Compliance Tooling Suite",
+        "type": "validation",
+        "uuid": "2b1d8ab3-5435-540f-8dab-2a0c293dd292"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-10-31T00:00:00Z",
+      "oscal-version": "1.2.0",
+      "published": "2026-10-31T00:00:00Z",
+      "remarks": "Components defining repository policy/standard documents and validation scripts implementing canonical controls",
+      "title": "ISMS Governance Documentation and Automation Tooling Components",
+      "version": "2.0.0"
+    },
+    "uuid": "cee8d263-6838-531e-8f01-dd2ca4d46179"
+  }
+}

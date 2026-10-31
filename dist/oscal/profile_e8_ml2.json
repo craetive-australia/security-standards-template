@@ -1,0 +1,86 @@
+{
+  "profile": {
+    "imports": [
+      {
+        "href": "./catalog.json",
+        "include-controls": [
+          {
+            "with-id": "cc-ac-02"
+          },
+          {
+            "with-id": "cc-ac-03"
+          },
+          {
+            "with-id": "cc-ac-04"
+          },
+          {
+            "with-id": "cc-ac-05"
+          },
+          {
+            "with-id": "cc-ac-06"
+          },
+          {
+            "with-id": "cc-ac-07"
+          },
+          {
+            "with-id": "cc-au-01"
+          },
+          {
+            "with-id": "cc-au-02"
+          },
+          {
+            "with-id": "cc-au-06"
+          },
+          {
+            "with-id": "cc-bc-02"
+          },
+          {
+            "with-id": "cc-op-02"
+          },
+          {
+            "with-id": "cc-op-04"
+          },
+          {
+            "with-id": "cc-op-07"
+          },
+          {
+            "with-id": "cc-op-09"
+          },
+          {
+            "with-id": "cc-sd-09"
+          }
+        ]
+      }
+    ],
+    "merge": {
+      "combine": {
+        "method": "merge"
+      }
+    },
+    "metadata": {
+      "last-modified": "2026-10-31T00:00:00Z",
+      "oscal-version": "1.2.0",
+      "published": "2026-10-31T00:00:00Z",
+      "remarks": "OSCAL profile selecting canonical controls satisfying ASD Essential Eight ML1 and ML2 requirements",
+      "title": "ASD Essential Eight Maturity Level 2 (ML2) Tailored Profile",
+      "version": "2.0.0"
+    },
+    "modify": {
+      "set-parameters": [
+        {
+          "param-id": "e8_patch_application_sla",
+          "values": [
+            "48h for critical vulnerabilities with known exploits"
+          ]
+        },
+        {
+          "param-id": "e8_mfa_requirement",
+          "values": [
+            "Phishing-resistant MFA (FIDO2/WebAuthn) for administrative and remote access"
+          ]
+        }
+      ]
+    },
+    "uuid": "80d74470-6169-509d-aa4d-ed3b5c6c96bc"
+  }
+}

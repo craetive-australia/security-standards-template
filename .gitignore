@@ -41,5 +41,6 @@ zserve_*.txt
 # Static analysis & SARIF audit reports
 *.sarif
 
-# Build distribution & OSCAL exports
-dist/
+# Build distribution (allow tracked OSCAL exports)
+dist/*
+!dist/oscal/

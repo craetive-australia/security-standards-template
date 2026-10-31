@@ -1,0 +1,3228 @@
+{
+  "catalog": {
+    "groups": [
+      {
+        "controls": [
+          {
+            "id": "cc-au-01",
+            "parts": [
+              {
+                "id": "cc-au-01-stmt",
+                "name": "statement",
+                "prose": "Rules for the acceptable use and handling of information and other associated assets must be identified, documented, and implemented."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-AU-01"
+              },
+              {
+                "name": "domain",
+                "value": "Acceptable Use"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/02_Asset_Management_Policy.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md"
+              }
+            ],
+            "title": "Acceptable Use of Corporate IT Assets",
+            "uuid": "97c3e440-0580-5552-8f03-dfa20e3115e0"
+          },
+          {
+            "id": "cc-au-02",
+            "parts": [
+              {
+                "id": "cc-au-02-stmt",
+                "name": "statement",
+                "prose": "Security measures must be implemented when personnel are teleworking or working remotely to safeguard information accessed, processed or stored off-site."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-AU-02"
+              },
+              {
+                "name": "domain",
+                "value": "Acceptable Use"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/01_Access_Control_Policy.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md"
+              }
+            ],
+            "title": "Teleworking and Remote Working Controls",
+            "uuid": "fe008655-ccc3-5556-99bc-c50e7baa3a12"
+          },
+          {
+            "id": "cc-au-03",
+            "parts": [
+              {
+                "id": "cc-au-03-stmt",
+                "name": "statement",
+                "prose": "Clear desk rules for papers and removable storage media and clear screen rules for information processing facilities must be defined and enforced."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-AU-03"
+              },
+              {
+                "name": "domain",
+                "value": "Acceptable Use"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/04_Physical_Security_Policy.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md"
+              }
+            ],
+            "title": "Clear Desk and Clear Screen Controls",
+            "uuid": "23d9a1a4-31f8-5170-b65a-f23eca66add4"
+          },
+          {
+            "id": "cc-au-04",
+            "parts": [
+              {
+                "id": "cc-au-04-stmt",
+                "name": "statement",
+                "prose": "Off-site assets must be protected, taking into account the different risks of working outside the organization premises."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-AU-04"
+              },
+              {
+                "name": "domain",
+                "value": "Acceptable Use"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/02_Asset_Management_Policy.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md"
+              }
+            ],
+            "title": "Security of Off-Premises Corporate Assets",
+            "uuid": "06283d54-16fc-58b1-bbf6-b84644820d6c"
+          },
+          {
+            "id": "cc-au-05",
+            "parts": [
+              {
+                "id": "cc-au-05-stmt",
+                "name": "statement",
+                "prose": "Information stored on, processed by, or accessible via user endpoint devices must be protected with mandatory MDM enrollment, AES-256 FDE, and inactivity screen locks."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-AU-05"
+              },
+              {
+                "name": "domain",
+                "value": "Acceptable Use"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/02_Asset_Management_Policy.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md"
+              }
+            ],
+            "title": "User Endpoint Security, Full Disk Encryption and MDM",
+            "uuid": "3dc67a71-571f-5dd0-a34c-f09ebc780be6"
+          },
+          {
+            "id": "cc-au-06",
+            "parts": [
+              {
+                "id": "cc-au-06-stmt",
+                "name": "statement",
+                "prose": "Governance and usage criteria for Generative AI and LLMs must be established per ISO/IEC 42001 and NIST AI RMF, including AI asset tiering and human-in-the-loop review."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-AU-06"
+              },
+              {
+                "name": "domain",
+                "value": "Acceptable Use"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md"
+              }
+            ],
+            "title": "Generative AI, Large Language Models and Machine Learning Governance",
+            "uuid": "d2a303f2-554b-53f5-8e26-2e2360c7bf8f"
+          },
+          {
+            "id": "cc-au-07",
+            "parts": [
+              {
+                "id": "cc-au-07-stmt",
+                "name": "statement",
+                "prose": "Protection against prompt injection, unredacted PII submission to LLMs, training data poisoning, and unauthorized shadow AI tooling must be strictly enforced."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-AU-07"
+              },
+              {
+                "name": "domain",
+                "value": "Acceptable Use"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/13_Acceptable_Use_and_AI_Security_Policy.md"
+              }
+            ],
+            "title": "AI Data Protection, Prompt Security and Shadow AI Prohibition",
+            "uuid": "1f3ed3f2-d4e6-54f6-8b30-f5221a722474"
+          }
+        ],
+        "id": "acceptable-use",
+        "title": "Acceptable Use"
+      },
+      {
+        "controls": [],
+        "id": "acceptable-use--endpoint---ai-security",
+        "title": "Acceptable Use, Endpoint & AI Security"
+      },
+      {
+        "controls": [
+          {
+            "id": "cc-ac-01",
+            "parts": [
+              {
+                "id": "cc-ac-01-stmt",
+                "name": "statement",
+                "prose": "Conflicting responsibilities and operational duties must be separated to prevent fraud, accidental errors, and circumvention of organizational security controls."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-AC-01"
+              },
+              {
+                "name": "domain",
+                "value": "Access Control"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/01_Access_Control_Policy.md"
+              }
+            ],
+            "title": "Segregation of Duties and Conflict Avoidance",
+            "uuid": "397c0f7e-361a-5e1d-95e1-651d301d0af7"
+          },
+          {
+            "id": "cc-ac-02",
+            "parts": [
+              {
+                "id": "cc-ac-02-stmt",
+                "name": "statement",
+                "prose": "Access to information, systems, and network services must be controlled based on business necessity, role-based access control (RBAC), and principle of least privilege."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-AC-02"
+              },
+              {
+                "name": "domain",
+                "value": "Access Control"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/01_Access_Control_Policy.md"
+              }
+            ],
+            "title": "Access Control Architecture and Least Privilege",
+            "uuid": "ea82ce11-229d-527f-8c4f-67dc7ad2f087"
+          },
+          {
+            "id": "cc-ac-03",
+            "parts": [
+              {
+                "id": "cc-ac-03-stmt",
+                "name": "statement",
+                "prose": "The complete lifecycle of user identities (creation, modification, suspension, revocation) must be managed through centralized identity provider workflows."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-AC-03"
+              },
+              {
+                "name": "domain",
+                "value": "Access Control"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/01_Access_Control_Policy.md"
+              }
+            ],
+            "title": "Identity Lifecycle Management and Account Provisioning",
+            "uuid": "46a6bd02-4c73-5210-8147-078fe84db78a"
+          },
+          {
+            "id": "cc-ac-04",
+            "parts": [
+              {
+                "id": "cc-ac-04-stmt",
+                "name": "statement",
+                "prose": "User passwords and authenticators must adhere to modern NIST SP 800-63B standards: 14-char minimum length, passphrase encouragement, compromised password checks, and no arbitrary periodic expiration."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-AC-04"
+              },
+              {
+                "name": "domain",
+                "value": "Access Control"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/03_Standards_and_Procedures/01_Password_and_Authentication_Standard.md"
+              }
+            ],
+            "title": "Authentication Information and NIST SP 800-63B Guidelines",
+            "uuid": "4624d92d-d8d9-5915-87e6-32b0d09ae859"
+          },
+          {
+            "id": "cc-ac-05",
+            "parts": [
+              {
+                "id": "cc-ac-05-stmt",
+                "name": "statement",
+                "prose": "User access rights must be formally reviewed and recertified at defined intervals: privileged access monthly, critical systems quarterly, and standard systems semi-annually."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-AC-05"
+              },
+              {
+                "name": "domain",
+                "value": "Access Control"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/01_Access_Control_Policy.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/04_Templates_and_Registers/05_Access_Review_Log.md"
+              }
+            ],
+            "title": "Access Rights Review and Recertification",
+            "uuid": "cc7e5aa4-cb7f-5001-b941-0b47636805fb"
+          },
+          {
+            "id": "cc-ac-06",
+            "parts": [
+              {
+                "id": "cc-ac-06-stmt",
+                "name": "statement",
+                "prose": "The allocation and use of privileged access rights must be restricted, authenticated with phishing-resistant MFA, vaulted, and audited."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-AC-06"
+              },
+              {
+                "name": "domain",
+                "value": "Access Control"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/01_Access_Control_Policy.md"
+              }
+            ],
+            "title": "Privileged Access Management (PAM)",
+            "uuid": "52dff8d0-8d57-5685-968f-e5f3b827611d"
+          },
+          {
+            "id": "cc-ac-07",
+            "parts": [
+              {
+                "id": "cc-ac-07-stmt",
+                "name": "statement",
+                "prose": "Access to information and application system functions must be restricted in accordance with granular authorization controls and defined access policies."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-AC-07"
+              },
+              {
+                "name": "domain",
+                "value": "Access Control"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/01_Access_Control_Policy.md"
+              }
+            ],
+            "title": "Information Access Restriction and Granular Authorization",
+            "uuid": "0e162169-a23d-5860-a98c-7ca4a42b95d5"
+          },
+          {
+            "id": "cc-ac-08",
+            "parts": [
+              {
+                "id": "cc-ac-08-stmt",
+                "name": "statement",
+                "prose": "Multi-Factor Authentication (MFA) utilizing FIDO2/WebAuthn hardware tokens or number-matching push authenticators must be enforced across all workforce logins."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-AC-08"
+              },
+              {
+                "name": "domain",
+                "value": "Access Control"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/03_Standards_and_Procedures/01_Password_and_Authentication_Standard.md"
+              }
+            ],
+            "title": "Secure Authentication and Phishing-Resistant MFA",
+            "uuid": "a0964ee4-fd52-58df-997e-476f0b92c5c6"
+          },
+          {
+            "id": "cc-ac-09",
+            "parts": [
+              {
+                "id": "cc-ac-09-stmt",
+                "name": "statement",
+                "prose": "The use of utility software programs that might be capable of overriding system and application controls must be strictly restricted, controlled, and monitored."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-AC-09"
+              },
+              {
+                "name": "domain",
+                "value": "Access Control"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/01_Access_Control_Policy.md"
+              }
+            ],
+            "title": "Restriction and Control of Privileged Utility Programs",
+            "uuid": "38c1eb2f-a8fd-53e3-9088-16e58f45cda6"
+          }
+        ],
+        "id": "access-control",
+        "title": "Access Control"
+      },
+      {
+        "controls": [],
+        "id": "access-control---identity",
+        "title": "Access Control & Identity"
+      },
+      {
+        "controls": [
+          {
+            "id": "cc-am-01",
+            "parts": [
+              {
+                "id": "cc-am-01-stmt",
+                "name": "statement",
+                "prose": "An accurate, comprehensive inventory of all information, software, hardware, and cloud assets must be maintained with designated owners and lifecycle tracking."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-AM-01"
+              },
+              {
+                "name": "domain",
+                "value": "Asset Management"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/02_Asset_Management_Policy.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/04_Templates_and_Registers/01_Information_Asset_Register.md"
+              }
+            ],
+            "title": "Information and Asset Inventory Management",
+            "uuid": "3581d313-23d1-533b-b3bf-977537973b3c"
+          },
+          {
+            "id": "cc-am-02",
+            "parts": [
+              {
+                "id": "cc-am-02-stmt",
+                "name": "statement",
+                "prose": "All corporate equipment, access credentials, and intellectual property in possession of employees and contractors must be recovered upon termination of employment or contract."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-AM-02"
+              },
+              {
+                "name": "domain",
+                "value": "Asset Management"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/08_HR_Security_Policy.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/02_Asset_Management_Policy.md"
+              }
+            ],
+            "title": "Return of Corporate Assets",
+            "uuid": "b3e1b127-f86e-555c-8104-2f925ef73df9"
+          },
+          {
+            "id": "cc-am-03",
+            "parts": [
+              {
+                "id": "cc-am-03-stmt",
+                "name": "statement",
+                "prose": "Information must be classified in accordance with its value, legal sensitivity, and criticality to the organization into Public, Internal, Confidential, and Restricted tiers."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-AM-03"
+              },
+              {
+                "name": "domain",
+                "value": "Asset Management"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/02_Asset_Management_Policy.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/03_Standards_and_Procedures/02_Data_Classification_and_Handling_Standard.md"
+              }
+            ],
+            "title": "Information Classification",
+            "uuid": "5da859a9-3610-5d77-a515-35d256ca6a70"
+          },
+          {
+            "id": "cc-am-04",
+            "parts": [
+              {
+                "id": "cc-am-04-stmt",
+                "name": "statement",
+                "prose": "Procedures for labelling and handling classified assets must be enforced, including default metadata classification and visual markings on Confidential and Restricted data."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-AM-04"
+              },
+              {
+                "name": "domain",
+                "value": "Asset Management"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/03_Standards_and_Procedures/02_Data_Classification_and_Handling_Standard.md"
+              }
+            ],
+            "title": "Information Labelling and Handling",
+            "uuid": "d7578eaf-0238-5650-9c45-d0cb27c1c2d5"
+          },
+          {
+            "id": "cc-am-05",
+            "parts": [
+              {
+                "id": "cc-am-05-stmt",
+                "name": "statement",
+                "prose": "Organizational and security records must be protected from loss, destruction, and unauthorized alteration, in accordance with statutory retention schedules."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-AM-05"
+              },
+              {
+                "name": "domain",
+                "value": "Asset Management"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/03_Standards_and_Procedures/03_Data_Retention_and_Destruction_Standard.md"
+              }
+            ],
+            "title": "Protection and Retention of Records",
+            "uuid": "949830af-39ba-5464-95c5-2adb1498cb30"
+          },
+          {
+            "id": "cc-am-06",
+            "parts": [
+              {
+                "id": "cc-am-06-stmt",
+                "name": "statement",
+                "prose": "Storage media containing sensitive data must be encrypted, physically secured during storage and transit, and restricted to authorized personnel."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-AM-06"
+              },
+              {
+                "name": "domain",
+                "value": "Asset Management"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/03_Standards_and_Procedures/03_Data_Retention_and_Destruction_Standard.md"
+              }
+            ],
+            "title": "Removable and Storage Media Management",
+            "uuid": "187c9f3d-a29d-5a0e-9a26-8fdf355d8504"
+          },
+          {
+            "id": "cc-am-07",
+            "parts": [
+              {
+                "id": "cc-am-07-stmt",
+                "name": "statement",
+                "prose": "All storage devices and hardware slated for decommission or disposal must undergo cryptographically verified sanitization aligned with NIST SP 800-88 Rev. 1 and IEEE 2883-2022."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-AM-07"
+              },
+              {
+                "name": "domain",
+                "value": "Asset Management"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/03_Standards_and_Procedures/03_Data_Retention_and_Destruction_Standard.md"
+              }
+            ],
+            "title": "Secure Media Sanitization and Equipment Disposal",
+            "uuid": "0fb20b75-4d91-5421-8385-2c22f2a0db83"
+          }
+        ],
+        "id": "asset-management",
+        "title": "Asset Management"
+      },
+      {
+        "controls": [],
+        "id": "asset-management---classification",
+        "title": "Asset Management & Classification"
+      },
+      {
+        "controls": [
+          {
+            "id": "cc-bc-01",
+            "parts": [
+              {
+                "id": "cc-bc-01-stmt",
+                "name": "statement",
+                "prose": "The organization must plan how to maintain information security at an appropriate level during disruption, emergency operations, or disaster recovery."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-BC-01"
+              },
+              {
+                "name": "domain",
+                "value": "Business Continuity"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/11_Business_Continuity_Policy.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/03_Standards_and_Procedures/07_Business_Continuity_Plan_BCP.md"
+              }
+            ],
+            "title": "Information Security During Disruption and Emergency Operations",
+            "uuid": "74e8efa2-a02b-520d-a00c-aec149c90515"
+          },
+          {
+            "id": "cc-bc-02",
+            "parts": [
+              {
+                "id": "cc-bc-02-stmt",
+                "name": "statement",
+                "prose": "ICT readiness must be planned, implemented, maintained, and tested based on business continuity objectives (RTO, RPO) and resilience requirements."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-BC-02"
+              },
+              {
+                "name": "domain",
+                "value": "Business Continuity"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/03_Standards_and_Procedures/08_Disaster_Recovery_Plan_DRP.md"
+              }
+            ],
+            "title": "ICT Readiness for Business Continuity and Disaster Recovery",
+            "uuid": "87c720fb-a8b5-597e-9b9d-ade0332456e1"
+          },
+          {
+            "id": "cc-bc-03",
+            "parts": [
+              {
+                "id": "cc-bc-03-stmt",
+                "name": "statement",
+                "prose": "Information processing facilities must be implemented with redundancy sufficient to meet availability requirements and eliminate single points of failure."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-BC-03"
+              },
+              {
+                "name": "domain",
+                "value": "Business Continuity"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/11_Business_Continuity_Policy.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/03_Standards_and_Procedures/08_Disaster_Recovery_Plan_DRP.md"
+              }
+            ],
+            "title": "Redundancy of Processing Facilities and High Availability",
+            "uuid": "ef9713d8-ca9d-5811-9ebd-89cf20cb9647"
+          },
+          {
+            "id": "cc-bc-04",
+            "parts": [
+              {
+                "id": "cc-bc-04-stmt",
+                "name": "statement",
+                "prose": "Business impact analysis (BIA) must be conducted to establish recovery time objectives (RTO) and recovery point objectives (RPO) for all critical systems."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-BC-04"
+              },
+              {
+                "name": "domain",
+                "value": "Business Continuity"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/11_Business_Continuity_Policy.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/03_Standards_and_Procedures/07_Business_Continuity_Plan_BCP.md"
+              }
+            ],
+            "title": "Business Impact Analysis and Recovery Objectives (RTO/RPO)",
+            "uuid": "03c73cb0-ed37-5530-8539-e3b56daa4d5d"
+          }
+        ],
+        "id": "business-continuity",
+        "title": "Business Continuity"
+      },
+      {
+        "controls": [],
+        "id": "business-continuity---disaster-recovery",
+        "title": "Business Continuity & Disaster Recovery"
+      },
+      {
+        "controls": [],
+        "id": "communications---network-security",
+        "title": "Communications & Network Security"
+      },
+      {
+        "controls": [
+          {
+            "id": "cc-cm-01",
+            "parts": [
+              {
+                "id": "cc-cm-01-stmt",
+                "name": "statement",
+                "prose": "Formal transfer policies, procedures, and controls must be in place to protect the transfer of information through the use of all types of communications facilities."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-CM-01"
+              },
+              {
+                "name": "domain",
+                "value": "Communications Security"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/06_Communications_Security_Policy.md"
+              }
+            ],
+            "title": "Information Transfer Policies and Agreements",
+            "uuid": "c3571d65-b5e8-550b-b850-b7ba64d7feb1"
+          },
+          {
+            "id": "cc-cm-02",
+            "parts": [
+              {
+                "id": "cc-cm-02-stmt",
+                "name": "statement",
+                "prose": "Cables carrying power, data, or supporting information services must be protected from interception, interference, or physical damage."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-CM-02"
+              },
+              {
+                "name": "domain",
+                "value": "Communications Security"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/06_Communications_Security_Policy.md"
+              }
+            ],
+            "title": "Cabling Security and Telecommunications Protection",
+            "uuid": "fa976233-5021-5000-9ac8-1dd7dbbdd7ff"
+          },
+          {
+            "id": "cc-cm-03",
+            "parts": [
+              {
+                "id": "cc-cm-03-stmt",
+                "name": "statement",
+                "prose": "Networks must be secured, managed, and controlled to protect information in systems and applications, including next-generation firewalls at all ingress/egress points."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-CM-03"
+              },
+              {
+                "name": "domain",
+                "value": "Communications Security"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/06_Communications_Security_Policy.md"
+              }
+            ],
+            "title": "Network Security Architecture and Boundary Protection",
+            "uuid": "f75c6f44-c208-59e2-8c37-07c0cb4b92ce"
+          },
+          {
+            "id": "cc-cm-04",
+            "parts": [
+              {
+                "id": "cc-cm-04-stmt",
+                "name": "statement",
+                "prose": "Security mechanisms, service levels, and service requirements of network services must be identified, implemented, and monitored."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-CM-04"
+              },
+              {
+                "name": "domain",
+                "value": "Communications Security"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/06_Communications_Security_Policy.md"
+              }
+            ],
+            "title": "Security of Managed Network Services and Connectivity",
+            "uuid": "d999e5b3-c2d8-5f20-9da3-0bf451d65474"
+          },
+          {
+            "id": "cc-cm-05",
+            "parts": [
+              {
+                "id": "cc-cm-05-stmt",
+                "name": "statement",
+                "prose": "Groups of information services, users, and information systems must be segregated on networks, isolating production VPCs from testing and office networks."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-CM-05"
+              },
+              {
+                "name": "domain",
+                "value": "Communications Security"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/06_Communications_Security_Policy.md"
+              }
+            ],
+            "title": "Network Segregation, VPC Isolation and Micro-segmentation",
+            "uuid": "a92ad7e3-3e41-53d2-b89d-e2aa40495918"
+          },
+          {
+            "id": "cc-cm-06",
+            "parts": [
+              {
+                "id": "cc-cm-06-stmt",
+                "name": "statement",
+                "prose": "Access to external websites must be managed using DNS and URL filtering to reduce exposure to malicious content, C2 servers, and credential phishing."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-CM-06"
+              },
+              {
+                "name": "domain",
+                "value": "Communications Security"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/06_Communications_Security_Policy.md"
+              }
+            ],
+            "title": "Web Filtering, DNS Security and Anti-Phishing Controls",
+            "uuid": "e34e419c-124d-50c8-94e3-963794b2ac54"
+          }
+        ],
+        "id": "communications-security",
+        "title": "Communications Security"
+      },
+      {
+        "controls": [
+          {
+            "id": "cc-cr-01",
+            "parts": [
+              {
+                "id": "cc-cr-01-stmt",
+                "name": "statement",
+                "prose": "Cryptographic algorithms and key management practices must align with NIST SP 800-57, including AES-256 for data at rest, annual symmetric key rotation, and automated KMS lifecycle controls."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-CR-01"
+              },
+              {
+                "name": "domain",
+                "value": "Cryptography"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/03_Cryptography_Policy.md"
+              }
+            ],
+            "title": "Cryptographic Controls and Key Management Lifecycle",
+            "uuid": "391ff7fb-f0d3-5e14-96b0-fb6aad59b279"
+          },
+          {
+            "id": "cc-cr-02",
+            "parts": [
+              {
+                "id": "cc-cr-02-stmt",
+                "name": "statement",
+                "prose": "All communications across public networks or between data centers must utilize TLS 1.3 (or TLS 1.2 with PFS cipher suites), disabling deprecated legacy protocols."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-CR-02"
+              },
+              {
+                "name": "domain",
+                "value": "Cryptography"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/03_Cryptography_Policy.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/06_Communications_Security_Policy.md"
+              }
+            ],
+            "title": "Data Encryption in Transit and TLS Configuration",
+            "uuid": "5c4b5c7b-b214-52f3-80fa-63d865b513c7"
+          },
+          {
+            "id": "cc-cr-03",
+            "parts": [
+              {
+                "id": "cc-cr-03-stmt",
+                "name": "statement",
+                "prose": "The organization maintains cryptographic agility and tracks migration to NIST post-quantum cryptographic standards (FIPS 203, 204, 205), enforcing <=90d lifetimes for TLS and API secrets."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-CR-03"
+              },
+              {
+                "name": "domain",
+                "value": "Cryptography"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/03_Cryptography_Policy.md"
+              }
+            ],
+            "title": "Post-Quantum Cryptography Readiness and Ephemeral Secrets",
+            "uuid": "eb8a9aff-3d96-5079-9e1a-76ec646dd9a8"
+          }
+        ],
+        "id": "cryptography",
+        "title": "Cryptography"
+      },
+      {
+        "controls": [],
+        "id": "cryptography---key-management",
+        "title": "Cryptography & Key Management"
+      },
+      {
+        "controls": [
+          {
+            "id": "cc-dp-01",
+            "parts": [
+              {
+                "id": "cc-dp-01-stmt",
+                "name": "statement",
+                "prose": "All applicable statutory, regulatory, and contractual requirements must be identified, documented, and reviewed periodically."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-DP-01"
+              },
+              {
+                "name": "domain",
+                "value": "Data Privacy"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/01_ISMS_Framework/02_Context_of_the_Organization.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/09_Data_Privacy_and_Protection_Policy.md"
+              }
+            ],
+            "title": "Legal, Statutory, Regulatory and Contractual Compliance",
+            "uuid": "0af259cb-2d3c-583c-a441-8859fb2bfde9"
+          },
+          {
+            "id": "cc-dp-02",
+            "parts": [
+              {
+                "id": "cc-dp-02-stmt",
+                "name": "statement",
+                "prose": "The organization must ensure the protection of personal data and compliance with GDPR and applicable privacy legislation through RoPA, DPIA, and DPO oversight."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-DP-02"
+              },
+              {
+                "name": "domain",
+                "value": "Data Privacy"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/09_Data_Privacy_and_Protection_Policy.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/04_Templates_and_Registers/06_RoPA_Template.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/04_Templates_and_Registers/07_DPIA_Template.md"
+              }
+            ],
+            "title": "Privacy and Protection of Personally Identifiable Information (PII)",
+            "uuid": "5d96410d-eb4f-59c9-a055-e24c9827d1bf"
+          },
+          {
+            "id": "cc-dp-03",
+            "parts": [
+              {
+                "id": "cc-dp-03-stmt",
+                "name": "statement",
+                "prose": "Information stored in information systems, devices or in any other storage media must be deleted when no longer required, fulfilling GDPR Right to Erasure."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-DP-03"
+              },
+              {
+                "name": "domain",
+                "value": "Data Privacy"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/03_Standards_and_Procedures/03_Data_Retention_and_Destruction_Standard.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/09_Data_Privacy_and_Protection_Policy.md"
+              }
+            ],
+            "title": "Information Deletion and Right to Erasure",
+            "uuid": "8413942b-6fe2-55c8-a2a1-b119ee8bfd62"
+          },
+          {
+            "id": "cc-dp-04",
+            "parts": [
+              {
+                "id": "cc-dp-04-stmt",
+                "name": "statement",
+                "prose": "Data masking, pseudonymization, and tokenization techniques must be applied to protect sensitive personal and business data in non-production environments."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-DP-04"
+              },
+              {
+                "name": "domain",
+                "value": "Data Privacy"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/09_Data_Privacy_and_Protection_Policy.md"
+              }
+            ],
+            "title": "Data Masking, Pseudonymization and Anonymization",
+            "uuid": "d490a5c2-8aac-550e-b639-90312583b38e"
+          },
+          {
+            "id": "cc-dp-05",
+            "parts": [
+              {
+                "id": "cc-dp-05-stmt",
+                "name": "statement",
+                "prose": "Data leakage prevention measures must be applied to systems, networks and any other devices that process, store or transmit sensitive information."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-DP-05"
+              },
+              {
+                "name": "domain",
+                "value": "Data Privacy"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/03_Standards_and_Procedures/02_Data_Classification_and_Handling_Standard.md"
+              }
+            ],
+            "title": "Data Leakage Prevention (DLP) and Exfiltration Safeguards",
+            "uuid": "141b117b-85c9-5ddb-b52a-561217cdb56e"
+          }
+        ],
+        "id": "data-privacy",
+        "title": "Data Privacy"
+      },
+      {
+        "controls": [],
+        "id": "data-privacy---protection",
+        "title": "Data Privacy & Protection"
+      },
+      {
+        "controls": [
+          {
+            "id": "cc-gv-01",
+            "parts": [
+              {
+                "id": "cc-gv-01-stmt",
+                "name": "statement",
+                "prose": "A comprehensive set of information security policies, governance structures, and management commitments must be established, approved by executive leadership, published, and reviewed at planned intervals."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-GV-01"
+              },
+              {
+                "name": "domain",
+                "value": "Governance"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/01_ISMS_Framework/01_Information_Security_Policy.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md"
+              }
+            ],
+            "title": "Information Security Policy Framework",
+            "uuid": "37566648-daa9-59a2-9f1c-5e4f7545de8f"
+          },
+          {
+            "id": "cc-gv-02",
+            "parts": [
+              {
+                "id": "cc-gv-02-stmt",
+                "name": "statement",
+                "prose": "Information security roles and responsibilities must be explicitly defined, allocated to competent personnel, and communicated across the organization."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-GV-02"
+              },
+              {
+                "name": "domain",
+                "value": "Governance"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/01_ISMS_Framework/04_Roles_and_Responsibilities.md"
+              }
+            ],
+            "title": "Security Roles and Responsibilities",
+            "uuid": "1cff8117-5c16-53b9-aa6a-afe8ed9dec32"
+          },
+          {
+            "id": "cc-gv-03",
+            "parts": [
+              {
+                "id": "cc-gv-03-stmt",
+                "name": "statement",
+                "prose": "Executive management must actively lead, support, and resource the ISMS, requiring all personnel to apply information security in accordance with established policies."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-GV-03"
+              },
+              {
+                "name": "domain",
+                "value": "Governance"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/01_ISMS_Framework/04_Roles_and_Responsibilities.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md"
+              }
+            ],
+            "title": "Management Responsibilities and Leadership Commitment",
+            "uuid": "e9b26874-0a3a-5dfc-8f45-a41bb33f4ee0"
+          },
+          {
+            "id": "cc-gv-04",
+            "parts": [
+              {
+                "id": "cc-gv-04-stmt",
+                "name": "statement",
+                "prose": "Formal channels and procedures must be maintained for prompt engagement with law enforcement, regulatory bodies, supervisory authorities, and emergency response agencies."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-GV-04"
+              },
+              {
+                "name": "domain",
+                "value": "Governance"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/03_Standards_and_Procedures/06_Incident_Response_Plan_IRP.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/03_Standards_and_Procedures/09_Data_Breach_Notification_Procedure.md"
+              }
+            ],
+            "title": "Contact with Statutory and Regulatory Authorities",
+            "uuid": "b4746255-89cd-596f-afe8-38f4e8277d61"
+          },
+          {
+            "id": "cc-gv-05",
+            "parts": [
+              {
+                "id": "cc-gv-05-stmt",
+                "name": "statement",
+                "prose": "The security organization must maintain active ties with professional associations, threat intelligence exchanges, and industry cybersecurity forums to remain current on emerging threats."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-GV-05"
+              },
+              {
+                "name": "domain",
+                "value": "Governance"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/01_ISMS_Framework/01_Information_Security_Policy.md"
+              }
+            ],
+            "title": "Contact with Special Interest Groups and Threat Forums",
+            "uuid": "47892810-4ffd-5f31-b43a-6aae327f75a0"
+          },
+          {
+            "id": "cc-gv-06",
+            "parts": [
+              {
+                "id": "cc-gv-06-stmt",
+                "name": "statement",
+                "prose": "The ISMS and implementation of security controls must be independently audited and evaluated at planned intervals by objective internal or external auditors."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-GV-06"
+              },
+              {
+                "name": "domain",
+                "value": "Governance"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/01_ISMS_Framework/03_Risk_Management_Methodology.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/04_Templates_and_Registers/08_Internal_Audit_and_CAPA_Register.md"
+              }
+            ],
+            "title": "Independent Review of Information Security",
+            "uuid": "df7468bb-3985-5eef-b35c-cf5277e0dc56"
+          },
+          {
+            "id": "cc-gv-07",
+            "parts": [
+              {
+                "id": "cc-gv-07-stmt",
+                "name": "statement",
+                "prose": "Managers and system owners must regularly review compliance of information processing and procedures within their area of responsibility against security standards and baselines."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-GV-07"
+              },
+              {
+                "name": "domain",
+                "value": "Governance"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/01_ISMS_Framework/01_Information_Security_Policy.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md"
+              }
+            ],
+            "title": "Compliance with Security Policies and Technical Standards",
+            "uuid": "3ab0c275-d7af-5692-a244-2987b239ce7f"
+          },
+          {
+            "id": "cc-gv-08",
+            "parts": [
+              {
+                "id": "cc-gv-08-stmt",
+                "name": "statement",
+                "prose": "Standard operating procedures (SOPs) for information security operations, system administration, and infrastructure maintenance must be documented, version-controlled, and made available."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-GV-08"
+              },
+              {
+                "name": "domain",
+                "value": "Governance"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/05_Operations_Security_Policy.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md"
+              }
+            ],
+            "title": "Documented Operating Procedures",
+            "uuid": "1f2df5f4-21e8-5e50-9961-2c5bbecf5170"
+          }
+        ],
+        "id": "governance",
+        "title": "Governance"
+      },
+      {
+        "controls": [],
+        "id": "governance--risk---improvement",
+        "title": "Governance, Risk & Improvement"
+      },
+      {
+        "controls": [],
+        "id": "human-resource-security",
+        "title": "Human Resource Security"
+      },
+      {
+        "controls": [
+          {
+            "id": "cc-hr-01",
+            "parts": [
+              {
+                "id": "cc-hr-01-stmt",
+                "name": "statement",
+                "prose": "Background verification checks on all candidates for employment must be carried out in accordance with relevant laws, regulations, and ethics."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-HR-01"
+              },
+              {
+                "name": "domain",
+                "value": "Human Resources"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/08_HR_Security_Policy.md"
+              }
+            ],
+            "title": "Personnel Screening and Background Checks",
+            "uuid": "644396ff-fd58-5d6e-ada2-25f067483b77"
+          },
+          {
+            "id": "cc-hr-02",
+            "parts": [
+              {
+                "id": "cc-hr-02-stmt",
+                "name": "statement",
+                "prose": "The employment contractual agreements must state the personnel and organization responsibilities for information security."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-HR-02"
+              },
+              {
+                "name": "domain",
+                "value": "Human Resources"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/08_HR_Security_Policy.md"
+              }
+            ],
+            "title": "Terms and Conditions of Employment",
+            "uuid": "dc832a78-9049-50d0-b199-6ac4dff59dac"
+          },
+          {
+            "id": "cc-hr-03",
+            "parts": [
+              {
+                "id": "cc-hr-03-stmt",
+                "name": "statement",
+                "prose": "All personnel must receive appropriate security awareness education, training, and regular updates relevant to their job function, supplemented by monthly phishing tests."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-HR-03"
+              },
+              {
+                "name": "domain",
+                "value": "Human Resources"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/08_HR_Security_Policy.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md"
+              }
+            ],
+            "title": "Security Awareness, Training and Phishing Simulations",
+            "uuid": "e50e5460-4187-5211-96dc-94b57a71adcb"
+          },
+          {
+            "id": "cc-hr-04",
+            "parts": [
+              {
+                "id": "cc-hr-04-stmt",
+                "name": "statement",
+                "prose": "A formal and communicated disciplinary process must be in place to take action against personnel who have committed an information security violation."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-HR-04"
+              },
+              {
+                "name": "domain",
+                "value": "Human Resources"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/08_HR_Security_Policy.md"
+              }
+            ],
+            "title": "Disciplinary Process for Security Policy Violations",
+            "uuid": "71146c2d-b721-55cc-b03a-d52f0e94eb3f"
+          },
+          {
+            "id": "cc-hr-05",
+            "parts": [
+              {
+                "id": "cc-hr-05-stmt",
+                "name": "statement",
+                "prose": "Information security responsibilities and duties that remain valid after termination or change of employment must be defined, enforced, and communicated."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-HR-05"
+              },
+              {
+                "name": "domain",
+                "value": "Human Resources"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/08_HR_Security_Policy.md"
+              }
+            ],
+            "title": "Responsibilities After Termination or Change of Employment",
+            "uuid": "77705e07-61b6-5a42-9e51-5363f4858716"
+          },
+          {
+            "id": "cc-hr-06",
+            "parts": [
+              {
+                "id": "cc-hr-06-stmt",
+                "name": "statement",
+                "prose": "Non-disclosure or confidentiality agreements reflecting the organization needs for protection of information must be identified, documented, and regularly reviewed."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-HR-06"
+              },
+              {
+                "name": "domain",
+                "value": "Human Resources"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/08_HR_Security_Policy.md"
+              }
+            ],
+            "title": "Confidentiality and Non-Disclosure Agreements",
+            "uuid": "c42726dd-c3e0-5a6f-9f26-d9d731320d32"
+          }
+        ],
+        "id": "human-resources",
+        "title": "Human Resources"
+      },
+      {
+        "controls": [
+          {
+            "id": "cc-ir-01",
+            "parts": [
+              {
+                "id": "cc-ir-01-stmt",
+                "name": "statement",
+                "prose": "The organization must plan and prepare for managing information security incidents by defining roles, responsibilities, severity levels, and CSIRT playbooks."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-IR-01"
+              },
+              {
+                "name": "domain",
+                "value": "Incident Management"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/10_Incident_Management_Policy.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/03_Standards_and_Procedures/06_Incident_Response_Plan_IRP.md"
+              }
+            ],
+            "title": "Incident Management Planning, Roles and CSIRT Playbooks",
+            "uuid": "b377753a-47ab-5b6f-a77b-2a927e993b91"
+          },
+          {
+            "id": "cc-ir-02",
+            "parts": [
+              {
+                "id": "cc-ir-02-stmt",
+                "name": "statement",
+                "prose": "The organization must assess information security events and decide if they are to be classified as information security incidents based on impact criteria."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-IR-02"
+              },
+              {
+                "name": "domain",
+                "value": "Incident Management"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/10_Incident_Management_Policy.md"
+              }
+            ],
+            "title": "Assessment and Classification of Security Events",
+            "uuid": "42b2d2bd-49ec-5263-9582-21e9d83dc676"
+          },
+          {
+            "id": "cc-ir-03",
+            "parts": [
+              {
+                "id": "cc-ir-03-stmt",
+                "name": "statement",
+                "prose": "Information security incidents must be responded to in accordance with the documented incident response plan and severity containment procedures."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-IR-03"
+              },
+              {
+                "name": "domain",
+                "value": "Incident Management"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/03_Standards_and_Procedures/06_Incident_Response_Plan_IRP.md"
+              }
+            ],
+            "title": "Incident Containment, Eradication and Response",
+            "uuid": "01e7e3cc-52af-54f6-b9c8-40e8b9407f26"
+          },
+          {
+            "id": "cc-ir-04",
+            "parts": [
+              {
+                "id": "cc-ir-04-stmt",
+                "name": "statement",
+                "prose": "Knowledge gained from information security incidents must be used to strengthen controls, holding post-mortems within 5 days for Sev1/2 and 10 days for Sev3."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-IR-04"
+              },
+              {
+                "name": "domain",
+                "value": "Incident Management"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/10_Incident_Management_Policy.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/04_Templates_and_Registers/03_Security_Incident_Log.md"
+              }
+            ],
+            "title": "Post-Incident Review, Root Cause Analysis and Lessons Learned",
+            "uuid": "12d390d1-891b-51ac-9c50-ae4c93f0923d"
+          },
+          {
+            "id": "cc-ir-05",
+            "parts": [
+              {
+                "id": "cc-ir-05-stmt",
+                "name": "statement",
+                "prose": "The organization must identify, collect, acquire, and preserve evidence related to information security incidents in accordance with legal admissibility standards."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-IR-05"
+              },
+              {
+                "name": "domain",
+                "value": "Incident Management"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/03_Standards_and_Procedures/06_Incident_Response_Plan_IRP.md"
+              }
+            ],
+            "title": "Collection and Preservation of Forensic Evidence",
+            "uuid": "f1063714-3ca5-5991-963b-74d54b912d60"
+          },
+          {
+            "id": "cc-ir-06",
+            "parts": [
+              {
+                "id": "cc-ir-06-stmt",
+                "name": "statement",
+                "prose": "The organization must provide a mechanism for all personnel to report observed or suspected information security events through designated channels."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-IR-06"
+              },
+              {
+                "name": "domain",
+                "value": "Incident Management"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/10_Incident_Management_Policy.md"
+              }
+            ],
+            "title": "Security Event and Anomaly Reporting",
+            "uuid": "0b4bb9db-cd69-59f7-b9a3-d111949e6919"
+          }
+        ],
+        "id": "incident-management",
+        "title": "Incident Management"
+      },
+      {
+        "controls": [],
+        "id": "incident-management---response",
+        "title": "Incident Management & Response"
+      },
+      {
+        "controls": [
+          {
+            "id": "cc-op-01",
+            "parts": [
+              {
+                "id": "cc-op-01-stmt",
+                "name": "statement",
+                "prose": "Information relating to information security threats must be collected, analyzed, and integrated into vulnerability management and threat defenses."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-OP-01"
+              },
+              {
+                "name": "domain",
+                "value": "Operations Security"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/03_Standards_and_Procedures/04_Vulnerability_and_Patch_Management_Standard.md"
+              }
+            ],
+            "title": "Threat Intelligence Ingestion and Risk Prioritization",
+            "uuid": "1c11853c-45ce-5035-be76-b9f27426e81f"
+          },
+          {
+            "id": "cc-op-02",
+            "parts": [
+              {
+                "id": "cc-op-02-stmt",
+                "name": "statement",
+                "prose": "Information processing equipment must be correctly maintained to ensure its continued availability, integrity, and operational security."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-OP-02"
+              },
+              {
+                "name": "domain",
+                "value": "Operations Security"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/05_Operations_Security_Policy.md"
+              }
+            ],
+            "title": "Equipment Maintenance and Servicing",
+            "uuid": "d409531d-c7ff-5c4f-9c81-13defce1a186"
+          },
+          {
+            "id": "cc-op-03",
+            "parts": [
+              {
+                "id": "cc-op-03-stmt",
+                "name": "statement",
+                "prose": "The use of computing, memory, storage, and network resources must be monitored and adjusted to satisfy future processing capacity demands."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-OP-03"
+              },
+              {
+                "name": "domain",
+                "value": "Operations Security"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/05_Operations_Security_Policy.md"
+              }
+            ],
+            "title": "Capacity Management and Cloud Resource Scaling",
+            "uuid": "55a8535a-a084-568d-ace0-2b19f5d70de3"
+          },
+          {
+            "id": "cc-op-04",
+            "parts": [
+              {
+                "id": "cc-op-04-stmt",
+                "name": "statement",
+                "prose": "Detection, prevention, and recovery controls to protect against malware must be implemented on all endpoints and servers, backed by next-gen EDR."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-OP-04"
+              },
+              {
+                "name": "domain",
+                "value": "Operations Security"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/05_Operations_Security_Policy.md"
+              }
+            ],
+            "title": "Malware Protection and Endpoint Detection and Response",
+            "uuid": "84511d04-6ead-5ea4-8a22-649b5a400ecb"
+          },
+          {
+            "id": "cc-op-05",
+            "parts": [
+              {
+                "id": "cc-op-05-stmt",
+                "name": "statement",
+                "prose": "Information about technical vulnerabilities must be evaluated against CVSS v4.0, CISA KEV, and EPSS, enforcing remediation SLAs (<=48h critical, <=14d high)."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-OP-05"
+              },
+              {
+                "name": "domain",
+                "value": "Operations Security"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/03_Standards_and_Procedures/04_Vulnerability_and_Patch_Management_Standard.md"
+              }
+            ],
+            "title": "Technical Vulnerability Management and Remediation SLAs",
+            "uuid": "8cbb2aa9-7620-517d-afb3-2d1775c398ef"
+          },
+          {
+            "id": "cc-op-06",
+            "parts": [
+              {
+                "id": "cc-op-06-stmt",
+                "name": "statement",
+                "prose": "Configurations, including security baselines for hardware, software, services, and network devices, must be established, tracked, monitored, and automated via IaC."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-OP-06"
+              },
+              {
+                "name": "domain",
+                "value": "Operations Security"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/05_Operations_Security_Policy.md"
+              }
+            ],
+            "title": "Configuration Management and Infrastructure as Code Baselines",
+            "uuid": "0e9e23cd-be6f-5a45-92f1-7d87a68db087"
+          },
+          {
+            "id": "cc-op-07",
+            "parts": [
+              {
+                "id": "cc-op-07-stmt",
+                "name": "statement",
+                "prose": "Backup copies of information, software, and systems must be maintained, encrypted, stored in immutable air-gapped repositories, and tested regularly."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-OP-07"
+              },
+              {
+                "name": "domain",
+                "value": "Operations Security"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/05_Operations_Security_Policy.md"
+              }
+            ],
+            "title": "Information Backup and Immutable Storage",
+            "uuid": "03d081e3-37ed-5075-a114-20ace5a7b1b1"
+          },
+          {
+            "id": "cc-op-08",
+            "parts": [
+              {
+                "id": "cc-op-08-stmt",
+                "name": "statement",
+                "prose": "Logs recording user activities, exceptions, faults, and security events must be generated, stored (90d hot + 365d cold), protected against tampering, and analyzed in SIEM."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-OP-08"
+              },
+              {
+                "name": "domain",
+                "value": "Operations Security"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/05_Operations_Security_Policy.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/03_Standards_and_Procedures/03_Data_Retention_and_Destruction_Standard.md"
+              }
+            ],
+            "title": "Audit Logging, SIEM Aggregation and Retention",
+            "uuid": "2704fb61-b9a4-5fad-b8ec-a3aa6a8c8ad0"
+          },
+          {
+            "id": "cc-op-09",
+            "parts": [
+              {
+                "id": "cc-op-09-stmt",
+                "name": "statement",
+                "prose": "Networks, systems, and applications must be monitored for anomalous behavior and potential security incidents, evaluating events against baselines."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-OP-09"
+              },
+              {
+                "name": "domain",
+                "value": "Operations Security"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/05_Operations_Security_Policy.md"
+              }
+            ],
+            "title": "Continuous Security Monitoring and Behavioral Anomaly Detection",
+            "uuid": "4be7ed3b-7152-5546-b3e9-f7dca39ebe85"
+          },
+          {
+            "id": "cc-op-10",
+            "parts": [
+              {
+                "id": "cc-op-10-stmt",
+                "name": "statement",
+                "prose": "The clocks of all information processing systems within the organization must be synchronized to an agreed reference time source (NTP)."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-OP-10"
+              },
+              {
+                "name": "domain",
+                "value": "Operations Security"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/05_Operations_Security_Policy.md"
+              }
+            ],
+            "title": "Clock Synchronization via NTP",
+            "uuid": "99a1ffe6-a38c-5963-9185-02ccc923db2a"
+          },
+          {
+            "id": "cc-op-11",
+            "parts": [
+              {
+                "id": "cc-op-11-stmt",
+                "name": "statement",
+                "prose": "Rules and automated restrictions governing the installation of software by users on operational systems must be implemented."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-OP-11"
+              },
+              {
+                "name": "domain",
+                "value": "Operations Security"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/05_Operations_Security_Policy.md"
+              }
+            ],
+            "title": "Software Installation Controls and Application Whitelisting",
+            "uuid": "48c53e3e-688c-5f5f-babb-6bca70b2d23d"
+          },
+          {
+            "id": "cc-op-12",
+            "parts": [
+              {
+                "id": "cc-op-12-stmt",
+                "name": "statement",
+                "prose": "Audit activities and penetration tests involving checks on operational systems must be planned and agreed between the auditor and management to minimize business disruption."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-OP-12"
+              },
+              {
+                "name": "domain",
+                "value": "Operations Security"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/05_Operations_Security_Policy.md"
+              }
+            ],
+            "title": "Protection of Operational Systems During Security Audits",
+            "uuid": "502f60b8-c3ea-53ee-bdfd-dadfe0beb1ed"
+          }
+        ],
+        "id": "operations-security",
+        "title": "Operations Security"
+      },
+      {
+        "controls": [],
+        "id": "physical---environmental-security",
+        "title": "Physical & Environmental Security"
+      },
+      {
+        "controls": [
+          {
+            "id": "cc-ps-01",
+            "parts": [
+              {
+                "id": "cc-ps-01-stmt",
+                "name": "statement",
+                "prose": "Physical security perimeters and access barriers must be implemented to safeguard areas containing sensitive information processing facilities."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-PS-01"
+              },
+              {
+                "name": "domain",
+                "value": "Physical Security"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/04_Physical_Security_Policy.md"
+              }
+            ],
+            "title": "Physical Security Perimeters and Barriers",
+            "uuid": "eba2ff87-746b-50ee-a067-6c646e150f6e"
+          },
+          {
+            "id": "cc-ps-02",
+            "parts": [
+              {
+                "id": "cc-ps-02-stmt",
+                "name": "statement",
+                "prose": "Access to secure areas must be controlled by electronic access control, visitor badge issuance, log retention, and escort requirements."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-PS-02"
+              },
+              {
+                "name": "domain",
+                "value": "Physical Security"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/04_Physical_Security_Policy.md"
+              }
+            ],
+            "title": "Physical Entry Controls and Visitor Management",
+            "uuid": "69abb831-9000-503d-a973-93ce7dee8196"
+          },
+          {
+            "id": "cc-ps-03",
+            "parts": [
+              {
+                "id": "cc-ps-03-stmt",
+                "name": "statement",
+                "prose": "Physical security for offices, server rooms, and technical spaces must be designed and applied to prevent unauthorized physical access and exposure."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-PS-03"
+              },
+              {
+                "name": "domain",
+                "value": "Physical Security"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/04_Physical_Security_Policy.md"
+              }
+            ],
+            "title": "Securing Offices, Rooms and Facilities",
+            "uuid": "9302f13f-8d8b-55e2-8a72-9be5d332034c"
+          },
+          {
+            "id": "cc-ps-04",
+            "parts": [
+              {
+                "id": "cc-ps-04-stmt",
+                "name": "statement",
+                "prose": "Premises and server rooms must be continuously monitored by surveillance cameras (CCTV) and intrusion detection sensors with retained audit logs."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-PS-04"
+              },
+              {
+                "name": "domain",
+                "value": "Physical Security"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/04_Physical_Security_Policy.md"
+              }
+            ],
+            "title": "Physical Security Monitoring and Video Surveillance",
+            "uuid": "5e08e50a-d6ef-5b2f-bfa4-8e38f9d2022f"
+          },
+          {
+            "id": "cc-ps-05",
+            "parts": [
+              {
+                "id": "cc-ps-05-stmt",
+                "name": "statement",
+                "prose": "Protection against natural disasters, fire, water ingress, and environmental hazards must be designed and applied across all physical operating environments."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-PS-05"
+              },
+              {
+                "name": "domain",
+                "value": "Physical Security"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/04_Physical_Security_Policy.md"
+              }
+            ],
+            "title": "Protection Against Environmental Threats",
+            "uuid": "93c6c299-f72f-50f4-ae4a-303244186ed1"
+          },
+          {
+            "id": "cc-ps-06",
+            "parts": [
+              {
+                "id": "cc-ps-06-stmt",
+                "name": "statement",
+                "prose": "Security measures and guidelines for working in secure or confidential areas must be designed and enforced (prohibiting unvetted photography or recording)."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-PS-06"
+              },
+              {
+                "name": "domain",
+                "value": "Physical Security"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/04_Physical_Security_Policy.md"
+              }
+            ],
+            "title": "Working in Secure Areas",
+            "uuid": "7b13e632-72dd-529a-ae5d-c56665a068ea"
+          },
+          {
+            "id": "cc-ps-07",
+            "parts": [
+              {
+                "id": "cc-ps-07-stmt",
+                "name": "statement",
+                "prose": "Equipment must be sited and protected to reduce the risks from environmental threats, unauthorized access, and accidental damage."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-PS-07"
+              },
+              {
+                "name": "domain",
+                "value": "Physical Security"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/04_Physical_Security_Policy.md"
+              }
+            ],
+            "title": "Equipment Siting, Placement and Protection",
+            "uuid": "2d60eda7-e2b3-5cc2-9228-f707c21bf84e"
+          },
+          {
+            "id": "cc-ps-08",
+            "parts": [
+              {
+                "id": "cc-ps-08-stmt",
+                "name": "statement",
+                "prose": "Equipment must be protected from power failures and other disruptions caused by failures in supporting utilities through UPS and backup generators."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-PS-08"
+              },
+              {
+                "name": "domain",
+                "value": "Physical Security"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/04_Physical_Security_Policy.md"
+              }
+            ],
+            "title": "Supporting Utilities and Power Redundancy",
+            "uuid": "8cb5bc88-5c2d-5166-9ab5-2ca67b62e806"
+          }
+        ],
+        "id": "physical-security",
+        "title": "Physical Security"
+      },
+      {
+        "controls": [
+          {
+            "id": "cc-sd-01",
+            "parts": [
+              {
+                "id": "cc-sd-01-stmt",
+                "name": "statement",
+                "prose": "Information security must be integrated into project management methodology across all product and infrastructure engineering lifecycles."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-SD-01"
+              },
+              {
+                "name": "domain",
+                "value": "Secure Development"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/12_SDLC_and_Change_Management_Policy.md"
+              }
+            ],
+            "title": "Security in Project Management and Agile Lifecycles",
+            "uuid": "7ebad3ae-af00-51a5-9b3d-c49f61b929b9"
+          },
+          {
+            "id": "cc-sd-02",
+            "parts": [
+              {
+                "id": "cc-sd-02-stmt",
+                "name": "statement",
+                "prose": "Appropriate procedures must be implemented to protect intellectual property rights, software licenses, and proprietary source code assets."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-SD-02"
+              },
+              {
+                "name": "domain",
+                "value": "Secure Development"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/12_SDLC_and_Change_Management_Policy.md"
+              }
+            ],
+            "title": "Intellectual Property Rights and Source Code Licensing",
+            "uuid": "2cb2291b-5857-57cd-8e0f-a48c4ecc3937"
+          },
+          {
+            "id": "cc-sd-03",
+            "parts": [
+              {
+                "id": "cc-sd-03-stmt",
+                "name": "statement",
+                "prose": "Read and write access to program source code, build pipelines, and deployment tooling must be strictly controlled, requiring MFA and branch protection rules."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-SD-03"
+              },
+              {
+                "name": "domain",
+                "value": "Secure Development"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/12_SDLC_and_Change_Management_Policy.md"
+              }
+            ],
+            "title": "Access Control to Source Code Repositories",
+            "uuid": "b398513a-e3b4-5d67-9a1f-d9cb2c7d9d0c"
+          },
+          {
+            "id": "cc-sd-04",
+            "parts": [
+              {
+                "id": "cc-sd-04-stmt",
+                "name": "statement",
+                "prose": "Rules for the secure development of software and systems must be established and applied to all development activities within the organization."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-SD-04"
+              },
+              {
+                "name": "domain",
+                "value": "Secure Development"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/12_SDLC_and_Change_Management_Policy.md"
+              }
+            ],
+            "title": "Secure Development Lifecycle Governance",
+            "uuid": "4e9407bf-04bf-525e-b701-a871cba711f3"
+          },
+          {
+            "id": "cc-sd-05",
+            "parts": [
+              {
+                "id": "cc-sd-05-stmt",
+                "name": "statement",
+                "prose": "Information security requirements must be identified, specified, and approved when developing or acquiring applications, incorporating STRIDE threat modeling."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-SD-05"
+              },
+              {
+                "name": "domain",
+                "value": "Secure Development"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/03_Standards_and_Procedures/05_Secure_Coding_Standard.md"
+              }
+            ],
+            "title": "Application Security Requirements and Threat Modeling",
+            "uuid": "fb499666-7763-5f3b-9dac-e2acb1e2116e"
+          },
+          {
+            "id": "cc-sd-06",
+            "parts": [
+              {
+                "id": "cc-sd-06-stmt",
+                "name": "statement",
+                "prose": "Principles for engineering secure systems must be established, documented, maintained, and applied to any information system development activities."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-SD-06"
+              },
+              {
+                "name": "domain",
+                "value": "Secure Development"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/12_SDLC_and_Change_Management_Policy.md"
+              }
+            ],
+            "title": "Secure System Architecture and Engineering Principles",
+            "uuid": "9ae3c766-3237-59ed-bb51-6f364e70b093"
+          },
+          {
+            "id": "cc-sd-07",
+            "parts": [
+              {
+                "id": "cc-sd-07-stmt",
+                "name": "statement",
+                "prose": "Secure coding principles must be applied to software development; peer code review requires at least 1 approval for standard changes and 2 approvals (including Security/CODEOWNERS) for Tier-1/security PRs."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-SD-07"
+              },
+              {
+                "name": "domain",
+                "value": "Secure Development"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/03_Standards_and_Procedures/05_Secure_Coding_Standard.md"
+              }
+            ],
+            "title": "Secure Coding Standards and Peer Code Review",
+            "uuid": "eec75320-488d-589c-82e7-e4a371d3d340"
+          },
+          {
+            "id": "cc-sd-08",
+            "parts": [
+              {
+                "id": "cc-sd-08-stmt",
+                "name": "statement",
+                "prose": "Security testing activities must be defined and implemented in the development life cycle, including pre-commit secret scanning, container scanning, and artifact signing."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-SD-08"
+              },
+              {
+                "name": "domain",
+                "value": "Secure Development"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/12_SDLC_and_Change_Management_Policy.md"
+              }
+            ],
+            "title": "Automated Security Testing in CI/CD (SAST, DAST, SCA)",
+            "uuid": "7fb678fb-3d44-5178-8a2b-1aec2661a6b4"
+          },
+          {
+            "id": "cc-sd-09",
+            "parts": [
+              {
+                "id": "cc-sd-09-stmt",
+                "name": "statement",
+                "prose": "Development, testing, and production environments must be strictly separated and secured to prevent unauthorized access or changes to the operational environment."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-SD-09"
+              },
+              {
+                "name": "domain",
+                "value": "Secure Development"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/12_SDLC_and_Change_Management_Policy.md"
+              }
+            ],
+            "title": "Separation of Development, Test and Production Environments",
+            "uuid": "f0a704de-69e1-5bca-9820-e26e88695e20"
+          },
+          {
+            "id": "cc-sd-10",
+            "parts": [
+              {
+                "id": "cc-sd-10-stmt",
+                "name": "statement",
+                "prose": "Changes to information processing facilities and systems must be subject to change management procedures, automated CI gates, and rollback planning."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-SD-10"
+              },
+              {
+                "name": "domain",
+                "value": "Secure Development"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/12_SDLC_and_Change_Management_Policy.md"
+              }
+            ],
+            "title": "Change Management and Release Governance",
+            "uuid": "1cf73213-1b88-53ff-bd9a-6d9dcd4f5bbb"
+          },
+          {
+            "id": "cc-sd-11",
+            "parts": [
+              {
+                "id": "cc-sd-11-stmt",
+                "name": "statement",
+                "prose": "Test data must be carefully selected, protected, and controlled; operational personal data must not be copied to non-production environments without pseudonymization or synthetic generation."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-SD-11"
+              },
+              {
+                "name": "domain",
+                "value": "Secure Development"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/12_SDLC_and_Change_Management_Policy.md"
+              }
+            ],
+            "title": "Test Data Protection and Synthetic Data Generation",
+            "uuid": "74d2840c-be3b-50e1-ae11-ca88f3358c40"
+          }
+        ],
+        "id": "secure-development",
+        "title": "Secure Development"
+      },
+      {
+        "controls": [],
+        "id": "secure-development---change-management",
+        "title": "Secure Development & Change Management"
+      },
+      {
+        "controls": [],
+        "id": "supplier---third-party-risk",
+        "title": "Supplier & Third-Party Risk"
+      },
+      {
+        "controls": [
+          {
+            "id": "cc-sp-01",
+            "parts": [
+              {
+                "id": "cc-sp-01-stmt",
+                "name": "statement",
+                "prose": "Processes and procedures must be defined and implemented to mitigate the security risks associated with the use of supplier products or services."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-SP-01"
+              },
+              {
+                "name": "domain",
+                "value": "Supplier Management"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/07_Supplier_Security_Policy.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/04_Templates_and_Registers/04_Vendor_Risk_Assessment_Template.md"
+              }
+            ],
+            "title": "Supplier Security Policy and Risk Management",
+            "uuid": "ca67387f-91a1-5973-9c4b-cf7686da8c48"
+          },
+          {
+            "id": "cc-sp-02",
+            "parts": [
+              {
+                "id": "cc-sp-02-stmt",
+                "name": "statement",
+                "prose": "Relevant information security requirements and Data Processing Agreements (DPAs) must be established and agreed upon with each supplier."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-SP-02"
+              },
+              {
+                "name": "domain",
+                "value": "Supplier Management"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/07_Supplier_Security_Policy.md"
+              }
+            ],
+            "title": "Supplier Security Agreements, SLAs and DPAs",
+            "uuid": "c9a44371-b3e8-5e45-a140-2983ef3dc269"
+          },
+          {
+            "id": "cc-sp-03",
+            "parts": [
+              {
+                "id": "cc-sp-03-stmt",
+                "name": "statement",
+                "prose": "Processes and procedures must be defined and implemented to manage the information security risks associated with the ICT products and services supply chain, including SBOM validation."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-SP-03"
+              },
+              {
+                "name": "domain",
+                "value": "Supplier Management"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/07_Supplier_Security_Policy.md"
+              }
+            ],
+            "title": "ICT Supply Chain Security and Software Bill of Materials (SBOM)",
+            "uuid": "2c29f12c-60e5-5fc3-9478-0f2e906869ff"
+          },
+          {
+            "id": "cc-sp-04",
+            "parts": [
+              {
+                "id": "cc-sp-04-stmt",
+                "name": "statement",
+                "prose": "The organization must regularly monitor, review, and evaluate supplier service delivery and security practices in line with vendor tiering."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-SP-04"
+              },
+              {
+                "name": "domain",
+                "value": "Supplier Management"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/07_Supplier_Security_Policy.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/04_Templates_and_Registers/04_Vendor_Risk_Assessment_Template.md"
+              }
+            ],
+            "title": "Supplier Service Monitoring, Audits and Review",
+            "uuid": "6374d28f-dc92-5057-921b-dc32b65790d0"
+          },
+          {
+            "id": "cc-sp-05",
+            "parts": [
+              {
+                "id": "cc-sp-05-stmt",
+                "name": "statement",
+                "prose": "Processes for acquisition, use, management, and exit from cloud services must be established in accordance with the cloud shared responsibility model."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-SP-05"
+              },
+              {
+                "name": "domain",
+                "value": "Supplier Management"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/05_Operations_Security_Policy.md"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/07_Supplier_Security_Policy.md"
+              }
+            ],
+            "title": "Cloud Services Security Governance and Shared Responsibility",
+            "uuid": "f5f43d4c-05ee-57ac-ab28-db982dd88e0a"
+          },
+          {
+            "id": "cc-sp-06",
+            "parts": [
+              {
+                "id": "cc-sp-06-stmt",
+                "name": "statement",
+                "prose": "The organization must direct, monitor, and review the security activities of outsourced system and software development contractors."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "CC-SP-06"
+              },
+              {
+                "name": "domain",
+                "value": "Supplier Management"
+              },
+              {
+                "name": "status",
+                "value": "implemented"
+              },
+              {
+                "name": "implementing-document",
+                "value": "docs/02_Policies/07_Supplier_Security_Policy.md"
+              }
+            ],
+            "title": "Outsourced Software Development Governance",
+            "uuid": "a55334f2-4854-5c28-bc5b-b12506e00d97"
+          }
+        ],
+        "id": "supplier-management",
+        "title": "Supplier Management"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-10-31T00:00:00Z",
+      "oscal-version": "1.2.0",
+      "published": "2026-10-31T00:00:00Z",
+      "remarks": "Centralized canonical control registry mapping internal ISMS security controls to ISO/IEC 27001:2022, AICPA SOC 2 TSC, NIST CSF 2.0, GDPR, NIST SP 800-53 Rev. 5, and ASD Essential Eight.",
+      "title": "Canonical Compliance-as-Code Control Registry",
+      "version": "2.0.0"
+    },
+    "uuid": "49b5071f-4324-5765-9e65-14e376290c34"
+  }
+}

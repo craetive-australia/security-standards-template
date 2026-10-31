@@ -1,0 +1,3927 @@
+{
+  "mapping-collection": {
+    "mappings": [
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-01",
+        "target_control_id": "A.5.3",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-01",
+        "target_control_id": "PR.AA-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-01",
+        "target_control_id": "AC-1",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-01",
+        "target_control_id": "AC-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-01",
+        "target_control_id": "CC6.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AC-02",
+        "target_control_id": "E8-AP-ML1",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-02",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-02",
+        "target_control_id": "A.5.15",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-02",
+        "target_control_id": "PR.AA-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-02",
+        "target_control_id": "AC-2",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AC-02",
+        "target_control_id": "IA-4",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-02",
+        "target_control_id": "CC6.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AC-03",
+        "target_control_id": "E8-AP-ML1",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-03",
+        "target_control_id": "E8-AP-ML2",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "superset-of",
+        "source_control_id": "CC-AC-03",
+        "target_control_id": "E8-AP-ML3",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-03",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-03",
+        "target_control_id": "A.5.16",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-03",
+        "target_control_id": "PR.AA-02",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AC-03",
+        "target_control_id": "AC-2",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-03",
+        "target_control_id": "AC-6",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-03",
+        "target_control_id": "CC6.2",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AC-04",
+        "target_control_id": "E8-AP-ML2",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-04",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-04",
+        "target_control_id": "A.5.17",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-04",
+        "target_control_id": "PR.AA-03",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-04",
+        "target_control_id": "AC-2",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AC-04",
+        "target_control_id": "CA-7",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-04",
+        "target_control_id": "CC6.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AC-05",
+        "target_control_id": "E8-MF-ML1",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-05",
+        "target_control_id": "E8-MF-ML2",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "superset-of",
+        "source_control_id": "CC-AC-05",
+        "target_control_id": "E8-MF-ML3",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-05",
+        "target_control_id": "A.5.18",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-05",
+        "target_control_id": "PR.AA-04",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AC-05",
+        "target_control_id": "AC-7",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-05",
+        "target_control_id": "IA-1",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-05",
+        "target_control_id": "IA-2",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AC-05",
+        "target_control_id": "IA-8",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-05",
+        "target_control_id": "CC6.2",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-05",
+        "target_control_id": "CC6.3",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "intersects-with",
+        "source_control_id": "CC-AC-06",
+        "target_control_id": "E8-MF-ML1",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "intersects-with",
+        "source_control_id": "CC-AC-06",
+        "target_control_id": "E8-MF-ML2",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-06",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-06",
+        "target_control_id": "A.8.2",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-06",
+        "target_control_id": "PR.AA-04",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-06",
+        "target_control_id": "IA-5",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AC-06",
+        "target_control_id": "IA-6",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-06",
+        "target_control_id": "CC6.3",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "intersects-with",
+        "source_control_id": "CC-AC-07",
+        "target_control_id": "E8-AP-ML2",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "intersects-with",
+        "source_control_id": "CC-AC-07",
+        "target_control_id": "E8-AP-ML3",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-07",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-07",
+        "target_control_id": "A.8.3",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-07",
+        "target_control_id": "PR.AA-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AC-07",
+        "target_control_id": "AC-6",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AC-07",
+        "target_control_id": "CM-7",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-07",
+        "target_control_id": "CC6.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-08",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-08",
+        "target_control_id": "A.8.5",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-08",
+        "target_control_id": "PR.AA-03",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-08",
+        "target_control_id": "CC6.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-09",
+        "target_control_id": "A.8.18",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-09",
+        "target_control_id": "PR.AA-04",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AC-09",
+        "target_control_id": "CC6.3",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-01",
+        "target_control_id": "Art. 30",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-01",
+        "target_control_id": "A.5.9",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-01",
+        "target_control_id": "ID.AM-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-01",
+        "target_control_id": "ID.AM-02",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-01",
+        "target_control_id": "CM-8",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AM-01",
+        "target_control_id": "IA-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-01",
+        "target_control_id": "CC6.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-02",
+        "target_control_id": "A.5.11",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-02",
+        "target_control_id": "PR.AA-06",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-02",
+        "target_control_id": "AC-20",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AM-02",
+        "target_control_id": "PL-4",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-02",
+        "target_control_id": "CC6.2",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-03",
+        "target_control_id": "Art. 5",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-03",
+        "target_control_id": "A.5.12",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-03",
+        "target_control_id": "ID.AM-05",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AM-03",
+        "target_control_id": "MP-6",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-03",
+        "target_control_id": "PS-4",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-03",
+        "target_control_id": "C1.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-03",
+        "target_control_id": "CC6.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-04",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-04",
+        "target_control_id": "A.5.13",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-04",
+        "target_control_id": "PR.DS-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AM-04",
+        "target_control_id": "MP-2",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-04",
+        "target_control_id": "RA-2",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-04",
+        "target_control_id": "C1.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-04",
+        "target_control_id": "CC6.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-05",
+        "target_control_id": "Art. 30",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-05",
+        "target_control_id": "Art. 5",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-05",
+        "target_control_id": "A.5.33",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-05",
+        "target_control_id": "PR.DS-11",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AM-05",
+        "target_control_id": "AC-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-05",
+        "target_control_id": "MP-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-05",
+        "target_control_id": "CC6.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-06",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-06",
+        "target_control_id": "A.7.10",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-06",
+        "target_control_id": "PR.PS-03",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AM-06",
+        "target_control_id": "AC-4",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-06",
+        "target_control_id": "MP-5",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-06",
+        "target_control_id": "SC-8",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-06",
+        "target_control_id": "CC6.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-07",
+        "target_control_id": "Art. 17",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-07",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-07",
+        "target_control_id": "A.7.14",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-07",
+        "target_control_id": "PR.PS-03",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-07",
+        "target_control_id": "C1.2",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AM-07",
+        "target_control_id": "CC6.5",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "intersects-with",
+        "source_control_id": "CC-AU-01",
+        "target_control_id": "E8-AC-ML1",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "intersects-with",
+        "source_control_id": "CC-AU-01",
+        "target_control_id": "E8-AC-ML2",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-01",
+        "target_control_id": "E8-AH-ML1",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-01",
+        "target_control_id": "E8-AH-ML2",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "superset-of",
+        "source_control_id": "CC-AU-01",
+        "target_control_id": "E8-AH-ML3",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "intersects-with",
+        "source_control_id": "CC-AU-01",
+        "target_control_id": "E8-OM-ML1",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-01",
+        "target_control_id": "E8-OM-ML2",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "superset-of",
+        "source_control_id": "CC-AU-01",
+        "target_control_id": "E8-OM-ML3",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-01",
+        "target_control_id": "A.5.10",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-01",
+        "target_control_id": "PR.AA-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AU-01",
+        "target_control_id": "AC-20",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-01",
+        "target_control_id": "PL-4",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-01",
+        "target_control_id": "CC6.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AU-02",
+        "target_control_id": "E8-OM-ML1",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AU-02",
+        "target_control_id": "E8-OM-ML2",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-02",
+        "target_control_id": "A.6.7",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-02",
+        "target_control_id": "PR.AA-05",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-02",
+        "target_control_id": "AC-19",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AU-02",
+        "target_control_id": "AC-20",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-02",
+        "target_control_id": "CC6.6",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-02",
+        "target_control_id": "CC6.7",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-03",
+        "target_control_id": "A.7.7",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-03",
+        "target_control_id": "PR.AA-06",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-03",
+        "target_control_id": "AC-14",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AU-03",
+        "target_control_id": "PE-5",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-03",
+        "target_control_id": "CC6.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-04",
+        "target_control_id": "A.7.9",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-04",
+        "target_control_id": "PR.PS-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-04",
+        "target_control_id": "AC-17",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AU-04",
+        "target_control_id": "PE-17",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-04",
+        "target_control_id": "CC6.4",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-05",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-05",
+        "target_control_id": "A.8.1",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-05",
+        "target_control_id": "PR.AA-05",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-05",
+        "target_control_id": "MP-7",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-05",
+        "target_control_id": "CC6.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AU-06",
+        "target_control_id": "E8-AC-ML2",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "intersects-with",
+        "source_control_id": "CC-AU-06",
+        "target_control_id": "E8-AH-ML2",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-06",
+        "target_control_id": "Art. 25",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-06",
+        "target_control_id": "A.5.10",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-06",
+        "target_control_id": "A.8.1",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-06",
+        "target_control_id": "A.8.23",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-06",
+        "target_control_id": "GV.PO-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-06",
+        "target_control_id": "PR.PS-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AU-06",
+        "target_control_id": "RA-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AU-06",
+        "target_control_id": "SA-8",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AU-06",
+        "target_control_id": "SI-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-06",
+        "target_control_id": "CC6.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-06",
+        "target_control_id": "CC6.6",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-07",
+        "target_control_id": "Art. 25",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-07",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-07",
+        "target_control_id": "A.5.1",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-07",
+        "target_control_id": "A.5.10",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-07",
+        "target_control_id": "A.8.12",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-07",
+        "target_control_id": "PR.AT-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-07",
+        "target_control_id": "PR.DS-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AU-07",
+        "target_control_id": "SC-7",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-AU-07",
+        "target_control_id": "SI-12",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-07",
+        "target_control_id": "CC6.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-AU-07",
+        "target_control_id": "CC6.7",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-01",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-01",
+        "target_control_id": "A.5.29",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-01",
+        "target_control_id": "RC.RP-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-01",
+        "target_control_id": "CP-1",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-01",
+        "target_control_id": "CP-2",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-01",
+        "target_control_id": "A1.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-01",
+        "target_control_id": "CC7.5",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "intersects-with",
+        "source_control_id": "CC-BC-02",
+        "target_control_id": "E8-RB-ML1",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-02",
+        "target_control_id": "E8-RB-ML2",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "intersects-with",
+        "source_control_id": "CC-BC-02",
+        "target_control_id": "E8-RB-ML3",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-02",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-02",
+        "target_control_id": "A.5.30",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-02",
+        "target_control_id": "RC.RP-02",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-02",
+        "target_control_id": "CP-6",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-02",
+        "target_control_id": "CP-7",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-BC-02",
+        "target_control_id": "CP-8",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-02",
+        "target_control_id": "A1.2",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-02",
+        "target_control_id": "CC7.5",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-02",
+        "target_control_id": "CC9.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-03",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-03",
+        "target_control_id": "A.8.14",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-03",
+        "target_control_id": "PR.IR-04",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-03",
+        "target_control_id": "CP-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-03",
+        "target_control_id": "CP-4",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-03",
+        "target_control_id": "A1.3",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-03",
+        "target_control_id": "CC7.5",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-04",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-04",
+        "target_control_id": "A.5.29",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-04",
+        "target_control_id": "A.5.30",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-04",
+        "target_control_id": "RC.RP-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-04",
+        "target_control_id": "CP-10",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-BC-04",
+        "target_control_id": "CP-2",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-BC-04",
+        "target_control_id": "A1.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-01",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-01",
+        "target_control_id": "Art. 44",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-01",
+        "target_control_id": "A.5.14",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-01",
+        "target_control_id": "PR.DS-02",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-CM-01",
+        "target_control_id": "AC-4",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-01",
+        "target_control_id": "SC-7",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-01",
+        "target_control_id": "CC6.6",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-01",
+        "target_control_id": "CC6.7",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-02",
+        "target_control_id": "A.7.12",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-02",
+        "target_control_id": "PR.IR-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-CM-02",
+        "target_control_id": "CA-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-02",
+        "target_control_id": "SC-8",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-02",
+        "target_control_id": "CC6.6",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-03",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-03",
+        "target_control_id": "A.8.20",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-03",
+        "target_control_id": "PR.IR-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-03",
+        "target_control_id": "AC-4",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-03",
+        "target_control_id": "SC-7",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-03",
+        "target_control_id": "CC6.6",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-04",
+        "target_control_id": "A.8.21",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-04",
+        "target_control_id": "PR.IR-02",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-04",
+        "target_control_id": "AC-17",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-CM-04",
+        "target_control_id": "SC-10",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-04",
+        "target_control_id": "CC6.6",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-05",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-05",
+        "target_control_id": "A.8.22",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-05",
+        "target_control_id": "PR.IR-03",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-CM-05",
+        "target_control_id": "AU-8",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-05",
+        "target_control_id": "SC-8",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-05",
+        "target_control_id": "CC6.6",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-06",
+        "target_control_id": "A.8.23",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-06",
+        "target_control_id": "PR.PS-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-06",
+        "target_control_id": "MP-6",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-CM-06",
+        "target_control_id": "PT-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CM-06",
+        "target_control_id": "CC6.6",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CR-01",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CR-01",
+        "target_control_id": "A.8.24",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CR-01",
+        "target_control_id": "PR.DS-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CR-01",
+        "target_control_id": "PR.DS-02",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CR-01",
+        "target_control_id": "SC-1",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CR-01",
+        "target_control_id": "SC-13",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CR-01",
+        "target_control_id": "CC6.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CR-01",
+        "target_control_id": "CC6.7",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CR-02",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CR-02",
+        "target_control_id": "A.5.14",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CR-02",
+        "target_control_id": "PR.DS-02",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-CR-02",
+        "target_control_id": "IA-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CR-02",
+        "target_control_id": "SC-12",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CR-02",
+        "target_control_id": "CC6.6",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CR-02",
+        "target_control_id": "CC6.7",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CR-03",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CR-03",
+        "target_control_id": "A.8.24",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CR-03",
+        "target_control_id": "PR.DS-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-CR-03",
+        "target_control_id": "SC-12",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CR-03",
+        "target_control_id": "SC-28",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-CR-03",
+        "target_control_id": "CC6.7",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-01",
+        "target_control_id": "Art. 5",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-01",
+        "target_control_id": "Art. 6",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-01",
+        "target_control_id": "A.5.31",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-01",
+        "target_control_id": "GV.OC-03",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-01",
+        "target_control_id": "PT-1",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-01",
+        "target_control_id": "PT-2",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-01",
+        "target_control_id": "CC2.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-02",
+        "target_control_id": "Art. 12",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-02",
+        "target_control_id": "Art. 15",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-02",
+        "target_control_id": "Art. 25",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-02",
+        "target_control_id": "Art. 35",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-02",
+        "target_control_id": "Art. 37",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-02",
+        "target_control_id": "Art. 5",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-02",
+        "target_control_id": "Art. 6",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-02",
+        "target_control_id": "Art. 9",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-02",
+        "target_control_id": "A.5.34",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-02",
+        "target_control_id": "PR.DS-10",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-02",
+        "target_control_id": "PT-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-02",
+        "target_control_id": "P1.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-02",
+        "target_control_id": "P2.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-02",
+        "target_control_id": "P3.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-02",
+        "target_control_id": "P4.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-02",
+        "target_control_id": "P5.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-02",
+        "target_control_id": "P6.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-02",
+        "target_control_id": "P7.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-02",
+        "target_control_id": "P8.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-03",
+        "target_control_id": "Art. 17",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-03",
+        "target_control_id": "A.8.10",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-03",
+        "target_control_id": "PR.DS-11",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-03",
+        "target_control_id": "PT-4",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-DP-03",
+        "target_control_id": "SA-8",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-03",
+        "target_control_id": "CC6.5",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-03",
+        "target_control_id": "P4.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-04",
+        "target_control_id": "Art. 25",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-04",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-04",
+        "target_control_id": "A.8.11",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-04",
+        "target_control_id": "PR.DS-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-04",
+        "target_control_id": "PT-7",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-DP-04",
+        "target_control_id": "RA-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-04",
+        "target_control_id": "C1.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-04",
+        "target_control_id": "CC6.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-05",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-05",
+        "target_control_id": "A.8.12",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-05",
+        "target_control_id": "PR.DS-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-DP-05",
+        "target_control_id": "SC-7",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-05",
+        "target_control_id": "SI-12",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-05",
+        "target_control_id": "C1.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-DP-05",
+        "target_control_id": "CC6.7",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-01",
+        "target_control_id": "Art. 24",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-01",
+        "target_control_id": "A.5.1",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-01",
+        "target_control_id": "GV.PO-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-GV-01",
+        "target_control_id": "CA-1",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-01",
+        "target_control_id": "PL-1",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-01",
+        "target_control_id": "PM-1",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-01",
+        "target_control_id": "CC1.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-01",
+        "target_control_id": "CC3.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-01",
+        "target_control_id": "CC5.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-01",
+        "target_control_id": "CC5.3",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-02",
+        "target_control_id": "Art. 24",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-02",
+        "target_control_id": "A.5.2",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-02",
+        "target_control_id": "GV.RR-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-GV-02",
+        "target_control_id": "PL-2",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-02",
+        "target_control_id": "PM-2",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-02",
+        "target_control_id": "CC1.3",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-03",
+        "target_control_id": "Art. 24",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-03",
+        "target_control_id": "A.5.4",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-03",
+        "target_control_id": "GV.RR-02",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-03",
+        "target_control_id": "AC-5",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-GV-03",
+        "target_control_id": "PS-7",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-03",
+        "target_control_id": "CC1.4",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-04",
+        "target_control_id": "Art. 33",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-04",
+        "target_control_id": "Art. 34",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-04",
+        "target_control_id": "A.5.5",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-04",
+        "target_control_id": "RS.CO-02",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-04",
+        "target_control_id": "IR-6",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-GV-04",
+        "target_control_id": "PM-4",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-04",
+        "target_control_id": "CC2.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-05",
+        "target_control_id": "A.5.6",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-05",
+        "target_control_id": "ID.RA-02",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-GV-05",
+        "target_control_id": "PM-16",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-05",
+        "target_control_id": "SI-5",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-05",
+        "target_control_id": "CC2.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-06",
+        "target_control_id": "Art. 24",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-06",
+        "target_control_id": "A.5.35",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-06",
+        "target_control_id": "GV.OV-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-GV-06",
+        "target_control_id": "CA-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-GV-06",
+        "target_control_id": "PM-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-06",
+        "target_control_id": "SA-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-06",
+        "target_control_id": "CC2.3",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-06",
+        "target_control_id": "CC3.2",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-06",
+        "target_control_id": "CC4.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-06",
+        "target_control_id": "CC4.2",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-07",
+        "target_control_id": "Art. 24",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-07",
+        "target_control_id": "A.5.36",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-07",
+        "target_control_id": "GV.PO-02",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-07",
+        "target_control_id": "CC2.2",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-07",
+        "target_control_id": "CC5.2",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-07",
+        "target_control_id": "CC5.3",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-08",
+        "target_control_id": "A.5.37",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-08",
+        "target_control_id": "PR.PS-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-GV-08",
+        "target_control_id": "CC7.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-01",
+        "target_control_id": "A.6.1",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-01",
+        "target_control_id": "PR.AT-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-01",
+        "target_control_id": "PS-1",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-01",
+        "target_control_id": "PS-2",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-01",
+        "target_control_id": "PS-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-01",
+        "target_control_id": "CC1.2",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-02",
+        "target_control_id": "A.6.2",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-02",
+        "target_control_id": "PR.AT-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-HR-02",
+        "target_control_id": "PL-4",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-02",
+        "target_control_id": "PS-6",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-02",
+        "target_control_id": "CC1.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-03",
+        "target_control_id": "Art. 39",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-03",
+        "target_control_id": "A.6.3",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-03",
+        "target_control_id": "PR.AT-02",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-03",
+        "target_control_id": "AT-1",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-03",
+        "target_control_id": "AT-2",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-HR-03",
+        "target_control_id": "AT-4",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-03",
+        "target_control_id": "CC2.2",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-04",
+        "target_control_id": "A.6.4",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-04",
+        "target_control_id": "PR.AT-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-04",
+        "target_control_id": "PS-8",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-04",
+        "target_control_id": "CC1.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-04",
+        "target_control_id": "CC1.5",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-05",
+        "target_control_id": "A.6.5",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-05",
+        "target_control_id": "PR.AA-06",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-05",
+        "target_control_id": "PS-4",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-05",
+        "target_control_id": "PS-5",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-05",
+        "target_control_id": "CC6.2",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-06",
+        "target_control_id": "A.6.6",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-06",
+        "target_control_id": "PR.AT-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-HR-06",
+        "target_control_id": "CC1.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-01",
+        "target_control_id": "Art. 33",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-01",
+        "target_control_id": "A.5.24",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-01",
+        "target_control_id": "RS.MA-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-01",
+        "target_control_id": "IR-1",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-01",
+        "target_control_id": "IR-8",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-01",
+        "target_control_id": "CC7.3",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-02",
+        "target_control_id": "Art. 33",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-02",
+        "target_control_id": "A.5.25",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-02",
+        "target_control_id": "RS.AN-03",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-02",
+        "target_control_id": "IR-4",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-02",
+        "target_control_id": "SI-4",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-02",
+        "target_control_id": "CC7.3",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-03",
+        "target_control_id": "Art. 33",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-03",
+        "target_control_id": "A.5.26",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-03",
+        "target_control_id": "RS.MA-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-03",
+        "target_control_id": "IR-4",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-03",
+        "target_control_id": "IR-5",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-03",
+        "target_control_id": "CC7.3",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-04",
+        "target_control_id": "A.5.27",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-04",
+        "target_control_id": "RS.AN-03",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-IR-04",
+        "target_control_id": "CA-7",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-IR-04",
+        "target_control_id": "IR-4",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-04",
+        "target_control_id": "CC7.3",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-05",
+        "target_control_id": "A.5.28",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-05",
+        "target_control_id": "RS.AN-07",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-IR-05",
+        "target_control_id": "AU-9",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-05",
+        "target_control_id": "IR-5",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-05",
+        "target_control_id": "CC7.4",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-06",
+        "target_control_id": "Art. 33",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-06",
+        "target_control_id": "A.6.8",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-06",
+        "target_control_id": "DE.AE-02",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-06",
+        "target_control_id": "IR-6",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-IR-06",
+        "target_control_id": "CC7.3",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-01",
+        "target_control_id": "A.5.7",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-01",
+        "target_control_id": "ID.RA-02",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-OP-01",
+        "target_control_id": "CA-7",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-01",
+        "target_control_id": "RA-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-01",
+        "target_control_id": "SI-5",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-01",
+        "target_control_id": "CC7.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-OP-02",
+        "target_control_id": "E8-AC-ML1",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-02",
+        "target_control_id": "E8-AC-ML2",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "superset-of",
+        "source_control_id": "CC-OP-02",
+        "target_control_id": "E8-AC-ML3",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-02",
+        "target_control_id": "A.7.13",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-02",
+        "target_control_id": "PR.PS-03",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-OP-02",
+        "target_control_id": "CM-7",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-02",
+        "target_control_id": "SI-1",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-02",
+        "target_control_id": "SI-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-02",
+        "target_control_id": "CC6.4",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-03",
+        "target_control_id": "A.8.6",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-03",
+        "target_control_id": "PR.PS-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-03",
+        "target_control_id": "MA-1",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-03",
+        "target_control_id": "MA-2",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-OP-03",
+        "target_control_id": "MA-4",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-03",
+        "target_control_id": "CC7.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-OP-04",
+        "target_control_id": "E8-RB-ML1",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-04",
+        "target_control_id": "E8-RB-ML2",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "superset-of",
+        "source_control_id": "CC-OP-04",
+        "target_control_id": "E8-RB-ML3",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-04",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-04",
+        "target_control_id": "A.8.7",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-04",
+        "target_control_id": "DE.CM-09",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-OP-04",
+        "target_control_id": "CP-10",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-04",
+        "target_control_id": "CP-9",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-04",
+        "target_control_id": "CC6.8",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-05",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-05",
+        "target_control_id": "A.8.8",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-05",
+        "target_control_id": "ID.RA-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-05",
+        "target_control_id": "AU-1",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-OP-05",
+        "target_control_id": "AU-12",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-05",
+        "target_control_id": "AU-2",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-05",
+        "target_control_id": "AU-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-05",
+        "target_control_id": "AU-6",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-05",
+        "target_control_id": "CC7.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-06",
+        "target_control_id": "A.8.9",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-06",
+        "target_control_id": "PR.PS-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-OP-06",
+        "target_control_id": "PT-2",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-06",
+        "target_control_id": "SC-28",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-06",
+        "target_control_id": "CC8.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-OP-07",
+        "target_control_id": "E8-PA-ML1",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-07",
+        "target_control_id": "E8-PA-ML2",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "superset-of",
+        "source_control_id": "CC-OP-07",
+        "target_control_id": "E8-PA-ML3",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-OP-07",
+        "target_control_id": "E8-PO-ML1",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-07",
+        "target_control_id": "E8-PO-ML2",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "superset-of",
+        "source_control_id": "CC-OP-07",
+        "target_control_id": "E8-PO-ML3",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-07",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-07",
+        "target_control_id": "A.8.13",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-07",
+        "target_control_id": "PR.DS-11",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-07",
+        "target_control_id": "RA-5",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-07",
+        "target_control_id": "SI-2",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-07",
+        "target_control_id": "A1.2",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-07",
+        "target_control_id": "CC7.5",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-08",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-08",
+        "target_control_id": "A.8.15",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-08",
+        "target_control_id": "DE.AE-03",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-08",
+        "target_control_id": "AU-11",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-08",
+        "target_control_id": "AU-4",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-08",
+        "target_control_id": "AU-9",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-OP-08",
+        "target_control_id": "CA-2",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-08",
+        "target_control_id": "CC7.2",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "intersects-with",
+        "source_control_id": "CC-OP-09",
+        "target_control_id": "E8-AH-ML1",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-09",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-09",
+        "target_control_id": "A.8.16",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-09",
+        "target_control_id": "DE.CM-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-OP-09",
+        "target_control_id": "CM-7",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-09",
+        "target_control_id": "SC-7",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-09",
+        "target_control_id": "CC7.2",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-10",
+        "target_control_id": "A.8.17",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-10",
+        "target_control_id": "PR.IR-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-10",
+        "target_control_id": "CC7.2",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-11",
+        "target_control_id": "A.8.19",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-11",
+        "target_control_id": "PR.PS-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-11",
+        "target_control_id": "CC8.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-12",
+        "target_control_id": "A.8.34",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-12",
+        "target_control_id": "PR.PS-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-OP-12",
+        "target_control_id": "CC2.3",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-01",
+        "target_control_id": "A.7.1",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-01",
+        "target_control_id": "PR.PS-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-01",
+        "target_control_id": "PE-1",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-01",
+        "target_control_id": "PE-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-01",
+        "target_control_id": "CC6.4",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-02",
+        "target_control_id": "A.7.2",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-02",
+        "target_control_id": "PR.PS-02",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-02",
+        "target_control_id": "PE-2",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-PS-02",
+        "target_control_id": "PE-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-02",
+        "target_control_id": "CC6.4",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-03",
+        "target_control_id": "A.7.3",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-03",
+        "target_control_id": "PR.PS-03",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-03",
+        "target_control_id": "PE-4",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-PS-03",
+        "target_control_id": "PE-5",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-03",
+        "target_control_id": "CC6.4",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-04",
+        "target_control_id": "A.7.4",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-04",
+        "target_control_id": "PR.PS-04",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-PS-04",
+        "target_control_id": "PE-2",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-04",
+        "target_control_id": "PE-6",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-04",
+        "target_control_id": "CC6.4",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-05",
+        "target_control_id": "A.7.5",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-05",
+        "target_control_id": "PR.PS-05",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-05",
+        "target_control_id": "PE-12",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-05",
+        "target_control_id": "PE-13",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-05",
+        "target_control_id": "PE-14",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-05",
+        "target_control_id": "PE-15",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-05",
+        "target_control_id": "CC6.4",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-06",
+        "target_control_id": "A.7.6",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-06",
+        "target_control_id": "PR.PS-06",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-PS-06",
+        "target_control_id": "PE-4",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-06",
+        "target_control_id": "PE-5",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-06",
+        "target_control_id": "CC6.4",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-07",
+        "target_control_id": "A.7.8",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-07",
+        "target_control_id": "PR.IR-02",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-07",
+        "target_control_id": "PE-16",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-07",
+        "target_control_id": "CC6.4",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-08",
+        "target_control_id": "A.7.11",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-08",
+        "target_control_id": "PR.PS-05",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-PS-08",
+        "target_control_id": "MA-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-08",
+        "target_control_id": "PE-10",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-08",
+        "target_control_id": "PE-11",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-08",
+        "target_control_id": "PE-8",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-PS-08",
+        "target_control_id": "CC6.4",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-01",
+        "target_control_id": "Art. 25",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-01",
+        "target_control_id": "A.5.8",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-01",
+        "target_control_id": "PR.PS-06",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-01",
+        "target_control_id": "SA-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-01",
+        "target_control_id": "SA-8",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-01",
+        "target_control_id": "CC8.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-02",
+        "target_control_id": "A.5.32",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-02",
+        "target_control_id": "PR.DS-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-SD-02",
+        "target_control_id": "RA-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-02",
+        "target_control_id": "SA-4",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-SD-02",
+        "target_control_id": "SA-5",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-02",
+        "target_control_id": "CC6.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-03",
+        "target_control_id": "A.8.4",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-03",
+        "target_control_id": "PR.PS-06",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-SD-03",
+        "target_control_id": "PL-8",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-03",
+        "target_control_id": "SA-8",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-03",
+        "target_control_id": "SC-2",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-03",
+        "target_control_id": "CC8.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-04",
+        "target_control_id": "Art. 25",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-04",
+        "target_control_id": "A.8.25",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-04",
+        "target_control_id": "PR.PS-06",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-04",
+        "target_control_id": "SA-11",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-SD-04",
+        "target_control_id": "SI-10",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-SD-04",
+        "target_control_id": "SI-11",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-04",
+        "target_control_id": "CC8.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-05",
+        "target_control_id": "Art. 25",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-05",
+        "target_control_id": "A.8.26",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-05",
+        "target_control_id": "PR.PS-06",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-05",
+        "target_control_id": "CM-2",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-05",
+        "target_control_id": "CM-5",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-05",
+        "target_control_id": "CC8.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-06",
+        "target_control_id": "Art. 25",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-06",
+        "target_control_id": "A.8.27",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-06",
+        "target_control_id": "PR.PS-06",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-06",
+        "target_control_id": "CM-1",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-06",
+        "target_control_id": "CM-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-SD-06",
+        "target_control_id": "CM-4",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-06",
+        "target_control_id": "CC8.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-07",
+        "target_control_id": "Art. 25",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-07",
+        "target_control_id": "A.8.28",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-07",
+        "target_control_id": "PR.PS-06",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-07",
+        "target_control_id": "AT-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-07",
+        "target_control_id": "SA-10",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-07",
+        "target_control_id": "CC8.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-08",
+        "target_control_id": "Art. 25",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-08",
+        "target_control_id": "A.8.29",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-08",
+        "target_control_id": "PR.PS-06",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-08",
+        "target_control_id": "SA-4",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-SD-08",
+        "target_control_id": "SR-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-08",
+        "target_control_id": "CC8.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "intersects-with",
+        "source_control_id": "CC-SD-09",
+        "target_control_id": "E8-PA-ML2",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "intersects-with",
+        "source_control_id": "CC-SD-09",
+        "target_control_id": "E8-PA-ML3",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "intersects-with",
+        "source_control_id": "CC-SD-09",
+        "target_control_id": "E8-PO-ML2",
+        "target_framework": "asd_essential_eight"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-09",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-09",
+        "target_control_id": "A.8.31",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-09",
+        "target_control_id": "PR.PS-06",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-09",
+        "target_control_id": "CM-10",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-SD-09",
+        "target_control_id": "CM-11",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-09",
+        "target_control_id": "SR-1",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-09",
+        "target_control_id": "SR-8",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-09",
+        "target_control_id": "CC8.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-10",
+        "target_control_id": "A.8.32",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-10",
+        "target_control_id": "PR.PS-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-10",
+        "target_control_id": "CC8.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-11",
+        "target_control_id": "Art. 25",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-11",
+        "target_control_id": "Art. 32",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-11",
+        "target_control_id": "A.8.33",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-11",
+        "target_control_id": "PR.PS-06",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SD-11",
+        "target_control_id": "CC8.1",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-01",
+        "target_control_id": "Art. 28",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-01",
+        "target_control_id": "A.5.19",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-01",
+        "target_control_id": "GV.SC-04",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-01",
+        "target_control_id": "SA-9",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-SP-01",
+        "target_control_id": "SR-1",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-01",
+        "target_control_id": "CC9.2",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-02",
+        "target_control_id": "Art. 28",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-02",
+        "target_control_id": "A.5.20",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-02",
+        "target_control_id": "GV.SC-06",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-02",
+        "target_control_id": "SA-4",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-02",
+        "target_control_id": "SR-3",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-02",
+        "target_control_id": "CC9.2",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-03",
+        "target_control_id": "A.5.21",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-03",
+        "target_control_id": "GV.SC-07",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-03",
+        "target_control_id": "SR-2",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-03",
+        "target_control_id": "SR-5",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-SP-03",
+        "target_control_id": "SR-6",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-03",
+        "target_control_id": "CC9.2",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-04",
+        "target_control_id": "Art. 28",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-04",
+        "target_control_id": "A.5.22",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-04",
+        "target_control_id": "GV.SC-08",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-04",
+        "target_control_id": "CA-7",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-04",
+        "target_control_id": "SR-6",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-04",
+        "target_control_id": "CC9.2",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-05",
+        "target_control_id": "Art. 28",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-05",
+        "target_control_id": "A.5.23",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-05",
+        "target_control_id": "PR.DS-01",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "subset-of",
+        "source_control_id": "CC-SP-05",
+        "target_control_id": "AC-20",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-05",
+        "target_control_id": "SA-9",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-05",
+        "target_control_id": "CC6.6",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-05",
+        "target_control_id": "CC9.2",
+        "target_framework": "soc2_tsc_2017"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-06",
+        "target_control_id": "Art. 28",
+        "target_framework": "gdpr"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-06",
+        "target_control_id": "A.8.30",
+        "target_framework": "iso_27001_2022"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-06",
+        "target_control_id": "GV.SC-07",
+        "target_framework": "nist_csf_2_0"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-06",
+        "target_control_id": "PS-4",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-06",
+        "target_control_id": "SR-9",
+        "target_framework": "nist_sp_800_53_rev5"
+      },
+      {
+        "relationship": "equivalent-to",
+        "source_control_id": "CC-SP-06",
+        "target_control_id": "CC9.2",
+        "target_framework": "soc2_tsc_2017"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-10-31T00:00:00Z",
+      "oscal-version": "1.2.0",
+      "published": "2026-10-31T00:00:00Z",
+      "remarks": "Deterministic crosswalk mappings between canonical controls and 6 external compliance frameworks",
+      "title": "ISMS Multi-Framework Canonical Control Crosswalk Mappings",
+      "version": "2.0.0"
+    },
+    "uuid": "0b83d270-ccd6-50cb-8213-3b269587360f"
+  }
+}
