@@ -1,0 +1,37 @@
+# ==============================================================================
+# ISMS Compliance-as-Code Repository Ownership & Mandatory Review Matrix
+# Aligned with docs/02_Policies/12_SDLC_and_Change_Management_Policy.md (CC-SD-01)
+# ==============================================================================
+
+# Default fallback owners
+* @org/security-core
+
+# Tier 1: Core ISMS Governance, SoA & Crosswalk Matrix
+/docs/01_ISMS_Framework/ @org/ciso @org/governance-team
+
+# Tier 2: Organizational Security Policies (Require Security/CISO signoff)
+/docs/02_Policies/ @org/ciso @org/security-lead
+
+# Tier 3: Operational Standards, Playbooks & Technical Baselines
+/docs/03_Standards_and_Procedures/ @org/security-engineering
+
+# Tier 4: Registers, Audit Logs & Evidence Templates
+/docs/04_Templates_and_Registers/ @org/audit-compliance @org/ciso
+
+# Canonical Framework Registry, Compliance Manifest & Reference Catalogs
+/mappings/ @org/compliance-architecture @org/ciso
+
+# JSON Schemas (Draft 2020-12)
+/schemas/ @org/security-architecture
+
+# Architectural Decision Records (ADRs)
+/architecture/ @org/security-architecture @org/ciso
+
+# CLI Automation, Validation & OSCAL Export Tooling
+/scripts/ @org/security-automation @org/devops
+
+# CI/CD Workflows & Repository Governance
+/.github/ @org/devops-security @org/ciso
+
+# E2E & Adversarial Test Suites
+/tests/ @org/qa-engineering @org/security-engineering

@@ -8,11 +8,11 @@
 | **Document Owner** | [CISO_NAME] / Head of Engineering |
 | **Review Cycle** | Annual |
 | **Classification** | Internal |
-| **Framework Mappings** | ISO/IEC 27001:2022 (A.8.25, A.8.28), SOC 2 TSC (CC7.1, CC8.1), NIST CSF 2.0 (PR.DS-07) |
+| **Framework Mappings** | ISO/IEC 27001:2022 (A.8.25, A.8.28), SOC 2 TSC (CC7.1, CC8.1), NIST CSF 2.0 (PR.PS-06) |
 
 ## 1. Purpose
 To define the minimum security requirements and practices for developing, testing, and maintaining software applications at [COMPANY_NAME] to prevent vulnerabilities and ensure code integrity.
-*(ISO/IEC 27001:2022 A.8.25, A.8.28, SOC 2 CC7.1, CC8.1, NIST CSF 2.0 PR.DS-07)*
+*(ISO/IEC 27001:2022 A.8.25, A.8.28, SOC 2 CC7.1, CC8.1, NIST CSF 2.0 PR.PS-06)*
 
 ## 2. Scope
 Applies to all software development activities (internal or contracted) for applications, APIs, scripts, and infrastructure-as-code used or produced by [COMPANY_NAME].

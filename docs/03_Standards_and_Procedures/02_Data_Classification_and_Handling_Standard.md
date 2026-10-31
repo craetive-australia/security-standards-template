@@ -8,7 +8,7 @@
 | **Document Owner** | [CISO_NAME] / Data Governance Lead |
 | **Review Cycle** | Annual |
 | **Classification** | Internal |
-| **Framework Mappings** | ISO/IEC 27001:2022 (A.5.12, A.5.13, A.8.11, A.8.12), SOC 2 TSC (CC6.1, CC6.7, C1.1), NIST CSF 2.0 (ID.AM-05, PR.DS-01, PR.DS-05), GDPR (Art. 5, 25, 32) |
+| **Framework Mappings** | ISO/IEC 27001:2022 (A.5.12, A.5.13, A.8.11, A.8.12), SOC 2 TSC (CC6.1, CC6.7, C1.1), NIST CSF 2.0 (ID.AM-05, PR.DS-01), GDPR (Art. 5, 25, 32) |
 
 ## 1. Purpose
 The purpose of this standard is to establish a framework for classifying data based on its sensitivity and criticality to [COMPANY_NAME], and to define the minimum security controls for handling data at each classification level.

@@ -33,3 +33,13 @@ ehthumbs.db
 
 # Multi-agent orchestration telemetry
 .agents/
+
+# Dev server output logs
+serve_*.txt
+zserve_*.txt
+
+# Static analysis & SARIF audit reports
+*.sarif
+
+# Build distribution & OSCAL exports
+dist/

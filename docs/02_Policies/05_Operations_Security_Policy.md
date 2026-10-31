@@ -8,7 +8,7 @@
 | **Document Owner** | [CISO_NAME] / VP Engineering |
 | **Review Cycle** | Annual |
 | **Classification** | Internal |
-| **Framework Mappings** | ISO/IEC 27001:2022 (A.5.37, A.8.6, A.8.7, A.8.9, A.8.13, A.8.15, A.8.16, A.8.17, A.8.19, A.8.32, A.8.34), SOC 2 TSC (CC7.1, CC7.2, CC7.3, CC7.5, CC8.1), NIST CSF 2.0 (PR.PS-01, DE.AE-03, DE.CM-01, DE.CM-04, PR.DS-09), GDPR (Art. 32) |
+| **Framework Mappings** | ISO/IEC 27001:2022 (A.5.37, A.8.6, A.8.7, A.8.9, A.8.13, A.8.15, A.8.16, A.8.17, A.8.19, A.8.32, A.8.34), SOC 2 TSC (CC7.1, CC7.2, CC7.3, CC7.5, CC8.1), NIST CSF 2.0 (PR.PS-01, DE.AE-03, DE.CM-01, DE.CM-09, PR.DS-11), NIST SP 800-53 Rev. 5 (SI-2, SI-3, CP-9, CP-10), ASD Essential Eight (E8-AC-ML2, E8-RB-ML2), GDPR (Art. 32) |
 
 ## 1. Purpose
 To ensure correct, secure, and resilient operations of [COMPANY_NAME]'s information processing facilities through automated controls and proactive monitoring. *(ISO/IEC 27001:2022 A.5.37, SOC 2 CC7.1, NIST CSF 2.0 PR.PS-01)*
@@ -24,12 +24,13 @@ Applies to all production IT systems, cloud infrastructure, endpoints, and opera
 ### 3.2 Capacity Management
 * **Auto-Scaling:** Cloud environments must utilize auto-scaling groups and automated performance alerting (e.g., Datadog, CloudWatch) for CPU, memory, and storage utilization to ensure uninterrupted service availability. *(ISO/IEC 27001:2022 A.8.6, SOC 2 CC7.1, NIST CSF 2.0 PR.PS-01)*
 
-### 3.3 Protection Against Malware
-* **Endpoint Detection and Response (EDR):** Next-generation EDR agents (e.g., CrowdStrike, SentinelOne) must be deployed on all workstations and servers, configured to automatically block and quarantine malicious activity. *(ISO/IEC 27001:2022 A.8.7, SOC 2 CC6.8, NIST CSF 2.0 DE.CM-04)*
+### 3.3 Protection Against Malware and Application Control
+* **Application Control (Allowlisting):** Execution of unapproved binaries, software libraries (.dll), scripts (PowerShell, VBScript, Python, batch), and installers must be blocked on all servers and workstations. User-writable directories (e.g., `%APPDATA%`, `%TEMP%`, and `Downloads`) are strictly blocked from executing unauthorized binaries and scripts. Application allowlisting rules must be enforced in block mode.
+* **Endpoint Detection and Response (EDR):** Next-generation EDR agents (e.g., CrowdStrike, SentinelOne) must be deployed on all workstations and servers, configured with tamper resistance enabled to automatically block, quarantine, and alert on malicious activity in real time. *(ISO/IEC 27001:2022 A.8.7, A.8.19, SOC 2 CC6.8, NIST CSF 2.0 DE.CM-09, PR.PS-05, NIST SP 800-53 Rev. 5 SI-3, CM-7, ASD Essential Eight E8-AC-ML2)*
 
-### 3.4 Immutable Backups
-* **Backup Architecture:** Daily automated backups of critical databases must be encrypted and stored in an immutable, logical air-gapped vault or separate cloud account.
-* **Restore Testing:** Automated restore tests must be conducted quarterly to validate RPO and RTO compliance. *(ISO/IEC 27001:2022 A.8.13, SOC 2 CC7.3, CC7.5, NIST CSF 2.0 PR.DS-09)*
+### 3.4 Immutable Backups and Ransomware Resilience
+* **Backup Architecture:** Daily automated backups of critical databases, configurations, and system state must be encrypted (AES-256) and stored in an immutable, disconnected state (logical air-gap or separate cloud account with WORM compliance) where unprivileged and standard administrator accounts cannot modify, overwrite, or delete restore points.
+* **Restore Testing:** Automated restore tests and recovery drills must be conducted quarterly, validating full system recovery, RPO, and RTO compliance under simulated catastrophic outage and ransomware conditions. *(ISO/IEC 27001:2022 A.8.13, SOC 2 CC7.3, CC7.5, NIST CSF 2.0 PR.DS-11, NIST SP 800-53 Rev. 5 CP-9, CP-10, ASD Essential Eight E8-RB-ML2)*
 
 ### 3.5 Centralized Logging and Monitoring
 * **SIEM Integration:** All OS, application, firewall, and access logs must be forwarded in real-time to a centralized SIEM platform.

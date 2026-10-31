@@ -17,6 +17,7 @@ import yaml
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
+
 def get_python() -> str:
     local_venv = REPO_ROOT / ".venv" / "Scripts" / "python.exe"
     if local_venv.exists():
@@ -45,7 +46,6 @@ class TestMilestone1AdversarialStress(unittest.TestCase):
 
     def test_01_fill_placeholders_idempotency_and_hash_preservation(self):
         """Stress: Multiple --dry-run executions must preserve 100% file hashes and timestamps, and verify O'Connor single-quote parsing."""
-        # Collect all markdown files and mkdocs.yml
         target_files = list((REPO_ROOT / "docs").rglob("*.md")) + [self.mkdocs_yml]
         self.assertGreater(len(target_files), 30)
 
@@ -64,7 +64,6 @@ class TestMilestone1AdversarialStress(unittest.TestCase):
             "--min-password-length", "16",
         ]
 
-        # Run 5 consecutive times
         for i in range(5):
             res = subprocess.run(cmd, cwd=str(REPO_ROOT), capture_output=True, text=True)
             self.assertEqual(res.returncode, 0, f"Run {i+1} failed: {res.stderr}")
@@ -75,7 +74,6 @@ class TestMilestone1AdversarialStress(unittest.TestCase):
             self.assertEqual(initial_hashes, current_hashes, f"File hashes mutated on dry-run {i+1}")
             self.assertEqual(initial_mtimes, current_mtimes, f"File timestamps mutated on dry-run {i+1}")
 
-        # Verify O'Connor single-quote parsing in mkdocs.yml
         with tempfile.TemporaryDirectory() as tmp_dir:
             tmp_path = Path(tmp_dir)
             tmp_mkdocs = tmp_path / "mkdocs.yml"
@@ -106,11 +104,9 @@ class TestMilestone1AdversarialStress(unittest.TestCase):
             "--company-name", "",
         ]
         res = subprocess.run(cmd, cwd=str(REPO_ROOT), capture_output=True, text=True)
-        # Empty string results in 'no placeholder arguments provided'
         self.assertEqual(res.returncode, 0)
         self.assertIn("No placeholder arguments provided", res.stdout)
 
-        # Empty string alongside valid parameter
         cmd2 = [
             self.python_bin,
             str(self.fill_script),
@@ -120,7 +116,6 @@ class TestMilestone1AdversarialStress(unittest.TestCase):
         ]
         res2 = subprocess.run(cmd2, cwd=str(REPO_ROOT), capture_output=True, text=True)
         self.assertEqual(res2.returncode, 0)
-        # Demonstrates that [COMPANY_NAME] is silently ignored rather than replaced with empty string
         self.assertNotIn("[COMPANY_NAME]", res2.stdout)
         self.assertIn("[CISO_NAME]", res2.stdout)
 
@@ -137,7 +132,6 @@ class TestMilestone1AdversarialStress(unittest.TestCase):
         self.assertEqual(res.returncode, 1)
         self.assertIn("does not exist", res.stderr)
 
-        # Also verify file path passed to --docs-dir is rejected
         cmd_file = [
             self.python_bin,
             str(self.fill_script),
@@ -151,7 +145,6 @@ class TestMilestone1AdversarialStress(unittest.TestCase):
 
     def test_04_fill_placeholders_min_password_length_custom(self):
         """Stress: Verify custom --min-password-length value and default propagation."""
-        # 1. Custom value standalone
         cmd = [
             self.python_bin,
             str(self.fill_script),
@@ -162,7 +155,6 @@ class TestMilestone1AdversarialStress(unittest.TestCase):
         self.assertEqual(res.returncode, 0)
         self.assertIn("[MIN_PASSWORD_LENGTH] => '20'", res.stdout)
 
-        # 2. Invalid integer argument rejected by argparse
         cmd_invalid = [
             self.python_bin,
             str(self.fill_script),
@@ -209,7 +201,6 @@ class TestMilestone1AdversarialStress(unittest.TestCase):
             "--company-name", "🛡️ CyberGuard",
         ]
         env = dict(os.environ)
-        # Force cp1252 legacy encoding to simulate Windows default non-UTF-8 console
         env["PYTHONIOENCODING"] = "cp1252"
         res = subprocess.run(
             cmd,
@@ -223,7 +214,7 @@ class TestMilestone1AdversarialStress(unittest.TestCase):
         self.assertEqual(res.returncode, 0, f"Script failed with stderr: {res.stderr}")
         self.assertNotIn("UnicodeEncodeError", res.stderr)
         self.assertIn("CyberGuard", res.stdout)
-        self.assertIn("Files modified: 39 / 39", res.stdout)
+        self.assertIn("Files modified: 40 / 40", res.stdout)
 
     def test_07_mkdocs_strict_build_fails_on_missing_nav_file(self):
         """Stress: Verify mkdocs build --strict fails when a nav target file is missing."""
@@ -263,7 +254,6 @@ class TestMilestone1AdversarialStress(unittest.TestCase):
     def test_09_mkdocs_search_index_and_theme_assets(self):
         """Stress: Verify search_index.json completeness and Material theme assets."""
         site_dir = REPO_ROOT / "site"
-        # Run strict build to ensure fresh artifacts
         res = subprocess.run(
             [self.mkdocs_bin, "build", "--strict"],
             cwd=str(REPO_ROOT),
@@ -272,7 +262,6 @@ class TestMilestone1AdversarialStress(unittest.TestCase):
         )
         self.assertEqual(res.returncode, 0, f"mkdocs build failed: {res.stderr}")
 
-        # Check search index
         search_idx = site_dir / "search" / "search_index.json"
         self.assertTrue(search_idx.exists(), "search_index.json missing")
         with open(search_idx, "r", encoding="utf-8") as f:
@@ -280,7 +269,6 @@ class TestMilestone1AdversarialStress(unittest.TestCase):
         docs = data.get("docs", [])
         self.assertGreater(len(docs), 200, "Search index should contain >200 indexed sections")
 
-        # Check theme assets
         assets_dir = site_dir / "assets"
         self.assertTrue((assets_dir / "stylesheets").exists(), "stylesheets dir missing")
         self.assertTrue((assets_dir / "javascripts").exists(), "javascripts dir missing")

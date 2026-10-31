@@ -8,11 +8,11 @@
 | **Document Owner** | [CISO_NAME] / Legal & Compliance Lead |
 | **Review Cycle** | Annual |
 | **Classification** | Internal |
-| **Framework Mappings** | ISO/IEC 27001:2022 (A.5.33, A.7.14, A.8.10), SOC 2 TSC (CC6.1, CC6.5), NIST CSF 2.0 (PR.DS-03, PR.DS-11), GDPR (Art. 5(1)(e), 17) |
+| **Framework Mappings** | ISO/IEC 27001:2022 (A.5.33, A.7.14, A.8.10), SOC 2 TSC (CC6.1, CC6.5), NIST CSF 2.0 (PR.PS-03, PR.DS-11), GDPR (Art. 5(1)(e), 17) |
 
 ## 1. Purpose
 This standard defines the requirements for retaining data for legal, regulatory, and business purposes, and ensures that data is securely destroyed when no longer needed by [COMPANY_NAME].
-*(ISO/IEC 27001:2022 A.5.33, A.7.14, A.8.10, SOC 2 CC6.1, CC6.5, GDPR Art. 5(1)(e), NIST CSF 2.0 PR.DS-03, PR.DS-11)*
+*(ISO/IEC 27001:2022 A.5.33, A.7.14, A.8.10, SOC 2 CC6.1, CC6.5, GDPR Art. 5(1)(e), NIST CSF 2.0 PR.PS-03, PR.DS-11)*
 
 ## 2. Scope
 This standard applies to all physical and electronic data owned, processed, or managed by [COMPANY_NAME].

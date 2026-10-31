@@ -4,20 +4,22 @@ tests/test_tier5_adversarial_challenger.py
 Tier 5 Adversarial Coverage Hardening & Stress Verification Harness.
 
 Adversarially challenges:
-1. Deep Citation & Legacy Scanner (including 4-segment A.8.x.y, case variations, forbidden DoD/DC3.1)
-2. Document Structure & Metadata Rigor (headers, footers, policy sections, exact tables)
+1. Deep Citation & Legacy Scanner (including 4-segment A.8.x.y, case variations, forbidden DoD/DC3.1, retired CSF 2.0)
+2. Document Structure & Metadata Rigor (headers, footers, policy sections, exact tables across all 40 docs)
 3. Full Link Graph & Heading Anchor Oracle (parses all markdown anchors and verifies targets exist)
-4. Tooling Edge Cases & Stress Harness (fill_placeholders.py & validate_isms.py error handling/dry-run)
-5. Framework Registry Deep Schema, Completeness, and Coverage Audit
+4. Tooling Edge Cases & Stress Harness (fill_placeholders.py, validate_isms.py, export_oscal.py, check_adoption.py, generate_docs.py)
+5. Framework Registry v2.0 Deep Schema, Catalog Referential Integrity, OSCAL Determinism & CI Workflow Security
 """
 
+import hashlib
+import json
 import os
 import re
-import sys
-import unittest
-import subprocess
-import tempfile
 import shutil
+import subprocess
+import sys
+import tempfile
+import unittest
 from pathlib import Path
 from typing import Dict, List, Set, Tuple
 import yaml
@@ -34,24 +36,23 @@ EXPECTED_ISO_2022_CONTROLS = (
 assert len(EXPECTED_ISO_2022_CONTROLS) == 93
 
 
+def _extract_id(item):
+    if isinstance(item, str):
+        return item.strip()
+    if isinstance(item, dict) and "id" in item:
+        return str(item["id"]).strip()
+    return ""
+
+
 def slugify_heading(heading_text: str) -> str:
     """
     Simulate Python-Markdown / MkDocs slugify logic for heading anchors.
-    Lowercases, strips leading/trailing whitespace, removes punctuation (except hyphens and underscores),
-    and converts spaces to hyphens.
     """
-    # Remove markdown link formatting e.g. [Link Text](url) -> Link Text
     text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", heading_text)
-    # Remove HTML tags
     text = re.sub(r"<[^>]+>", "", text)
-    # Strip markdown bold/italic formatting
     text = re.sub(r"[*_`]", "", text)
-    # Strip leading numbers followed by dot/space if any, but python-markdown keeps them:
-    # Python-markdown slugify: lowercase, strip non-alphanumeric except hyphen/underscore, space -> hyphen
     text = text.strip().lower()
-    # Replace whitespace and forward slashes with hyphens
     text = re.sub(r"[\s/]+", "-", text)
-    # Remove all characters that are not alphanumeric, hyphen, or underscore
     text = re.sub(r"[^a-z0-9_-]", "", text)
     return text.strip("-")
 
@@ -66,7 +67,6 @@ def extract_headings(file_path: Path) -> Set[str]:
         slug = slugify_heading(heading_title)
         if slug:
             anchors.add(slug)
-        # Also check for explicit anchor definitions {#custom-anchor} or <a name="anchor">
         custom_anchor = re.search(r"\{#([^}]+)\}", heading_title)
         if custom_anchor:
             anchors.add(custom_anchor.group(1).strip().lower())
@@ -74,7 +74,6 @@ def extract_headings(file_path: Path) -> Set[str]:
         if a_name:
             anchors.add(a_name.group(1).strip().lower())
 
-    # Also search for <a name="anchor"> or <a id="anchor"> anywhere in body
     for a_match in re.finditer(r'<a\s+(?:name|id)=["\']([^"\']+)["\']', content):
         anchors.add(a_match.group(1).strip().lower())
 
@@ -96,9 +95,7 @@ class TestTier5AdversarialIntegrity(unittest.TestCase):
         Must NOT appear outside explicit legacy crosswalk columns.
         """
         legacy_patterns = [
-            # Any A.9 through A.18 control (e.g. A.9.1, A.9.1.1, A.12.1.2)
             re.compile(r"\bA\.(?:9|1[0-8])(?:\.\d+)+", re.IGNORECASE),
-            # Any 4-segment control (A.5.x.y, A.6.x.y, A.7.x.y, A.8.x.y)
             re.compile(r"\bA\.(?:5|6|7|8)\.\d+\.\d+", re.IGNORECASE),
         ]
 
@@ -112,9 +109,7 @@ class TestTier5AdversarialIntegrity(unittest.TestCase):
             is_onboarding = "07_Framework_and_Domain_Onboarding_Guide.md" in rel_path
 
             for line_idx, line in enumerate(lines, start=1):
-                # If SoA or Onboarding, check if line is an explicit legacy crosswalk row/table
                 if is_soa:
-                    # In SoA, legacy IDs are in the designated "Legacy 2013 Crosswalk" column
                     if "legacy" in line.lower() or "2013" in line:
                         continue
                 if is_onboarding:
@@ -165,12 +160,7 @@ class TestTier5AdversarialIntegrity(unittest.TestCase):
 
     def test_document_control_headers_adversarial(self):
         """
-        Verifies all 37 ISMS framework/policy/procedure/register documents have exact 2-column key-value header tables.
-        Checks for:
-        - Exact Markdown table format directly below document heading
-        - Presence of all 7 mandatory keys:
-          Document ID, Version, Effective Date, Document Owner, Review Cycle, Classification, Framework Mappings
-        - Zero collapsed single-line bold metadata
+        Verifies all 39 ISMS framework/policy/procedure/register documents have exact 2-column key-value header tables.
         """
         mandatory_keys = [
             "Document ID",
@@ -192,11 +182,9 @@ class TestTier5AdversarialIntegrity(unittest.TestCase):
             lines = content.splitlines()
             top_sample = "\n".join(lines[:30])
 
-            # Check for collapsed bold metadata
             if re.search(r"^\*\*(?:Document ID|Version|Effective Date|Classification)\*\*:", top_sample, re.MULTILINE):
                 violations.append(f"{rel_path}: Contains collapsed bold metadata in header")
 
-            # Check header table presence
             missing_keys = [k for k in mandatory_keys if k not in top_sample]
             if missing_keys:
                 violations.append(f"{rel_path}: Header table missing keys: {missing_keys}")
@@ -209,8 +197,7 @@ class TestTier5AdversarialIntegrity(unittest.TestCase):
 
     def test_document_history_footers_adversarial(self):
         """
-        Verifies all 37 ISMS framework/policy/procedure/register documents have exact 5-column history tables at the bottom.
-        Columns required: Version, Date, Author, Approved By, Description.
+        Verifies all 39 ISMS framework/policy/procedure/register documents have exact 5-column history tables at the bottom.
         """
         required_cols = ["Version", "Date", "Author", "Approved By", "Description"]
         violations = []
@@ -240,10 +227,7 @@ class TestTier5AdversarialIntegrity(unittest.TestCase):
 
     def test_policy_mandatory_sections_adversarial(self):
         """
-        Verifies every policy under docs/02_Policies/ (all 13 policies) contains:
-        1. Roles and Responsibilities
-        2. Compliance and Exceptions (or Enforcement)
-        3. Related Documents (with active markdown links)
+        Verifies every policy under docs/02_Policies/ (all 13 policies) contains mandatory sections.
         """
         policy_files = sorted((REPO_ROOT / "docs" / "02_Policies").glob("*.md"))
         self.assertEqual(len(policy_files), 13, f"Expected 13 policy files, found {len(policy_files)}")
@@ -269,7 +253,6 @@ class TestTier5AdversarialIntegrity(unittest.TestCase):
                 violations.append(f"{rel_path} missing mandatory sections: {missing}")
                 continue
 
-            # Check that Related Documents section contains at least one relative markdown link
             related_match = re.search(r"##\s+.*Related Documents(.*?)(?=\n##|\Z)", content, re.DOTALL | re.IGNORECASE)
             if related_match:
                 section_body = related_match.group(1)
@@ -286,17 +269,12 @@ class TestTier5AdversarialIntegrity(unittest.TestCase):
 
 class TestTier5LinkGraphAndHeadingAnchors(unittest.TestCase):
     """
-    Exhaustive link graph and anchor validation:
-    Checks EVERY relative Markdown link in docs/**/*.md:
-    1. Target file must exist.
-    2. If link contains an anchor `#heading-slug`, target document MUST have that heading slug.
-    3. If link is a same-document anchor `#heading-slug`, the document MUST have that heading slug.
+    Exhaustive link graph and anchor validation across all 40 docs.
     """
 
     def setUp(self):
         self.docs_dir = REPO_ROOT / "docs"
         self.all_md_files = sorted(self.docs_dir.rglob("*.md"))
-        # Precompute all heading anchors for each markdown file
         self.heading_anchors: Dict[str, Set[str]] = {}
         for md_file in self.all_md_files:
             rel_path = md_file.relative_to(REPO_ROOT).as_posix()
@@ -314,13 +292,11 @@ class TestTier5LinkGraphAndHeadingAnchors(unittest.TestCase):
             lines = content.splitlines()
 
             for line_no, line in enumerate(lines, start=1):
-                # Skip markdown comments
                 if line.strip().startswith("<!--"):
                     continue
 
                 for match in link_pattern.finditer(line):
                     target = match.group(2).strip()
-                    # Skip external web URLs and mailto
                     if (
                         target.startswith("http://")
                         or target.startswith("https://")
@@ -331,7 +307,6 @@ class TestTier5LinkGraphAndHeadingAnchors(unittest.TestCase):
 
                     total_links += 1
 
-                    # Case A: Same-document anchor e.g. #roles-and-responsibilities
                     if target.startswith("#"):
                         anchor = target.lstrip("#").lower().strip()
                         if anchor:
@@ -342,7 +317,6 @@ class TestTier5LinkGraphAndHeadingAnchors(unittest.TestCase):
                                 )
                         continue
 
-                    # Case B: Target file with optional anchor
                     parts = target.split("#")
                     file_part = parts[0].strip()
                     anchor_part = parts[1].strip().lower() if len(parts) > 1 else None
@@ -350,7 +324,6 @@ class TestTier5LinkGraphAndHeadingAnchors(unittest.TestCase):
                     if not file_part:
                         continue
 
-                    # Resolve file target relative to source document parent directory
                     resolved_target = (md_file.parent / file_part).resolve()
                     if not resolved_target.exists():
                         broken_files.append(
@@ -358,12 +331,10 @@ class TestTier5LinkGraphAndHeadingAnchors(unittest.TestCase):
                         )
                         continue
 
-                    # If there's an anchor, check it in the resolved target
                     if anchor_part:
                         try:
                             rel_target = resolved_target.relative_to(REPO_ROOT).as_posix()
                         except ValueError:
-                            # Target outside repo
                             broken_files.append(
                                 f"{rel_src}:{line_no} - Target file is outside repo: {resolved_target}"
                             )
@@ -451,15 +422,10 @@ class TestTier5ToolingAdversarial(unittest.TestCase):
         self.assertIn("Error: Documentation directory", result.stderr)
 
     def test_fill_placeholders_no_args_behavior(self):
-        """
-        Verify CLI contract:
-        - When no arguments provided without dry-run: exit code 1 with helpful message
-        - When only --dry-run without arguments: exit code 0
-        """
+        """Verify CLI contract when no arguments are provided."""
         python_exe = sys.executable
         script = str(REPO_ROOT / "scripts" / "fill_placeholders.py")
 
-        # 1. No arguments at all
         res1 = subprocess.run(
             [python_exe, script],
             cwd=str(REPO_ROOT),
@@ -470,7 +436,6 @@ class TestTier5ToolingAdversarial(unittest.TestCase):
         self.assertEqual(res1.returncode, 1)
         self.assertIn("Error: No placeholder arguments provided", res1.stderr)
 
-        # 2. Only --dry-run
         res2 = subprocess.run(
             [python_exe, script, "--dry-run"],
             cwd=str(REPO_ROOT),
@@ -499,22 +464,14 @@ class TestTier5ToolingAdversarial(unittest.TestCase):
         self.assertIn("Scanning for Remaining Placeholders", result.stdout)
 
     def test_fill_placeholders_actual_execution_on_sandbox_copy(self):
-        """
-        Stress test fill_placeholders.py by copying docs and mkdocs.yml to a temporary sandbox,
-        running the script with replacements, and verifying:
-        1. All target placeholders were replaced.
-        2. mkdocs.yml YAML escaping for single quotes was handled properly.
-        3. No syntax corruption occurred.
-        """
+        """Stress test fill_placeholders.py in a temporary sandbox."""
         python_exe = sys.executable
         script = str(REPO_ROOT / "scripts" / "fill_placeholders.py")
 
         with tempfile.TemporaryDirectory() as tmpdir:
             tmppath = Path(tmpdir)
-            # Copy docs and mkdocs.yml
             shutil.copytree(REPO_ROOT / "docs", tmppath / "docs")
             shutil.copy(REPO_ROOT / "mkdocs.yml", tmppath / "mkdocs.yml")
-            # Create scripts folder with script
             os.makedirs(tmppath / "scripts", exist_ok=True)
             shutil.copy(script, tmppath / "scripts" / "fill_placeholders.py")
 
@@ -540,23 +497,21 @@ class TestTier5ToolingAdversarial(unittest.TestCase):
             self.assertEqual(result.returncode, 0, f"Sandbox replacement failed:\n{result.stderr}")
             self.assertIn("Summary (APPLY):", result.stdout)
 
-            # Check mkdocs.yml valid YAML
             with open(tmppath / "mkdocs.yml", "r", encoding="utf-8") as f:
                 parsed_yaml = yaml.safe_load(f)
             self.assertIsNotNone(parsed_yaml)
 
-            # Check docs/01_ISMS_Framework/01_Information_Security_Policy.md has replaced text
             sample_policy = (tmppath / "docs" / "01_ISMS_Framework" / "01_Information_Security_Policy.md").read_text(encoding="utf-8")
             self.assertIn("O'Reilly & Associates", sample_policy)
             self.assertIn("Jane Doe", sample_policy)
             self.assertNotIn("[COMPANY_NAME]", sample_policy)
 
     def test_validate_isms_strict_and_coverage_report(self):
-        """Test validate_isms.py with --strict and --coverage-report flags."""
+        """Test validate_isms.py with --strict, --coverage-report, and --check-drift flags."""
         python_exe = sys.executable
         script = str(REPO_ROOT / "scripts" / "validate_isms.py")
 
-        cmd = [python_exe, script, "--coverage-report", "--strict"]
+        cmd = [python_exe, script, "--coverage-report", "--strict", "--check-drift"]
         result = subprocess.run(
             cmd,
             cwd=str(REPO_ROOT),
@@ -572,6 +527,8 @@ class TestTier5ToolingAdversarial(unittest.TestCase):
         )
         self.assertIn("ISMS FRAMEWORK COMPLIANCE & CONTROL COVERAGE REPORT", result.stdout)
         self.assertIn("ISO/IEC 27001:2022 Annex A", result.stdout)
+        self.assertIn("NIST SP 800-53 Rev. 5", result.stdout)
+        self.assertIn("ASD Essential Eight", result.stdout)
         self.assertIn("100.0%", result.stdout)
         self.assertIn("COMPLIANT", result.stdout)
 
@@ -620,6 +577,7 @@ class TestTier5RegistryDeepVerification(unittest.TestCase):
         """Verify registry root schema, metadata, and canonical control definitions."""
         self.assertIsInstance(self.data, dict)
         self.assertIn("version", self.data)
+        self.assertEqual(self.data.get("schema_version"), "2.0.0")
         controls = self.data.get("canonical_controls") or self.data.get("controls")
         self.assertIsInstance(controls, list)
         self.assertGreaterEqual(
@@ -660,7 +618,7 @@ class TestTier5RegistryDeepVerification(unittest.TestCase):
         for ctrl in controls:
             iso_list = ctrl.get("mappings", {}).get("iso_27001_2022", [])
             for item in iso_list:
-                mapped_iso.add(item)
+                mapped_iso.add(_extract_id(item))
 
         missing_iso = set(EXPECTED_ISO_2022_CONTROLS) - mapped_iso
         self.assertEqual(
@@ -680,28 +638,116 @@ class TestTier5RegistryDeepVerification(unittest.TestCase):
         for ctrl in controls:
             mappings = ctrl.get("mappings", {})
             for s in mappings.get("soc2_tsc_2017", []):
-                mapped_soc2.add(s)
+                mapped_soc2.add(_extract_id(s))
             for n in mappings.get("nist_csf_2_0", []):
-                mapped_nist.add(n)
+                mapped_nist.add(_extract_id(n))
             for g in mappings.get("gdpr_articles", []):
-                mapped_gdpr.add(g)
+                mapped_gdpr.add(_extract_id(g))
 
-        # Baseline thresholds
-        self.assertGreaterEqual(
-            len(mapped_soc2),
-            30,
-            f"Expected at least 30 SOC 2 TSC mappings, got {len(mapped_soc2)}: {sorted(mapped_soc2)}",
-        )
-        self.assertGreaterEqual(
-            len(mapped_nist),
-            35,
-            f"Expected at least 35 NIST CSF 2.0 mappings, got {len(mapped_nist)}: {sorted(mapped_nist)}",
-        )
-        self.assertGreaterEqual(
-            len(mapped_gdpr),
-            10,
-            f"Expected at least 10 GDPR article mappings, got {len(mapped_gdpr)}: {sorted(mapped_gdpr)}",
-        )
+        self.assertGreaterEqual(len(mapped_soc2), 30)
+        self.assertGreaterEqual(len(mapped_nist), 45)
+        self.assertGreaterEqual(len(mapped_gdpr), 10)
+
+
+class TestTier5V2ModernizationAdversarial(unittest.TestCase):
+    """Adversarial tests for v2.0 OSCAL determinism, negative adoption checks, drift detection, and CI security."""
+
+    def test_oscal_byte_determinism(self):
+        """Executes export_oscal.py twice into isolated temp directories and asserts identical SHA-256 digests."""
+        python_exe = sys.executable
+        script = str(REPO_ROOT / "scripts" / "export_oscal.py")
+
+        with tempfile.TemporaryDirectory() as dir1, tempfile.TemporaryDirectory() as dir2:
+            for out_dir in (dir1, dir2):
+                res = subprocess.run(
+                    [python_exe, script, "--output-dir", out_dir, "--validate"],
+                    cwd=str(REPO_ROOT),
+                    capture_output=True,
+                    text=True,
+                    encoding="utf-8",
+                )
+                self.assertEqual(res.returncode, 0, f"OSCAL export failed:\n{res.stderr}")
+
+            files1 = sorted(p.name for p in Path(dir1).glob("*.json"))
+            files2 = sorted(p.name for p in Path(dir2).glob("*.json"))
+            self.assertEqual(len(files1), 5)
+            self.assertEqual(files1, files2)
+
+            for fname in files1:
+                h1 = hashlib.sha256((Path(dir1) / fname).read_bytes()).hexdigest()
+                h2 = hashlib.sha256((Path(dir2) / fname).read_bytes()).hexdigest()
+                self.assertEqual(h1, h2, f"Non-deterministic OSCAL output detected in {fname}")
+
+    def test_check_adoption_negative_expired_and_unknown_control(self):
+        """Verifies check_adoption.py exits 1 when given an expired exception or unknown control_id."""
+        python_exe = sys.executable
+        script = str(REPO_ROOT / "scripts" / "check_adoption.py")
+        manifest_data = yaml.safe_load((REPO_ROOT / "mappings" / "compliance_manifest.yaml").read_text(encoding="utf-8"))
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            # 1. Expired exception
+            expired_manifest = yaml.safe_load(yaml.safe_dump(manifest_data))
+            expired_manifest["exceptions"][0]["approval_date"] = "2025-01-01"
+            expired_manifest["exceptions"][0]["expiration_date"] = "2025-02-01"
+            exp_path = Path(tmpdir) / "expired_manifest.yaml"
+            exp_path.write_text(yaml.safe_dump(expired_manifest), encoding="utf-8")
+
+            res_exp = subprocess.run(
+                [python_exe, script, "--manifest", str(exp_path), "--strict"],
+                cwd=str(REPO_ROOT),
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+            )
+            self.assertEqual(res_exp.returncode, 1, "check_adoption.py MUST fail on expired security exception")
+
+            # 2. Unknown canonical control ID
+            bad_ctrl_manifest = yaml.safe_load(yaml.safe_dump(manifest_data))
+            bad_ctrl_manifest["exceptions"][0]["control_id"] = "CC-INVALID-999"
+            bad_path = Path(tmpdir) / "bad_ctrl_manifest.yaml"
+            bad_path.write_text(yaml.safe_dump(bad_ctrl_manifest), encoding="utf-8")
+
+            res_bad = subprocess.run(
+                [python_exe, script, "--manifest", str(bad_path), "--strict"],
+                cwd=str(REPO_ROOT),
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+            )
+            self.assertEqual(res_bad.returncode, 1, "check_adoption.py MUST fail on unknown control_id in exception")
+
+    def test_generate_docs_drift_detection_negative(self):
+        """Verifies generate_docs.py --check returns exit code 1 when crosswalk output has drifted."""
+        python_exe = sys.executable
+        script = str(REPO_ROOT / "scripts" / "generate_docs.py")
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            corrupted_out = Path(tmpdir) / "08_drifted.md"
+            corrupted_out.write_text("# Drifted Content\n", encoding="utf-8")
+
+            res = subprocess.run(
+                [python_exe, script, "--output", str(corrupted_out), "--check"],
+                cwd=str(REPO_ROOT),
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+            )
+            self.assertEqual(res.returncode, 1, "generate_docs.py --check MUST fail when output has drifted")
+
+    def test_github_workflows_least_privilege_permissions(self):
+        """Verifies all GitHub Actions workflows define explicit top-level permissions blocks."""
+        workflows_dir = REPO_ROOT / ".github" / "workflows"
+        wf_files = sorted(workflows_dir.glob("*.yml"))
+        self.assertGreaterEqual(len(wf_files), 3, "Expected at least 3 GitHub Actions workflows")
+
+        for wf in wf_files:
+            data = yaml.safe_load(wf.read_text(encoding="utf-8"))
+            self.assertIn(
+                "permissions",
+                data,
+                f"Workflow {wf.name} is missing explicit least-privilege 'permissions' block",
+            )
+            self.assertIsInstance(data["permissions"], dict)
 
 
 if __name__ == "__main__":

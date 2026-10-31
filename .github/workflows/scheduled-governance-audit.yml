@@ -1,0 +1,48 @@
+name: Scheduled ISMS Governance & Exception Audit
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  governance-audit:
+    name: Continuous Review Cadence & Exception Expiration Audit
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Compliance Adoption & Cadence Audit
+        id: adoption_audit
+        run: |
+          python scripts/check_adoption.py --manifest mappings/compliance_manifest.yaml --strict --format markdown > adoption_audit_report.md
+          python scripts/check_adoption.py --manifest mappings/compliance_manifest.yaml --strict
+
+      - name: Run ISMS Drift & Coverage Check
+        run: |
+          python scripts/validate_isms.py --strict --coverage-report --check-drift
+
+      - name: Upload Governance Audit Report Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: isms-governance-audit-report
+          path: adoption_audit_report.md
+          retention-days: 90

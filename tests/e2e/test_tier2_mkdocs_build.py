@@ -130,7 +130,7 @@ class TestTier2MkDocsBuild(unittest.TestCase):
             )
 
     def test_bidirectional_nav_file_parity(self):
-        """Verifies 100% bidirectional parity between mkdocs.yml nav and docs/ files."""
+        """Verifies 100% bidirectional parity between mkdocs.yml nav and all 40 docs/ files."""
         mkdocs_yml = REPO_ROOT / "mkdocs.yml"
         self.assertTrue(mkdocs_yml.exists(), "mkdocs.yml not found")
 
@@ -166,17 +166,25 @@ class TestTier2MkDocsBuild(unittest.TestCase):
             set(),
             f"Entries in mkdocs.yml nav do not exist in docs/: {dead_nav_entries}",
         )
+        self.assertEqual(
+            len(nav_set),
+            39,
+            f"Expected 39 navigation entries in mkdocs.yml, found {len(nav_set)}",
+        )
 
     def test_mkdocs_strict_build(self):
         """Executes 'mkdocs build --strict' and verifies exit code 0 with zero warnings."""
         mkdocs_bin = get_mkdocs_executable()
         cmd = [mkdocs_bin, "build", "--strict"]
+        env = dict(os.environ)
+        env["NO_MKDOCS_2_WARNING"] = "1"
 
         site_dir = REPO_ROOT / "site"
         # Run build
         result = subprocess.run(
             cmd,
             cwd=str(REPO_ROOT),
+            env=env,
             capture_output=True,
             text=True,
             check=False,

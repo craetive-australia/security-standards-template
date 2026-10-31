@@ -8,7 +8,7 @@
 | **Document Owner** | [CISO_NAME] / Incident Commander Lead |
 | **Review Cycle** | Annual |
 | **Classification** | Internal |
-| **Framework Mappings** | ISO/IEC 27001:2022 (A.5.24, A.5.25, A.5.26, A.5.27, A.5.28, A.6.8), SOC 2 TSC (CC7.3, CC7.4), NIST CSF 2.0 (RS.MA-01, RS.AN-03, RS.AN-04, RS.AN-05, RS.RP-01, RS.CO-02), GDPR (Art. 33, 34) |
+| **Framework Mappings** | ISO/IEC 27001:2022 (A.5.24, A.5.25, A.5.26, A.5.27, A.5.28, A.6.8), SOC 2 TSC (CC7.3, CC7.4), NIST CSF 2.0 (RS.MA-01, RS.AN-03, RS.AN-07, RS.CO-02), GDPR (Art. 33, 34) |
 
 ## 1. Purpose
 To ensure a rapid, automated, and effective approach to the management of information security incidents, minimizing downtime and data exposure. *(ISO/IEC 27001:2022 A.5.24, SOC 2 CC7.3, NIST CSF 2.0 RS.MA-01)*
@@ -29,13 +29,13 @@ Applies to all security events, breaches, and vulnerabilities affecting [COMPANY
   2. **Containment:** Network isolation via EDR or firewall rules.
   3. **Eradication:** Wiping affected instances, rotating compromised credentials.
   4. **Recovery:** Restoring from immutable backups.
-  *(ISO/IEC 27001:2022 A.5.26, SOC 2 CC7.3, NIST CSF 2.0 RS.RP-01)*
+  *(ISO/IEC 27001:2022 A.5.26, SOC 2 CC7.3, NIST CSF 2.0 RS.MA-01)*
 
 ### 3.3 Blameless Post-Mortems and SLAs
-* **Root Cause Analysis:** A formal, blameless post-mortem document must be completed within **5 business days** for all Sev1 and Sev2 (critical and high) incidents, and within **10 business days** for Sev3 incidents. Post-mortem action items must result in prioritized engineering Jira tickets to prevent recurrence. *(ISO/IEC 27001:2022 A.5.27, SOC 2 CC7.3, NIST CSF 2.0 RS.AN-04)*
+* **Root Cause Analysis:** A formal, blameless post-mortem document must be completed within **5 business days** for all Sev1 and Sev2 (critical and high) incidents, and within **10 business days** for Sev3 incidents. Post-mortem action items must result in prioritized engineering Jira tickets to prevent recurrence. *(ISO/IEC 27001:2022 A.5.27, SOC 2 CC7.3, NIST CSF 2.0 RS.AN-03)*
 
 ### 3.4 Evidence Collection and Forensics
-* **Chain of Custody:** EDR tools must be configured to support remote memory dumps and forensic artifact collection. Immutable audit logs must be preserved for investigative purposes. *(ISO/IEC 27001:2022 A.5.28, SOC 2 CC7.4, NIST CSF 2.0 RS.AN-05)*
+* **Chain of Custody:** EDR tools must be configured to support remote memory dumps and forensic artifact collection. Immutable audit logs must be preserved for investigative purposes. *(ISO/IEC 27001:2022 A.5.28, SOC 2 CC7.4, NIST CSF 2.0 RS.AN-07)*
 
 ### 3.5 Out-of-Band Communication
 * **Dedicated Channels:** Incident coordination must occur over dedicated, out-of-band communication channels (e.g., dedicated private Slack channels, encrypted conference bridges) to prevent adversary eavesdropping. *(SOC 2 CC7.4, NIST CSF 2.0 RS.CO-02)*

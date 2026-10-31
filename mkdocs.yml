@@ -1,5 +1,5 @@
 site_name: '[COMPANY_NAME] Information Security Management System'
-site_description: 'Compliance-as-Code ISMS Documentation Template aligned with ISO/IEC 27001:2022, SOC 2, NIST CSF 2.0, and GDPR'
+site_description: 'Compliance-as-Code ISMS Documentation Template aligned with ISO/IEC 27001:2022, SOC 2, NIST CSF 2.0, GDPR, NIST SP 800-53 Rev. 5, and ASD Essential Eight'
 
 theme:
   name: material
@@ -62,6 +62,7 @@ nav:
     - Statement of Applicability: 01_ISMS_Framework/05_Statement_of_Applicability_SoA.md
     - Governance, Audit & Improvement: 01_ISMS_Framework/06_ISMS_Governance_Audit_and_Improvement.md
     - Framework & Domain Onboarding: 01_ISMS_Framework/07_Framework_and_Domain_Onboarding_Guide.md
+    - Multi-Framework Crosswalk & OSCAL Matrix: 01_ISMS_Framework/08_Multi_Framework_Crosswalk_and_OSCAL_Matrix.md
   - Policies:
     - Access Control Policy: 02_Policies/01_Access_Control_Policy.md
     - Asset Management Policy: 02_Policies/02_Asset_Management_Policy.md

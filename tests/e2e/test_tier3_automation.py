@@ -1,10 +1,12 @@
 """
 Tier 3: Automation Tooling E2E Tests
-Validates scripts/fill_placeholders.py and scripts/validate_isms.py CLI behavior,
-flags, dry-run safety, and framework coverage reporting.
+Validates scripts/fill_placeholders.py, scripts/validate_isms.py, scripts/export_oscal.py,
+scripts/check_adoption.py, and scripts/generate_docs.py CLI behavior, flags, dry-run safety,
+and 6-framework coverage reporting.
 """
 
 import hashlib
+import json
 import os
 import subprocess
 import sys
@@ -12,6 +14,7 @@ import unittest
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+
 
 def get_python_executable() -> str:
     """Finds the python executable in environment, local venv, or sys.executable."""
@@ -30,6 +33,9 @@ class TestTier3Automation(unittest.TestCase):
         self.python_bin = get_python_executable()
         self.fill_script = REPO_ROOT / "scripts" / "fill_placeholders.py"
         self.val_script = REPO_ROOT / "scripts" / "validate_isms.py"
+        self.oscal_script = REPO_ROOT / "scripts" / "export_oscal.py"
+        self.adopt_script = REPO_ROOT / "scripts" / "check_adoption.py"
+        self.gendoc_script = REPO_ROOT / "scripts" / "generate_docs.py"
 
     def test_fill_placeholders_help(self):
         """Verifies scripts/fill_placeholders.py --help succeeds with code 0."""
@@ -53,7 +59,6 @@ class TestTier3Automation(unittest.TestCase):
         """Verifies fill_placeholders.py --dry-run operates safely without mutating files."""
         self.assertTrue(self.fill_script.exists(), "scripts/fill_placeholders.py not found")
 
-        # Snapshot mkdocs.yml and docs/index.md content hashes before dry-run
         files_to_watch = [REPO_ROOT / "mkdocs.yml", REPO_ROOT / "docs" / "index.md"]
         hashes_before = {}
         for f in files_to_watch:
@@ -94,12 +99,10 @@ class TestTier3Automation(unittest.TestCase):
             f"STDERR:\n{result.stderr}",
         )
 
-        # Ensure no syntax/attribute bugs occurred
         self.assertNotIn("AttributeError", result.stderr)
         self.assertNotIn("ciso-name", result.stderr)
         self.assertNotIn("SyntaxError", result.stderr)
 
-        # Verify that files were not modified on disk
         for f, h_before in hashes_before.items():
             if f.exists():
                 h_after = hashlib.sha256(f.read_bytes()).hexdigest()
@@ -182,9 +185,9 @@ class TestTier3Automation(unittest.TestCase):
         self.assertIn("usage", result.stdout.lower())
 
     def test_validate_isms_strict_mode(self):
-        """Verifies scripts/validate_isms.py --strict validates the repository cleanly."""
+        """Verifies scripts/validate_isms.py --strict --check-drift validates the repository cleanly."""
         self.assertTrue(self.val_script.exists(), "scripts/validate_isms.py not found")
-        cmd = [self.python_bin, str(self.val_script), "--strict"]
+        cmd = [self.python_bin, str(self.val_script), "--strict", "--check-drift"]
         result = subprocess.run(
             cmd,
             cwd=str(REPO_ROOT),
@@ -195,13 +198,13 @@ class TestTier3Automation(unittest.TestCase):
         self.assertEqual(
             result.returncode,
             0,
-            f"validate_isms.py --strict failed with code {result.returncode}.\n"
+            f"validate_isms.py --strict --check-drift failed with code {result.returncode}.\n"
             f"STDOUT:\n{result.stdout}\n"
             f"STDERR:\n{result.stderr}",
         )
 
-    def test_validate_isms_coverage_report(self):
-        """Verifies validate_isms.py --coverage-report reports full framework metrics."""
+    def test_validate_isms_coverage_report_and_formats(self):
+        """Verifies validate_isms.py --coverage-report reports all 6 frameworks and supports json/sarif/markdown."""
         self.assertTrue(self.val_script.exists(), "scripts/validate_isms.py not found")
         cmd = [self.python_bin, str(self.val_script), "--coverage-report"]
         result = subprocess.run(
@@ -211,32 +214,81 @@ class TestTier3Automation(unittest.TestCase):
             text=True,
             check=False,
         )
-        self.assertEqual(
-            result.returncode,
-            0,
-            f"validate_isms.py --coverage-report failed with code {result.returncode}.\n"
-            f"STDOUT:\n{result.stdout}\n"
-            f"STDERR:\n{result.stderr}",
-        )
+        self.assertEqual(result.returncode, 0, f"validate_isms.py --coverage-report failed:\n{result.stderr}")
 
         output = result.stdout
-        # Assert coverage reporting includes the major compliance frameworks
-        self.assertTrue(
-            "ISO" in output or "27001" in output,
-            "Coverage report missing ISO/IEC 27001 section",
+        for fw in ("ISO/IEC 27001:2022", "SOC 2", "NIST Cybersecurity Framework 2.0", "GDPR", "NIST SP 800-53", "ASD Essential Eight"):
+            self.assertIn(fw, output, f"Coverage report missing framework: {fw}")
+
+        # Verify JSON and SARIF formats
+        for fmt in ("json", "sarif"):
+            res_fmt = subprocess.run(
+                [self.python_bin, str(self.val_script), "--format", fmt],
+                cwd=str(REPO_ROOT),
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+            self.assertEqual(res_fmt.returncode, 0)
+            parsed = json.loads(res_fmt.stdout)
+            self.assertIsInstance(parsed, dict)
+
+    def test_export_oscal_cli_validate_and_check(self):
+        """Verifies scripts/export_oscal.py --validate --check succeeds with exit code 0."""
+        self.assertTrue(self.oscal_script.exists(), "scripts/export_oscal.py not found")
+        res = subprocess.run(
+            [self.python_bin, str(self.oscal_script), "--validate", "--check"],
+            cwd=str(REPO_ROOT),
+            capture_output=True,
+            text=True,
+            check=False,
         )
-        self.assertTrue(
-            "SOC 2" in output or "SOC2" in output or "TSC" in output,
-            "Coverage report missing SOC 2 section",
+        self.assertEqual(
+            res.returncode,
+            0,
+            f"export_oscal.py --validate --check failed:\nSTDOUT:\n{res.stdout}\nSTDERR:\n{res.stderr}",
         )
-        self.assertTrue(
-            "NIST" in output or "CSF" in output,
-            "Coverage report missing NIST CSF section",
+        self.assertIn("[PASS]", res.stdout)
+
+    def test_check_adoption_cli_strict(self):
+        """Verifies scripts/check_adoption.py --manifest mappings/compliance_manifest.yaml --strict succeeds."""
+        self.assertTrue(self.adopt_script.exists(), "scripts/check_adoption.py not found")
+        res = subprocess.run(
+            [
+                self.python_bin,
+                str(self.adopt_script),
+                "--manifest",
+                "mappings/compliance_manifest.yaml",
+                "--strict",
+            ],
+            cwd=str(REPO_ROOT),
+            capture_output=True,
+            text=True,
+            check=False,
         )
-        self.assertTrue(
-            "GDPR" in output,
-            "Coverage report missing GDPR section",
+        self.assertEqual(
+            res.returncode,
+            0,
+            f"check_adoption.py --strict failed:\nSTDOUT:\n{res.stdout}\nSTDERR:\n{res.stderr}",
         )
+        self.assertIn("[PASS]", res.stdout)
+
+    def test_generate_docs_cli_check(self):
+        """Verifies scripts/generate_docs.py --check succeeds with exit code 0."""
+        self.assertTrue(self.gendoc_script.exists(), "scripts/generate_docs.py not found")
+        res = subprocess.run(
+            [self.python_bin, str(self.gendoc_script), "--check"],
+            cwd=str(REPO_ROOT),
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        self.assertEqual(
+            res.returncode,
+            0,
+            f"generate_docs.py --check failed:\nSTDOUT:\n{res.stdout}\nSTDERR:\n{res.stderr}",
+        )
+        self.assertIn("[PASS]", res.stdout)
 
 
 if __name__ == "__main__":
